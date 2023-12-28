@@ -1,1 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+body{
+    background-image:url()
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center;
 
+}
+.Login{
+    background: rgb(2, 52, 54);
+    border-radius: 10px;
+    width: 400px;
+    padding: 55px;
+}
+.Login h2{
+    margin-bottom: 30px;
+    font-size: 30px;
+    color: aliceblue;
+    text-align: center;
+}
+
+.Login .Nome-palavra-passe {
+    position: relative;
+} 
+.Login .Nome-palavra-passe input{
+    width: 100%;
+    padding: 10px 0;
+    outline: none;
+    border: 0;
+    background: transparent;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+.Login .Nome-palavra-passe label{
+    position:absolute;
+    top: 0; 
+    left: 0;
+    padding: 10px 0;
+    color: #fff;
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+.Login .Nome-palavra-passe input:focus~label,
+.Login .Nome-palavra-passe input:valid~label 
+{
+    top:-20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+}
+p{
+    font-size: 13px;
+    color:#fff;
+    float: right;
+}
+a{
+    color: #03e9f4;
+    text-decoration: none;
+    margin-left: 10px;
+    
+}
+.Botão-do-enter{
+    position: relative;
+    display: inline-block;
+    padding: 12px 20;
+    color: #03e9f4;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 700;
+    margin-top: 20px;
+    transition: .5s;
+}
+.Botão-do-enter:hover{
+    background: #03e9f4;
+    border-radius: 1px;
+    color: #172031;
+}
+.Botão-do-enter span{
+    position: absolute;
+    display: block;
+}
