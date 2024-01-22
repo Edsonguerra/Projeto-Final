@@ -1,4 +1,171 @@
-body{
-    background-color: blueviolet;
-    color:white;
+@import url('https://fonts.googleapis.com/css2?family=inter:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'inter', sans-serif;
 }
+
+body {
+    background: #F6F9FF;
+    height: 200vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #434343;
+}
+.name{
+    position: absolute;
+    font-size: 20px;
+    display: flex;
+    height: 900px;
+    width: 600px;
+    left: 40px;
+}
+
+.Conteudo{
+    position: absolute;
+    display: flex;
+    height: 640px;
+    width: 700px;
+    font-size: 18px;
+    text-align: center;
+}
+.Tipo {
+    position: absolute;
+    display: flex;
+    height: 390px;
+    font-size: 30px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    background-image: url(img/img.jpg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+
+}
+
+.Hospital {
+    font-size: 2em;
+    color: #fff;
+    user-select: none;
+}
+
+.icones a {
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.icones a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.icones a:hover::after {
+    transform: scaleX(1);
+
+}
+
+.icones .botaologin {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+} 
+
+.icones .botaologin:hover {
+    background: #fff;
+    color: #162938;
+}
+
+main.Cards section.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: rgb(255, 255, 255);
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    max-height: 256px;
+    margin-left: 32px;
+}
+
+main.Cards section.card:first-child{
+    margin-left: 0;
+}
+
+main.Cards {
+    display: flex;
+    padding: 32px;
+}
+
+main.Cards section.card .icon {
+    width: 64px;
+    height: 64px;
+}
+
+main.Cards section.card img {
+  width: 100%;
+}
+
+main.Cards section.card h3 {
+    margin: 16px 0;
+
+} 
+
+main.Cards section.card span {
+    font-weight: 300;
+    max-width: 240px;
+    font-size: 80%;
+    margin-bottom: 16px;
+}
+
+main.Cards section.card button {
+    padding: 0.5em 1rem;
+    text-transform: uppercase;
+    border-radius: 32px;
+    border: 0;
+    cursor: pointer;
+    font-size: 80%;
+    font-weight: 500;
+    color: white;
+
+}
+
+main.Cards section.card.agendar button {
+    background: linear-gradient(to right, #3a7991, #00c4c4);
+}
+
+main.Cards section.card.agendar{
+    box-shadow: 20px 20px 50px -30px #002b44;
+}
+
