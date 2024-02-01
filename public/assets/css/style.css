@@ -8,8 +8,10 @@
 }
 
 body {
-    background: #F6F9FF;
-    height: 200vh;
+    background-image: url(img/ESCOLA.jpg);
+    background-repeat: no-repeat;
+    background-position: ;
+    height: 300vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -18,35 +20,37 @@ body {
 }
 .name{
     position: absolute;
-    font-size: 20px;
+    font-size: 30px;
     display: flex;
-    height: 1000px;
+    height: 1390px;
     width: 600px;
-    left: 40px;
+    left: 60px;
+    color: #fff;
 }
 
 .Conteudo{
     position: absolute;
     display: flex;
-    height: 640px;
+    height: 1140px;
+    left: 60px;
     width: 700px;
     font-size: 18px;
-    text-align: center;
+    color: rgb(255, 255, 255);
+    
 }
 .Tipo {
     position: absolute;
     display: flex;
-    height: 390px;
+    height: 450px;
     font-size: 30px;
 }
 
 header {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 40px 100px;
-    background-image: url(img/img.jpg);
+    padding: 25px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
