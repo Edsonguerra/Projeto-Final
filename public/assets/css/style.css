@@ -9,18 +9,16 @@
 
 body {
     background-image: url(img/ESCOLA.jpg);
-    background-repeat: no-repeat;
-    background-position: ;
-    height: 300vh;
-    width: 100%;
+    background-repeat: no-repeat; 
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #434343;
+    
 }
+
 .name{
     position: absolute;
-    font-size: 30px;
+    font-size: 25px;
     display: flex;
     height: 1390px;
     width: 600px;
@@ -31,10 +29,10 @@ body {
 .Conteudo{
     position: absolute;
     display: flex;
-    height: 1140px;
-    left: 60px;
+    height: 1120px;
+    left: 61px;
     width: 700px;
-    font-size: 18px;
+    font-size: 15px;
     color: rgb(255, 255, 255);
     
 }
@@ -111,6 +109,7 @@ header {
     color: #162938;
 }
 
+
 main.Cards section.card {
     display: flex;
     flex-direction: column;
@@ -121,6 +120,16 @@ main.Cards section.card {
     border-radius: 8px;
     max-height: 256px;
     margin-left: 32px;
+}
+
+main.Cards{
+    display: flex;
+    height: 300vh;
+    width: 99%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #434343;
 }
 
 main.Cards section.card:first-child{
@@ -173,7 +182,7 @@ main.Cards section.card.agendar{
     box-shadow: 20px 20px 50px -30px #002b44;
 }
 
-.Cards .card.agendar:hover{
+main.Cards .card.agendar:hover{
     box-shadow: 0 10px 15px rgb(126, 141, 141);
     transform: scale(1.02);
 }
