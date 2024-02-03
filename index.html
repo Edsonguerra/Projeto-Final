@@ -4,27 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./public/assets/css/style.css">
-    <title>BG</title>
+    <title>Página Inicial</title>
 </head>
-<body>
-    <header>
-       <h1 class="Hospital">Hospital dos cajueiros</h1>
-   <nav class="icones">
+<body>    
+    <header class="headerContainer">
+       <div class="logoContainer">
+           <h1 class="Hospital">Hospital dos Cajueiros</h1>
+       </div>
+   <nav class="navContainer icones hideComputer">
     <a href="#">Sobre</a>
     <a href="#">Ajuda</a>
     <button class="botaologin">Login</button>
    </nav>  
+   <button id="btnFechar" class="hideMobile">X</button>
+   <div class="menuContainer hide">
+    <nav class="navContainer icones">
+        <a href="#">Sobre</a>
+        <a href="#">Ajuda</a>
+        <button class="botaologin">Login</button>
+       </nav>  
+       <footer class="menuFooter">
+        <h3>Hospital dos Cajueiros</h3>
+       </footer>
+   </div>
     </header>
-    <div class="name">
-        <h2>Seja bem vindo ao site de marcações de consultas online do Hospital dos Cajueiros!</h2>
-    </div>
-    <div class="Conteudo">
-        <h3>Faça a sua marcação de consultas de forma rapida e simples selecionando o tipo de consulta abaixo.</h3>
-    </div>
-    <div class="Tipo">
-        <h4>Tipos de Consultas</h4>
-    </div>
-    <main class="Cards">
+    <main class="mainContainer">
+    <!-- <main class="Cards"> -->
+
+        <div class="name">
+            <h2>Seja bem vindo ao site de marcações de consultas online do Hospital dos Cajueiros!</h2>
+        </div>
+        <div class="Conteudo">
+            <h3>Faça a sua marcação de consultas de forma rapida e simples selecionando o tipo de consulta abaixo.</h3>
+        </div>
+        <div class="Tipo">
+            <h4>Tipos de Consultas</h4>
+        </div>
+    
         <section class="card agendar">
             <div class="icon">
                 <img src="public/assets/css/img/43493.png" alt="Paludismo">
@@ -60,5 +76,9 @@
 </section>
     </main>
    
+    <footer>
+
+   </footer>
+<script src="public/js/index.js"></script>
 </body>
 </html>
