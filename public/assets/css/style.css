@@ -18,14 +18,11 @@
 }
 
 #btnFechar{
-position:fixed;
+position:absolute;
 right:0;
 top:0;
-background-color: white;
+border: none;
 font-weight: bold;
-border: transparent;
-padding: 0.5rem;
-border-radius: 8px;
 margin:1rem;
 z-index: 1000;
 }
@@ -56,7 +53,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: blue;
+    background-color:#5ca5c2;
     color: white;
     z-index: 500;
 }
@@ -161,7 +158,7 @@ body {
 }
 
 
-main.Cards section.card {
+.mainContainer section.card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -173,7 +170,7 @@ main.Cards section.card {
     margin-left: 32px;
 }
 
-main.Cards {
+.mainContainer {
     display: flex;
     height: 300vh;
     width: 99%;
@@ -183,37 +180,37 @@ main.Cards {
     color: #434343;
 }
 
-main.Cards section.card:first-child {
+.mainContainer section.card:first-child {
     margin-left: 0;
 }
 
-main.Cards {
+.mainContainer {
     display: flex;
     padding: 32px;
 }
 
-main.Cards section.card .icon {
+.mainContainer section.card .icon {
     width: 64px;
     height: 64px;
 }
 
-main.Cards section.card img {
+.mainContainer section.card img {
     width: 100%;
 }
 
-main.Cards section.card h3 {
+.mainContainer section.card h3 {
     margin: 16px 0;
 
 }
 
-main.Cards section.card span {
+.mainContainer section.card span {
     font-weight: 300;
     max-width: 240px;
     font-size: 80%;
     margin-bottom: 16px;
 }
 
-main.Cards section.card button {
+.mainContainer section.card button {
     padding: 0.5em 1rem;
     text-transform: uppercase;
     border-radius: 32px;
@@ -225,15 +222,15 @@ main.Cards section.card button {
 
 }
 
-main.Cards section.card.agendar button {
+.mainContainer section.card.agendar button {
     background: linear-gradient(to right, #3a7991, #00c4c4);
 }
 
-main.Cards section.card.agendar {
+.mainContainer section.card.agendar {
     box-shadow: 20px 20px 50px -30px #002b44;
 }
 
-main.Cards .card.agendar:hover {
+.mainContainer .card.agendar:hover {
     box-shadow: 0 10px 15px rgb(126, 141, 141);
     transform: scale(1.02);
 }
@@ -262,4 +259,5 @@ main.Cards .card.agendar:hover {
         background-color: transparent;
         margin-top: 1rem;
     }
+    
 }
