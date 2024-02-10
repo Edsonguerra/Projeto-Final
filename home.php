@@ -10,13 +10,8 @@
 <body>
     <div class="wrapper">
     <nav class="nav">
-<<<<<<< Updated upstream:home.php
         <div class="nav-hospital">
             <p>Hospital Cajueiros</p>
-=======
-        <div class="hospital">
-            <p>Hospital dos Cajueiros</p>
->>>>>>> Stashed changes:index.html
         </div>
         <div class="nav-menu" id="navMenu">
             <ul>
