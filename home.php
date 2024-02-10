@@ -10,10 +10,15 @@
 <body>
     <div class="wrapper">
     <nav class="nav">
+<<<<<<< Updated upstream:home.php
         <div class="nav-hospital">
             <p>Hospital Cajueiros</p>
+=======
+        <div class="hospital">
+            <p>Hospital dos Cajueiros</p>
+>>>>>>> Stashed changes:index.html
         </div>
-        <div class="nav-menu">
+        <div class="nav-menu" id="navMenu">
             <ul>
                 <li><a href="#" class="link active">Acerca</a></li>
                 <li><a href="#" class="link">Contacto</a></li>
@@ -21,26 +26,116 @@
             </ul>
         </div>
         <div class="nav-button">
-             <button class="btn enter-btn" id="LoginBtn">Entrar</button>
-             <button class="btn" id="Registerbtn">Registrar</button>
+             <button class="btn enter-btn" id="LoginBtn" onclick="login()">Entrar</button>
+             <button class="btn" id="Registerbtn" onclick="register()">Inscreva-se</button> </button>
         </div>
         <div class="nav-menu-btn">
-            <i class="bx bx-menu"></i>
+            <i class="bx bx-menu" onclick="myMenufunction()"></i>
         </div>
     </nav>
-    <!---------------------------------------------->
-    <h2>Login</h2>
-    <div class="Nome-palavra-passe">
-        <input type="text" name="" required>
-        <label>Nome</label>
+<!---------------------------------- Form box ---------------------------------------->
+    <div class="form-box"> 
+
+                <!------------------------------ login form --------------------------------------------->
+                  
+                <div class="login-container" id="login">
+                    <div class="top">
+                        <span>Não tem uma conta? <a href="#" onclick="register()">Inscreva-se</a></span>
+                        <header>Login</header>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" class="input-field" placeholder="Digite o seu numero ou email">
+                        <i class="bx bx-user"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" class="input-field" placeholder="Digite a sua palavra-passe">
+                        <i class="bx bx-lock-alt"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="submit" class="submit" value="Entrar">
+                    </div>
+                    <div class="two-col">
+                        <div class="two">
+                            <label><a href="#">Esqueceu a senha?</a></label>
+                        </div>
+                    </div>
+                </div>
+
+        <!------------------------------ registration form --------------------------------------------->
+        <div class="register-container" id="register">
+            <div class="top">
+                <span>Já tens uma conta? <a href="#" onclick="login()">Login</a></span>
+                <header>Inscreva-se</header>
+            </div>
+            <div class="two-forms">
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Digite o primeiro nome">
+                    <i class="bx bx-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Digite o ultimo nome">
+                    <i class="bx bx-user"></i>
+                </div>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="Digite o seu email">
+                <i class="bx bx-envelope"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="Crie uma palavra-passe">
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            <div class="input-box">
+                <input type="submit" class="submit" value="Registrar">
+            </div>
+            <div class="two-col">
+                <div class="two">
+                    <label><a href="#">Termos & condições</a></label>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="Nome-palavra-passe">
-        <input type="text" name="" required>
-        <label>Palavra-passe</label>
-    </div>
-    <p>Ainda não tem uma conta?<a href="#">Criar conta</a></p>
-    <a href="#" class="Botão-do-enter">Entrar</a>
-</form>
+</div>
+
+
+<script>
+
+    function myMenufunction() {
+        var i = document.getElementById("navMenu");
+
+        if(i.className === "nav-menu") {
+            i.className += " responsive"; 
+        } else {
+            i.className = "nav-menu";
+        }
+    }
+
+</script>
+
+<script>
+    var a = document.getElementById("loginBtn");
+    var b = document.getElementById("registerBtn");
+    var x = document.getElementById("login");
+    var y = document.getElementById("register");
+
+    function login() {
+        x.style.left = "4px";
+        y.style.right = "-520px";
+        a.className += " white-btn";
+        b.className = "btn";
+        x.style.opacity = 1;
+        y.style.opacity = 0;
+    }
+
+    function register() {
+        x.style.left = "-510px";
+        y.style.right = "5px";
+        a.className = "btn";
+        b.className += " white-btn";
+        x.style.opacity = 0;
+        y.style.opacity = 1;
+    }
+</script>
     <link rel="stylesheet" href="public/assets/css/style.css">
 </body>
 </html>
