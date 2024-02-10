@@ -11,7 +11,7 @@
     <div class="wrapper">
     <nav class="nav">
         <div class="nav-hospital">
-            <p>Hospital dos Escajueiros</p>
+            <p>Hospital Cajueiros</p>
         </div>
         <div class="nav-menu">
             <ul>
