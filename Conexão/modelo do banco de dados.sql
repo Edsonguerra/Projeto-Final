@@ -23,7 +23,7 @@ CREATE SCHEMA IF NOT EXISTS `site_marcaçao_de_consulta` DEFAULT CHARACTER SET u
 -- Schema new_schema1
 -- -----------------------------------------------------
 CREATE SCHEMA IF NOT EXISTS `new_schema1` ;
-USE `site_marcação_de_consulta` ;
+USE `site_marcaçao_de_consulta` ;
 
 -- -----------------------------------------------------
 -- Table `site_marcaçao_de_consulta`.`Consulta`
@@ -32,13 +32,13 @@ CREATE TABLE IF NOT EXISTS `site_marcaçao_de_consulta`.`Consulta` (
   `id` INT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
   `Tipo` VARCHAR(45) NULL,
-  `id da área` VARCHAR(45) NOT NULL,
+  `id da area` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `site_marcação_de_consulta`.`Consulta_paciente`
+-- Table `site_marcaçao_de_consulta`.`Consulta_paciente`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `site_marcaçao_de_consulta`.`Consulta_paciente` (
   `id` INT NOT NULL AUTO_INCREMENT,
