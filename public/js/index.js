@@ -20,6 +20,7 @@ function login() {
     registerBtn.className = "btn";
     loginContainer.style.opacity = 1;
     registerContainer.style.opacity = 0;
+    color: //#endregion
 }
 
 function register() {
