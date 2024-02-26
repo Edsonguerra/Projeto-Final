@@ -30,6 +30,10 @@ body {
     align-items:center;
 }
 
+.pesquisar-texto::placeholder{
+    color: #fff;
+}
+
 .pesquisar-texto{
     background: none;
     border: 0;
