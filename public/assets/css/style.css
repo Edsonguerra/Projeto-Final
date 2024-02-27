@@ -69,6 +69,47 @@ body {
 .Barra-de-Pesquisa:hover > .pesquisar-texto{
     width: 220px;
 }
+.lista{
+    position: absolute;
+   top: 815px;
+   left: 1130px;
+   display: flex;
+   flex-flow: column;
+   align-items: center;
+   justify-content: center;
+
+}
+
+#lista-consultas{
+    display: block;
+    width: 300px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+}
+
+#lista-consultas li a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 18px;
+    border: 1px solid #00aacb;
+    border-radius: 10px;
+    background: #ffffff;
+    padding: 3px;
+
+}
+
+#lista-consultas li a:hover{
+    background: #eee;
+
+}
+
+.Tipo-consulta{
+    margin-left: 15px;
+}
+
 .name{
     position: absolute;
     font-size: 25px;
