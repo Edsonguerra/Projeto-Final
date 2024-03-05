@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./public/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>BG</title>
 </head>
 <body>
@@ -21,56 +22,52 @@
     <div class="Conteudo">
         <h3>Faça a sua marcação de consultas de forma rapida e simples selecionando o tipo <p> de consulta abaixo.</h3>
     </div>
-    <div class="Tipo">
-        <h4>Tipos de Consultas</h4>
-    </div>
-    <div class="Barra-de-Pesquisa">
-        <input type="texto" class="pesquisar-texto" placeholder="Pesquisar...">
-        <a class="pesquisar-circular">
-            <img class="loupe-branco" src="public/assets/css/img/loupe-branco.svg" alt="" width="25px" height="25px">
-        </a>
-    </div>
-    <div class="lista">
-        <ul id="lista-consultas">
-            <li>
-                <a href="#">
-                    <img width="40" src="public/assets/css/img/43493.png">
-                    <span class="Tipo-consulta">Paludismo</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img width="40" src="public/assets/css/img/43493.png">
-                    <span class="Tipo-consulta">Diabete</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img width="40" src="public/assets/css/img/43493.png">
-                    <span class="Tipo-consulta">Covid-19</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img width="40" src="public/assets/css/img/43493.png">
-                    <span class="Tipo-consulta">Malária</span>
-                </a>
-            </li>
-        </ul>
-    </div>
     <div class="Selecionar">
         <div class="selecionar-botao">
             <span class="texto">Selecionar Consulta</span>
-            <span class="down-arrow">&blacktriangledown;</span>
+            <span class="down-arrow">
+                <i class="fa-solid fa-chevron-down"></i>
+            </span> 
         </div>
 
         <ul class="lista-consulta">
             <li class="lista">
+                <img class="img" width="35 " src="public/assets/css/img/43493.png" alt="">
                 <span class="checkbox">
-                    <i class="fa-solid fa-check"></i>
+                    <i class="fa-solid fa-check check-icon"></i>
                 </span>
+                <span class="primeiro-lista">Cardiologia</span>
+            </li>
+            <li class="lista">
+                <img class="img" width="35" src="public/assets/css/img/43493.png" alt="">
+                <span class="checkbox">
+                    <i class="fa-solid fa-check check-icon"></i>
+                </span>
+                <span class="primeiro-lista">Paludismo</span>
+            </li>
+            <li class="lista">
+                <img class="img" width="35" src="public/assets/css/img/43493.png" alt="">
+                <span class="checkbox">
+                    <i class="fa-solid fa-check check-icon"></i>
+                </span>
+                <span class="primeiro-lista">Paludismo</span>
+            </li>
+            <li class="lista">
+                <img class="img" width="35" src="public/assets/css/img/43493.png" alt="">
+                <span class="checkbox">
+                    <i class="fa-solid fa-check check-icon"></i>
+                </span>
+                <span class="primeiro-lista">Paludismo</span>
+            </li>
+            <li class="lista">
+                <img class="img" width="35" src="public/assets/css/img/43493.png" alt="">
+                <span class="checkbox">
+                    <i class="fa-solid fa-check check-icon"></i>
+                </span>
+                <span class="primeiro-lista">Paludismo</span>
             </li>
         </ul>
     </div>
+    <script src="public/js/index.js"></script>
 </body>
 </html>
