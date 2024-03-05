@@ -205,10 +205,54 @@ header {
     background: #eee;
 
 }
-
 .Tipo-consulta{
     margin-left: 15px;
 }
+
+
+
+
+
+
+
+.Selecionar{
+    position: relative;
+    left: -35px;
+    max-width: 320px;
+    width: 100%;
+    border-radius: 8px;
+    margin: 670px auto 30px;
+ 
+}
+
+.selecionar-botao{
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #008791;
+    box-shadow: 0 5px 10px rgb(126, 141, 141);
+}
+
+.selecionar-botao .texto{
+    font-size: 17px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.selecionar-botao .down-arrow{
+    display: flex;
+    color: #fff;
+    font-size: 30px;
+}
+
+
+
+
+
 
 main.Cards section.card.agendar button {
     background: linear-gradient(to right, #3a7991, #00c4c4);
