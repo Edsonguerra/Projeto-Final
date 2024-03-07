@@ -148,9 +148,12 @@ header {
     background: #fff;
     align-items: center;
     justify-content: center;
-
+    transition: 0.3s;
 }
 
+.selecionar-botao.open .arrow-dwn{
+    transform: rotate(-180deg);
+}
 
 .lista-consulta{
     position: relative;
@@ -159,6 +162,13 @@ header {
     padding: 9px;
     background-color: #ffffff;
     box-shadow: 0 5px 10px rgb(27, 97, 97);
+    display: none;
+
+}
+
+
+.selecionar-botao.open ~ .lista-consulta{
+    display: block;
 
 }
 
@@ -192,7 +202,7 @@ header {
     left: 10px;
 }
 
-.lista .checkbox{
+.lista .checked{
     position: absolute;
     display: flex;
     align-items: center;
@@ -207,9 +217,16 @@ header {
 }
 
 
-.checkbox .check-icon{
+.checked .check-icon{
     font-size: 11px;
     transform: scale(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.item.checked .check-icon{
+    transform: scale(1);
+
+
 }
 
 
