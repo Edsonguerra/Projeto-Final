@@ -223,11 +223,6 @@ header {
     transition: all 0.3s ease-in-out;
 }
 
-.item.checked .check-icon{
-    transform: scale(1);
-
-
-}
 
 
 main.Cards section.card.agendar button {
