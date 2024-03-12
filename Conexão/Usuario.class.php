@@ -1,15 +1,16 @@
 <?php
-class Usuario{
+$localhost="localhost";
+$user="root"
+$passw="";
+$bancodedados="cddstro";
+global $pdo;
 
+//orientada a objecto
+$pdo=new PDO("MSQL:dbname=".$bancodedados.";host=".$localhost,$user,$passw) ;
+$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-    public function loginForm($email,$senha){
-        global $pdo;
+$SQL=$pdo->query("SELECT*FROM user");
+$sql->execute();
 
-        $sql ="SELECT* FROM usuario WHERE email=:email AND senha =:senha";
-
-        $sql= $pdo->bindvalue("email",$email);
-        $sql= $pdo->bindvalue("senha",$senha);
-        $sql->execute();
-
-    }
-}
+echo $sql->rowcount();   
+ 
