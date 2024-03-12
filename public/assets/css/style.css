@@ -225,10 +225,7 @@ header {
 }
 
 
-.item.checked .check-icon{
-    transform: scale(1);
-    
-}
+
 
 
 
@@ -291,6 +288,7 @@ header {
     box-shadow: 0 5px 10px rgb(27, 97, 97);
 
 
+
 }
 
 
@@ -342,8 +340,6 @@ header {
     border: 1.5px solid #c0c0c0;
     transition: all 0.3s ease-in-out;
 }
-
-
 
 
 
