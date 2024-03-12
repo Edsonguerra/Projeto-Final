@@ -111,11 +111,12 @@ header {
 
 
 .Selecionar{
-    position: relative;
+    position: absolute;
     max-width: 320px;
     width: 100%;
     border-radius: 8px;
-    margin: 620px auto 30px;
+    top: 615px;   
+    left: 310px;
     
  
 }
@@ -151,7 +152,7 @@ header {
     transition: 0.3s;
 }
 
-.selecionar-botao.open .arrow-dwn{
+.selecionar-botao.open .down-arrow{
     transform: rotate(-180deg);
 }
 
@@ -222,6 +223,139 @@ header {
     transform: scale(0);
     transition: all 0.3s ease-in-out;
 }
+
+
+.item.checked .check-icon{
+    transform: scale(1);
+    
+}
+
+
+
+
+
+
+
+
+.Selecionar2{
+    position: absolute;
+    max-width: 320px;
+    width: 100%;
+    border-radius: 8px;
+    top: 615px;    
+    left: 660px;
+ 
+}
+
+.selecionar-botao2{
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #008791;
+    box-shadow: 0 5px 10px rgb(126, 141, 141);
+}
+
+.selecionar-botao2 .texto2{
+    font-size: 17px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.selecionar-botao2 .down-arrow{
+    display: flex;
+    height: 21px;
+    width: 21px;
+    border-radius: 50%;
+    color: #008791;
+    font-size: 14px;
+    background: #fff;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.selecionar-botao2.open .down-arrow{
+    transform: rotate(-180deg);
+}
+
+.lista-consulta2{
+    position: relative;
+    margin-top: 15px;
+    border-radius: 8px;
+    padding: 9px;
+    background-color: #ffffff;
+    box-shadow: 0 5px 10px rgb(27, 97, 97);
+
+
+}
+
+
+.selecionar-botao2.open ~ .lista-consulta2{
+    display: block;
+
+}
+
+
+.lista-consulta2 .lista2{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    height: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 0 15px;
+    border-radius: 8px;
+}
+
+.lista-consulta2 .lista2:hover{
+    background-color: #e7edfe;
+
+}
+
+.lista2 .primeiro-lista2{
+    position: absolute;
+    font-size: 16px;
+    left: 52px;
+    font-weight: 400px;
+    color: #002033;
+}
+
+.lista2 .img2{
+    position: absolute;
+    left: 10px;
+}
+
+.lista2 .checked{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 285px;
+    height: 16px;
+    width: 16px;
+    border-radius: 4px;
+    margin-right: 12px;
+    border: 1.5px solid #c0c0c0;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
