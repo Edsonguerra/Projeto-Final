@@ -1,10 +1,18 @@
 <?php
-$localhost="localhost";
+$host="localhost";
 $user="root";
-$passw="";
+$password="";
 $bancodedados ="caddstro";
 
-$conecta = mysqli_connect($localhost,$user,$passw,$bancodedados);
+$conexao = mysqli_connect($host,$user,$passw,$bancodedados);
 
-$sql= mysqli_query($conecta,"SELECT * FROM user");
-echo var_dump($sql);
+if($conexao->connect_error){
+    die("Erro na conexão".$conexao->connect_error);
+}else{
+    echo "<h1>Conexão Feita com sucersso!</h1>";
+}
+
+$sql="SELECT * FROM user";
+$usuarios=$conexao->query($sql);
+
+echo var_dump($usuarios);
