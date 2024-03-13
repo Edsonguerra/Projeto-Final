@@ -224,6 +224,9 @@ header {
     transition: all 0.3s ease-in-out;
 }
 
+.lista.checked .check-icon{
+    transform: scale(1);
+}
 
 
 
