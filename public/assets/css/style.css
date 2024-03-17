@@ -13,6 +13,7 @@ body {
     background-size: 100%;
 }
 
+
 header {
     position: absolute;
     top: 0;
@@ -243,7 +244,7 @@ header {
     width: 100%;
     border-radius: 8px;
     top: 615px;    
-    left: 660px;
+    left: 700px;
  
 }
 
@@ -344,6 +345,65 @@ header {
     transition: all 0.3s ease-in-out;
 }
 
+
+.Conteudos-de-baixo{
+    position: absolute;
+    width: 100%;
+    top: 1000px;
+}
+.Hosp{
+    position: absolute;
+    font-size: 25px;
+    top: 80px;
+    left: 350px;
+    display: flex;
+    color:#ffffff;
+}
+
+.Infor{
+    position: absolute;
+    font-size: 20px;
+    left: 740px;
+    top: 45px;
+    color: #fff;
+}
+
+.Sobre{
+    position: absolute;
+    font-size: 15px;
+    left: 740px;
+    top: 70px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.Contacto{
+    position: absolute;
+    font-size: 15px;
+    left: 740px;
+    top: 90px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.Termos{
+    position: absolute;
+    font-size: 15px;
+    left: 740px;
+    top: 110px;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+.Politica{
+    position: absolute;
+    font-size: 15px;
+    left: 740px;
+    top: 130px;
+    color: #fff;
+    cursor: pointer;
+}
 
 
 
