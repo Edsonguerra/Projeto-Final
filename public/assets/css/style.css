@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=inter:wght@100;200;300;400;500;600&display=swap');
 
 *{
     margin: 0;
@@ -11,6 +10,10 @@ body {
     background-image: url(img/ESCOLA.jpg);
     background-repeat: no-repeat; 
     background-size: 100%;
+}
+
+h1{
+    font-family: "Doppio One", sans-serif;
 }
 
 
@@ -94,7 +97,12 @@ header {
     color: #fff;
 }
 
+h2{
+    font-family: "Doppio One", sans-serif;
+}
+
 .Conteudo{
+   
     position: absolute;
     display: flex;
     top: 335px;
@@ -102,6 +110,10 @@ header {
     font-size: 15px;
     color: rgb(255, 255, 255);
     
+}
+
+h3{
+    font-family: "Quattrocento", serif;
 }
 
 
@@ -352,6 +364,7 @@ header {
     top: 1000px;
 }
 .Hosp{
+    font-family: "Doppio One", sans-serif;
     position: absolute;
     font-size: 25px;
     top: 80px;
@@ -360,7 +373,9 @@ header {
     color:#ffffff;
 }
 
+
 .Infor{
+    font-family: "Quattrocento", serif;
     position: absolute;
     font-size: 20px;
     left: 740px;
@@ -369,6 +384,7 @@ header {
 }
 
 .Sobre{
+    font-family: "Glegoo", serif;
     position: absolute;
     font-size: 15px;
     left: 740px;
@@ -378,6 +394,7 @@ header {
 }
 
 .Contacto{
+    font-family: "Glegoo", serif;
     position: absolute;
     font-size: 15px;
     left: 740px;
@@ -387,6 +404,7 @@ header {
 }
 
 .Termos{
+    font-family: "Glegoo", serif;
     position: absolute;
     font-size: 15px;
     left: 740px;
@@ -397,6 +415,7 @@ header {
 
 
 .Politica{
+    font-family: "Glegoo", serif;
     position: absolute;
     font-size: 15px;
     left: 740px;
