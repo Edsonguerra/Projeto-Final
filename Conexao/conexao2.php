@@ -5,7 +5,7 @@ $passw="";
 $bancodedados="cddstro";
 global $pdo;
 
-//orientada a objecto
+
 $pdo=new PDO("MSQL:dbname=".$bancodedados.";host=".$localhost,$user,$passw) ;
 $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
