@@ -15,7 +15,7 @@ bfunction enviarSMS() {
     document.getElementById("codigo-verificacao").style.display = "block";
   
   
-  function verificarCodigo() 
+  function verificarCodigo()
     // Obter o código digitado pelo usuário
     var codigoDigitado = document.getElementById("codigo-digitado").value;
   
