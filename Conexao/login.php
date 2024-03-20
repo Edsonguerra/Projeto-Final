@@ -1,12 +1,12 @@
 <?php
 //configurar as credencias
-$host="localhost";
+$localhost="localhost";
 $username="usuario";
-$password="senha" ;
-$database="cajueiros";
+$password="" ;
+$database="cddstro";
 
 //estabelcer a conexao
-$conn= new mysqli ($host, $username, $password, $database);
+$conn= new mysqli ($localhost, $username, $password, $database);
 // Verificar a conexão
 
 if ($conn-> connect_error) {
@@ -26,7 +26,7 @@ $query = "SELECT * FROM users";
 $result = mysqli_query($db, $query);
 
 // Exibir os resultados
-while ($row = mysqli_fetch_assoc($result)) {
+while ($row = mysqli_fetch_assoc($result)) 
   echo "<p>Nome: " . $row["name"] . "</p>";
   echo "<p>Email: " . $row["email"] . "</p>";
 }
