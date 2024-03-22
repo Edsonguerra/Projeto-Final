@@ -242,6 +242,31 @@ h3{
 }
 
 
+.button{
+    
+    width: 100%;
+    margin-top: 0.1rem;
+    border: none;
+    background-color: #008791;
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: #00747c;
+}
+
+.button{
+    text-decoration: none;
+    font-size: 1.0rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+
+
+
 
 
 
@@ -357,6 +382,36 @@ h3{
     transition: all 0.3s ease-in-out;
 }
 
+.button2{
+    
+    width: 100%;
+    margin-top: 0.1rem;
+    border: none;
+    background-color: #008791;
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button2:hover{
+    background-color: #00747c;
+}
+
+.button2{
+    text-decoration: none;
+    font-size: 1.0rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -366,7 +421,7 @@ h3{
 .Conteudos-de-baixo{
     position: absolute;
     width: 100%;
-    top: 1000px;
+    top: 1020px;
 }
 .Hosp{
     font-family: "Doppio One", sans-serif;
