@@ -8,7 +8,6 @@ selectBtn.addEventListener("click", () => {
 
 itemsLista.forEach (itemLista => {
     itemLista.addEventListener("click", () => {
-        itemLista.classList.toggle("checked");
+      itemLista.classList.toggle("checked");
     });
 });
-
