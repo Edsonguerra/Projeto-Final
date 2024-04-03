@@ -100,8 +100,7 @@ body {
     align-items: center;
     justify-content: center;
     width: 512px;
-    height: 800px;
-    top: -260px;
+    height: 420px;
     overflow: hidden;
     z-index: 2;
 }
