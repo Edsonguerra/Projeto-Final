@@ -107,7 +107,7 @@ body {
 
 .login-container {
     position: absolute;
-    left: 600px;
+    left: 4px;
     width: 500px;
     display: flex;
     flex-direction: column;
@@ -116,7 +116,7 @@ body {
 
 .register-container {
     position: absolute;
-    right: -520;
+    right: -520px;
     width: 500px;
     display: flex;
     flex-direction: column;
