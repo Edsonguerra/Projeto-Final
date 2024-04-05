@@ -33,17 +33,17 @@
     <div class="form-box">
 
         <!------------------------------------- login box   -------------------------------------------->
-        <form action="login.php" method="get" class="login-container" id="login">
+        <form action="login.php" method="POST" class="login-container" id="login">
             <div class="top">
                  <span>Não tem uma conta? <a href="#" onclick="register()">Inscreva-se</a></span>
                  <header>Login</header>
             </div>
             <div class="input-box">
-                <input type="text" class="input-field" placeholder="Digite o seu numero" name="numero">
+                <input type="text" class="input-field" placeholder="Digite o seu email" name="email">
                 <i class="bx bx-user"></i>
             </div>
             <div class="input-box">
-                <input type="password" class="input-field" placeholder="Digite a tua palavra-passe" name="password">
+                <input type="password" class="input-field" placeholder="Digite a tua palavra-passe" name="senha">
                 <i class="bx bx-lock-alt"></i>
             </div>
             <div class="input-box">
@@ -57,27 +57,27 @@
         </form>
     
         <!------------------------------------- Register box   -------------------------------------------->
-        <form action="register.php" method="get" class="register-container" id="register">
+        <form action="register.php" method="POST" class="register-container" id="register">
             <div class="top">
                 <span>Tens uma conta? <a href="#" onclick="login()">Entrar</a></span>
                 <header>Inscreva-se</header>
             </div>
             <div class="two-forms">
                 <div class="input-box">
-                    <input type="text" class="input-field" placeholder="Digite o primeiro nome" name="nome" id="idnome">
+                    <input type="text" class="input-field" placeholder="Digite o primeiro nome" name="nome">
                     <i class="bx bx-user"></i>
                 </div>
                 <div class="input-box">
-                    <input type="text" class="input-field" placeholder="Digite o ultimo nome" name="ultimonome" id="idultimonome">
+                    <input type="text" class="input-field" placeholder="Digite o ultimo nome" name="ultimo_nome">
                     <i class="bx bx-user"></i>
                 </div>
             </div>
             <div class="input-box">
-                <input type="text" class="input-field" placeholder="Digite o seu Email" name="email" id="idemail">
+                <input type="text" class="input-field" placeholder="Digite o seu Email" name="email">
                 <i class="bx bx-envelope"></i>
             </div>
             <div class="input-box">
-                <input type="password" class="input-field" placeholder="Crie uma palavra-passe" name="password" id="idpassword">
+                <input type="password" class="input-field" placeholder="Crie uma palavra-passe" name="senha">
                 <i class="bx bx-lock-alt"></i>
             </div>
             <div class="input-box">
