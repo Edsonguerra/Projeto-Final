@@ -49,6 +49,8 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
         }
     }   
 
-} 
+} else {
+    echo "Erro: Algum campo não foi preenchido.";
+  }
 
 ?>
