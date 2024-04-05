@@ -7,7 +7,7 @@ $bancodedados ="site_marcação_de_consulta";
 $mysqli = new  mysqli($host, $usuarios, $password, $bancodedados);
 
 if($mysqli->error) {
-    die("Falha aao conectar ao banco de dados: " . $mysql->error );
+    die("Falha ao conectar ao banco de dados: " . $mysql->error );
 }
 
 ?>
