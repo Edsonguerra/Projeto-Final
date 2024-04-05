@@ -1,4 +1,9 @@
 <?php
+$host="localhost";
+$user="root";
+$password="";
+$bancodedados ="site_marcação_de_consulta";
+
 if (isset($_POST['email']) || isset($_POST['senha'])) {
     if (strlen($_POST['email']) == 0) {
         echo "Digite o seu email";
