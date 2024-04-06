@@ -30,6 +30,12 @@
     </nav>
 
 <!------------------------------------- Form box   -------------------------------------------->
+<?php
+
+    $alertalogin = strlen($alertalogin) ? '<div class="alert alert-danger">'.$alertalogin.'</div>' : '';
+    $alertaregister = strlen($alertaregister) ? '<div class="alert alert-danger">'.$alertaregister.'</div>' : '';
+
+?>
     <div class="form-box">
 
         <!------------------------------------- login box   -------------------------------------------->
@@ -37,6 +43,7 @@
             <div class="top">
                  <span>Não tem uma conta? <a href="#" onclick="register()">Inscreva-se</a></span>
                  <header>Login</header>
+                 <?=$alertalogin?>
             </div>
             <div class="input-box">
                 <input type="text" class="input-field" placeholder="Digite o seu email" name="email">
@@ -61,6 +68,7 @@
             <div class="top">
                 <span>Tens uma conta? <a href="#" onclick="login()">Entrar</a></span>
                 <header>Inscreva-se</header>
+                <?=$alertalogin?>
             </div>
             <div class="two-forms">
                 <div class="input-box">
