@@ -1,4 +1,8 @@
 <?php
+$host="localhost";
+$user="root";
+$password="";
+$bancodedados ="site_marcação_de_consulta";
 
 if(isset($_POST['submit'])){
     print_r('Nome: ' . $_POST['nome']);
