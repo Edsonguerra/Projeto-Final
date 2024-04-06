@@ -11,10 +11,6 @@ if ($mysqli->connect_errno) {
     exit();
 }
 
-//Mensagem de alerta dos formularios
-$alertalogin = '';
-$alertaregister = '';
-
 if (isset($_POST['email']) || isset($_POST['senha'])) {
     if (strlen($_POST['email']) == 0) {
         echo "Digite o seu email";
@@ -24,7 +20,6 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
 
         if ($mysqli && $mysqli->connect_errno === 0) {
             $email = $mysqli->real_escape_string($_POST['email']);
-            $alertalogin = 'Email ou senha invalidos';
             $senha = $mysqli->real_escape_string($_POST['senha']);
         } else {
             echo "Falha ao conectar ao MySQL";
