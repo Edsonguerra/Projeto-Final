@@ -45,9 +45,12 @@ try {
       } else {
         echo "Ação inválida. Utilize o botão 'Pesquisar' para selecionar consultas.";
       }
-    } else {
-      echo "Consulta inválida";
-    }
+      if (isset($_POST['consulta']) && !empty($_POST['consulta'])) {
+        // Código para processar a consulta
+      } else {
+        echo "Consulta inválida";
+      }
+      
   } elseif (isset($_POST['primeiro-lista'])) {
  
     $consulta = $_POST['primeiro-lista'];
