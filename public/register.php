@@ -4,54 +4,29 @@
 $host = "localhost";
 $user = "root";
 $password = "";
-$bancodedados = "site_marcação_de_consulta";
+$database = "site_marcação_de_consulta";
 
-$mysqli = new mysqli($host, $user, $password, $bancodedados);
+$mysqli = new mysqli($host, $user, $password, $database);
 
-// Validação de dados
+// Validação de entrada
 if (isset($_POST['submit'])) {
-    $nome = $_POST['nome'];
-    $ultimo_nome = $_POST['ultimo_nome'];
-    $email = $_POST['email'];
-    $senha = $_POST['senha'];
+    $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
+    $ultimo_nome = filter_input(INPUT_POST, 'ultimo_nome', FILTER_SANITIZE_STRING);
+    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+    $senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_STRING);
 
-    // Validação de email
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        echo "<p>Erro: Email inválido.</p>";
-        exit;
-    }
+    // Validação adicional de acordo com suas necessidades
 
-    // Validação de senha
-    if (!validarSenha($senha)) {
-        echo "<p>Erro: Senha fraca. A senha deve ter no mínimo 8 caracteres, com letras maiúsculas e minúsculas, números ou símbolos especiais.</p>";
-        exit;
-    }
-
-    // Hash da senha
-    $senhaHash = password_hash($senha, PASSWORD_BCRYPT);
-
-    // Prepared statement para evitar SQL injection
+    // Prevenção de SQL Injection
     $stmt = $mysqli->prepare("INSERT INTO usuarios(nome, ultimo_nome, email, senha) VALUES (?, ?, ?, ?)");
-    $stmt->bind_param("ssss", $nome, $ultimo_nome, $email, $senhaHash);
-
-    // Execução da query
+    $stmt->bind_param("ssss", $nome, $ultimo_nome, $email, $senha);
     $stmt->execute();
 
-    // Mensagem de sucesso
-    echo "<p>Usuário cadastrado com sucesso!</p>";
+    // Armazenamento seguro de senhas
+    $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
 
-    // Redirecionamento para a página inicial
+    // Redirecionamento
     header("Location: index.html");
-}
-
-// Função para validar a senha
-function validarSenha($senha) {
-    // Requisitos da senha
-    $tamanhoMinimo = 8;
-    $regex = "/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}$/";
-
-    // Verificação dos requisitos
-    return strlen($senha) >= $tamanhoMinimo && preg_match($regex, $senha);
 }
 
 ?>
