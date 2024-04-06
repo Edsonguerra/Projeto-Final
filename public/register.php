@@ -1,32 +1,29 @@
 <?php
+$host="localhost";
+$user="root";
+$password="";
+$bancodedados ="site_marcação_de_consulta";
 
-// Conexão ao banco de dados
-$host = "localhost";
-$user = "root";
-$password = "";
-$database = "site_marcação_de_consulta";
 
-$mysqli = new mysqli($host, $user, $password, $database);
-
-// Validação de entrada
-if (isset($_POST['submit'])) {
-    $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
-    $ultimo_nome = filter_input(INPUT_POST, 'ultimo_nome', FILTER_SANITIZE_STRING);
-    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
-    $senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_STRING);
-
-    // Validação adicional de acordo com suas necessidades
-
-    // Prevenção de SQL Injection
-    $stmt = $mysqli->prepare("INSERT INTO usuarios(nome, ultimo_nome, email, senha) VALUES (?, ?, ?, ?)");
-    $stmt->bind_param("ssss", $nome, $ultimo_nome, $email, $senha);
-    $stmt->execute();
-
-    // Armazenamento seguro de senhas
-    $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
-
-    // Redirecionamento
-    header("Location: index.html");
+if(isset($_POST['submit'])){
+    print_r('Nome: ' . $_POST['nome']);
+    print_r('<br>');
+    print_r('Ultimo nome: ' . $_POST['ultimo_nome']);
+    print_r('<br>');
+    print_r('Email: ' . $_POST['email']);
+    print_r('<br>');
+    print_r('Senha: ' . $_POST['senha']);
 }
+
+    include_once('conexão.php');
+
+    $nome = $_POST['nome'];
+    $ultimo_nome = $_POST['ultimo_nome'];
+    $email = $_POST['email'];
+    $senha = $_POST['senha'];
+
+    $result = mysqli_query($mysqli, "INSERT INTO usuarios(nome,ultimo_nome,email,senha) VALUES ('$nome','$ultimo_nome','$email','$senha')"); 
+
+    header("Location: index.html");
 
 ?>
