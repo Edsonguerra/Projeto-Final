@@ -10,7 +10,7 @@ include_once('conexao.php');
   $conn = new mysqli($host, $user, $password, $bancodedados);
 
   // Verifica se uma consulta foi selecionada
-if (isset($_POST['consulta'])) {
+  if (isset($_POST['consulta']) && !empty($_POST['consulta'])) {
   $consultaSelecionada = $_POST['consulta'];
 
   // Simula o processamento da seleção (substitua pela sua lógica real)
