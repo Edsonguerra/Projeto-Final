@@ -6,7 +6,7 @@ $dbname = "site_marcação_de_consulta";
 
 try {
 
-  $conn = mysqli_connect($servername, $username, $password, $dbname);
+  $mysqli = new  mysqli($host, $user, $password, $bancodedados);
 
 
   if (isset($_POST['consulta'])) {
