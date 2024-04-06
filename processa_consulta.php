@@ -8,7 +8,7 @@ include_once('conexao.php');
 
 try {
 
-  $mysqli = new  mysqli($host, $user, $password, $bancodedados);
+  $conn = new mysqli($host, $user, $password, $bancodedados);
 
 
   if (isset($_POST['consulta'])) {
@@ -16,14 +16,14 @@ try {
 
 
     $consultas = array(
-      "Consulta de Dermatologia",
-      "Consulta de Pediatria",
-      "Consulta de Hematologia",
-      "Consulta de Ginecologia",
-      "Consulta de Estomatologia"
+      "Consulta_de_Dermatologia",
+      "Consulta_de_Pediatria",
+      "Consulta_de_Hematologia",
+      "Consulta_de_Ginecologia",
+      "Consulta_de_Estomatologia"
     );
 
-    if (in_array($consulta, $consultas)) {
+    if (in_array($Consulta_de_Dermatologia, $Consulta_de_Pediatria, $Consulta_de_Hematologia, $Consulta_de_Ginecologia, $Consulta_de_Estomatologia)); {
 
     
       if (isset($_POST['pesquisar'])) {
@@ -46,7 +46,7 @@ try {
         echo "Ação inválida. Utilize o botão 'Pesquisar' para selecionar consultas.";
       }
     } else {
-      echo "Consulta inválida.";
+      echo "Consulta inválida."; 
     }
   } elseif (isset($_POST['primeiro-lista'])) {
  
