@@ -1,13 +1,13 @@
 const selectBtn = document.querySelector(".selecionar-botao"),
-    itemsLista = document.querySelector(".lista");
+    items = document.querySelectorAll(".lista");
 
 
 selectBtn.addEventListener("click", () => {
     selectBtn.classList.toggle("open");
-})
-
-itemsLista.forEach (itemLista => {
-    itemLista.addEventListener("click", () => {
-      itemLista.classList.toggle("checked");
-    });
 });
+
+items.forEach(item => {
+    item.addEventListener("click", () => {
+        item.classList.toggle("checked");
+    })
+})
