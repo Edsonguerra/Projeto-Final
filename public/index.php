@@ -28,7 +28,9 @@
             <i class="bx bx-menu" onclick="mymenuFunction()"></i>
         </div>
     </nav>
-
+        <div class="erro-login">
+            <?php echo $msgErro; ?>
+        </div>
 <!------------------------------------- Form box   -------------------------------------------->
     <div class="form-box">
 
