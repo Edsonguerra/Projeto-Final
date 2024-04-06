@@ -50,10 +50,20 @@ try {
       } else {
         echo "Consulta inválida";
       }
-      
-  } elseif (isset($_POST['primeiro-lista'])) {
- 
-    $consulta = $_POST['primeiro-lista'];
+
+  } 
+
+  if (isset($_POST['consulta']) && !empty($_POST['consulta'])) {
+    // Código para processar a consulta
+  } else {
+    echo "Consulta inválida";
+  }
+  
+  if (isset($_POST['primeiro-lista'])) {
+    // Código para criar a consulta
+  } else {
+    echo "Nenhuma consulta selecionada.";
+  }
 
     $sql = "INSERT INTO consultas (nome) VALUES (?)";
     $stmt = $conn->prepare($sql);
