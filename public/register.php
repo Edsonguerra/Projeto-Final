@@ -4,7 +4,6 @@ $user="root";
 $password="";
 $bancodedados ="site_marcação_de_consulta";
 
-$mysqli = new mysqli($host, $user, $password, $bancodedados);
 
 if(isset($_POST['submit'])){
     print_r('Nome: ' . $_POST['nome']);
