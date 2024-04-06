@@ -44,8 +44,10 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
 
             header("Location: painel.php");
 
+        } if($quantidade == 1) {
+            // ... (lógica de login bem-sucedido)
         } else {
-            $msgErro = "Falha ao entrar! E-mail ou Senha incorretos";
+            $_SESSION['msgErro'] = "Falha ao entrar! E-mail ou Senha incorretos";
         }
     }   
 
