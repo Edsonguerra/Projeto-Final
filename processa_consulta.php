@@ -27,7 +27,7 @@ try {
     "Consulta_de_Estomatologia"
   );
 
-  if (!in_array($consulta, $consultas)) {
+  if (!in_array($Consulta_de_Dermatologia, $Consulta_de_Pediatria, $Consulta_de_Hematologia, $Consulta_de_Ginecologia, $Consulta_de_Estomatologia)) {
     echo "Erro: Consulta inválida.";
     exit;
   }
