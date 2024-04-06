@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "site_marcação_de_consulta";
+$dbname = "consultas";
 
 include_once('conexao.php');
 
