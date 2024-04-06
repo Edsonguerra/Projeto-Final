@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "cadastro";
+$dbname = "site_marcação_de_consulta";
 
 try {
 
