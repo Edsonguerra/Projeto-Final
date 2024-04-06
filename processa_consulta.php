@@ -4,6 +4,8 @@ $username = "root";
 $password = "";
 $dbname = "site_marcação_de_consulta";
 
+include_once('conexao.php');
+
 try {
 
   $mysqli = new  mysqli($host, $user, $password, $bancodedados);
