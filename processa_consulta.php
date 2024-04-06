@@ -67,7 +67,19 @@ try {
 
     $sql = "INSERT INTO consultas (nome) VALUES (?)";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("s", $consulta);
+    $stmt = $conn->prepare("SELECT * FROM consultas WHERE nome = ?");
+
+    if ($stmt) {
+      $stmt->bind_param("s", $consulta);
+      $stmt->execute();
+    
+      // ...
+    
+      $stmt->close();
+    } else {
+      echo "Erro ao preparar a consulta.";
+    }
+    
     $stmt->execute();
 
     if ($stmt->affected_rows > 0) {
