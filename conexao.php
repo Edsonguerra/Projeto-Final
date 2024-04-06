@@ -2,7 +2,7 @@
 $host="localhost";
 $user="root";
 $password="";
-$bancodedados ="consultas";
+$bancodedados ="site_marcação_de_consulta";
 
 $mysqli = new  mysqli($host, $user, $password, $bancodedados);
 
