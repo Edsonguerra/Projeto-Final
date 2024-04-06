@@ -28,21 +28,6 @@
             <i class="bx bx-menu" onclick="mymenuFunction()"></i>
         </div>
     </nav>
-
-
-    <?php
-        session_start();
-
-        if(isset($_SESSION['msgErro'])) {
-            $msgErro = $_SESSION['msgErro'];
-            unset($_SESSION['msgErro']); // Limpe a variável de sessão após o uso
-        }
-    ?>
-    
-
-<div class="erro-login">
-    <?php echo isset($msgErro) ? $msgErro : ''; ?>
-</div>
 <!------------------------------------- Form box   -------------------------------------------->
     <div class="form-box">
 
