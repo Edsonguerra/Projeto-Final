@@ -6,7 +6,7 @@ $bancodedados = "site_marcação_de_consulta";
 
 
 // Conectar ao banco de dados
-$conexao = mysqli_connect($host, $usuario, $senha, $banco) or die("Erro ao conectar ao banco de dados!");
+$conexao = mysqli_connect($host, $user, $password, $bancodedados) or die("Erro ao conectar ao banco de dados!");
 
 // Extrair o tipo de consulta selecionado
 $tipoConsulta = $_POST['Consulta_']; // Substitua "_" pelo nome específico da consulta (ex: Consulta_Dermatologia)
