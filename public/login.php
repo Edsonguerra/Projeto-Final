@@ -44,8 +44,27 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
 
             header("Location: painel.php");
 
-        } else {
-            echo "Falha ao entrar! E-mail ou Senha incorretos";
+            $email = null;
+            $email_erro = null;
+            $senha = null;
+            $senha_erro2 = null;
+            $sucesso = null;
+
+
+
+        } if(isset($_POST['entrar'])){
+            $email = $_POST['email'];
+            $senha = $_POST['senha'];
+
+            if(empty(trim($email))){
+                 $email_erro = "Digite o Email";
+            }else{
+
+            }if(empty(trim($senha))){
+                 $senha_erro2 = "Digite a sua senha";
+            }else{
+                 $sucesso = "Obrigado";
+            }
         }
     }   
 

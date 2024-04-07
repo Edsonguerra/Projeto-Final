@@ -1,3 +1,5 @@
+<?php require("login.php") ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="assets/css/style.css">
+    <?php 
+        if($email_erro != null){
+            ?> <style>.erro {display: block}<style> <?php 
+        }
+
+        if($senha_erro2 != null){
+            ?> <style>.erro2 {display: block}<style> <?php 
+        }
+
+        if($sucesso != null){
+            ?> <style>.sucesso {display: block}<style> <?php 
+        }
+    ?>
     <title>Login</title>
 </head>
 <body>
@@ -38,15 +53,24 @@
                  <header>Login</header>
             </div>
             <div class="input-box">
-                <input type="text" class="input-field" placeholder="Digite o seu email" name="email">
+                <input type="text" class="input-field" placeholder="Digite o seu email" name="email" value="<?php echo $email_erro ?>">
                 <i class="bx bx-user"></i>
+                <p class="erro">
+                    <?php echo $email_erro ?>
+                </p>
             </div>
             <div class="input-box">
-                <input type="password" class="input-field" placeholder="Digite a tua palavra-passe" name="senha">
+                <input type="password" class="input-field" placeholder="Digite a tua palavra-passe" name="senha" value="<?php echo $senha_erro2 ?>">
                 <i class="bx bx-lock-alt"></i>
+                <p class="erro2">
+                    <?php echo $senha_erro2 ?>
+                </p>
             </div>
             <div class="input-box">
-                <input type="submit" class="submit" value="Entrar">
+                <input type="submit" name="entrar" class="submit" value="Entrar">
+                <p class="sucesso">
+                <?php echo $email_erro ?>
+                </p>
             </div>
             <div class="two-col">
                 <div class="two">
