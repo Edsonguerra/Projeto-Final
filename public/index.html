@@ -54,7 +54,14 @@
                 </div>
             </div>
         </form>
+
         <div id="mensagemErro" style="color: red;"></div>
+        
+        <script>
+            function exibirMensagemErro(mensagem) {
+                document.getElementById("mensagemErro").innerText = mensagem;
+            }
+        </script>
    
     
         <!------------------------------------- Register box   -------------------------------------------->
@@ -107,11 +114,6 @@
     function register(){
         x.style.left = "-510px";
         y.style.right = "5px";  
-    }
-
-
-    function exibirMensagemErro(mensagem) {
-        document.getElementById("mensagemErro").innerText = mensagem;
     }
 </script>
 
