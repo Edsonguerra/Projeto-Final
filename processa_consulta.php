@@ -9,10 +9,10 @@ $bancodedados = "site_marcação_de_consulta";
 $conexao = mysqli_connect($host, $user, $password, $bancodedados) or die("Erro ao conectar ao banco de dados!");
 
 
-$tipoConsulta = $_POST['Consulta_']; 
+$tipos_de_consultas = $_POST['Consulta_de_Dermatologia']; 
 
 
-switch ($tipoConsulta) {
+switch ($tipos_de_consultas ) {
   case "1": 
 
 
