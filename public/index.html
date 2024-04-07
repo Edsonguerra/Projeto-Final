@@ -54,6 +54,8 @@
                 </div>
             </div>
         </form>
+        <div id="mensagemErro" style="color: red;"></div>
+   
     
         <!------------------------------------- Register box   -------------------------------------------->
         <form action="register.php" method="POST" class="register-container" id="register">
@@ -105,6 +107,11 @@
     function register(){
         x.style.left = "-510px";
         y.style.right = "5px";  
+    }
+
+
+    function exibirMensagemErro(mensagem) {
+        document.getElementById("mensagemErro").innerText = mensagem;
     }
 </script>
 
