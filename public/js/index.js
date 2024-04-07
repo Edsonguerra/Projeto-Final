@@ -1,4 +1,4 @@
-const selectBtn = document.querySelector(".selecionar-botao"),
+const selectBtn = document.querySelector(".selecionar-botao",),
     items = document.querySelectorAll(".lista");
 
 
