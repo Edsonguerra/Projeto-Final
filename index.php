@@ -131,8 +131,19 @@
             <input class="button2" type="submit" value="Marcar Consulta"> 
         </ul>
     </div>
+    
+    <?php
 
+$host="localhost";
+$user="root";
+$password="";
+$bancodedados ="site_marcação_de_consulta";
 
+$mysqli = new  mysqli($host, $user, $password, $bancodedados);
+$result = mysqli_query($mysqli, "SELECT * FROM tipos_de_consultas"); 
+echo $result;
+?>
+  
     <div class="Conteudos-de-baixo">
         <img src="public/assets/css/img/EXAME.jpg">
         <h4 class="Hosp">Hospital dos Cajueiros</h4>
