@@ -58,38 +58,6 @@
                 </li>
             <?php endwhile;?>     
             <?php endif;?>     
-                <li class="lista">
-                    <img class="img" width="35" src="public/assets/css/img/43493.png" alt="">
-                    <span class="checked">
-                        <i class="fa-solid fa-check check-icon"></i>
-                    </span>
-                    <span class="primeiro-lista">Consulta de Pediatria</span>
-                    <input type="checkbox" name="tipo_consulta[]" value="Consulta_de_Pediatria">
-                </li>
-                <li class="lista">
-                    <img class="img" width="35" src="public/assets/css/img/43493.png" alt="">
-                    <span class="checked">
-                        <i class="fa-solid fa-check check-icon"></i>
-                    </span>
-                    <span class="primeiro-lista">Consulta de Hematologia</span>
-                    <input type="checkbox" name="tipo_consulta[]" value="Consulta_de_Hematologia">
-                </li>
-                <li class="lista">
-                    <img class="img" width="35" src="public/assets/css/img/43493.png" alt="">
-                    <span class="checked">
-                        <i class="fa-solid fa-check check-icon"></i>
-                    </span>
-                    <span class="primeiro-lista">Consulta de Ginecologia</span>
-                    <input type="checkbox" name="tipo_consulta[]" value="Consulta_de_Ginecologia">
-                </li>
-                <li class="lista">
-                    <img class="img" width="35" src="public/assets/css/img/43493.png" alt="">
-                    <span class="checked">
-                        <i class="fa-solid fa-check check-icon"></i>
-                    </span>
-                    <span class="primeiro-lista">Consulta de Estomatologia</span>
-                    <input type="checkbox" name="tipo_consulta[]" value="Consulta_de_Estomatologia">
-                </li>
                 <input class="button" type="submit" value="Marcar Consulta"> 
             </ul>   
         </div>    
