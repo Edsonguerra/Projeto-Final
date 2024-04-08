@@ -57,8 +57,8 @@
             <input type="checkbox" name="tipo_consulta[]" value="Consulta_de_Dermatologia">
                 </li>
             <?php endwhile;?>     
+            <input class="button" type="submit" value="Marcar Consulta"> 
             <?php endif;?>     
-                <input class="button" type="submit" value="Marcar Consulta"> 
             </ul>   
         </div>    
     </form>
