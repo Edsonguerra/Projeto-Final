@@ -58,6 +58,8 @@
                 </li>
             <?php endwhile;?>     
             <input class="button" type="submit" value="Marcar Consulta"> 
+            <?php else:?>
+                <p>Consultas indisponiveis</p>     
             <?php endif;?>     
             </ul>   
         </div>    
