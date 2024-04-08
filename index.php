@@ -49,7 +49,14 @@
             </div>
             <ul class="lista-consulta">
             <?php if ($tiposdeconsultas->num_rows > 0): ?> 
-                <h1>HA Conteudo</h1>
+            <?php while ($row = $tiposdeconsultas->fetch_assoc()) :?> 
+            <li class="lista">
+            <img class="img" width="35 " src="public/assets/css/img/43493.png" alt="">
+            <span class="checked"><i class="fa-solid fa-check check-icon"></i></span>
+            <span class="primeiro-lista"><?php echo $row["nome"]?></span>
+            <input type="checkbox" name="tipo_consulta[]" value="Consulta_de_Dermatologia">
+                </li>
+            <?php endwhile;?>     
             <?php endif;?>     
                 <li class="lista">
                     <img class="img" width="35" src="public/assets/css/img/43493.png" alt="">
