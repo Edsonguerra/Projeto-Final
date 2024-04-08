@@ -21,6 +21,8 @@ if(isset($_POST['submit'])){
     $ultimo_nome = $_POST['ultimo_nome'];
     $email = $_POST['email'];
     $senha = $_POST['senha'];
+    // $nomeCompleto = $nome + $ultimo_nome;
+
 
     $result = mysqli_query($mysqli, "INSERT INTO usuarios(nome,ultimo_nome,email,senha) VALUES ('$nome','$ultimo_nome','$email','$senha')"); 
 
