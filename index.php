@@ -140,9 +140,20 @@ $password="";
 $bancodedados ="site_marcação_de_consulta";
 
 $mysqli = new  mysqli($host, $user, $password, $bancodedados);
-$result = mysqli_query($mysqli, "SELECT * FROM tipos_de_consultas"); 
+$tiposdeconsultas = mysqli_query($mysqli, "SELECT * FROM tipos_de_consultas"); 
+// $usuarios=$conexao->query($sql);
+
+if ($tiposdeconsultas->num_rows > 0) {
+    while ($row = $tiposdeconsultas->fetch_assoc()) {
+        echo "Consulta:".$row["nome"]."<br>";
+    }
+} else {
+    echo "0 results";
+}
+
 echo $result;
 ?>
+
   
     <div class="Conteudos-de-baixo">
         <img src="public/assets/css/img/EXAME.jpg">
