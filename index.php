@@ -50,7 +50,7 @@
             <ul class="lista-consulta">
             <?php if ($tiposdeconsultas->num_rows > 0): ?> 
                 <h1>HA Conteudo</h1>
-            <?php end;?>     
+            <?php endif;?>     
                 <li class="lista">
                     <img class="img" width="35" src="public/assets/css/img/43493.png" alt="">
                     <span class="checked">
