@@ -96,7 +96,16 @@ header {
   
   /* Estilo para o parágrafo */
   p {
-    margin: 0;
-    text-decoration: none;
-    color: black;
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
   }
