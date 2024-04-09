@@ -30,6 +30,12 @@ header {
 
 }
 
+.sair{
+    position: absolute;
+    text-decoration: none;
+    color: #fff;
+}
+
 .Hospital {
     font-size: 2em;
     color: #fff;
