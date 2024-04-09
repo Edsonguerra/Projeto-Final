@@ -95,9 +95,9 @@ header {
     text-decoration: none;
     margin-left: 10px;
     background: transparent;
-    border: 2px solid #fff;
+    border: 10px solid #fff;
     outline: none;
-    border-radius: 10px;
+    border-radius: 6px;
     cursor: pointer;
     color: #fff;
     font-weight: 500;
