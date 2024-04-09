@@ -50,7 +50,7 @@ header {
     position: absolute;
     left: 0;
     bottom: -6px;
-    width: 100%;
+    width: 50%;
     height: 3px;
     background: #fff;
     border-radius: 5px;
@@ -74,11 +74,12 @@ header {
     font-size: 1.1em;
     color: #fff;
     font-weight: 500;
+    margin-left: 40px;
     transition: .5s;
 } 
 
 .icones .botaologin:hover {
- 
+    background: #fff;
     color: #162938;
 }
 
