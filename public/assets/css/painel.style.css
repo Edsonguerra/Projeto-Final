@@ -88,14 +88,6 @@ header {
   
   /* Estilo para o link de logout */
   .logout {
-    font-size: 14px;
-    text-decoration: none;
-    color: #777;
-    margin-left: 10px;
-  }
-  
-  /* Estilo para o parágrafo */
-  p {
     width: 130px;
     height: 50px;
     background: transparent;
@@ -108,4 +100,9 @@ header {
     font-weight: 500;
     margin-left: 40px;
     transition: .5s;
+  }
+  
+  /* Estilo para o parágrafo */
+  p {
+    font-size: 10px;
   }
