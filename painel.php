@@ -31,9 +31,9 @@ include('protect.php');
                         </a>
                     </nav> 
     </header>
-    
-            <p>
-                <a href="logout.php" class="sair">Sair</a>
+
+            <p class="sair">
+                <a href="logout.php">Sair</a>
             </p>
 
 
