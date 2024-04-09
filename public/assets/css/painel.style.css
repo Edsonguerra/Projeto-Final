@@ -90,7 +90,7 @@ header {
   /* Estilo para o link de logout */
   .logout {
     position: absolute;
-    top: -20px;
+    top: 20px;
     font-size: 20px;
     text-decoration: none;
     color: #ffffff;
