@@ -95,11 +95,12 @@ header {
     text-decoration: none;
     margin-left: 10px;
     background: transparent;
-    border: 10px solid #fff;
+    border: 2px solid #fff;
     outline: none;
     border-radius: 6px;
     cursor: pointer;
     color: #fff;
+    font-size: 1.1em;
     font-weight: 500;
     margin-left: 40px;
     transition: .5s;
