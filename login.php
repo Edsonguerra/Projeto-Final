@@ -42,7 +42,7 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
             $_SESSION['id'] = $usuarios['id'];
             $_SESSION['nome'] = $usuarios['nome'];
 
-            header("Location: index.php");
+            header("Location: painel.php");
 
         } else {
             echo "Falha ao entrar! E-mail ou Senha incorretos";
