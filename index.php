@@ -17,7 +17,7 @@
        <h1 class="Hospital">Hospital dos cajueiros</h1>
    <nav class="icones">
     <a href="Sobre.html">Sobre</a>
-    <a href="Sobre.html">Sobre</a>
+    <a href="Sobre.html">Ajuda</a>
     <a href="index.html">
         <a href="index.html">
         <button class="botaologin">Login</button>

@@ -58,11 +58,6 @@ body {
     margin: 0 10px;
 }
 
-.link:hover,
-.active {
-    border-bottom: 2px solid #fff;
-}
-
 .nav-button .btn {
     width: 130px;
     height: 40px;
