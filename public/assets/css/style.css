@@ -1,0 +1,522 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'inter', sans-serif;
+}
+
+body {
+    background-image: url(img/ESCOLA.jpg);
+    background-repeat: no-repeat; 
+    background-size: 100%;
+}
+
+h1{
+    font-family: "Doppio One", sans-serif;
+}
+
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+
+}
+
+.Hospital {
+    font-size: 2em;
+    color: #fff;
+    user-select: none;
+}
+
+.icones a {
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.icones a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.icones a:hover::after {
+    transform: scaleX(1);
+
+}
+
+.icones .botaologin {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+} 
+
+.icones .botaologin:hover {
+    background: #fff;
+    color: #162938;
+}
+
+
+
+
+
+
+.name{
+    position: absolute;
+    font-size: 25px;
+    display: flex;
+    top: 201px;
+    left: 60px;
+    color: #fff;
+}
+
+h2{
+    font-family: "Doppio One", sans-serif;
+}
+
+.Conteudo{
+   
+    position: absolute;
+    display: flex;
+    top: 335px;
+    left: 61px;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    
+}
+
+h3{
+    font-family: "Quattrocento", serif;
+}
+
+
+
+
+
+
+
+
+.Selecionar{
+    position: absolute;
+    max-width: 320px;
+    width: 100%;
+    border-radius: 8px;
+    top: 615px;   
+    left: 310px;
+    
+ 
+}
+
+.selecionar-botao{
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #008791;
+    box-shadow: 0 5px 10px rgb(126, 141, 141);
+}
+
+.selecionar-botao .texto{
+    font-size: 17px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.selecionar-botao .down-arrow{
+    display: flex;
+    height: 21px;
+    width: 21px;
+    border-radius: 50%;
+    color: #008791;
+    font-size: 14px;
+    background: #fff;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.selecionar-botao.open .down-arrow{
+    transform: rotate(-180deg);
+}
+
+.lista-consulta{
+    position: relative;
+    margin-top: 15px;
+    border-radius: 8px;
+    padding: 9px;
+    background-color: #ffffff;
+    box-shadow: 0 5px 10px rgb(27, 97, 97);
+    display: none;
+    
+
+}
+
+
+.selecionar-botao.open ~ .lista-consulta{
+    display: block;
+
+}
+
+
+.lista-consulta .lista{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    height: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 0 15px;
+    border-radius: 8px;
+}
+
+.lista-consulta .lista:hover{
+    background-color: #e7edfe;
+
+}
+
+.lista .primeiro-lista{
+    position: absolute;
+    font-size: 16px;
+    left: 52px;
+    font-weight: 400px;
+    color: #002033;
+}
+
+.lista .img{
+    position: absolute;
+    left: 10px;
+}
+
+.lista .checked{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 285px;
+    height: 16px;
+    width: 16px;
+    border-radius: 4px;
+    margin-right: 12px;
+    border: 1.5px solid #c0c0c0;
+    transition: all 0.3s ease-in-out;
+}
+
+.lista.checked .checked{
+    background-color: #008791;
+    border-color: #ffffff;
+} 
+
+.checked .check-icon{
+    color: #e7edfe;
+    font-size: 11px;
+    transform: scale(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.lista.checked .check-icon{
+    transform: scale(1);
+}
+
+
+.button{
+    
+    width: 100%;
+    margin-top: 0.1rem;
+    border: none;
+    background-color: #008791;
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: #00747c;
+}
+
+.button{
+    text-decoration: none;
+    font-size: 1.0rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.Selecionar2{
+    position: absolute;
+    max-width: 320px;
+    width: 100%;
+    border-radius: 8px;
+    top: 615px;    
+    left: 700px;
+ 
+}
+
+.selecionar-botao2{
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #008791;
+    box-shadow: 0 5px 10px rgb(126, 141, 141);
+}
+
+.selecionar-botao2 .texto2{
+    font-size: 17px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.selecionar-botao2 .down-arrow{
+    display: flex;
+    height: 21px;
+    width: 21px;
+    border-radius: 50%;
+    color: #008791;
+    font-size: 14px;
+    background: #fff;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.selecionar-botao2.open .down-arrow{
+    transform: rotate(-180deg);
+}
+
+.lista-consulta2{
+    position: relative;
+    margin-top: 15px;
+    border-radius: 8px;
+    padding: 9px;
+    background-color: #ffffff;
+    box-shadow: 0 5px 10px rgb(27, 97, 97);
+    
+
+
+
+}
+
+
+.selecionar-botao2.open ~ .lista-consulta2{
+    display: block;
+
+}
+
+
+.lista-consulta2 .lista2{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    height: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 0 15px;
+    border-radius: 8px;
+}
+
+.lista-consulta2 .lista2:hover{
+    background-color: #e7edfe;
+
+}
+
+.lista2 .primeiro-lista2{
+    position: absolute;
+    font-size: 16px;
+    left: 52px;
+    font-weight: 400px;
+    color: #002033;
+}
+
+.lista2 .img2{
+    position: absolute;
+    left: 10px;
+}
+
+.lista2 .checked{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 285px;
+    height: 16px;
+    width: 16px;
+    border-radius: 4px;
+    margin-right: 12px;
+    border: 1.5px solid #c0c0c0;
+    transition: all 0.3s ease-in-out;
+}
+
+.button2{
+    
+    width: 100%;
+    margin-top: 0.1rem;
+    border: none;
+    background-color: #008791;
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button2:hover{
+    background-color: #00747c;
+}
+
+.button2{
+    text-decoration: none;
+    font-size: 1.0rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.Conteudos-de-baixo{
+    position: absolute;
+    width: 100%;
+    top: 1020px;
+}
+.Hosp{
+    font-family: "Doppio One", sans-serif;
+    position: absolute;
+    font-size: 25px;
+    top: 80px;
+    left: 350px;
+    display: flex;
+    color:#ffffff;
+}
+
+
+.Infor{
+    font-family: "Quattrocento", serif;
+    position: absolute;
+    font-size: 20px;
+    left: 740px;
+    top: 45px;
+    color: #fff;
+}
+
+.Sobre{
+    font-family: "Glegoo", serif;
+    position: absolute;
+    font-size: 15px;
+    left: 740px;
+    top: 70px;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.Contacto{
+    font-family: "Glegoo", serif;
+    position: absolute;
+    font-size: 15px;
+    left: 740px;
+    top: 90px;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.Termos{
+    font-family: "Glegoo", serif;
+    position: absolute;
+    font-size: 15px;
+    left: 740px;
+    top: 110px;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+.Politica{
+    font-family: "Glegoo", serif;
+    position: absolute;
+    font-size: 15px;
+    left: 740px;
+    top: 130px;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+main.Cards section.card.agendar button {
+    background: linear-gradient(to right, #3a7991, #00c4c4);
+}
+
+main.Cards section.card.agendar{
+    box-shadow: 20px 20px 50px -30px #002b44;
+}
+
+main.Cards .card.agendar:hover{
+    box-shadow: 0 10px 15px rgb(126, 141, 141);
+    transform: scale(1.02);
+}
