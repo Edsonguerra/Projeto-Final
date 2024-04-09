@@ -24,10 +24,7 @@ include('protect.php');
             <nav class="icones">
                 <a href="Sobre.html">Sobre</a>
                 <a href="Sobre.html">Ajuda</a>
-                <a href="index.html">
-                    <a href="index.html">
-                        <button class="botaologin">Login</button>
-                    </a>
+                <a href="index.html">            
                 </a>
             </nav>  
     </header>
@@ -35,7 +32,7 @@ include('protect.php');
     <div class="boas-vindas">
         Bem vindo ao painel, <span class="nome-usuario"><?php echo $_SESSION['nome']; ?></span>
         <p>
-            <a href="logout.php" class="logout">Sair</a>
+            <a href="logout.php" class="botaologin">Sair</a>
         </p>
     </div>
 
