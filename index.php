@@ -21,12 +21,12 @@
     <a href="Sobre.html">Sobre</a>
     <a href="Ajuda.html">Ajuda</a>
     <a href="index.html">
-       
-        <button class="botaologin">Login</button>
-      
     </a>
    </nav>  
     </header>
+    <a href="index.html">
+        <button class="botaologin">Login</button>
+        </a>
     <div class="name">
         <h2>Seja bem vindo ao site de <p> marcações de consultas online <p> do Hospital dos Cajueiros!</h2>
     </div>
