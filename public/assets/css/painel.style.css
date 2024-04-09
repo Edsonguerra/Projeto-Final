@@ -1,0 +1,28 @@
+
+
+/* Estilo para a mensagem de boas-vindas */
+.boas-vindas {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    margin: 10px;
+    color: #333;
+  }
+  
+  /* Estilo para o nome do usuário */
+  .nome-usuario {
+    font-weight: bold;
+    color: #444;
+  }
+  
+  /* Estilo para o link de logout */
+  .logout {
+    font-size: 14px;
+    text-decoration: none;
+    color: #777;
+    margin-left: 10px;
+  }
+  
+  /* Estilo para o parágrafo */
+  p {
+    margin: 0;
+  }
