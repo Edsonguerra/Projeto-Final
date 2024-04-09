@@ -21,7 +21,7 @@ include('protect.php');
     <header>
         Bem vindo ao painel, <?php echo $_SESSION['nome']; ?>
             <p>
-                <a class="sair" href="logout.php">Sair</a>
+                <a href="logout.php" class="sair">Sair</a>
             </p>
                 <h1 class="Hospital">Hospital dos cajueiros</h1>
                     <nav class="icones">
