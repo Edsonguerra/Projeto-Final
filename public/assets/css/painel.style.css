@@ -89,16 +89,16 @@ header {
   
   /* Estilo para o link de logout */
   .logout {
-    font-size: 14px;
+    position: absolute;
+    top: -20px;
+    font-size: 20px;
     text-decoration: none;
-    color: #777;
+    color: #ffffff;
     margin-left: 10px;
   }
   
   /* Estilo para o parágrafo */
   p {
-    position: absolute;
-    top: -20px;
     margin: 0;
     text-decoration: none;
     color: rgb(255, 255, 255);
