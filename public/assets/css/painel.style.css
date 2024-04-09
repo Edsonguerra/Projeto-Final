@@ -97,6 +97,8 @@ header {
   
   /* Estilo para o parágrafo */
   p {
+    position: absolute;
+    top: -20px;
     margin: 0;
     text-decoration: none;
     color: rgb(255, 255, 255);
