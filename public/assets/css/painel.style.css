@@ -93,8 +93,16 @@ header {
     top: 20px;
     font-size: 20px;
     text-decoration: none;
-    color: #ffffff;
     margin-left: 10px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
   }
   
   /* Estilo para o parágrafo */
