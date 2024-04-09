@@ -13,12 +13,7 @@
     <title>Pagina Inicial</title>
 </head>
 <body>
-    
-    <?php
 
-        include('protect.php');
-
-    ?>
     
     Bem vindo ao painel, <?php echo $_SESSION['nome']; ?>
     <p>
