@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./public/assets/css/style.css">
+    <link rel="stylesheet" href="./public/assets/css/login.style.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
@@ -18,7 +18,9 @@
    <nav class="icones">
     <a href="Sobre.html">Sobre</a>
     <a href="Ajuda.html">Ajuda</a>
-    <button class="botaologin">Login</button>
+    <a href="index.html">
+        <button class="botaologin">Login</button>
+    </a>
    </nav>  
     </header>
     <div class="name">
