@@ -20,9 +20,6 @@ include('protect.php');
 <body>
     <header>
         Bem vindo ao painel, <?php echo $_SESSION['nome']; ?>
-            <p>
-                <a href="logout.php" class="sair">Sair</a>
-            </p>
                 <h1 class="Hospital">Hospital dos cajueiros</h1>
                     <nav class="icones">
                         <a href="Sobre.html">Sobre</a>
@@ -34,6 +31,10 @@ include('protect.php');
                         </a>
                     </nav> 
     </header>
+    
+            <p>
+                <a href="logout.php" class="sair">Sair</a>
+            </p>
 
 
 
