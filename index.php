@@ -13,6 +13,20 @@
     <title>Pagina Inicial</title>
 </head>
 <body>
+    
+    <?php
+
+        include('protect.php');
+
+    ?>
+    
+    Bem vindo ao painel, <?php echo $_SESSION['nome']; ?>
+    <p>
+        <a href="logout.php">Sair</a>
+    </p>
+
+
+
     <header>
        <h1 class="Hospital">Hospital dos cajueiros</h1>
    <nav class="icones">
