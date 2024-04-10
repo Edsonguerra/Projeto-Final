@@ -8,14 +8,11 @@
 
 body {
     background-image: url(img/ESCOLA.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100vh; /* Garanta a altura da viewport */
-    display: flex; /* Permite empurrar o conteúdo ao expandir o menu */
-    justify-content: center; /* Centraliza o conteúdo horizontalmente */
-    align-items: center; /* Centraliza o conteúdo verticalmente */
-  }
-
+    background-repeat: no-repeat; 
+    background-size: 100%;
+    display: flex;
+    padding-left: 90px; 
+}
 
 nav{
     position: fixed;
@@ -33,9 +30,14 @@ nav{
 
 
 .content {
-    flex: 1; /* Empurre o conteúdo para a direita ao expandir o menu */
-    padding: 20px; /* Padding opcional para a área de conteúdo */
-  }
+    padding-left: 280px; /* Ajuste o padding de acordo com a largura do menu */
+    transition: padding-left 0.2s linear;
+}
+
+nav:hover {
+    width: 280px; /* Ajuste a largura de acordo com sua preferência */
+    transition: all 0.5s ease;
+}
 
 .logo{
     text-align: center;
