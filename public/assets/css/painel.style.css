@@ -118,13 +118,13 @@ nav:hover{
     color: #fff;
 }
 
-.selecionar-botao .down-arrow{
+.selecionar-botao .down-arrow
     display: flex;
     height: 21px;
     width: 21px;
     border-radius: 50%;
     color: #008791;
-    font-size: 10px;
+    font-size: 14px;
     background: #fff;
     align-items: center;
     justify-content: center;
