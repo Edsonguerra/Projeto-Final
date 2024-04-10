@@ -57,6 +57,15 @@ a{
 
 }
 
+.fa-solid{
+   
+    width: 70px;
+    height: 40px;
+    top: 14px;
+    font-size: 20px;
+    text-align: center;
+
+}
 
 .nav-item{
     position: relative;
