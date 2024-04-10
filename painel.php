@@ -53,6 +53,16 @@ include('protect.php');
         </ul>
     </nav>
 
+    <?php
+    $host="localhost";
+    $user="root";
+    $password="";
+    $bancodedados ="site_marcação_de_consulta";
+
+    $mysqli = new  mysqli($host, $user, $password, $bancodedados);
+    $tiposdeconsultas = mysqli_query($mysqli, "SELECT * FROM tipos_de_consultas"); 
+    ?>
+
     <form action="processa_consulta.php" method="POST">
         <div class="Selecionar">
             <div class="selecionar-botao">
