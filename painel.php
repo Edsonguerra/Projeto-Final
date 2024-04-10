@@ -23,7 +23,6 @@ include('protect.php');
     <div class="menu">
         <div class="top">
             <div class="logo">
-              
                 <span>Hospital Cajueiros</span>
             </div>
             <i class="fa-solid fa-chevron-right" id="btn"></i>
