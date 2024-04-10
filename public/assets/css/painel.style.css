@@ -1,4 +1,10 @@
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'inter', sans-serif;
+}
 
 body {
     background-image: url(img/ESCOLA.jpg);
@@ -6,247 +12,100 @@ body {
     background-size: 100%;
 }
 
-nav{
-    position: fixed;
+h1{
+    font-family: "Doppio One", sans-serif;
+}
+
+
+header {
+    position: absolute;
     top: 0;
-    bottom: 0;
-    height: 100%;
     left: 0;
-    background: #fff;
-    width: 90px;
-    overflow: hidden;
-    transition: width 0.2s linear;
-    box-shadow: 0 20px 35px rgb(0, 0, 0, 0.1);
-}
-
-.logo{
-    text-align: center;
-    display: flex;
-    transition: all 0.5s ease;
-    margin: 10px 0 0 10px;
-}
-
-.logo img{
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-
-}
-
-.logo span{
-    font-weight: bold;
-    padding-left: 15px;
-    font-size: 18px;
-    text-transform: uppercase;
-}
-
-a{
-    position: relative;
-    color: rgb(83, 83, 83);
-    font-size: 17px;
-    display: table;
-    width: 300px;
-    padding: 10px;
-    text-decoration: none;
-
-}
-
-.fa-solid{
-    position: relative;
-    width: 70px;
-    height: 40px;
-    top: 14px;
-    font-size: 20px;
-    text-align: center;
-
-}
-
-.nav-item{
-    position: relative;
-    top: 12px;
-    margin-left: 10px;
-}
-
-a:hover{
-    background: #eee;
-}
-
-nav:hover{
-    width: 280px;
-    transition: all 0.5s ease;
-}
-
-.sair{
-    position: absolute;
-    bottom: 0;
-}
-
-
-
-
-
-
-.Selecionar{
-    position: absolute;
-    max-width: 320px;
     width: 100%;
-    border-radius: 8px;
-    top: 615px;   
-    left: 310px;
-    
- 
-}
-
-.selecionar-botao{
+    padding: 25px 100px;
     display: flex;
-    height: 50px;
-    align-items: center;
     justify-content: space-between;
-    padding: 0 16px;
-    border-radius: 8px;
-    cursor: pointer;
-    background-color: #008791;
-    box-shadow: 0 5px 10px rgb(126, 141, 141);
+    align-items: center;
+    z-index: 99;
+
 }
 
-.selecionar-botao .texto{
-    font-size: 17px;
-    font-weight: 400;
+.Hospital {
+    font-size: 2em;
     color: #fff;
+    user-select: none;
 }
 
-.selecionar-botao .down-arrow{
-    display: flex;
-    height: 21px;
-    width: 21px;
-    border-radius: 50%;
-    color: #008791;
-    font-size: 14px;
-    background: #fff;
-    align-items: center;
-    justify-content: center;
-    transition: 0.3s;
-}
-
-.selecionar-botao.open .down-arrow{
-    transform: rotate(-180deg);
-}
-
-.lista-consulta{
+.icones a {
     position: relative;
-    margin-top: 15px;
-    border-radius: 8px;
-    padding: 9px;
-    background-color: #ffffff;
-    box-shadow: 0 5px 10px rgb(27, 97, 97);
-    display: none;
-    
-
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
 }
 
 
-.selecionar-botao.open ~ .lista-consulta{
-    display: block;
+
+.icones a:hover::after {
+    transform: scaleX(1);
 
 }
 
-
-.lista-consulta .lista{
-    display: flex;
-    align-items: center;
-    list-style: none;
+.icones .botaologin {
+    width: 130px;
     height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
     cursor: pointer;
-    transition: 0.3s;
-    padding: 0 15px;
-    border-radius: 8px;
-}
-
-.lista-consulta .lista:hover{
-    background-color: #e7edfe;
-
-}
-
-.lista .primeiro-lista{
-    position: absolute;
-    font-size: 16px;
-    left: 52px;
-    font-weight: 400px;
-    color: #002033;
-}
-
-.lista .img{
-    position: absolute;
-    left: 10px;
-}
-
-.lista .checked{
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    left: 285px;
-    height: 16px;
-    width: 16px;
-    border-radius: 4px;
-    margin-right: 12px;
-    border: 1.5px solid #c0c0c0;
-    transition: all 0.3s ease-in-out;
-}
-
-.lista.checked .checked{
-    background-color: #008791;
-    border-color: #ffffff;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
 } 
 
-.checked .check-icon{
-    color: #e7edfe;
-    font-size: 11px;
-    transform: scale(0);
-    transition: all 0.3s ease-in-out;
-}
-
-.lista.checked .check-icon{
-    transform: scale(1);
+.icones .botaologin:hover {
+    background: #fff;
+    color: #162938;
 }
 
 
-.button{
-    
-    width: 100%;
-    margin-top: 0.1rem;
-    border: none;
-    background-color: #008791;
-    padding: 0.62rem;
-    border-radius: 5px;
+/* Estilo para a mensagem de boas-vindas */
+.boas-vindas {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    margin: 10px;
+    color: #333;
+  }
+  
+  /* Estilo para o nome do usuário */
+  .nome-usuario {
+    font-weight: bold;
+    color: #444;
+  }
+  
+  /* Estilo para o link de logout */
+  .logout {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
     cursor: pointer;
-}
-
-.button:hover{
-    background-color: #00747c;
-}
-
-.button{
-    text-decoration: none;
-    font-size: 1.0rem;
-    font-weight: 500;
+    font-size: 1.1em;
     color: #fff;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+  }
+  
+  /* Estilo para o parágrafo */
+  p {
+    margin: 0;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  }
