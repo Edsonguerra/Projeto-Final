@@ -43,7 +43,7 @@ nav{
     text-transform: uppercase;
 }
 
-.a{
+a{
     position: relative;
     color: rgb(83, 83, 83);
     font-size: 14px;
