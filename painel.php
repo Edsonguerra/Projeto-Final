@@ -21,10 +21,66 @@ include('protect.php');
 
     <div class="boas-vindas">
         Bem vindo ao painel, <span class="nome-usuario"><?php echo $_SESSION['nome']; ?></span>
-        <p>
-            <a href="logout.php" class="logout">Sair</a>
-        </p>
     </div>
 
+    <nav>
+        <ul>
+            <li>
+                <a href="#" class="logo">
+                    <img src="public/assets/css/img/43493.png" alt="">
+                    <span class="nav-item">MENU</span>
+                </a>
+            </li>
+            <li><a href="#">
+                <i class="fa-solid fa-clipboard-question"></i>
+                <span class="nav-item">Consultar Consulta</span>
+            </a></li>
+
+            <li><a href="#">
+            <i class="fa-solid fa-user-tie"></i>
+                <span class="nav-item">Administrador</span>
+            </a></li>
+
+            <li><a href="#">
+            <i class="fa-solid fa-handshake-angle"></i>
+                <span class="nav-item">Ajuda</span>
+            </a></li>
+
+            <li><a href="logout.php" class="sair">
+            <i class="fa-solid fa-right-from-bracket"></i>
+                <span class="nav-item">Sair</span>
+            </a></li>
+        </ul>
+    </nav>
+
+    <form action="processa_consulta.php" method="POST">
+        <div class="Selecionar">
+            <div class="selecionar-botao">
+                <span class="texto">Selecionar Consulta</span>
+                <span class="down-arrow">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </span> 
+            </div>
+            <ul class="lista-consulta">
+            <?php if ($tiposdeconsultas->num_rows > 0): ?> 
+            <?php while ($row = $tiposdeconsultas->fetch_assoc()) :?> 
+            <li class="lista">
+            <img class="img" width="35 " src="public/assets/css/img/43493.png" alt="">
+            <span class="checked"><i class="fa-solid fa-check check-icon"></i></span>
+            <span class="primeiro-lista"><?php echo $row["nome"]?></span>
+            <input type="checkbox" name="tipo_consulta[]" value="Consulta_de_Dermatologia">
+                </li>
+            <?php endwhile;?>     
+            <input class="button" type="submit" value="Marcar Consulta"> 
+            <?php else:?>
+                <p>Consultas indisponiveis</p>     
+            <?php endif;?>     
+            </ul>   
+        </div>    
+    </form>
+
+
+
+    <script src="public/js/index.js"></script>
 </body>
 </html>
