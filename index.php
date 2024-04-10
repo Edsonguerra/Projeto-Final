@@ -32,6 +32,42 @@
         <h3>Faça a sua marcação de consultas de forma rapida e simples selecionando o tipo <p> de consulta abaixo.</h3>
     </div>
 
+    <?php
+    $host="localhost";
+    $user="root";
+    $password="";
+    $bancodedados ="site_marcação_de_consulta";
+
+    $mysqli = new  mysqli($host, $user, $password, $bancodedados);
+    $tiposdeconsultas = mysqli_query($mysqli, "SELECT * FROM tipos_de_consultas"); 
+?>
+
+
+    <form action="processa_consulta.php" method="POST">
+        <div class="Selecionar">
+            <div class="selecionar-botao">
+                <span class="texto">Selecionar Consulta</span>
+                <span class="down-arrow">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </span> 
+            </div>
+            <ul class="lista-consulta">
+            <?php if ($tiposdeconsultas->num_rows > 0): ?> 
+            <?php while ($row = $tiposdeconsultas->fetch_assoc()) :?> 
+            <li class="lista">
+            <img class="img" width="35 " src="public/assets/css/img/43493.png" alt="">
+            <span class="checked"><i class="fa-solid fa-check check-icon"></i></span>
+            <span class="primeiro-lista"><?php echo $row["nome"]?></span>
+            <input type="checkbox" name="tipo_consulta[]" value="Consulta_de_Dermatologia">
+                </li>
+            <?php endwhile;?>     
+            <input class="button" type="submit" value="Marcar Consulta"> 
+            <?php else:?>
+                <p>Consultas indisponiveis</p>     
+            <?php endif;?>     
+            </ul>   
+        </div>    
+    </form>
 
     <div class="Selecionar2">
         <div class="selecionar-botao2">
