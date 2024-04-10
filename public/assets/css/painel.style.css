@@ -20,6 +20,37 @@ nav{
     width: 90px;
     overflow: hidden;
     transition: width 0.2s linear;
+    box-shadow: 0 20px 35px rgb(0, 0, 0, 0.1);
+}
+
+.logo{
+    text-align: center;
+    display: flex;
+    transition: all 0.5s ease;
+}
+
+.logo img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+
+}
+
+.logo span{
+    font-weight: bold;
+    padding: 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.a{
+    position: relative;
+    color: rgb(83, 83, 83);
+    font-size: 14px;
+    display: table;
+    width: 300px;
+    padding: 10px;
+
 }
 
 h1{
