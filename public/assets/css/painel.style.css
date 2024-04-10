@@ -21,35 +21,25 @@ body{
     transition: all 0.5s ease;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.Conteudo{
-   
-    position: absolute;
-    display: flex;
-    top: 335px;
-    left: 61px;
-    font-size: 15px;
-    color: rgb(255, 255, 255);
+.img-menu{
+    width: 50px;
+    border-radius: 100vh;
     
 }
 
-h3{
-    font-family: "Quattrocento", serif;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
