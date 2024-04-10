@@ -27,6 +27,11 @@ nav{
     z-index: 1; 
 }
 
+nav:hover .nav-item {
+    width: calc(100% - 90px); /* Expanda a área de texto no hover */
+    transition: width 0.2s ease;
+    }
+
 .content {
     flex: 1; /* Empurre o conteúdo para a direita ao expandir o menu */
     padding: 20px; /* Padding opcional para a área de conteúdo */
