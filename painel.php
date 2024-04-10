@@ -24,7 +24,7 @@ include('protect.php');
         <div class="top">
             <div class="logo">
                 <img src="public/assets/css/img/43493.png" alt="" class="img-menu">
-                <span>Menu</span>
+                <span>Hospital Cajueiros</span>
             </div>
             <i class="fa-solid fa-chevron-right" id="btn"></i>
         </div>
