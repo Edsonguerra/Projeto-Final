@@ -7,7 +7,9 @@
 }
 
 body{
-    background-color: #fff;
+    background-image: url(img/ESCOLA.jpg);
+    background-repeat: no-repeat; 
+    background-size: 100%;
 }
 
 .menu{
