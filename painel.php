@@ -26,5 +26,31 @@ include('protect.php');
         </p>
     </div>
 
+    <nav>
+        <ul>
+            <li>
+                <a href="#">
+                    <img src="" alt="/public/assets/css/img/43493.png">
+                </a>
+            </li>
+            <li><a href="#">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span class="nav-item">Consulta</span>
+            </a></li>
+            <li><a href="#">
+            <i class="fa-solid fa-right-from-bracket"></i>
+                <span class="nav-item">Consulta</span>
+            </a></li>
+            <li><a href="#">
+            <i class="fa-solid fa-right-from-bracket"></i>
+                <span class="nav-item">Consulta</span>
+            </a></li>
+            <li><a href="#">
+            <i class="fa-solid fa-right-from-bracket"></i>
+                <span class="nav-item">Consulta</span>
+            </a></li>
+        </ul>
+    </nav>
+
 </body>
 </html>
