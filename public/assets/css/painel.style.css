@@ -42,10 +42,22 @@ body{
 }
 
 .menu.active #btn {
-    left: 90%;
-    
+    left: 90%; 
 }
 
+.menu .top .logo {
+    color: #fff;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.menu.active .top .logo {
+    opacity: 1;
+}
 
 
 
