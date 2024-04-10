@@ -132,7 +132,7 @@ nav:hover{
 }
 
 .selecionar-botao.open .down-arrow{
-    size: 2px;
+    color: #002033;
     transform: rotate(-180deg);
 }
 
