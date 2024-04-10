@@ -41,6 +41,10 @@ body{
     cursor: pointer;
 }
 
+.menu.active #btn {
+    left: 90%;
+    
+}
 
 
 
