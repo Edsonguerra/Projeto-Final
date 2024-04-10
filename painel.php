@@ -28,7 +28,7 @@ include('protect.php');
             <li>
                 <a href="#" class="logo">
                     <img src="public/assets/css/img/43493.png" alt="">
-                    <span class="nav-item">H.Cajueiros</span>
+                    <span class="nav-item">MENU</span>
                 </a>
             </li>
             <li><a href="#">
