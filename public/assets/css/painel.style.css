@@ -58,7 +58,7 @@ a{
 }
 
 .fa-solid{
-    position: fixed;
+    position: relative;
     width: 70px;
     height: 40px;
     top: 14px;
@@ -88,17 +88,6 @@ nav:hover{
 }
 
 
-
-.Selecionar{
-    position: absolute;
-    max-width: 320px;
-    width: 100%;
-    border-radius: 8px;
-    top: 615px;   
-    left: 310px;
-    
- 
-}
 
 .selecionar-botao{
     display: flex;
@@ -235,15 +224,6 @@ nav:hover{
     font-weight: 500;
     color: #fff;
 }
-
-
-
-
-
-
-
-
-
 
 
 
