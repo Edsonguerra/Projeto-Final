@@ -11,7 +11,7 @@ body {
 }
 
 nav{
-    position: fixed;
+    position: relative;
     top: 0;
     bottom: 0;
     height: 100%;
@@ -90,9 +90,7 @@ nav:hover{
 
 
 
-h1{
-    font-family: "Doppio One", sans-serif;
-}
+
 
 
 header {
