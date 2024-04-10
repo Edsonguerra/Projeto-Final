@@ -125,6 +125,7 @@ nav:hover{
     border-radius: 50%;
     color: #008791;
     font-size: 14px;
+    size: 10px;
     background: #fff;
     align-items: center;
     justify-content: center;
@@ -132,7 +133,6 @@ nav:hover{
 }
 
 .selecionar-botao.open .down-arrow{
-    color: #002033;
     transform: rotate(-180deg);
 }
 
