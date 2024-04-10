@@ -31,20 +31,23 @@ include('protect.php');
                 </a>
             </li>
             <li><a href="#">
-                <i class="fa-solid fa-right-from-bracket"></i>
-                <span class="nav-item">Consulta</span>
+                <i class="fa-solid fa-clipboard-question"></i>
+                <span class="nav-item">Consultar Consulta</span>
             </a></li>
             <li><a href="#">
             <i class="fa-solid fa-right-from-bracket"></i>
-                <span class="nav-item">Consulta</span>
+                <span class="nav-item"></span>
             </a></li>
             <li><a href="#">
-            <i class="fa-solid fa-right-from-bracket"></i>
-                <span class="nav-item">Consulta</span>
+            <i class="fa-solid fa-user-tie"></i>
+                <span class="nav-item">Administrador</span>
+            </a></li>
+            <i class="fa-solid fa-handshake-angle"></i>
+                <span class="nav-item">Ajuda</span>
             </a></li>
             <li><a href="logout.php">
             <i class="fa-solid fa-right-from-bracket"></i>
-                <span class="nav-item">Consulta</span>
+                <span class="nav-item">Sair</span>
             </a></li>
         </ul>
     </nav>
