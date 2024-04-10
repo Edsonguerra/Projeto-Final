@@ -20,36 +20,52 @@ include('protect.php');
 <body>
 
   
-
-    <nav>
+    <div class="menu">
+        <div class="top">
+            <div class="logo">
+                <img src="public/assets/css/img/43493.png" alt="">
+                <span>Menu</span>
+            </div>
+            <i class="fa-solid fa-chevron-right" id="btn"></i>
+        </div>
         <ul>
             <li>
-                <a href="#" class="logo">
-                    <img src="public/assets/css/img/43493.png" alt="">
-                    <span class="nav-item">MENU</span>
+                <a href="#">
+                    <i class="meu-icone fa-solid fa-clipboard-question"></i>
+                    <span class="nav-item">Consultar Consulta</span>
                 </a>
+                <span class="tooltip">Consultar Consulta</span>
             </li>
-            <li><a href="#">
-                <i class="meu-icone fa-solid fa-clipboard-question"></i>
-                <span class="nav-item">Consultar Consulta</span>
-            </a></li>
 
-            <li><a href="#">
-            <i class="meu-icone fa-solid fa-user-tie"></i>
-                <span class="nav-item">Administrador</span>
-            </a></li>
+            <li>
+                <a href="#">
+                    <i class="meu-icone fa-solid fa-user-tie"></i>
+                    <span class="nav-item">Administrador</span>
+                </a>
+                <span class="tooltip">Adiminstrador</span>
+            </li>
 
-            <li><a href="#">
-            <i class="meu-icone fa-solid fa-handshake-angle"></i>
-                <span class="nav-item">Ajuda</span>
-            </a></li>
+            <li>
+                <a href="#">
+                    <i class="meu-icone fa-solid fa-handshake-angle"></i>
+                    <span class="nav-item">Ajuda</span>
+                </a>
+                <span class="tooltip">Ajuda</span>
+            </li>
 
-            <li><a href="logout.php" class="sair">
-            <i class="meu-icone fa-solid fa-right-from-bracket"></i>
-                <span class="nav-item">Sair</span>
-            </a></li>
+            <li>
+                <a href="logout.php">
+                    <i class="meu-icone fa-solid fa-right-from-bracket"></i>
+                    <span class="nav-item">Sair</span>
+                </a>
+                <span class="tooltip">Sair</span>
+            </li>
+
         </ul>
-    </nav>
+    </div>
+
+
+
 
     <div class="boas-vindas">
         Bem vindo ao painel, <span class="nome-usuario"><?php echo $_SESSION['nome']; ?></span>
@@ -102,4 +118,13 @@ include('protect.php');
 
     <script src="public/js/index.js"></script>
 </body>
+
+<script>
+    let btn = document.querySelector('#btn')
+    let menu = document.querySelector('.menu')
+
+    btn.onclick = function () {
+        menu.classList.toggle('active')
+    };
+</script>
 </html>
