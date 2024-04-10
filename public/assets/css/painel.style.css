@@ -22,12 +22,12 @@ body{
 }
 
 .menu.active ~ .main-content {
-    left: 300px;
-    width: calc(100% - 300px);
+    left: 350px;
+    width: calc(100% - 350px);
 }
 
 .menu.active {
-    width: 300px;
+    width: 350px;
 }
 
 .menu #btn{
