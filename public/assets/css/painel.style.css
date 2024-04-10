@@ -64,7 +64,10 @@ body{
     border-radius: 100%;
 }
 
-
+.top .logo i {
+    font-size: 2rem;
+    margin-right: 5px;
+}
 
 
 
