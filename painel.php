@@ -47,7 +47,7 @@ include('protect.php');
             </a></li>
 
             <li><a href="logout.php" class="sair">
-            <i class="fa-solid fa-right-from-bracket"></i>
+            <i class="meu-icone fa-solid fa-right-from-bracket"></i>
                 <span class="nav-item">Sair</span>
             </a></li>
         </ul>
