@@ -197,7 +197,7 @@ nav:hover{
     transition: all 0.3s ease-in-out;
 }
 
-.lista.checked .checked
+.lista.checked .checked{
     background-color: #008791;
     border-color: #ffffff;
 } 
