@@ -34,7 +34,6 @@ include('protect.php');
                     <i class="meu-icone fa-solid fa-clipboard-question"></i>
                     <span class="nav-item">Consultar</span>
                 </a>
-                <span class="tooltip">Consultar Consulta</span>
             </li>
 
             <li>
@@ -42,7 +41,6 @@ include('protect.php');
                     <i class="meu-icone fa-solid fa-user-tie"></i>
                     <span class="nav-item">Administrador</span>
                 </a>
-                <span class="tooltip">Adiminstrador</span>
             </li>
 
             <li>
@@ -50,7 +48,6 @@ include('protect.php');
                     <i class="meu-icone fa-solid fa-handshake-angle"></i>
                     <span class="nav-item">Ajuda</span>
                 </a>
-                <span class="tooltip">Ajuda</span>
             </li>
 
             <li>
@@ -58,7 +55,6 @@ include('protect.php');
                     <i class="meu-icone fa-solid fa-right-from-bracket"></i>
                     <span class="nav-item">Sair</span>
                 </a>
-                <span class="tooltip">Sair</span>
             </li>
 
         </ul>
