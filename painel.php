@@ -32,7 +32,7 @@ include('protect.php');
             <li>
                 <a href="#">
                     <i class="meu-icone fa-solid fa-clipboard-question"></i>
-                    <span class="nav-item">Consultar Consulta</span>
+                    <span class="nav-item">Consultar </span>
                 </a>
                 <span class="tooltip">Consultar Consulta</span>
             </li>
