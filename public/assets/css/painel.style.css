@@ -112,7 +112,7 @@ nav:hover{
     box-shadow: 0 5px 10px rgb(126, 141, 141);
 }
 
-.selecionar-botao .texto
+.selecionar-botao .texto{
     font-size: 17px;
     font-weight: 400;
     color: #fff;
