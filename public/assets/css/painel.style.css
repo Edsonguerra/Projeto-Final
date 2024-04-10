@@ -26,6 +26,21 @@ body{
     width: calc(100% - 250px);
 }
 
+.menu.active {
+    width: 250px;
+}
+
+.menu #btn{
+    position: absolute;
+    color: #fff;
+    top: .4rem;
+    left: 50%;
+    font-size: 1.2rem;
+    line-height: 50px;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
 
 
 
