@@ -7,11 +7,13 @@
 }
 
 body {
-  background-color: rgb(23, 54, 82);
+    background-image: url(img/ESCOLA.jpg);
+    background-repeat: no-repeat; 
+    background-size: 100%;
 }
 
 nav{
-    position: relative;
+    position: fixed;
     top: 0;
     bottom: 0;
     height: 100%;
