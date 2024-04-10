@@ -124,6 +124,10 @@ body{
     opacity: 1;
 }
 
+.menu.active ul li .tooltip{
+    display: none;
+}
+
 
 
 
