@@ -20,7 +20,49 @@ include('protect.php');
 <body>
 
   
+    <div class="menu">
+        <div class="top">
+            <div class="logo">
+             
+                <span>Menu</span>
+            </div>
+            <i class="fa-solid fa-chevron-right" id="btn"></i>
+        </div>
+        <ul>
+            <li>
+                <a href="#">
+                    <i class="meu-icone fa-solid fa-clipboard-question"></i>
+                    <span class="nav-item">Consultar Consulta</span>
+                </a>
+                <span class="tooltip">Consultar Consulta</span>
+            </li>
 
+            <li>
+                <a href="#">
+                    <i class="meu-icone fa-solid fa-user-tie"></i>
+                    <span class="nav-item">Administrador</span>
+                </a>
+                <span class="tooltip">Adiminstrador</span>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="meu-icone fa-solid fa-handshake-angle"></i>
+                    <span class="nav-item">Ajuda</span>
+                </a>
+                <span class="tooltip">Ajuda</span>
+            </li>
+
+            <li>
+                <a href="logout.php">
+                    <i class="meu-icone fa-solid fa-right-from-bracket"></i>
+                    <span class="nav-item">Sair</span>
+                </a>
+                <span class="tooltip">Sair</span>
+            </li>
+
+        </ul>
+    </div>
 
 
 </body>
