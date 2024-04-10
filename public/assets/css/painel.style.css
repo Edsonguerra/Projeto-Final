@@ -1,24 +1,5 @@
 
 
-body {
-    background-image: url(img/ESCOLA.jpg);
-    background-repeat: no-repeat; 
-    background-size: 100%;
-}
-
-nav{
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    height: 100%;
-    left: 0;
-    background: #fff;
-    width: 90px;
-    overflow: hidden;
-    transition: width 0.2s linear;
-    box-shadow: 0 20px 35px rgb(0, 0, 0, 0.1);
-}
-
 .logo{
     text-align: center;
     display: flex;
