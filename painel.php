@@ -53,38 +53,6 @@ include('protect.php');
         </ul>
     </nav>
 
-
-    <header>
-       <h1 class="Hospital">Hospital dos cajueiros</h1>
-        <nav class="icones">
-            <a href="Sobre.html">Sobre</a>
-            <a href="Sobre.html">Ajuda</a>
-                <a href="index.html">
-                    <a href="index.html">
-                        <button class="botaologin">Login</button>
-                    </a>
-                </a>
-        </nav>  
-    </header>
-
-    <div class="name">
-        <h2>Seja bem vindo ao site de <p> marcações de consultas online <p> do Hospital dos Cajueiros!</h2>
-    </div>
-        <div class="Conteudo">
-            <h3>Faça a sua marcação de consultas de forma rapida e simples selecionando o tipo <p> de consulta abaixo.</h3>
-        </div>
-
-        <?php
-            $host="localhost";
-            $user="root";
-            $password="";
-            $bancodedados ="site_marcação_de_consulta";
-
-            $mysqli = new  mysqli($host, $user, $password, $bancodedados);
-            $tiposdeconsultas = mysqli_query($mysqli, "SELECT * FROM tipos_de_consultas"); 
-        ?>
-
-
     <form action="processa_consulta.php" method="POST">
         <div class="Selecionar">
             <div class="selecionar-botao">
@@ -93,24 +61,26 @@ include('protect.php');
                     <i class="fa-solid fa-chevron-down"></i>
                 </span> 
             </div>
-                <ul class="lista-consulta">
-                    <?php if ($tiposdeconsultas->num_rows > 0): ?> 
-                        <?php while ($row = $tiposdeconsultas->fetch_assoc()) :?> 
-                            <li class="lista">
-                                <img class="img" width="35 " src="public/assets/css/img/43493.png" alt="">
-                                <span class="checked"><i class="fa-solid fa-check check-icon"></i></span>
-                                <span class="primeiro-lista"><?php echo $row["nome"]?></span>
-                                <input type="checkbox" name="tipo_consulta[]" value="Consulta_de_Dermatologia">
-                            </li>
-                                <?php endwhile;?>     
-                                <input class="button" type="submit" value="Marcar Consulta"> 
-                                <?php else:?>
-                                <p>Consultas indisponiveis</p>     
-                                <?php endif;?>     
-                </ul>   
-            </div>    
-        </form>
+            <ul class="lista-consulta">
+            <?php if ($tiposdeconsultas->num_rows > 0): ?> 
+            <?php while ($row = $tiposdeconsultas->fetch_assoc()) :?> 
+            <li class="lista">
+            <img class="img" width="35 " src="public/assets/css/img/43493.png" alt="">
+            <span class="checked"><i class="fa-solid fa-check check-icon"></i></span>
+            <span class="primeiro-lista"><?php echo $row["nome"]?></span>
+            <input type="checkbox" name="tipo_consulta[]" value="Consulta_de_Dermatologia">
+                </li>
+            <?php endwhile;?>     
+            <input class="button" type="submit" value="Marcar Consulta"> 
+            <?php else:?>
+                <p>Consultas indisponiveis</p>     
+            <?php endif;?>     
+            </ul>   
+        </div>    
+    </form>
 
 
+
+    <script src="public/js/index.js"></script>
 </body>
 </html>

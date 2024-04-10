@@ -92,104 +92,6 @@ nav:hover{
 
 
 
-
-
-
-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 25px 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 99;
-
-}
-
-.Hospital {
-    font-size: 2em;
-    color: #fff;
-    user-select: none;
-}
-
-.icones a {
-    position: relative;
-    font-size: 1.1em;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 40px;
-}
-
-
-
-.icones a:hover::after {
-    transform: scaleX(1);
-
-}
-
-.icones .botaologin {
-    width: 130px;
-    height: 50px;
-    background: transparent;
-    border: 2px solid #fff;
-    outline: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1.1em;
-    color: #fff;
-    font-weight: 500;
-    margin-left: 40px;
-    transition: .5s;
-} 
-
-.icones .botaologin:hover {
-    background: #fff;
-    color: #162938;
-}
-
-
-
-
-
-
-.name{
-    position: absolute;
-    font-size: 25px;
-    display: flex;
-    top: 201px;
-    left: 60px;
-    color: #fff;
-}
-
-h2{
-    font-family: "Doppio One", sans-serif;
-}
-
-.Conteudo{
-   
-    position: absolute;
-    display: flex;
-    top: 335px;
-    left: 61px;
-    font-size: 15px;
-    color: rgb(255, 255, 255);
-    
-}
-
-h3{
-    font-family: "Quattrocento", serif;
-}
-
-
-
-
-
-
-
-
 .Selecionar{
     position: absolute;
     max-width: 320px;
@@ -336,5 +238,21 @@ h3{
     font-weight: 500;
     color: #fff;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
