@@ -18,53 +18,18 @@ include('protect.php');
     <link href="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&family=Glegoo:wght@400;700&family=M+PLUS+1+Code:wght@100..700&family=Quattrocento:wght@400;700&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  
-    <div class="menu">
-        <div class="top">
-            <div class="logo">
-                <span>Hospital Cajueiros</span>
+ 
+    <div class="contianer">
+        <div class="sidebat">
+            <div class="head">
+                <div class="hosp-img">
+                   
+                </div>
             </div>
-            <i class="fa-solid fa-chevron-right" id="btn"></i>
-        </div>
-        <ul>
-            <li>
-                <a href="#">
-                    <i class="meu-icone fa-solid fa-clipboard-question"></i>
-                    <span class="nav-item">Consultar</span>
-                </a>
-            </li>
-
-            <li>
-                <a href="#">
-                    <i class="meu-icone fa-solid fa-user-tie"></i>
-                    <span class="nav-item">Administrador</span>
-                </a>
-            </li>
-
-            <li>
-                <a href="#">
-                    <i class="meu-icone fa-solid fa-handshake-angle"></i>
-                    <span class="nav-item">Ajuda</span>
-                </a>
-            </li>
-
-            <li><a href="logout.php" class="sair">
-                    <i class="fa-solid fa-right-from-bracket"></i>
-                    <span class="nav-item">Sair</span>
-                </a>
-            </li>
-
-        </ul>
-    </div>
-
-    <div class="main-content">
-        <div class="container">
-            <h1>Hospital dos cajueiros</h1>
-            <h2 class="name">Seja bem vindo ao site de <br> marcações de consultas online <br> do Hospital dos Cajueiros!</h2>
-            <h3 class="Conteudo">Faça a sua marcação de consultas de forma rapida e simples selecionando o tipo <br> de consulta abaixo.</h3>
         </div>
     </div>
+
+
 
 
     <div class="boas-vindas">
