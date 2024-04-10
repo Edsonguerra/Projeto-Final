@@ -88,6 +88,7 @@ body{
     align-items: center;
     text-decoration: none;
     border-radius: 0.8rem;
+    white-space: nowrap;
 }
 
 .menu ul li a:hover{
@@ -101,6 +102,7 @@ body{
     height: 50px;
     border-radius: 12px;
     line-height: 50px;
+    white-space: nowrap;
 }
 
 .menu .nav-item {
