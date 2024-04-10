@@ -123,8 +123,7 @@ body{
 .sair{
     position: absolute;
     bottom: 0; /* Ajuste o padding inferior conforme necessário */
-    left: 0; /* Alinhe à esquerda do menu */
-    width: 100%;
+   
 }
 
 
