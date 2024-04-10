@@ -7,7 +7,6 @@
 }
 
 body {
-    padding-left: 90px;
     background-image: url(img/ESCOLA.jpg);
     background-repeat: no-repeat; 
     background-size: 100%;
@@ -26,10 +25,7 @@ nav{
     box-shadow: 0 20px 35px rgb(0, 0, 0, 0.1);
 }
 
-nav:hover .nav-item {
-    width: calc(100% - 90px); /* Expanda a área de texto no hover */
-    transition: width 0.2s ease;
-  }
+
 
 .logo{
     text-align: center;
