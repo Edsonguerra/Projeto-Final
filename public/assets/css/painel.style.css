@@ -120,7 +120,7 @@ body{
     padding: 1rem;
 }
 
-.menu ul li a .sair{
+.menu ul li .sair{
     position: absolute;
     bottom: 200px; /* Ajuste o padding inferior conforme necessário */
    
