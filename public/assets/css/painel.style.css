@@ -126,6 +126,17 @@ body{
 
 .menu.active ul li .tooltip{
     display: none;
+} 
+
+.main-content{
+    position: relative;
+    background-color: #eee;
+    min-height: 100vh;
+    top: 0;
+    left: 80px;
+    transition: all 0.5s ease;
+    width: calc(100% - 80px);
+    padding: 1rem;
 }
 
 
