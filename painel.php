@@ -21,9 +21,6 @@ include('protect.php');
 
     <div class="boas-vindas">
         Bem vindo ao painel, <span class="nome-usuario"><?php echo $_SESSION['nome']; ?></span>
-        <p>
-            <a href="logout.php" class="logout">Sair</a>
-        </p>
     </div>
 
     <nav>
@@ -45,7 +42,7 @@ include('protect.php');
             <i class="fa-solid fa-right-from-bracket"></i>
                 <span class="nav-item">Consulta</span>
             </a></li>
-            <li><a href="#">
+            <li><a href="logout.php">
             <i class="fa-solid fa-right-from-bracket"></i>
                 <span class="nav-item">Consulta</span>
             </a></li>
