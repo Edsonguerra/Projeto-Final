@@ -16,7 +16,7 @@ body {
     /* overflow: hidden; */
 }
 
-nav{
+.nav{
     position: absolute;
     top: 0;
     bottom: 0;
