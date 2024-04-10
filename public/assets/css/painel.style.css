@@ -8,11 +8,14 @@
 
 body {
     background-image: url(img/ESCOLA.jpg);
-    background-repeat: no-repeat; 
-    background-size: 100%;
-    display: flex;
-    padding-left: 90px; 
-}
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh; /* Garanta a altura da viewport */
+    display: flex; /* Permite empurrar o conteúdo ao expandir o menu */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+  }
+
 
 nav{
     position: fixed;
