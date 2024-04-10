@@ -25,34 +25,28 @@ nav{
     box-shadow: 0 20px 35px rgb(0, 0, 0, 0.1);
 }
 
-
-
-a{
-    position: relative;
-    color: rgb(83, 83, 83);
-    font-size: 17px;
-    display: table;
-    width: 300px;
-    padding: 10px;
-    text-decoration: none;
-
-}
-
-.fa-solid{
-    position: relative;
-    width: 70px;
-    height: 40px;
-    top: 14px;
-    font-size: 20px;
+.logo{
     text-align: center;
+    display: flex;
+    transition: all 0.5s ease;
+    margin: 10px 0 0 10px;
+}
+
+.logo img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
 
 }
 
-.nav-item{
-    position: relative;
-    top: 12px;
-    margin-left: 10px;
+.logo span{
+    font-weight: bold;
+    padding-left: 15px;
+    font-size: 18px;
+    text-transform: uppercase;
 }
+
+
 
 a:hover{
     background: #eee;
