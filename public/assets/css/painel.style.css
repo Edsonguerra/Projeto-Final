@@ -19,6 +19,7 @@ body{
     background-color: #12171e;
     padding: .4rem .8rem;
     transition: all 0.5s ease;
+    padding-bottom: 50px; 
 }
 
 .menu.active ~ .main-content {
@@ -77,6 +78,7 @@ body{
     width: 90%;
     margin: 0.8rem auto;
     line-height: 50px;
+    margin-bottom: 0;
 }
 
 .menu ul li a {
