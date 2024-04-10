@@ -120,9 +120,9 @@ nav:hover{
 
 .selecionar-botao .down-arrow{
     display: flex;
-    height: 25px;
-    width: 25px;
-    border-radius: 50%;
+    height: 21px;
+    width: 21px;
+    border-radius: 5%;
     color: #008791;
     font-size: 14px;
     background: #fff;
