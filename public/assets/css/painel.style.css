@@ -54,6 +54,16 @@ a{
 
 }
 
+.fa-solid{
+    position: relative;
+    width: 70px;
+    height: 40px;
+    top: 14px;
+    font-size: 20px;
+    text-align: center;
+
+}
+
 h1{
     font-family: "Doppio One", sans-serif;
 }
