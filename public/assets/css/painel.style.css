@@ -10,8 +10,6 @@ body {
     background-image: url(img/ESCOLA.jpg);
     background-repeat: no-repeat; 
     background-size: 100%;
-    display: flex;
-    padding-left: 90px; 
 }
 
 nav{
@@ -28,16 +26,6 @@ nav{
     z-index: 1; 
 }
 
-
-.content {
-    padding-left: 280px; /* Ajuste o padding de acordo com a largura do menu */
-    transition: padding-left 0.2s linear;
-}
-
-nav:hover {
-    width: 280px; /* Ajuste a largura de acordo com sua preferência */
-    transition: all 0.5s ease;
-}
 
 .logo{
     text-align: center;
