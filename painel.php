@@ -42,7 +42,6 @@ include('protect.php');
             <i class="fa-solid fa-user-tie"></i>
                 <span class="nav-item">Administrador</span>
             </a></li>
-            <i class="fa-solid fa-handshake-angle"></i>
                 <span class="nav-item">Ajuda</span>
             </a></li>
             <li><a href="logout.php">
