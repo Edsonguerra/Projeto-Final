@@ -23,7 +23,7 @@ include('protect.php');
     <div class="menu">
         <div class="top">
             <div class="logo">
-             
+                <img src="" alt="">
                 <span>Menu</span>
             </div>
             <i class="fa-solid fa-chevron-right" id="btn"></i>
@@ -65,6 +65,51 @@ include('protect.php');
     </div>
 
 
+
+
+    <div class="boas-vindas">
+        Bem vindo ao painel, <span class="nome-usuario"><?php echo $_SESSION['nome']; ?></span>
+    </div>
+
+    <?php
+    $host="localhost";
+    $user="root";
+    $password="";
+    $bancodedados ="site_marcação_de_consulta";
+
+    $mysqli = new  mysqli($host, $user, $password, $bancodedados);
+    $tiposdeconsultas = mysqli_query($mysqli, "SELECT * FROM tipos_de_consultas"); 
+    ?>
+
+    <form action="processa_consulta.php" method="POST">
+        <div class="Selecionar">
+            <div class="selecionar-botao">
+                <span class="texto">Selecionar Consulta</span>
+                <span class="down-arrow">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </span> 
+            </div>
+            <ul class="lista-consulta">
+            <?php if ($tiposdeconsultas->num_rows > 0): ?> 
+            <?php while ($row = $tiposdeconsultas->fetch_assoc()) :?> 
+            <li class="lista">
+            <img class="img" width="35 " src="public/assets/css/img/43493.png" alt="">
+            <span class="checked"><i class="fa-solid fa-check check-icon"></i></span>
+            <span class="primeiro-lista"><?php echo $row["nome"]?></span>
+            <input type="checkbox" name="tipo_consulta[]" value="Consulta_de_Dermatologia">
+                </li>
+            <?php endwhile;?>     
+            <input class="button" type="submit" value="Marcar Consulta"> 
+            <?php else:?>
+                <p>Consultas indisponiveis</p>     
+            <?php endif;?>     
+            </ul>   
+        </div>    
+    </form>
+
+
+
+    <script src="public/js/index.js"></script>
 </body>
 
 <script>

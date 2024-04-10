@@ -35,3 +35,314 @@ body{
 
 
 
+
+.Conteudo{
+   
+    position: absolute;
+    display: flex;
+    top: 335px;
+    left: 61px;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    
+}
+
+h3{
+    font-family: "Quattrocento", serif;
+}
+
+
+
+
+
+
+
+
+
+
+.selecionar-botao{
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #008791;
+    box-shadow: 0 5px 10px rgb(126, 141, 141);
+}
+
+.selecionar-botao .texto{
+    font-size: 17px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.selecionar-botao .down-arrow{
+    display: flex;
+    height: 21px;
+    width: 21px;
+    border-radius: 50%;
+    color: #008791;
+    font-size: 14px;
+    background: #fff;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.selecionar-botao.open .down-arrow{
+    transform: rotate(-180deg);
+}
+
+.lista-consulta{
+    position: relative;
+    margin-top: 15px;
+    border-radius: 8px;
+    padding: 9px;
+    background-color: #ffffff;
+    box-shadow: 0 5px 10px rgb(27, 97, 97);
+    display: none;
+    
+
+}
+
+
+.selecionar-botao.open ~ .lista-consulta{
+    display: block;
+
+}
+
+
+.lista-consulta .lista{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    height: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 0 15px;
+    border-radius: 8px;
+}
+
+.lista-consulta .lista:hover{
+    background-color: #e7edfe;
+
+}
+
+.lista .primeiro-lista{
+    position: absolute;
+    font-size: 16px;
+    left: 52px;
+    font-weight: 400px;
+    color: #002033;
+}
+
+.lista .img{
+    position: absolute;
+    left: 10px;
+}
+
+.lista .checked{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 285px;
+    height: 16px;
+    width: 16px;
+    border-radius: 4px;
+    margin-right: 12px;
+    border: 1.5px solid #c0c0c0;
+    transition: all 0.3s ease-in-out;
+}
+
+.lista.checked .checked{
+    background-color: #008791;
+    border-color: #ffffff;
+} 
+
+.checked .check-icon{
+    color: #e7edfe;
+    font-size: 11px;
+    transform: scale(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.lista.checked .check-icon{
+    transform: scale(1);
+}
+
+
+.button{
+    
+    width: 100%;
+    margin-top: 0.1rem;
+    border: none;
+    background-color: #008791;
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: #00747c;
+}
+
+.button{
+    text-decoration: none;
+    font-size: 1.0rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+
+
+.Selecionar{
+    position: absolute;
+    max-width: 320px;
+    width: 100%;
+    border-radius: 8px;
+    top: 615px;   
+    left: 310px;
+    
+ 
+}
+
+.selecionar-botao{
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #008791;
+    box-shadow: 0 5px 10px rgb(126, 141, 141);
+}
+
+.selecionar-botao .texto{
+    font-size: 17px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.selecionar-botao .down-arrow{
+    display: flex;
+    height: 21px;
+    width: 21px;
+    border-radius: 50%;
+    color: #008791;
+    font-size: 14px;
+    background: #fff;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.selecionar-botao.open .down-arrow{
+    transform: rotate(-180deg);
+}
+
+.lista-consulta{
+    position: relative;
+    margin-top: 15px;
+    border-radius: 8px;
+    padding: 9px;
+    background-color: #ffffff;
+    box-shadow: 0 5px 10px rgb(27, 97, 97);
+    display: none;
+    
+
+}
+
+
+.selecionar-botao.open ~ .lista-consulta{
+    display: block;
+
+}
+
+
+.lista-consulta .lista{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    height: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 0 15px;
+    border-radius: 8px;
+}
+
+.lista-consulta .lista:hover{
+    background-color: #e7edfe;
+
+}
+
+.lista .primeiro-lista{
+    position: absolute;
+    font-size: 16px;
+    left: 52px;
+    font-weight: 400px;
+    color: #002033;
+}
+
+.lista .img{
+    position: absolute;
+    left: 10px;
+}
+
+.lista .checked{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 285px;
+    height: 16px;
+    width: 16px;
+    border-radius: 4px;
+    margin-right: 12px;
+    border: 1.5px solid #c0c0c0;
+    transition: all 0.3s ease-in-out;
+}
+
+.lista.checked .checked{
+    background-color: #008791;
+    border-color: #ffffff;
+} 
+
+.checked .check-icon{
+    color: #e7edfe;
+    font-size: 11px;
+    transform: scale(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.lista.checked .check-icon{
+    transform: scale(1);
+}
+
+
+.button{
+    
+    width: 100%;
+    margin-top: 0.1rem;
+    border: none;
+    background-color: #008791;
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: #00747c;
+}
+
+.button{
+    text-decoration: none;
+    font-size: 1.0rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+
