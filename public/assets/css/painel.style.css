@@ -12,6 +12,18 @@ body {
     background-size: 100%;
 }
 
+.nav{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    background: #fff;
+    width: 90px;
+    overflow: hidden;
+    transition: width 0.2s linear;
+}
+
 h1{
     font-family: "Doppio One", sans-serif;
 }
