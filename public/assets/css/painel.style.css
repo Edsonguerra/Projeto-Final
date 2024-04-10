@@ -120,9 +120,9 @@ body{
     padding: 1rem;
 }
 
-.menu ul li a .sair{
+.sair{
     position: absolute;
-    bottom: -0px; /* Ajuste o padding inferior conforme necessário */
+    bottom: 10px; /* Ajuste o padding inferior conforme necessário */
     left: 0; /* Alinhe à esquerda do menu */
     width: 100%;
 }
