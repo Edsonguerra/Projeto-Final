@@ -121,7 +121,7 @@ nav:hover{
 .selecionar-botao .down-arrow{
     display: flex;
     height: 21px;
-    width: 30px;
+    width: 21px;
     border-radius: 50%;
     color: #008791;
     font-size: 14px;
@@ -197,7 +197,7 @@ nav:hover{
     transition: all 0.3s ease-in-out;
 }
 
-.lista.checked .checked{
+.lista.checked .checked
     background-color: #008791;
     border-color: #ffffff;
 } 
