@@ -73,6 +73,7 @@ body{
     position: relative;
     list-style-type: none;
     height: 50px;
+    font-size: 18px;
     width: 90%;
     margin: 0.8rem auto;
     line-height: 50px;
@@ -80,7 +81,6 @@ body{
 
 .menu ul li a {
     color: #fff;
-    font-size: 10px;
     display: flex;
     align-items: center;
     text-decoration: none;
