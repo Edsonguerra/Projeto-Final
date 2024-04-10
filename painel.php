@@ -19,16 +19,7 @@ include('protect.php');
 </head>
 <body>
 
-    <div class="boas-vindas">
-        Bem vindo ao painel, <span class="nome-usuario"><?php echo $_SESSION['nome']; ?></span>
-    </div>
-
-    <div class="name">
-        <h2>Seja bem vindo ao site de <p> marcações de consultas online <p> do Hospital dos Cajueiros!</h2>
-    </div>
-    <div class="Conteudo">
-        <h3>Faça a sua marcação de consultas de forma rapida e simples selecionando o tipo <p> de consulta abaixo.</h3>
-    </div>
+  
 
     <nav>
         <ul>
@@ -59,6 +50,17 @@ include('protect.php');
             </a></li>
         </ul>
     </nav>
+
+    <div class="boas-vindas">
+        Bem vindo ao painel, <span class="nome-usuario"><?php echo $_SESSION['nome']; ?></span>
+    </div>
+
+    <div class="name">
+        <h2>Seja bem vindo ao site de <p> marcações de consultas online <p> do Hospital dos Cajueiros!</h2>
+    </div>
+    <div class="Conteudo">
+        <h3>Faça a sua marcação de consultas de forma rapida e simples selecionando o tipo <p> de consulta abaixo.</h3>
+    </div>
 
     <?php
     $host="localhost";
