@@ -88,7 +88,7 @@ body{
     border-radius: 0.8rem;
 }
 
-.menu ul li :hover{
+.menu ul li a:hover{
     background-color: #fff;
     color: #12171e;
 }
