@@ -99,6 +99,13 @@ body{
     line-height: 50px;
 }
 
+.menu .nav-item {
+    opacity: 0;
+}
+
+.menu.active .nav-item {
+    opacity: 1;
+}
 
 
 
