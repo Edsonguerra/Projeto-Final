@@ -58,7 +58,7 @@ a{
 }
 
 .fa-solid{
-    position: absolute;
+    position: fixed;
     width: 70px;
     height: 40px;
     top: 14px;
