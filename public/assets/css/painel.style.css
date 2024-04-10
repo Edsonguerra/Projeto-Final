@@ -100,7 +100,7 @@ nav:hover{
  
 }
 
-.selecionar-botao{
+.selecionar-botao
     display: flex;
     height: 50px;
     align-items: center;
@@ -124,7 +124,7 @@ nav:hover{
     width: 21px;
     border-radius: 50%;
     color: #008791;
-    font-size: 1px;
+    font-size: 14px;
     background: #fff;
     align-items: center;
     justify-content: center;
