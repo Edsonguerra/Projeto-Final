@@ -6,7 +6,9 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-
+body{
+    background-color: #fff;
+}
 
 .menu{
     position: fixed;
@@ -78,6 +80,7 @@
 
 .menu ul li a {
     color: #fff;
+    font-size: 10px;
     display: flex;
     align-items: center;
     text-decoration: none;
