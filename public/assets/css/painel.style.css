@@ -1,25 +1,31 @@
 
-
-.logo{
-    text-align: center;
-    display: flex;
-    transition: all 0.5s ease;
-    margin: 10px 0 0 10px;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'inter', sans-serif;
 }
 
-.logo img{
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-
+body {
+    background-image: url(img/ESCOLA.jpg);
+    background-repeat: no-repeat; 
+    background-size: 100%;
 }
 
-.logo span{
-    font-weight: bold;
-    padding-left: 15px;
-    font-size: 18px;
-    text-transform: uppercase;
+nav{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    background: #fff;
+    width: 90px;
+    overflow: hidden;
+    transition: width 0.2s linear;
+    box-shadow: 0 20px 35px rgb(0, 0, 0, 0.1);
 }
+
+
 
 a{
     position: relative;
