@@ -133,6 +133,38 @@ body{
 
 
 
+.name{
+    position: absolute;
+    font-size: 25px;
+    display: flex;
+    top: 201px;
+    left: 60px;
+    color: #fff;
+}
+
+h2{
+    font-family: "Doppio One", sans-serif;
+}
+
+.Conteudo{
+   
+    position: absolute;
+    display: flex;
+    top: 335px;
+    left: 61px;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    
+}
+
+h3{
+    font-family: "Quattrocento", serif;
+}
+
+
+
+
+
 
 
 

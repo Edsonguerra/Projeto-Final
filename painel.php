@@ -61,8 +61,8 @@ include('protect.php');
     <div class="main-content">
         <div class="container">
             <h1>Hospital dos cajueiros</h1>
-            <h2>Seja bem vindo ao site de <p> marcações de consultas online <p> do Hospital dos Cajueiros!</h2>
-            <h3>Faça a sua marcação de consultas de forma rapida e simples selecionando o tipo <p> de consulta abaixo.</h3>
+            <h2 class="name">Seja bem vindo ao site de <p> marcações de consultas online <p> do Hospital dos Cajueiros!</h2>
+            <h3 class="Conteudo">Faça a sua marcação de consultas de forma rapida e simples selecionando o tipo <p> de consulta abaixo.</h3>
         </div>
     </div>
 
