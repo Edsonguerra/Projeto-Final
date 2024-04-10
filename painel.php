@@ -27,7 +27,7 @@ include('protect.php');
         <ul>
             <li>
                 <a href="#" class="logo">
-                    <img src="public/assets/css/img/43493" alt="">
+                    <img src="public/assets/css/img/43493.png" alt="">
                     <span class="nav-item">Menu</span>
                 </a>
             </li>
