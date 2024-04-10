@@ -23,7 +23,7 @@ body{
 
 .menu.active ~ .main-content {
     left: 300px;
-    width: calc(100% - 250px);
+    width: calc(100% - 300px);
 }
 
 .menu.active {
