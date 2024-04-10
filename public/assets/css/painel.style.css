@@ -27,7 +27,10 @@ nav{
     z-index: 1; 
 }
 
-
+.content {
+    flex: 1; /* Empurre o conteúdo para a direita ao expandir o menu */
+    padding: 20px; /* Padding opcional para a área de conteúdo */
+  }
 
 .logo{
     text-align: center;
