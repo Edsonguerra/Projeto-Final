@@ -19,91 +19,58 @@ include('protect.php');
 </head>
 <body>
 
-    <nav>
-        <div class="logo">
-            <i class="menu-icone fa-solid fa-bars"></i>
-            <div class="logo-nome">Hospital Cajueiros</div>
+
+    <div class="sidebar">
+        <div class="logo_details">
+            <i class="fa-solid fa-hospital"></i>
+            <div class="logo_name">Hospital Cajueiros</div>
+            <i class="fa-solid fa-bars" id="btn"></i>
         </div>
+        <ul class="nav-list">
+            <li>
+                <a href="#">
+                    <i class="meu-icone fa-solid fa-clipboard-question"></i>
+                    <span class="link_name">Consultar Consulta</span> 
+                </a>
+                <span class="tooltip">Consultar Consulta</span>
+            </li>
 
-        <div class="sidebar">
-            <div class="logo">
-                <i class="menu-icone fa-solid fa-bars"></i>
-                <div class="logo-nome">Hospital Cajueiros</div>
-            </div>
+            <li>
+                <a href="#">
+                    <i class="meu-icone fa-solid fa-user-tie"></i>
+                    <span class="link_name">Gestão</span> 
+                </a>
+                <span class="tooltip">Gestão</span>
+            </li>
 
-            <div class="sidebar-content">
-                <ul class="listas">
-                    <li class="lista">
-                        <a href="#" class="link-nav">
-                            <i class="meu-icone fa-solid fa-clipboard-question"></i>
-                            <span class="titulo">Consultar Consulta</span>
-                        </a>
-                    </li>
+            <li>
+                <a href="#">
+                    <i class="meu-icone fa-solid fa-handshake-angle"></i>
+                    <span class="link_name">Ajuda</span> 
+                </a>
+                <span class="tooltip">Ajuda</span>
+            </li>
 
-                   
-                    <li class="lista">
-                        <a href="#" class="link-nav">
-                            <i class="meu-icone fa-solid fa-user-tie"></i>
-                            <span class="titulo">Gestão</span>
-                        </a>
-                    </li>
+            
+            <li>
+                <a href="logout.php">
+                    <i class="meu-icone fa-solid fa-right-from-bracket"></i>
+                    <span class="link_name">Ajuda</span> 
+                </a>
+                <span class="tooltip">Ajuda</span>
+            </li>
+        </ul>
+    </div>
 
-                 
-                    <li class="lista">
-                        <a href="#" class="link-nav">
-                            <i class="meu-icone fa-solid fa-handshake-angle"></i>
-                            <span class="titulo">Ajuda</span>
-                        </a>
-                    </li>
+ 
 
-         
-                    <li class="lista">
-                        <a href="logout.php" class="link-nav">
-                            <i class="meu-icone fa-solid fa-right-from-bracket"></i>
-                            <span class="titulo">Sair</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-  
-    <section class="overlay"></section>
-
-
-    <script>
-        const navBar = document.querySelector("nav"),
-            menuBtns = document.querySelectorAll(".menu-icone"),
-            overlay = document.querySelector(".overlay");
-        menuBtns.forEach(menuBtn => {
-            menuBtn.addEventListener("click", () => {
-                navBar.classList.toggle("open");
-            });
-        });
-
-        overlay.addEventListener("click", () => {
-            navBar.classList.remove("open");
-        })
-    </script>
-        
-
-        <div class="direita">
-            <div class="empurra">
-            <h2>Seja bem</h2>
-            </div>
-           
-        </div>
+   
                     
     <div class="boas-vindas">
         Bem vindo ao painel, <span class="nome-usuario"><?php echo $_SESSION['nome']; ?></span>
     </div>
 
-    <div class="name">
-        
-    </div>
-    <div class="Conteudo">
-        <h3>Faça a sua marcação de consultas de forma rapida e simples selecionando o tipo <p> de consulta abaixo.</h3>
-    </div>
+
 
     <?php
     $host="localhost";
