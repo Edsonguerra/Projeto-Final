@@ -18,22 +18,91 @@ include('protect.php');
     <link href="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&family=Glegoo:wght@400;700&family=M+PLUS+1+Code:wght@100..700&family=Quattrocento:wght@400;700&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
 </head>
 <body>
- 
-    <div class="contianer">
-        <div class="sidebat">
-            <div class="head">
-                <div class="hosp-img">
+
+    <nav>
+        <div class="logo">
+            <i class="menu-icone fa-solid fa-bars"></i>
+            <div class="logo-nome">Hospital Cajueiros</div>
+        </div>
+
+        <div class="sidebar">
+            <div class="logo">
+                <i class="menu-icone fa-solid fa-bars"></i>
+                <div class="logo-nome">Hospital Cajueiros</div>
+            </div>
+
+            <div class="sidebar-content">
+                <ul class="listas">
+                    <li class="lista">
+                        <a href="#" class="link-nav">
+                            <i class="meu-icone fa-solid fa-clipboard-question"></i>
+                            <span class="titulo">Consultar Consulta</span>
+                        </a>
+                    </li>
+
                    
-                </div>
+                    <li class="lista">
+                        <a href="#" class="link-nav">
+                            <i class="meu-icone fa-solid fa-user-tie"></i>
+                            <span class="titulo">Gestão</span>
+                        </a>
+                    </li>
+
+                 
+                    <li class="lista">
+                        <a href="#" class="link-nav">
+                            <i class="meu-icone fa-solid fa-handshake-angle"></i>
+                            <span class="titulo">Ajuda</span>
+                        </a>
+                    </li>
+
+         
+                    <li class="lista">
+                        <a href="logout.php" class="link-nav">
+                            <i class="meu-icone fa-solid fa-right-from-bracket"></i>
+                            <span class="titulo">Sair</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </div>
+    </nav>
+  
+    <section class="overlay"></section>
 
 
+    <script>
+        const navBar = document.querySelector("nav"),
+            menuBtns = document.querySelectorAll(".menu-icone"),
+            overlay = document.querySelector(".overlay");
+        menuBtns.forEach(menuBtn => {
+            menuBtn.addEventListener("click", () => {
+                navBar.classList.toggle("open");
+            });
+        });
 
+        overlay.addEventListener("click", () => {
+            navBar.classList.remove("open");
+        })
+    </script>
+        
 
+        <div class="direita">
+            <div class="empurra">
+            <h2>Seja bem</h2>
+            </div>
+           
+        </div>
+                    
     <div class="boas-vindas">
         Bem vindo ao painel, <span class="nome-usuario"><?php echo $_SESSION['nome']; ?></span>
+    </div>
+
+    <div class="name">
+        
+    </div>
+    <div class="Conteudo">
+        <h3>Faça a sua marcação de consultas de forma rapida e simples selecionando o tipo <p> de consulta abaixo.</h3>
     </div>
 
     <?php
@@ -76,13 +145,4 @@ include('protect.php');
 
     <script src="public/js/index.js"></script>
 </body>
-
-<script>
-    let btn = document.querySelector('#btn')
-    let menu = document.querySelector('.menu')
-
-    btn.onclick = function () {
-        menu.classList.toggle('active')
-    };
-</script>
 </html>
