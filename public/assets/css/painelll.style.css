@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body{
+    background-image: url(img/qq.jpg);
+    background-repeat: no-repeat; 
+    background-size: 100%;
+}
+
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 80px;
+    background-color: #ffffff;
+    padding: 0.4rem 0.8rem;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active ~ .main-content{
+    left: 250px;
+    width: calc(100% - 250px);
+}
+
+.sidebar.active{
+    width: 250px;
+}
+
+.sidebar #btn {
+    position: absolute;
+    color: #003757;
+    top: .4rem;
+    left: 50%;
+    font-size: 1.2rem;
+    line-height: 50px;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.sidebar.active #btn{
+    left: 90%;
+}
+
+.sidebar .top .logo{
+    color: #003757;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.sidebar.active .top .logo{
+    opacity: 1;
+}
+
+.top .logo i{
+    font-size: 2rem;
+    margin-right: 5px;
+}
+
+.sidebar ul li {
+    position: relative;
+    top: 20px;
+    list-style: none;
+    height: 50px;
+    margin: 0.8rem auto;
+    line-height: 55px;
+}
+
+.sidebar ul li a{
+    color: #003757;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 0.8rem;
+}
+
+.sidebar ul li a:hover {
+    background-color: #00a3b8;
+    color: #ffffff;
+}
+
+.sidebar ul li a i{
+    min-width: 50px;
+    text-align: center;
+    height: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+}
+
+.sidebar .nav-item {
+    opacity: 0;
+}
+
+.sidebar.active .nav-item {
+    opacity: 1;
+}
+
+.sidebar ul li .tooltip{
+    position: absolute;
+    left: 125px;
+    top: 50%;
+    color: #002c3d;
+    transform: translate(-50%, -50%);
+    border-radius: .6rem;
+    padding: .4rem 1.2rem;
+    line-height: 1.8rem;
+    z-index: 20;
+    opacity: 0;
+}
+
+.sidebar ul li:hover .tooltip{
+    opacity: 1;
+}
+
+.sidebar.active ul li .tooltip{
+    display: none   ;
+}
+
+.sidebar ul li .sair{
+    position: relative;
+    bottom: -240px;
+}
+
+.main-content{
+    position: absolute;
+    min-height: 100vh;
+    top: 0;
+    left: 80px;
+    transition: all 0.5s ease;
+    width: calc(100% - 80px);
+    padding: 1rem;
+    
+}
+
+
+
+
+
+.name{
+    position: absolute;
+    font-size: 40px;
+    display: flex;
+    top: 201px;
+    left: 60px;
+    color: #fff;
+}
+
+h2{
+    font-family: "Doppio One", sans-serif;
+}
+
+.Conteudo{
+   
+    position: absolute;
+    display: flex;
+    top: 336px;
+    left: 61px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    
+}
+
+h3{
+    font-family: "Quattrocento", serif;
+}
+
+
+.bem-vindo{
+    position: absolute;
+    left: 30px;
+    top: 16px;
+    color: #007585;
+    font-size: 25px;
+}
+
+
+
+
+
+.boas-vindas{
+    position: absolute;
+    font-size: 19px;
+    margin-top: 10px;
+    top: 70px;
+    left: 100px;
+    color: #fff;
+    border-radius: 10px;
+    width: 280px;
+    height: 60px;
+    background-color: #008091;
+
+}
+
+.texto-bem-vindo{
+    position: absolute;
+    left: 50px;
+    top: 7px;
+    font-size: 18px;
+}
+
+.nome-usuario{
+    position: absolute;
+    top: 7px;
+    left: 140px;
+    font-size: 18px;
+}
+
+.sucesso{
+    position: absolute;
+    top: 5px;
+    margin-left: 50px;
+}
+
+.icone {
+    position: absolute;
+    top: 8px;
+    left: 15px;
+}
