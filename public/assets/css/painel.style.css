@@ -170,17 +170,97 @@ h2{
 }
 
 h3{
-    font-family: "Quattrocento", serif;
+    font-family: "Jura", sans-serif;
 }
 
 
 .bem-vindo{
     position: absolute;
     left: 30px;
-    top: 16px;
+    top: 14px;
     color: #007585;
-    font-size: 25px;
+    font-size: 22px;
 }
+
+h1 {
+    font-family: "Jura", sans-serif;
+    font-weight: 700;
+ 
+  }
+
+
+
+  header {
+    position: absolute;
+    top: -15px;
+    left: 700px;
+    width: 100%;
+    padding: 25px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+
+}
+
+
+
+.icones a {
+    position: relative;
+    font-size: 1.1em;
+    color: #006c80;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+    font-family: "Jura", sans-serif;
+    font-weight: 700;
+}
+
+
+
+.icones a:hover::after {
+    transform: scaleX(1);
+
+}
+
+.icones .botaologin {
+    width: 115px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #007f96;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.0em;
+    color: #006c80;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+    font-family: "Jura", sans-serif;
+    font-weight: 700;
+} 
+
+.icones .botaologin:hover {
+    background: #00758a;
+    color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -190,13 +270,13 @@ h3{
     position: absolute;
     font-size: 19px;
     margin-top: 10px;
-    top: 70px;
-    left: 100px;
+    top: 50px;
+    left: 1090px;
     color: #fff;
     border-radius: 10px;
     width: 280px;
     height: 60px;
-    background-color: #008091;
+    background-color: #dd0000;
 
 }
 
