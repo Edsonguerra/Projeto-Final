@@ -9,7 +9,7 @@ include('protect.php');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./public/assets/css/paine.style.css">
+    <link rel="stylesheet" href="./public/assets/css/painell.style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Encode+Sans+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Gudea:ital,wght@0,400;0,700;1,400&family=Inter:wght@100..900&family=Jura:wght@300..700&family=Noto+Sans+Mono:wght@100..900&family=PT+Mono&family=Sawarabi+Gothic&family=Teko:wght@300..700&display=swap" rel="stylesheet">
@@ -86,6 +86,7 @@ include('protect.php');
             <h2 class="name">Marque agora mesmo <br> a tua Consulta ou Análise <br> de uma forma fácil e segura!</h2>
             <h3 class="Conteudo">A tua saúde é a nossa prioridade!</h3>
 
+
         </div>
     </div>
 
@@ -96,7 +97,7 @@ include('protect.php');
    <div class="boas-vindas">
         <i class="icone fa-solid fa-circle-check"></i>
         <span class="sucesso"> <strong>Sucesso ao Entrar</strong> <br> </span>
-        <span class="texto-bem-vindo"> <br> Bem vindo</span> <span class="nome-usuario"> <br> <?php echo $_SESSION['nome']; ?>!</span>
+        <span class="texto-bem-vindo"> <br> Bem vindo/a</span> <span class="nome-usuario"> <br> <?php echo $_SESSION['nome']; ?>!</span>
    </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -118,11 +119,44 @@ include('protect.php');
     });
     </script>
 
+    <?php
+        $host="localhost";
+        $user="root";
+        $password="";
+        $bancodedados ="site_marcação_de_consulta";
+
+        $mysqli = new  mysqli($host, $user, $password, $bancodedados);
+        $tiposdeconsultas = mysqli_query($mysqli, "SELECT * FROM tipos_de_consultas"); 
+    ?>
 
 
+    <form action="processa_consulta.php" method="POST">
+        <div class="Selecionar">
+            <div class="selecionar-botao">
+                <span class="texto">Selecionar Consulta</span>
+                <span class="down-arrow">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </span> 
+            </div>
+            <ul class="lista-consulta">
+                <?php if ($tiposdeconsultas->num_rows > 0): ?> 
+                <?php while ($row = $tiposdeconsultas->fetch_assoc()) :?> 
+            <li class="lista">
+                <img class="img" width="35 " src="public/assets/css/img/43493.png" alt="">
+                <span class="checked"><i class="fa-solid fa-check check-icon"></i></span>
+                <span class="primeiro-lista"><?php echo $row["nome"]?></span>
+                <input type="checkbox" name="tipo_consulta[]" value="Consulta_de_Dermatologia">
+            </li>
+            <?php endwhile;?>     
+                <input class="button" type="submit" value="Marcar Consulta"> 
+            <?php else:?>
+                <p>Consultas indisponiveis</p>     
+            <?php endif;?>     
+            </ul>   
+        </div>    
+    </form>
 
 
-
-    
+    <script src="public/js/index.js"></script> 
 </body>
 </html>
