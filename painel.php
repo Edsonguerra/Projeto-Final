@@ -9,7 +9,7 @@ include('protect.php');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./public/assets/css/painel.style.css">
+    <link rel="stylesheet" href="./public/assets/css/paineel.style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Encode+Sans+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Gudea:ital,wght@0,400;0,700;1,400&family=Inter:wght@100..900&family=Jura:wght@300..700&family=Noto+Sans+Mono:wght@100..900&family=PT+Mono&family=Sawarabi+Gothic&family=Teko:wght@300..700&display=swap" rel="stylesheet">
@@ -21,6 +21,9 @@ include('protect.php');
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
+
+
+<!------------------------------------- Menu  -------------------------------------------->
 
     <div class="sidebar">
         <div class="top">
@@ -62,17 +65,18 @@ include('protect.php');
     </div>
 
 
-    <header>
-   <nav class="icones">
-    <a href="Sobre.html">Sobre</a>
-    <a href="Sobre.html">Ajuda</a>
-    <a href="index.html">
-        <a href="logout.php">
-        <button class="botaologin">Sair</button>
-        </a>
-    </a>
-   </nav>  
-    </header>
+     
+    <script>
+        let btn = document.querySelector('#btn')
+        let sidebar = document.querySelector('.sidebar')
+
+        btn.onclick = function () {
+            sidebar.classList.toggle('active')
+        };
+    </script>
+
+
+<!------------------------------------- Textos da pagina   -------------------------------------------->
 
 
 
@@ -87,23 +91,7 @@ include('protect.php');
 
 
 
-
-
-
- 
-    <script>
-        let btn = document.querySelector('#btn')
-        let sidebar = document.querySelector('.sidebar')
-
-        btn.onclick = function () {
-            sidebar.classList.toggle('active')
-        };
-    </script>
-   
-
-
-
-
+<!------------------------------------- Mensagem de bem-vindo  -------------------------------------------->
                     
    <div class="boas-vindas">
         <i class="icone fa-solid fa-circle-check"></i>
@@ -115,12 +103,12 @@ include('protect.php');
 
     <script>
         $(document).ready(function() {
-        // Verifica se a página foi atualizada
+    
         if (window.performance && window.performance.navigation.type === 1) {
-        // Se a página foi atualizada, esconde a mensagem
+   
         $('.boas-vindas').hide();
         } else {
-        // Se a página não foi atualizada, mostra a mensagem e a esconde após 1 segundo
+
         $('.boas-vindas').fadeIn();
         var interval = setInterval(function() {
         $('.boas-vindas').fadeOut();
@@ -129,5 +117,10 @@ include('protect.php');
     }
 });
     </script>
+
+
+
+
+    
 </body>
 </html>

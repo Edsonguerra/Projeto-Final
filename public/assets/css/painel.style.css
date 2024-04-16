@@ -145,6 +145,10 @@ body{
 
 
 
+
+
+
+
 .name{
     position: absolute;
     font-size: 40px;
@@ -190,75 +194,6 @@ h1 {
 
 
 
-  header {
-    position: absolute;
-    top: -15px;
-    left: 700px;
-    width: 100%;
-    padding: 25px 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 99;
-
-}
-
-
-
-.icones a {
-    position: relative;
-    font-size: 1.1em;
-    color: #006c80;
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 40px;
-    font-family: "Jura", sans-serif;
-    font-weight: 700;
-}
-
-
-
-.icones a:hover::after {
-    transform: scaleX(1);
-
-}
-
-.icones .botaologin {
-    width: 115px;
-    height: 40px;
-    background: transparent;
-    border: 2px solid #007f96;
-    outline: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1.0em;
-    color: #006c80;
-    font-weight: 500;
-    margin-left: 40px;
-    transition: .5s;
-    font-family: "Jura", sans-serif;
-    font-weight: 700;
-} 
-
-.icones .botaologin:hover {
-    background: #00758a;
-    color: #ffffff;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -270,13 +205,13 @@ h1 {
     position: absolute;
     font-size: 19px;
     margin-top: 10px;
-    top: 50px;
+    top: 20px;
     left: 1090px;
     color: #fff;
     border-radius: 10px;
     width: 280px;
     height: 60px;
-    background-color: #dd0000;
+    background-color: #15b300;
 
 }
 
@@ -305,3 +240,7 @@ h1 {
     top: 8px;
     left: 15px;
 }
+
+
+
+
