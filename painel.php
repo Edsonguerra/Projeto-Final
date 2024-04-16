@@ -115,7 +115,7 @@ include('protect.php');
         clearInterval(interval);
         }, 2000); // 1 segundo
     }
-});
+    });
     </script>
 
 
