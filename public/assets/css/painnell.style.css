@@ -5,7 +5,7 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-body{
+.panelContainer{
     background-image: url(img/qq.jpg);
     background-repeat: no-repeat; 
     background-size: 100%;
