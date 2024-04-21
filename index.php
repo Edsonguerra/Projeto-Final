@@ -6,7 +6,7 @@
    <nav class="icones">
     <a href="Sobre.html">Sobre</a>
     <a href="Sobre.html">Ajuda</a>
-        <a href="login.php">
+        <a href="views/login.php">
         <button class="botaologin">Login</button>
         </a>
    </nav>  

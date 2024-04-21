@@ -9,6 +9,8 @@
     background-image: url(img/qq.jpg);
     background-repeat: no-repeat; 
     background-size: 100%;
+    background-attachment: scroll;
+    
 }
 
 
@@ -202,7 +204,7 @@ h1 {
 
 
 .boas-vindas{
-    position: absolute;
+    position: fixed;
     font-size: 19px;
     margin-top: 10px;
     top: 20px;
