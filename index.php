@@ -4,8 +4,8 @@
 <header>
        <h1 class="Hospital">Hospital dos cajueiros</h1>
    <nav class="icones">
-    <a href="Sobre.html">Sobre</a>
-    <a href="Sobre.html">Ajuda</a>
+    <a href="views/Sobre.php">Sobre</a>
+    <a href="views/Sobre.php">Ajuda</a>
         <a href="views/login.php">
         <button class="botaologin">Login</button>
         </a>
@@ -23,10 +23,10 @@
         <img src="public/assets/css/img/EXAME.jpg">
         <h4 class="Hosp">Hospital dos Cajueiros</h4>
         <h5 class="Infor">Informações</h5>
-        <a class="Sobre" href="Sobre.html">Sobre</a>
-        <a class="Contacto" href="Contacto.html">Contacto</a>
-        <a class="Termos" href="Termos.html">Termos</a>
-        <a class="Politica" href="Politica.html">Politica de privacidade</a>
+        <a class="Sobre" href="views/Sobre.php">Sobre</a>
+        <a class="Contacto" href="views/Contacto.php">Contacto</a>
+        <a class="Termos" href="views/Termos.php">Termos</a>
+        <a class="Politica" href="views/Politica.php">Politica de privacidade</a>
     </div>
 
     <script src="public/js/index.js"></script>
