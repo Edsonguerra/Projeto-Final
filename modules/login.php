@@ -31,7 +31,7 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
             header("Location: ../views/painel.php");
 
         } else {
-            echo "Falha ao entrar! E-mail ou Senha incorretos";
+            header("Location: ../views/login.php");
         }
     }   
 }
