@@ -28,6 +28,13 @@
 
             <li>
                 <a href="#">
+                    <i class="fa-solid fa-handshake-angle"></i>
+                    <span class="nav-item">Ajuda</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
                     <i class="fa-solid fa-users"></i>
                     <span class="nav-item">Gestão</span>
                 </a>
