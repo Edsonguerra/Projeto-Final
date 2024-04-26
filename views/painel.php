@@ -22,14 +22,14 @@
             </li>
 
             <li>
-                <a href="#">
-                    <i class="fa-solid fa-handshake-angle"></i>
-                    <span class="nav-item">Ajuda</span>
+                <a href="Formulario_de_consulta.php">
+                    <i class="fa-solid fa-align-left"></i>
+                    <span class="nav-item">Formulário</span>
                 </a>
             </li>
 
             <li>
-                <a href="#">
+                <a href="">
                     <i class="fa-solid fa-handshake-angle"></i>
                     <span class="nav-item">Ajuda</span>
                 </a>
