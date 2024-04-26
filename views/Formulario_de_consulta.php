@@ -4,20 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/assets/css/Formulariio_de_consulta.css">
+    <link rel="stylesheet" href="../public/assets/css/Formulario_de_consulta.css">
     <title>Document</title>
 </head>
 <body>
     <div class="Formulario">
         <div class="detalhes">
             <div class="img-formulario">
-                <img src="../public/assets/css/img/imagem do formulário.jpg" alt="">
+                <img src="../public/assets/css/img/imagem do formulario.jpg" alt="">
             </div>
             <div class="submite-formulario">
                 <form action="../modules/Formulário.php" method="POST">
                     <h5 class="titulo">Formulário de Consulta</h5>
                     <div class="input-box">
-                        <input type="text" name="nome_completo" id="nome_completo" class="input_nome" required>
+                        <input type="text" name="nome_completo" id="nome_completo" class="input_nome" required placeholder="Digite o seu nome completo">
                         <label for="nome completo" class="nome_completo">Nome completo</label>
                     </div>
                     

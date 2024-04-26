@@ -1,6 +1,8 @@
 <?php include('../modules/protect.php');?> 
 <?php include('../modules/conexao.php');?>
 <?php include('../components/header.php');?>
+
+
 <!------------------------------------- Menu  -------------------------------------------->
 <body class="panelContainer">
     <div class="sidebar">
