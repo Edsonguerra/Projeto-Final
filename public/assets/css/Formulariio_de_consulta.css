@@ -16,7 +16,7 @@ body{
     position: relative;
     width: 100%;
     height: 100vh;
-    background: #00e1ff;
+    background: #007585;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,9 +35,15 @@ body{
     z-index: 1000;
 }
 
-.img-formulario{
-    background: #007585;
+.img-formulario img{
+    width: 100%;
+    margin-top: 50px;
 }
+
+.img-formulario{
+    background: #00a6c6;
+}
+
 
 .submite-formulario{
     background: rgb(255, 255, 255);
@@ -171,3 +177,5 @@ textarea.input{
 input[type="date"]::-webkit-calendar-picker-indicator {
     filter: invert(1) brightness(100%); /* Inverte e aumenta o brilho para branco */
   }
+
+

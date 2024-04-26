@@ -1,3 +1,4 @@
+<?php include('../modules/conexao.php');?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,39 +10,41 @@
 <body>
     <div class="Formulario">
         <div class="detalhes">
-            <div class="img-formulario"></div>
+            <div class="img-formulario">
+                <img src="../public/assets/css/img/imagem do formulário.jpg" alt="">
+            </div>
             <div class="submite-formulario">
-                <form action="">
+                <form action="../modules/Formulário.php" method="POST">
                     <h5 class="titulo">Formulário de Consulta</h5>
                     <div class="input-box">
-                        <input type="text" class="input_nome" required>
-                        <label class="nome_completo" for="">Nome completo</label>
+                        <input type="text" name="nome_completo" id="nome_completo" class="input_nome" required>
+                        <label for="nome completo" class="nome_completo">Nome completo</label>
                     </div>
                     
                     <br>
                     <div class="Genero">
                         <br><br>
                     <p class="Sexo">Sexo:</p>
-                        <input type="radio" id="feminino" name="genero" value="Feminino" required>
+                        <input type="radio" id="feminino" name="sexo" value="Feminino" required>
                         <label for="feminino">Feminino</label>
                     </div>
     
                     <div class="Genero">
-                        <input type="radio" id="Masculino"name="genero" value="Masculino" required>
+                        <input type="radio" id="Masculino"name="sexo" value="Masculino" required>
                         <label for="masculino">Masculino</label>
                     </div>
 
                     <div class="input-box">
                         <label class="data_nascimento" for="data_nascimento">Data de nascimento:</label> 
-                        <input type="date" name="data_nascimento" id="data_nascimento" class="inputUser" required>
+                        <input type="date" name="data_de_nascimento" id="data_nascimento" class="inputUser" required>
                     </div>
                     
 
                     <div class="input-box">  
-                        <label class="historico" for="#">Historico medico</label>                    
-                        <textarea name="" class="input" required id="Historico" cols="30" rows="10" placeholder="Fale um pouco..."></textarea> 
+                        <label for="#" class="historico">Historico medico</label>                    
+                        <textarea name="historico_medico" class="input" id="historico_medico" cols="30" rows="10" placeholder="Fale um pouco..."  required></textarea> 
                     </div>
-                    <input type="submit" class="btn_enviar" value="Envia"> 
+                    <input type="submit" name="submit" id="submit" class="btn_enviar" value="Envia"> 
                 </form>
             </div>
         </div>
