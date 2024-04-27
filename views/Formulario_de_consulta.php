@@ -45,7 +45,7 @@
 
                     <div class="input-box">  
                         <label for="#" class="historico">Historico medico</label>                    
-                        <textarea name="historico_medico" class="input" id="historico_medico" cols="30" rows="10" placeholder="Fale um pouco..."  required></textarea> 
+                        <textarea name="historico_medico" class="input" id="historico_medico" cols="30" rows="10" placeholder="Fale um pouco..."></textarea> 
                     </div>
                     <input type="submit" name="submit" id="submit" class="btn_enviar" value="Envia"> 
                 </form>
