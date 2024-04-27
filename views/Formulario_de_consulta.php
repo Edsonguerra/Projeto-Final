@@ -14,6 +14,9 @@
                 <img src="../public/assets/css/img/imagem do formulario.jpg" alt="">
             </div>
             <div class="submite-formulario">
+                <a href="painel.php">
+                    <button class="voltar">Voltar</button>
+                </a>
                 <form action="../modules/Formulário.php" method="POST">
                     <h5 class="titulo">Formulário de Consulta</h5>
                     <div class="input-box">
