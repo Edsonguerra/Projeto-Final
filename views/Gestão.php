@@ -10,7 +10,7 @@
 <body>
     <section id="sidebar">
 
-        <a href="#" class="brand"><img src="../public/assets/css/img/43493.png" alt="">Hospital Cajueiros</a>
+        <a href="#" class="brand" data-text="hospital"> <i class="fa-solid fa-hospital icon"></i> Hospital Cajueiros</a>
         <ul class="side-menu">
 
             <li class="divider" data-text="doctores">Doctores</li>
@@ -30,7 +30,7 @@
 
             <li>
                 <a href="#">
-                    <i class="fa-solid fa-hospital-user icon"></i>Dados $ Validações <i class="fa-solid fa-chevron-right icon-rigth"></i> 
+                    <i class="fa-solid fa-hospital-user icon"></i>Dados & Validações <i class="fa-solid fa-chevron-right icon-rigth"></i> 
                 </a>
                     <ul class="side-dropdown">
                         <li><a href="#">Cardiologista</a></li>
@@ -41,10 +41,19 @@
                     </ul>
             </li>
 
-            <li class="divider">Criar</li>
-            <li><a href="#"><i class="fa-solid fa-notes-medical icon"></i>Criar Consulta e Análise</a></li>
+            
+            <li class="divider"  data-text="criar">Consultas e análises</li>
+            <li><a href="Criar_consulta.php"><i class="fa-solid fa-notes-medical icon"></i>Criar Consulta</a></li>
+            <li><a href="#"><i class="fa-solid fa-notes-medical icon"></i>Consultas criadas</a></li>
+            <li><a href="#"><i class="fa-solid fa-notes-medical icon"></i>Criar Análise</a></li>
+            <li><a href="#"><i class="fa-solid fa-notes-medical icon"></i>Análises criadas</a></li>
 
-            <li class="divider">Área Administrativa</li>
+
+
+
+
+
+            <li class="divider"  data-text="área administrativa">Área Administrativa</li>
             <li>
                 <a href="#">
                     <i class="fa-solid fa-users icon"></i>Adminstradores <i class="fa-solid fa-chevron-right icon-rigth"></i> 
@@ -56,12 +65,6 @@
             </li>
 
         </ul>
-    </section>
-
-    <section id="content">
-        <nav>
-            <i class="fa-solid fa-bars toggle-sidebar"></i>
-        </nav>
     </section>
 
     <script src="../public/js/Gestão.js"></script> 

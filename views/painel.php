@@ -36,7 +36,7 @@
             </li>
 
             <li>
-                <a href="#">
+                <a href="Gestão.php">
                     <i class="fa-solid fa-users"></i>
                     <span class="nav-item">Gestão</span>
                 </a>
