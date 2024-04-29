@@ -60,8 +60,8 @@
 
             <li class="divider"  data-text="área administrativa">Voltar ou sair</li>
             
-            <li><a href="painel.php"><i class="fa-solid fa-notes-medical icon"></i>Voltar</a></li>
-            <li><a href="logout.php"><i class="fa-solid fa-notes-medical icon"></i>Sair</a></li>
+            <li><a href="painel.php"><i class="fa-solid fa-arrow-left-long icon"></i>Voltar</a></li>
+            <li><a href="logout.php"><i class="fa-solid fa-arrow-right-from-bracket icon"></i>Sair</a></li>
             
                 
 
