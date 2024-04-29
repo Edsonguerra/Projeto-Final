@@ -9,7 +9,7 @@ if(isset($_POST ['submit'])){
     if($result){
         echo "Data inserted sucesso";
     }else{
-        die($mysqli->error($mysqli));
+        die($mysql->error($mysqli));
     }
 }
 ?>
@@ -29,7 +29,7 @@ if(isset($_POST ['submit'])){
             </div>
             <div class="submite-formulario">
                 
-                <a href="Gestão.php">
+                <a href="Gerenciamento_de_consultas.php">
                     <button class="voltar">Voltar</button>
                 </a>
                 

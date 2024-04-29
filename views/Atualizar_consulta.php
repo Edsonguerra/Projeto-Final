@@ -15,7 +15,7 @@
             </div>
             <div class="submite-formulario">
                 
-                <a href="Gestão.php">
+                <a href="Gerenciamento_de_consultas.php">
                     <button class="voltar">Voltar</button>
                 </a>
                 

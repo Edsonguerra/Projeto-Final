@@ -43,8 +43,8 @@
 
             
             <li class="divider"  data-text="criar">Consultas & análises</li>
-            <li><a href="Criar_consulta.php"><i class="fa-solid fa-notes-medical icon"></i>Consultas</a></li>
-            <li><a href="#"><i class="fa-solid fa-notes-medical icon"></i>Análises</a></li>
+            <li><a href="Gerenciamento_de_consultas.php"><i class="fa-solid fa-notes-medical icon"></i>Gerenciamento de Consultas</a></li>
+            <li><a href="#"><i class="fa-solid fa-notes-medical icon"></i>Gerenciamento de Análises</a></li>
 
 
             <li class="divider"  data-text="área administrativa">Área Administrativa</li>
@@ -57,6 +57,13 @@
                         <li><a href="#">Outros</a></li>
                     </ul>
             </li>
+
+            <li class="divider"  data-text="área administrativa">Voltar ou sair</li>
+            
+            <li><a href="painel.php"><i class="fa-solid fa-notes-medical icon"></i>Voltar</a></li>
+            <li><a href="logout.php"><i class="fa-solid fa-notes-medical icon"></i>Sair</a></li>
+            
+                
 
         </ul>
     </section>
