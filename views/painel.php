@@ -130,7 +130,7 @@
             <li class="lista">
                 <img class="img" width="35 " src="../public/assets/css/img/43493.png" alt="">
                 <span class="checked"><i class="fa-solid fa-check check-icon"></i></span>
-                <span class="primeiro-lista"><?php echo $row["nome"]?></span>
+                <span class="primeiro-lista"><?php echo $row["nome_da_consulta"]?></span>
                 <input type="checkbox" name="tipo_consulta[]" value="Consulta_de_Dermatologia">
             </li>
             <?php endwhile;?>     

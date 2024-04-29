@@ -42,15 +42,9 @@
             </li>
 
             
-            <li class="divider"  data-text="criar">Consultas e análises</li>
-            <li><a href="Criar_consulta.php"><i class="fa-solid fa-notes-medical icon"></i>Criar Consulta</a></li>
-            <li><a href="#"><i class="fa-solid fa-notes-medical icon"></i>Consultas criadas</a></li>
-            <li><a href="#"><i class="fa-solid fa-notes-medical icon"></i>Criar Análise</a></li>
-            <li><a href="#"><i class="fa-solid fa-notes-medical icon"></i>Análises criadas</a></li>
-
-
-
-
+            <li class="divider"  data-text="criar">Consultas & análises</li>
+            <li><a href="Criar_consulta.php"><i class="fa-solid fa-notes-medical icon"></i>Consultas</a></li>
+            <li><a href="#"><i class="fa-solid fa-notes-medical icon"></i>Análises</a></li>
 
 
             <li class="divider"  data-text="área administrativa">Área Administrativa</li>

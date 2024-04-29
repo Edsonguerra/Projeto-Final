@@ -1,24 +1,10 @@
-<?php include('../modules/conexao.php');
-
-if(isset($_POST ['submit'])){
-    $nome_da_consulta=$_POST['nome_da_consulta'];
-    $area_profissional=$_POST['area_profissional'];
-
-    $sql="insert into `tipos_de_consultas` (nome_da_consulta,area_profissional)values('$nome_da_consulta', '$area_profissional')";
-    $result=mysqli_query($mysqli,$sql);
-    if($result){
-        echo "Data inserted sucesso";
-    }else{
-        die($mysqli->error($mysqli));
-    }
-}
-?>
+<?php include('../modules/conexao.php');?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/assets/css/Criar_consulta.css">
+    <link rel="stylesheet" href="../public/assets/css/Atualizar_consulta.css">
     <title>Document</title>
 </head>
 <body>
@@ -33,8 +19,8 @@ if(isset($_POST ['submit'])){
                     <button class="voltar">Voltar</button>
                 </a>
                 
-                <form method="POST">
-                    <h5 class="titulo">Criar Consultas</h5>
+                <form action="../modules/Formulário.php" method="POST">
+                    <h5 class="titulo">Atualizar Consultas</h5>
 
 
                     <div class="input-box">
@@ -47,7 +33,7 @@ if(isset($_POST ['submit'])){
                         <label class="area_profissional">Área Profissional</label>
                     </div>
 
-                    <input type="submit" name="submit" id="submit" class="btn_enviar" value="Criar Consulta"> 
+                    <input type="submit" name="submit" id="submit" class="btn_enviar" value="Atualizar"> 
                 </form>
             </div>
         </div>
