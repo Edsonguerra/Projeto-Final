@@ -17,7 +17,7 @@
 
             <li>
                 <a href="#">
-                    <i class="fa-solid fa-user-doctor icon"></i>Consultas & Especialidades <i class="fa-solid fa-chevron-right icon-rigth"></i> 
+                    <i class="fa-solid fa-user-doctor icon"></i>Consultas & Especializações <i class="fa-solid fa-chevron-right icon-rigth"></i> 
                 </a>
                     <ul class="side-dropdown">
                         <li><a href="#">Cardiologista</a></li>
