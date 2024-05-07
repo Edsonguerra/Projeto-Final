@@ -13,7 +13,7 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
             exit();
         }
 
-        $sql_code = "SELECT * FROM usuarios WHERE email = '$email' AND senha = '$senha'LIMIT 1";
+        $sql_code = "SELECT * FROM user WHERE email = '$email' AND senha = '$senha'LIMIT 1";
         $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL: " . $mysqli->error);
 
         $quantidade = $sql_query->num_rows;
@@ -25,7 +25,7 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
                 session_start();
             }
 
-            $_SESSION['id'] = $usuarios['id'];
+            $_SESSION['id_user'] = $usuarios['id_user'];
             $_SESSION['nome'] = $usuarios['nome'];
             $_SESSION['email'] = $usuarios['email'];
             header("Location: ../views/painel.php");

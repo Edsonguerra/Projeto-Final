@@ -5,6 +5,6 @@ include_once('conexao.php');
     $email = $_POST['email'];
     $senha = $_POST['senha'];
   
-    $result = mysqli_query($mysqli, "INSERT INTO usuarios(nome,ultimo_nome,email,senha) VALUES ('$nome','$ultimo_nome','$email','$senha')"); 
+    $result = mysqli_query($mysqli, "INSERT INTO user (nome,ultimo_nome,email,senha) VALUES ('$nome','$ultimo_nome','$email','$senha')"); 
     header("Location: ../views/login.php");
 ?>
