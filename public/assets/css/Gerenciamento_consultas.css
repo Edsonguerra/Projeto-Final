@@ -6,3 +6,178 @@
     padding: 0;
 }
 
+
+body{
+    font-family: "Jura", sans-serif;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+.top{
+    position: relative;
+    background: rgb(255, 255, 255);
+    height: 70px;
+}
+
+
+
+
+
+.titulo_gerenciamento{
+    position: fixed; /* Add position: fixed */
+    justify-content: center;
+    display: flex;
+    top: 0; /* Set top to 0 to position at the top */
+    left: 0; /* Set left to 0 to position at the left */
+    width: 100%; /* Set width to 100% to span the entire width */
+    z-index: 100; /* Set a high z-index to ensure it stays on top */
+    font-size: 25px;
+    font-weight: 700;
+    overflow: hidden;
+}
+
+
+.btn-cria_consulta{
+    position: fixed;
+    top: 17px;
+    left: 80px;
+    outline: none;
+    border: none;
+    background:rgb(0, 167, 179);
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    height: 38px;
+    width: 108px;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+.btn-voltar{
+    position: relative;
+    top: -17px;
+    left: 85px;
+    border: 2px solid rgb(0, 167, 179);
+    color: rgb(0, 129, 138);
+    font-size: 15px;
+    font-weight: 600;
+    height: 38px;
+    width: 108px;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+    transform: 1s;
+}
+
+
+.btn-voltar:hover{
+    background: rgb(0, 167, 179);
+    color: #fff;
+}
+
+
+
+
+
+
+.elementos{
+    position: absolute;
+    border-spacing: 170px 30px;
+    top: 90px;
+    left: 190px;
+    background: rgb(0, 167, 179);
+    color: #fff;
+    height: 7%;
+    width: 70%;
+    font-size: 17px;
+}
+
+
+
+
+.dados_da_consulta {
+    position: absolute;
+    top: 132px;
+    left: 190px;
+    background: rgb(0, 98, 105);
+    color: #fff;
+    width: 956px;
+}
+
+
+
+.id{
+    position: relative;
+    top: -20px;
+    left: -20px;
+}
+
+
+
+
+.nome{
+    position: relative;
+    top: -20px;
+    left: 3px;
+}
+
+.area{
+    position: relative;
+    top: -20px;
+}
+
+.operações{
+    position: relative;
+    top: -20px;
+    left: 65px;
+}
+
+
+
+
+.id_consulta{
+    position: relative;
+    left: 140px;
+    top: -3px;
+}
+
+.nome_da_consulta{
+    position: relative;
+    left: 344px;
+    top: -3px;
+}
+.btn-eliminar{
+    position: relative;
+    left: 670px;
+    outline: none;
+    top: -1px;
+    border: none;
+    background: rgb(243, 0, 0);
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    height: 30px;
+    width: 70px;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-atualizar{
+    position: relative;
+    left: 670px;
+    outline: none;
+    top: -0px;
+    border: none;
+    background: rgb(60, 212, 0);
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    height: 30px;
+    width: 70px;
+    border-radius: 3px;
+    cursor: pointer;
+}
