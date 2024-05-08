@@ -13,6 +13,7 @@ if (isset($_POST['submit'])) {
     } else {
         echo "Erro ao inserir dados: " . mysqli_error($mysqli);
     }
+    header("Location: ../views/Gerenciamento_de_consultas.php");  
 }
 ?>
 <!DOCTYPE html>

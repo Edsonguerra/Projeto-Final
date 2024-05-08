@@ -112,7 +112,7 @@
     </script>
 
     <?php
-        $tiposdeconsultas = mysqli_query($mysqli, "SELECT * FROM tipos_de_consultas"); 
+        $consulta = mysqli_query($mysqli, "SELECT * FROM consulta"); 
     ?>
 
 
@@ -125,13 +125,13 @@
                 </span> 
             </div>
             <ul class="lista-consulta">
-                <?php if ($tiposdeconsultas->num_rows > 0): ?> 
-                <?php while ($row = $tiposdeconsultas->fetch_assoc()) :?> 
+                <?php if ($consulta->num_rows > 0): ?> 
+                <?php while ($row = $consulta->fetch_assoc()) :?> 
             <li class="lista">
                 <img class="img" width="35 " src="../public/assets/css/img/43493.png" alt="">
                 <span class="checked"><i class="fa-solid fa-check check-icon"></i></span>
-                <span class="primeiro-lista"><?php echo $row["nome_da_consulta"]?></span>
-                <input type="checkbox" name="tipo_consulta[]" value="Consulta_de_Dermatologia">
+                <span class="primeiro-lista"><?php echo $row["nome"]?></span>
+                <input type="checkbox" name="nome[]" value="Consulta_de_Dermatologia">
             </li>
             <?php endwhile;?>     
                 <input class="button" type="submit" value="Marcar Consulta"> 
