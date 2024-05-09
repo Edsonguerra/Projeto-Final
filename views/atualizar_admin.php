@@ -1,21 +1,25 @@
 <?php
-include('../modules/conexao.php'); 
-include('../modules/protect.php');?>
-<?php
+include('../modules/conexao.php');
+include('../modules/protect.php');
+
+$id_user = $_GET['updateid'];
+
 if (isset($_POST['submit'])) {
-   $nome = $_POST['nome'];
-   $email = $_POST['email'];
-   $administrador = $_POST['administrador'] = true;
+  $nome = $_POST['nome'];
+  $email = $_POST['email'];
+  $administrador = true;  
 
-        $sql = "INSERT INTO `user` (nome, administrador, email) VALUES ('$nome', '$administrador','$email')";
-        $result = mysqli_query($mysqli, $sql);
+  $stmt = $mysqli->prepare("UPDATE `user` SET nome=?, email=?, administrador=? WHERE id_user=?");
+  $stmt->bind_param('ssss', $nome, $email, $administrador, $id_user);
 
-        if ($result) {
-         echo "Dados inseridos com sucesso!";
-        } else {
-         echo "Erro ao inserir dados: " . mysqli_error($mysqli);
-         }
-    header("Location: ../views/Administradores.php");  
+  if ($stmt->execute()) {
+    echo "Dados atualizados com sucesso!";
+  } else {
+    echo "Erro ao atualizar dados: " . mysqli_error($mysqli);
+  }
+  $stmt->close(); 
+
+  header("Location: Administradores.php");
 }
 ?>
 <!DOCTYPE html>
@@ -49,7 +53,7 @@ if (isset($_POST['submit'])) {
                     <label class="area_profissional">Email</label>
                 </div>
 
-                    <input type="submit" name="submit" id="submit" class="btn_enviar" value="Criar">
+                    <input type="submit" name="submit" id="submit" class="btn_enviar" value="Atualizar">
                 </form>
             </div>
         </div>

@@ -1,5 +1,36 @@
-<?php include('../modules/conexao.php');?>
-<?php include('../modules/protect.php');?> 
+<?php
+include('../modules/conexao.php');
+include('../modules/protect.php');
+
+if (isset($_GET['updateid']) && is_numeric($_GET['updateid'])) {
+  $id_da_consulta = $_GET['updateid'];
+
+  if (isset($_POST['submit'])) {
+    $nome = mysqli_real_escape_string($mysqli, $_POST['nome']); 
+
+    $stmt = mysqli_prepare($mysqli, "UPDATE consulta SET nome = ? WHERE id_da_consulta = ?");
+    if (!$stmt) {
+        echo "Erro ao preparar a declaração: " . mysqli_error($mysqli);
+        exit;
+    }
+
+    mysqli_stmt_bind_param($stmt, "si", $nome, $id_da_consulta);
+
+    if (mysqli_stmt_execute($stmt)) {
+      header("Location: Gerenciamento_de_consultas.php");
+      echo "Dados atualizados com sucesso!";
+
+    } 
+    mysqli_stmt_close($stmt);
+  }
+} else {
+
+  echo "ID da consulta inválido";
+  exit;
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,12 +51,12 @@
                     <button class="voltar">Voltar</button>
                 </a>
                 
-                <form action="../modules/Formulário.php" method="POST">
+                <form method="POST">
                     <h5 class="titulo">Atualizar Consultas</h5>
 
 
                     <div class="input-box">
-                        <input type="text" name="nome_da_consulta" class="input_nome" required placeholder="Digite o nome da consulta">
+                        <input type="text" name="nome" class="input_nome" required placeholder="Digite o nome da consulta">
                         <label for="nome completo" class="nome_da_consulta">Nome da consulta</label>
                     </div>
 

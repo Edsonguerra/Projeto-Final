@@ -1,6 +1,6 @@
 <?php
 include('../modules/conexao.php'); 
-include('../modules/protect.php');?> 
+include('../modules/protect.php');
 
 if (isset($_POST['submit'])) {
     $nome = $_POST['nome'];
