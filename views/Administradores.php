@@ -12,9 +12,9 @@
 <body>
 
     <div class="top" >
-        <label class="titulo_gerenciamento" >Gerenciamento de consultas</label>
-        <a href="Criar_consulta.php">
-            <button class="btn-cria_consulta">Criar Consulta</button>
+        <label class="titulo_gerenciamento" >Administradores</label>
+        <a href="Criar_administradores.php">
+            <button class="btn-cria_consulta">Criar</button>
         </a>
         <a href="Gestão.php">
         <button class="btn-voltar">Voltar</button>
@@ -26,7 +26,7 @@
             <thead>
                 <tr class="elementos" >
                     <th class="id" scope="Id"> Id</th>
-                    <th class="nome" scope="Id"> Nome da consulta</th>         
+                    <th class="nome" scope="Id"> Nome do administrador</th>         
                     <th class="operações" scope="Id"> Operações</th>
                 </tr>
             </thead>
@@ -34,17 +34,17 @@
             <tbody class="dados_da_consulta" >
             <?php 
 
-            $sqli = "SELECT * FROM `consulta`"; 
+            $sqli = "SELECT * FROM `user` WHERE administrador IS TRUE";
 
             $result = mysqli_query($mysqli, $sqli);
             
             if ($result) {
             while ($row = mysqli_fetch_assoc($result)) {
-            $id_da_consulta = $row['id_da_consulta'];
+            $id_user = $row['id_user'];
             $nome = $row['nome'];
             
             echo '<tr>
-            <th class="id_consulta" scope="row">' . $id_da_consulta . '</th>
+            <th class="id_consulta" scope="row">' . $id_user . '</th>
             <th class="nome_da_consulta" scope="row">' . $nome . '</th>
 
             <td>

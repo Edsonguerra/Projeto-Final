@@ -1,4 +1,5 @@
 <?php include('../components/header.php');?>
+<?php include('../modules/protect.php');?> 
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

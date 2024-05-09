@@ -1,3 +1,4 @@
+<?php include('../modules/protect.php');?> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,23 +49,13 @@
 
 
             <li class="divider"  data-text="área administrativa">Área Administrativa</li>
-            <li>
-                <a href="#">
-                    <i class="fa-solid fa-users icon"></i>Adminstradores <i class="fa-solid fa-chevron-right icon-rigth"></i> 
-                </a>
-                    <ul class="side-dropdown">
-                        <li><a href="#">Geral</a></li>
-                        <li><a href="#">Outros</a></li>
-                    </ul>
-            </li>
-
-            <li class="divider"  data-text="área administrativa">Voltar ou sair</li>
-            
-            <li><a href="painel.php"><i class="fa-solid fa-arrow-left-long icon"></i>Voltar</a></li>
-            <li><a href="logout.php"><i class="fa-solid fa-arrow-right-from-bracket icon"></i>Sair</a></li>
-            
+            <li><a href="Administradores.php"> <i class="fa-solid fa-users icon"></i>Adminstradores</a></li>
+                 
                 
 
+            <li class="divider"  data-text="Voltar ou sair">Voltar ou sair</li>
+            <li><a href="painel.php"><i class="fa-solid fa-arrow-left-long icon"></i>Voltar</a></li>
+            <li><a href="logout.php"><i class="fa-solid fa-arrow-right-from-bracket icon"></i>Sair</a></li>        
         </ul>
     </section>
 
