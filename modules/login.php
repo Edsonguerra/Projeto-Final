@@ -9,6 +9,7 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
         if ($mysqli && $mysqli->connect_errno === 0) {
             $email = $mysqli->real_escape_string($_POST['email']);
             $senha = $mysqli->real_escape_string($_POST['senha']);
+            header("Location: ../views/login.php");
         } else {
             echo "Falha ao conectar ao MySQL";
             exit();
