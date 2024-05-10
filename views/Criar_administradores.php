@@ -5,9 +5,10 @@ include('../modules/protect.php');?>
 if (isset($_POST['submit'])) {
    $nome = $_POST['nome'];
    $email = $_POST['email'];
+   $senha = $_POST['senha'];
    $administrador = $_POST['administrador'] = true;
 
-        $sql = "INSERT INTO `user` (nome, administrador, email) VALUES ('$nome', '$administrador','$email')";
+        $sql = "INSERT INTO `user` (nome, administrador, email, senha) VALUES ('$nome', '$administrador','$email','$senha')";
         $result = mysqli_query($mysqli, $sql);
 
         if ($result) {
@@ -23,7 +24,7 @@ if (isset($_POST['submit'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/assets/css/Criar_consulta.css">
+    <link rel="stylesheet" href="../public/assets/css/Criar_administrador.css">
     <title>Document</title>
 </head>
 <body>
@@ -46,7 +47,12 @@ if (isset($_POST['submit'])) {
 
                 <div class="input-box">
                     <input type="text" name="email" class="input_area" required placeholder="Digite o seu email">
-                    <label class="area_profissional">Email</label>
+                    <label class="area_email">Email</label>
+                </div>
+
+                <div class="input-box">
+                    <input type="text" name="senha" class="input_senha" required placeholder="Crie uma senha">
+                    <label class="senha">Senha</label>
                 </div>
 
                     <input type="submit" name="submit" id="submit" class="btn_enviar" value="Criar">

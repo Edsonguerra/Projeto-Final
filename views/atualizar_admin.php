@@ -7,17 +7,18 @@ $id_user = $_GET['updateid'];
 if (isset($_POST['submit'])) {
   $nome = $_POST['nome'];
   $email = $_POST['email'];
-  $administrador = true;  
+  $senha = $_POST['senha'];
+  $administrador = true;
 
-  $stmt = $mysqli->prepare("UPDATE `user` SET nome=?, email=?, administrador=? WHERE id_user=?");
-  $stmt->bind_param('ssss', $nome, $email, $administrador, $id_user);
+  $stmt = $mysqli->prepare("UPDATE `user` SET nome=?, email=?, senha=?, administrador=? WHERE id_user=?");
+  $stmt->bind_param('sssss', $nome, $email, $senha, $administrador, $id_user);
 
   if ($stmt->execute()) {
     echo "Dados atualizados com sucesso!";
   } else {
     echo "Erro ao atualizar dados: " . mysqli_error($mysqli);
   }
-  $stmt->close(); 
+  $stmt->close();
 
   header("Location: Administradores.php");
 }
@@ -27,7 +28,7 @@ if (isset($_POST['submit'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/assets/css/Criar_consulta.css">
+    <link rel="stylesheet" href="../public/assets/css/Atualizar_admin.css">
     <title>Document</title>
 </head>
 <body>
@@ -41,7 +42,7 @@ if (isset($_POST['submit'])) {
                     <button class="voltar">Voltar</button>
                 </a>
                 <form method="POST">
-                    <h5 class="titulo">Criar Administrador</h5>
+                    <h5 class="titulo">Atualizar</h5>
 
                     <div class="input-box">
                         <input type="text" name="nome" class="input_nome" required placeholder="Digite o nome do administrador">
@@ -50,7 +51,12 @@ if (isset($_POST['submit'])) {
 
                 <div class="input-box">
                     <input type="text" name="email" class="input_area" required placeholder="Digite o seu email">
-                    <label class="area_profissional">Email</label>
+                    <label class="email-edit">Email</label>
+                </div>
+
+                <div class="input-box">
+                    <input type="text" name="senha" class="input_senha" required placeholder="Crie uma senha">
+                    <label class="senha">Senha</label>
                 </div>
 
                     <input type="submit" name="submit" id="submit" class="btn_enviar" value="Atualizar">
