@@ -1,5 +1,4 @@
-<?php include('../modules/conexao.php');?>
-<?php include('../modules/protect.php');?> 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

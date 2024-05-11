@@ -15,7 +15,7 @@
         </div>
         <ul>
             <li>
-                <a href="#">
+                <a href="Consulta.php">
                     <i class="fa-solid fa-clipboard-question"></i>
                     <span class="nav-item">Consultar</span>
                 </a>
