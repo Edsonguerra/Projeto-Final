@@ -21,11 +21,11 @@
                     <i class="fa-solid fa-user-doctor icon"></i>Consultas & Especializações <i class="fa-solid fa-chevron-right icon-rigth"></i> 
                 </a>
                     <ul class="side-dropdown">
-                        <li><a href="#">Cardiologista</a></li>
-                        <li><a href="#">Dentista</a></li>
-                        <li><a href="#">Fisioterapeuta</a></li>
-                        <li><a href="#">Nutricionista</a></li>
-                        <li><a href="#">Urologista</a></li>
+                        <li><a href="Consulta_doctor.php">Cardiologista</a></li>
+                        <li><a href="Consulta_doctor.php">Dentista</a></li>
+                        <li><a href="Consulta_doctor.php">Fisioterapeuta</a></li>
+                        <li><a href="Consulta_doctor.php">Nutricionista</a></li>
+                        <li><a href="Consulta_doctor.php">Urologista</a></li>
                     </ul>
             </li>
 
@@ -34,11 +34,11 @@
                     <i class="fa-solid fa-hospital-user icon"></i>Dados & Validações <i class="fa-solid fa-chevron-right icon-rigth"></i> 
                 </a>
                     <ul class="side-dropdown">
-                        <li><a href="#">Cardiologista</a></li>
-                        <li><a href="#">Dentista</a></li>
-                        <li><a href="#">Fisioterapeuta</a></li>
-                        <li><a href="#">Nutricionista</a></li>
-                        <li><a href="#">Urologista</a></li>
+                        <li><a href="Consulta_validação.php">Cardiologista</a></li>
+                        <li><a href="Consulta_validação.php">Dentista</a></li>
+                        <li><a href="Consulta_validação.php">Fisioterapeuta</a></li>
+                        <li><a href="Consulta_validação.php">Nutricionista</a></li>
+                        <li><a href="Consulta_validação.php">Urologista</a></li>
                     </ul>
             </li>
 

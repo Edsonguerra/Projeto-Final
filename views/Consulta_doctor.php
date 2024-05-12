@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/assets/css/Consultaa.css">
+    <link rel="stylesheet" href="../public/assets/css/Consulta_doctor.css">
      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&family=Glegoo:wght@400;700&family=M+PLUS+1+Code:wght@100..700&family=Quattrocento:wght@400;700&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
     <title>Document</title>
@@ -14,7 +14,7 @@
 
     <div class="top" >
         <label class="titulo_gerenciamento" >Consultar consulta</label>
-        <a href="Painel.php">
+        <a href="Gestão.php">
         <button class="btn-voltar">Voltar</button>
         </a>
     </div>
@@ -25,6 +25,8 @@
                 <tr class="elementos" >
                     <th class="nome" scope="Id"> Nome completo</th>         
                     <th class="sexo" scope="Id"> Sexo</th>
+                    <th class="medico" scope="Id"> Historico Medico</th>
+                    <th class="data" scope="Id"> Data de nascimento</th>
                     <th class="consulta" scope="Id"> Consulta/Análise</th>
 
                     
@@ -48,6 +50,8 @@
             echo '<tr>
             <th class="nome_da_consulta" scope="row">' . $nome_completo . '</th>
             <th class="Sexo" scope="row">' . $sexo . '</th>
+            <th class="medico" scope="row">' . $historico_medico . '</th>
+            <th class="medico" scope="row">' . $data_de_nascimento . '</th>
             </td>
             </tr>';    
              }
