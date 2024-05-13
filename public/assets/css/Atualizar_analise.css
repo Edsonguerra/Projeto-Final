@@ -12,11 +12,11 @@ body{
     min-height: 100vh;
 }
 
-.Formulario{
+.formulario-analise{
     position: relative;
     width: 100%;
     height: 100vh;
-    background: #007585;
+    background: #0088aa;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,12 +35,12 @@ body{
     z-index: 1000;
 }
 
-.img-formulario img{
+.img-formulario-analise img{
     width: 100%;
     margin-top: 50px;
 }
 
-.img-formulario{
+.img-formulario-analise{
     background: #00a6c6;
 }
 
@@ -73,7 +73,7 @@ form{
     position: relative;
 }
 
-.nome_da_consulta{
+.nome_da_analise{
     position: absolute;
     top: 50px;
     font-weight: 500;

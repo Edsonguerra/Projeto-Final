@@ -91,7 +91,7 @@
 
 
     <div class="Conteudos-de-baixo">
-        <img src="public/assets/css/img/EXAME.jpg">
+        <img src="public/assets/css/img/fundo1.jpg" width="100%" >
         <h4 class="Hosp">Hospital dos Cajueiros</h4>
         <h5 class="Infor">Informações</h5>
         <a class="Sobre" href="views/Sobre.php">Sobre</a>

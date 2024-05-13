@@ -43,7 +43,7 @@ if (isset($_POST['submit'])) {
                     </div>
 
                     <div class="input-box">
-                        <input type="text" name="tipo_consulta" class="input_area" required placeholder="Digite a área profissional">
+                        <input type="text" name="tipo_consulta" class="input_area" placeholder="Digite a área profissional">
                         <label class="area_profissional">Área Profissional</label>
                     </div>
 

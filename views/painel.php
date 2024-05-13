@@ -130,7 +130,7 @@
                     <input type="checkbox" name="nome[]" value="Analise_de_Paludismo">
                 </li>
                 <?php endwhile;?>     
-                    <input class="button2" type="submit" value="Marcar Consulta"> 
+                    <input class="button2" type="submit" value="Marcar Análise"> 
                 <?php else:?>
                     <p>Análises indisponiveis</p>     
                 <?php endif;?>     
@@ -141,6 +141,7 @@
         <div class="contudo-abaixo">
     
         <h4 class="Hosp">Hospital dos Cajueiros</h4>
+        <img src="../public/assets/css/img/fundo2.jpg" width="100%" >
         <h5 class="Infor">Informações</h5>
         <a class="Sobre" href="views/Sobre.php">Sobre</a>
         <a class="Contacto" href="views/Contacto.php">Contacto</a>
