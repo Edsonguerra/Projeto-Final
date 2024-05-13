@@ -108,19 +108,14 @@ h3{
 
 
 
-
-
-
-
 .Selecionar{
     position: absolute;
     max-width: 320px;
     width: 100%;
     border-radius: 8px;
     top: 615px;   
-    left: 310px;
-    
- 
+    left: 320px;
+    z-index: 100;
 }
 
 .selecionar-botao{
@@ -267,17 +262,14 @@ h3{
 
 
 
-
-
-
 .Selecionar2{
     position: absolute;
     max-width: 320px;
     width: 100%;
     border-radius: 8px;
-    top: 615px;    
+    top: 615px;   
     left: 700px;
- 
+    z-index: 100;
 }
 
 .selecionar-botao2{
@@ -311,7 +303,7 @@ h3{
     transition: 0.3s;
 }
 
-.selecionar-botao2.open .down-arrow{
+.selecionar-botao2.open2 .down-arrow{
     transform: rotate(-180deg);
 }
 
@@ -322,14 +314,13 @@ h3{
     padding: 9px;
     background-color: #ffffff;
     box-shadow: 0 5px 10px rgb(27, 97, 97);
+    display: none;
     
-
-
 
 }
 
 
-.selecionar-botao2.open ~ .lista-consulta2{
+.selecionar-botao2.open2 ~ .lista-consulta2{
     display: block;
 
 }
@@ -359,7 +350,7 @@ h3{
     color: #002033;
 }
 
-.lista2 .img2{
+.lista2 .img{
     position: absolute;
     left: 10px;
 }
@@ -378,8 +369,24 @@ h3{
     transition: all 0.3s ease-in-out;
 }
 
+.lista2.checked .checked{
+    background-color: #008791;
+    border-color: #ffffff;
+} 
+
+.checked .check-icon{
+    color: #e7edfe;
+    font-size: 11px;
+    transform: scale(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.lista2.checked .check-icon{
+    transform: scale(1);
+}
+
+
 .button2{
-    
     width: 100%;
     margin-top: 0.1rem;
     border: none;
@@ -412,12 +419,10 @@ h3{
 
 
 
-
-
 .Conteudos-de-baixo{
     position: absolute;
     width: 100%;
-    top: 570px;
+    top: 870px;
 }
 .Hosp{
     font-family: "Doppio One", sans-serif;

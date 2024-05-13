@@ -19,6 +19,77 @@
     </div>
 
 
+
+           
+<!------------------------------------- Consultas -------------------------------------------->
+
+<?php
+                $consulta = mysqli_query($mysqli, "SELECT * FROM consulta"); 
+            ?>
+
+
+            <form action="views/login.php">
+                <div class="Selecionar">
+                <div class="selecionar-botao">
+                    <span class="texto">Consultas disponíveis</span>
+                    <span class="down-arrow">
+                    <i class="fa-solid fa-chevron-down"></i>
+                    </span> 
+                </div>
+                <ul class="lista-consulta">
+                    <?php if ($consulta->num_rows > 0): ?> 
+                    <?php while ($row = $consulta->fetch_assoc()) :?> 
+                <li class="lista">
+                    <img class="img" width="35 " src="public/assets/css/img/43493.png" alt="">
+                    <span class="primeiro-lista"><?php echo $row["nome"]?></span>
+                    <input type="checkbox" name="nome[]" value="Consulta_de_Dermatologia">
+                </li>
+                <?php endwhile;?>     
+                    <input class="button" type="submit" value="Cadastra-se agora mesmo!"> 
+                <?php else:?>
+                    <p>Consultas indisponiveis</p>     
+                <?php endif;?>     
+                </ul>   
+                </div>    
+            </form>
+
+            <?php
+        $analise = mysqli_query($mysqli, "SELECT * FROM analise"); 
+    ?>
+
+<!------------------------------------- Análises -------------------------------------------->
+
+        <form action="views/login.php">
+            <div class="Selecionar2">
+                <div class="selecionar-botao2">
+                    <span class="texto2">Análises disponíveis</span>
+                    <span class="down-arrow">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </span> 
+                </div>
+                <ul class="lista-consulta2">
+                    <?php if ($analise->num_rows > 0): ?> 
+                    <?php while ($row = $analise->fetch_assoc()) :?> 
+                <li class="lista2">
+                    <img class="img" width="35 " src="public/assets/css/img/43493.png" alt="">
+                    <span class="primeiro-lista2"><?php echo $row["nome"]?></span>
+                    <input type="checkbox" name="nome[]" value="Analise_de_Paludismo">
+                </li>
+                <?php endwhile;?>     
+                    <input class="button2" type="submit" value="Cadastra-se agora mesmo!"> 
+                <?php else:?>
+                    <p>Análises indisponiveis</p>     
+                <?php endif;?>     
+                </ul>   
+            </div>   
+        </form>
+
+
+
+
+
+
+
     <div class="Conteudos-de-baixo">
         <img src="public/assets/css/img/EXAME.jpg">
         <h4 class="Hosp">Hospital dos Cajueiros</h4>
@@ -29,6 +100,8 @@
         <a class="Politica" href="views/Politica.php">Politica de privacidade</a>
     </div>
 
-    <script src="public/js/index.js"></script>
+    <script src="public/js/disponivel.js"></script>  
+    <script src="public/js/disponivel2.js"></script> 
+
 </body>
 </html>
