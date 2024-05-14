@@ -141,7 +141,7 @@
         <div class="contudo-abaixo">
     
         <h4 class="Hosp">Hospital dos Cajueiros</h4>
-        <img src="../public/assets/css/img/fundo2.jpg" width="100%" >
+        <img src="../public/assets/css/img/fundo1.jpg" width="100%" >
         <h5 class="Infor">Informações</h5>
         <a class="Sobre" href="views/Sobre.php">Sobre</a>
         <a class="Contacto" href="views/Contacto.php">Contacto</a>
