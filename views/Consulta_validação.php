@@ -13,7 +13,7 @@
 <body>
 
     <div class="top" >
-        <label class="titulo_gerenciamento" >Consulta e Validações</label>
+        <label class="titulo_gerenciamento" >Consultas/Análises e Validações</label>
         <a href="Gestão.php">
         <button class="btn-voltar">Voltar</button>
         </a>
