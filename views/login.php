@@ -2,9 +2,11 @@
 <body>
 <div class="wrapper">  
     <nav class="nav">
+        <a href="../index.php">
         <div class="nav-hospital">
-            <p>Hospital dos Cajueiros</p>
+                <p>Hospital dos Cajueiros</p>
         </div>
+        </a>
         <div class="nav-menu">
             <ul>
                 <li><a href="../index.php" class="link">Pagina Inicial</a></li>

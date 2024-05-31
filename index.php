@@ -2,7 +2,7 @@
 <?php include('modules/conexao.php');?>
 <?php $tiposdeconsultas = mysqli_query($mysqli, "SELECT * FROM tipos_de_consultas"); ?>
 <header>
-       <h1 class="Hospital">Hospital dos cajueiros</h1>
+        <h1 class="Hospital">Hospital dos cajueiros</h1>
    <nav class="icones">
     <a href="views/Sobre.php">Sobre</a>
     <a href="views/Sobre.php">Ajuda</a>
