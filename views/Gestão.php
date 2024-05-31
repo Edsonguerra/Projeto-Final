@@ -49,6 +49,7 @@
 
 
             <li class="divider"  data-text="área administrativa">Área Administrativa</li>
+            <li><a href="Area.php"><i class="fa-solid fa-list-ol icon"></i>Área</a></li>
             <li><a href="Administradores.php"> <i class="fa-solid fa-users icon"></i>Adminstradores</a></li>
                  
                 
