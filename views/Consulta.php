@@ -43,6 +43,12 @@ if (isset($_SESSION['message'])) {
         </div>
     <?php endif; ?>
 
+    <script>
+    setTimeout(function(){
+        document.querySelector('.mensagem').style.display = 'none';
+    }, 2000); // Tempo em milissegundos (2 segundos = 2000 milissegundos)
+    </script>
+
     <div class="container">
         <table class="table-consulta">
             <thead>

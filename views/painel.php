@@ -166,7 +166,6 @@
         $(document).ready(function() {
     
         if (window.performance && window.performance.navigation.type === 1) {
-   
         $('.boas-vindas').hide();
         } else {
 
