@@ -118,7 +118,7 @@
             <div class="Selecionar2">
                 <div class="selecionar-botao2">
                     <span class="texto2">Selecionar Análise</span>
-                    <span class="down-arrow">
+                    <span class="down-arrow2">
                         <i class="fa-solid fa-chevron-down"></i>
                     </span> 
                 </div>
