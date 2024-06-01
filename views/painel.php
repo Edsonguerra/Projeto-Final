@@ -106,11 +106,13 @@
                 </div>    
             </form>
 
-            <?php
-        $analise = mysqli_query($mysqli, "SELECT * FROM analise"); 
-    ?>
 
 <!------------------------------------- Análises -------------------------------------------->
+
+        <?php
+            $analise = mysqli_query($mysqli, "SELECT * FROM analise"); 
+        ?>
+
 
         <form action="processa_analise.php" method="POST">
             <div class="Selecionar2">
