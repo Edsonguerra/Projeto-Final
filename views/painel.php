@@ -80,7 +80,7 @@
             ?>
 
 
-            <form action="processa_consulta.php" method="POST">
+            <form action="../modules/Formulário.php" method="POST">
                 <div class="Selecionar">
                 <div class="selecionar-botao">
                     <span class="texto">Selecionar Consulta</span>
