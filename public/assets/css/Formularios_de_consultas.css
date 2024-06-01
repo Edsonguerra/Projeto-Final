@@ -132,7 +132,7 @@ textarea.input{
 
 .btn_enviar{
     position: relative;
-    top: 123px;
+    top: 1px;
     left: 170px;
     background: #007585;
     outline: none;
@@ -183,7 +183,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .voltar{
     position: absolute;
-    top: 514px;
+    top: 330px;
     left: 745px;
     font-size: 16px;
     font-weight: 600;

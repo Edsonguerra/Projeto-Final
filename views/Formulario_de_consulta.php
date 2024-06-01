@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/assets/css/Formulario_de_consulta.css">
+    <link rel="stylesheet" href="../public/assets/css/Formularios_de_consultas.css">
     <title>Document</title>
 </head>
 <body>
@@ -41,12 +41,7 @@
                         <label class="data_nascimento" for="data_nascimento">Data de nascimento:</label> 
                         <input type="date" name="data_de_nascimento" id="data_nascimento" class="inputUser" required>
                     </div>
-                    
 
-                    <div class="input-box">  
-                        <label for="#" class="historico">Historico medico</label>                    
-                        <textarea name="historico_medico" class="input" id="historico_medico" cols="30" rows="10" placeholder="Fale um pouco..."></textarea> 
-                    </div>
                     <input type="submit" name="submit" id="submit" class="btn_enviar" value="Envia"> 
                 </form>
             </div>

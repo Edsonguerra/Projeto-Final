@@ -157,7 +157,7 @@
    <div class="boas-vindas">
         <i class="icone fa-solid fa-circle-check"></i>
         <span class="sucesso"> <strong>Sucesso ao Entrar</strong> <br> </span>
-        <span class="texto-bem-vindo"> <br> Bem vindo/a</span> <span class="nome-usuario"> <br> <?php echo $_SESSION['nome']; ?>!</span>
+        <span class="texto-bem-vindo"> <br> Bem vindo/a</span> <span class="nome-usuario">!</span>
    </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
