@@ -35,7 +35,7 @@ if (isset($_GET['updateid']) && is_numeric($_GET['updateid'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/assets/css/Atualizar_analise.css">
+    <link rel="stylesheet" href="../public/assets/css/Atualizar_analises.css">
     <title>Document</title>
 </head>
 <body>

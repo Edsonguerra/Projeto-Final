@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/assets/css/Gestão.css">
+    <link rel="stylesheet" href="../public/assets/css/Área administrativa.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Document</title>
 </head>
@@ -16,18 +16,6 @@
 
             <li class="divider" data-text="doctores">Doctores</li>
 
-            <li>
-                <a href="#">
-                    <i class="fa-solid fa-user-doctor icon"></i>Consultas & Especializações <i class="fa-solid fa-chevron-right icon-rigth"></i> 
-                </a>
-                    <ul class="side-dropdown">
-                        <li><a href="Consulta_doctor.php">Cardiologista</a></li>
-                        <li><a href="Consulta_doctor.php">Dentista</a></li>
-                        <li><a href="Consulta_doctor.php">Fisioterapeuta</a></li>
-                        <li><a href="Consulta_doctor.php">Nutricionista</a></li>
-                        <li><a href="Consulta_doctor.php">Urologista</a></li>
-                    </ul>
-            </li>
 
             <li>
                 <a href="#">
@@ -59,7 +47,10 @@
             <li><a href="logout.php"><i class="fa-solid fa-arrow-right-from-bracket icon"></i>Sair</a></li>        
         </ul>
     </section>
-
+        <div class="barra">A</div>
+        <label class="Admin" >Bem vindo/a</label>
+        <label class="admin2" >A área administrativa</label>
+    
     <script src="../public/js/Gestão.js"></script> 
 </body>
 </html>

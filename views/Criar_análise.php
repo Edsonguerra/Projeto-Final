@@ -48,7 +48,7 @@ if ($result_areas) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/assets/css/Criar_consulta.css">
+    <link rel="stylesheet" href="../public/assets/css/Criar_analise.css">
     <title>Document</title>
 </head>
 <body>

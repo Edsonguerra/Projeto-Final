@@ -7,8 +7,11 @@
 }
 
 body{
-    background-color: #007585;
+    background-image: url(img/fundo.jpg);
     background-repeat: no-repeat; 
+    background-size: 100%;
+    background-attachment: scroll;
+    background-attachment: fixed;
     background-attachment: fixed;
 }
 
