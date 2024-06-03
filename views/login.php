@@ -1,5 +1,19 @@
-<?php include('../components/header.php');?>
+<?php include('../components/header.php');
+
+?>
+
+
+                
+    <?php
+    if (isset($_GET['error'])) {
+        echo '<div style="color: red;">' . htmlspecialchars($_GET['error']) . '</div>';
+    }
+    ?>
 <body>
+
+
+
+
 <div class="wrapper">  
     <nav class="nav">
         <a href="../index.php">
