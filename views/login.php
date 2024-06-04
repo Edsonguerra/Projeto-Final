@@ -5,14 +5,19 @@ session_start();
 
 if (isset($_SESSION['cadastro_msg'])) {
 ?>
-  <div id="mensagem-cadastro" class="alert alert-success">
+  <div id="mensagem-cadastro" class="mensagem_registro">
     <?php echo $_SESSION['cadastro_msg']; ?>
+    <label class="successo-label"><strong>Registro realizado</strong></label>
+    <br>
+    <i class="icone fa-solid fa-circle-check"></i>
+    <label class="successo-label2">com sucesso!</label>
   </div>
 <?php
   unset($_SESSION['cadastro_msg']);
 }
 ?>
 
+<i class="fa-solid fa-circle-xmark"></i>
 
 <?php
     if (isset($_GET['error'])) {

@@ -10,11 +10,8 @@ $result = mysqli_query($mysqli, "INSERT INTO user (nome,ultimo_nome,email,senha)
 
 if ($result) {
 
-$mensagemCadastro = "Cadastro realizado com sucesso!";
-} else {
-
-$mensagemCadastro = "Erro ao registrar usuário. Por favor, tente novamente.";
-}
+$mensagemCadastro = "";
+} 
 session_start();
 $_SESSION['cadastro_msg'] = $mensagemCadastro;
 

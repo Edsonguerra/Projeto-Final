@@ -221,6 +221,20 @@ header {
 }
 
 
+.mensagem_registro{
+    position: fixed;
+    font-size: 19px;
+    margin-top: 10px;
+    top: 70px;
+    left: 1090px;
+    border: 2px solid  rgb(255, 255, 255);
+    color: #fff;
+    border-radius: 10px;
+    width: 280px;
+    height: 60px;
+    background-color: #15b300;
+}
+
 .success-message{
     position: fixed;
     font-size: 19px;
@@ -244,11 +258,20 @@ header {
 
 .successo-label2{
     position: absolute;
+    top: 27px;
     left: 45px;
 }
 
 
-
+.circulo .icone{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ccc;
+    text-align: center;
+    line-height: 30px;
+}
 
 
 
