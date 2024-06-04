@@ -1,17 +1,32 @@
 <?php include('../components/header.php'); ?>
 
 <?php
+session_start();
+
+if (isset($_SESSION['cadastro_msg'])) {
+?>
+  <div id="mensagem-cadastro" class="alert alert-success">
+    <?php echo $_SESSION['cadastro_msg']; ?>
+  </div>
+<?php
+  unset($_SESSION['cadastro_msg']);
+}
+?>
+
+
+<?php
     if (isset($_GET['error'])) {
         echo '<div class="error-message">' . htmlspecialchars($_GET['error']) . '</div>';
 }
 
-
-
-    if (isset($_GET['success'])) {
+if (isset($_GET['success'])) {
     echo '<div id="success-message" class="success-message">';
-    echo '<label class="successo-label">Sucesso ao entrar<br>Bem vindo/a</label>';
+    echo '<label class="successo-label"><strong>Sucesso ao entrar</strong></label>';
+    echo '<br>';
+    echo '<i class="icone fa-solid fa-circle-check"></i>';
+    echo '<label class="successo-label2">Bem vindo/a</label>';
     echo '</div>';
-}
+  }
 ?>
 
 <body>
@@ -97,7 +112,7 @@
         </div>
     </div>   
 
-   <!-- <script>
+   <script>
         var a = document.getElementById("loginBtn");
         var b = document.getElementById("registerBtn");
         var x = document.getElementById("login");
@@ -121,7 +136,12 @@
                 }, 2000);
             }
         } 
-        -->
+
+        setTimeout(function() {
+        document.getElementById('mensagem-cadastro').style.display = 'none';
+        }, 2000); 
+</script>
+    
     </script>
 
 </body>

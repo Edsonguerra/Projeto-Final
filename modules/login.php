@@ -38,7 +38,7 @@ if (isset($_POST['email']) && isset($_POST['senha'])) {
             $_SESSION['nome'] = $usuarios['nome'];
             $_SESSION['email'] = $usuarios['email'];
 
-            header("Location: ../views/login.php?success=Sucesso ao entrar");
+            header("Location: ../views/login.php?success=");
             exit();
         } else {
             header("Location: ../views/login.php?error=Senha incorreta");

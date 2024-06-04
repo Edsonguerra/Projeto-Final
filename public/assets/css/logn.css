@@ -239,9 +239,13 @@ header {
 .successo-label{
     position: absolute;
     top: 4px;
-    left: 30px;
+    left: 45px;
 }
 
+.successo-label2{
+    position: absolute;
+    left: 45px;
+}
 
 
 
