@@ -263,14 +263,38 @@ header {
 }
 
 
-.circulo .icone{
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: #ccc;
-    text-align: center;
-    line-height: 30px;
+
+.error-message{
+    position: fixed;
+    font-size: 19px;
+    margin-top: 10px;
+    top: 70px;
+    left: 1090px;
+    border: 2px solid  rgb(255, 255, 255);
+    color: #fff;
+    border-radius: 10px;
+    width: 280px;
+    height: 60px;
+    background-color: #b30000;
+}
+
+.error-email{
+    position: absolute;
+    top: 5px;
+    left: 45px;
+}
+
+.error-email2{
+    position: absolute;
+    top: 25px;
+    
+    left: 45px;
+}
+
+.icone2{
+    position: relative;
+    top: 5px;
+    left: 15px;
 }
 
 
@@ -321,6 +345,15 @@ header {
 
     }
 }
+
+
+
+
+
+
+
+
+
 
 @media only screen and (max-width: 540px) {
     .wrapper {

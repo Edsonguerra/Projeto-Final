@@ -17,13 +17,32 @@ if (isset($_SESSION['cadastro_msg'])) {
 }
 ?>
 
-<i class="fa-solid fa-circle-xmark"></i>
 
 <?php
-    if (isset($_GET['error'])) {
-        echo '<div class="error-message">' . htmlspecialchars($_GET['error']) . '</div>';
-}
 
+if (isset($_GET['error'])) {
+  $errorMessage = htmlspecialchars($_GET['error']);
+
+
+  if ($errorMessage === 'Email incorreto') {
+    echo '<div id="error-messege" class="error-message">';
+    echo '<div class="error-email"><strong> Email incorreto </strong></div>';
+    echo '<i class="icone2 fa-solid fa-circle-xmark"></i>';
+    echo '<div class="error-email2">Tente novamente! </strong></div>';
+    echo '</div>';
+  } else if ($errorMessage === 'Senha incorreta') {
+    echo '<div  id="error-messege" class="error-message">';
+    echo '<div class="error-email"><strong> Senha incorreta </strong></div>';
+    echo '<i class="icone2 fa-solid fa-circle-xmark"></i>';
+    echo '<div class="error-email2">Tente novamente! </strong></div>';
+    echo '</div>';
+  } else {
+
+    echo '<div class="error-message">' . $errorMessage . '</div>';
+  }
+}
+?>
+<?php
 if (isset($_GET['success'])) {
     echo '<div id="success-message" class="success-message">';
     echo '<label class="successo-label"><strong>Sucesso ao entrar</strong></label>';
@@ -145,8 +164,10 @@ if (isset($_GET['success'])) {
         setTimeout(function() {
         document.getElementById('mensagem-cadastro').style.display = 'none';
         }, 2000); 
-</script>
-    
+
+        setTimeout(function() {
+        document.getElementById('error-messege').style.display = 'none';
+        }, 2000); 
     </script>
 
 </body>
