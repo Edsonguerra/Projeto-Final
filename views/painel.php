@@ -156,11 +156,11 @@
 
 <!------------------------------------- Mensagem de bem-vindo  -------------------------------------------->
                     
-   <div class="boas-vindas">
+    <!-- <div class="boas-vindas">
         <i class="icone fa-solid fa-circle-check"></i>
         <span class="sucesso"> <strong>Sucesso ao Entrar</strong> <br> </span>
         <span class="texto-bem-vindo"> <br> Bem vindo/a</span> <span class="nome-usuario">!</span>
-   </div>
+   </div> 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
@@ -178,7 +178,7 @@
         }, 2000); 
     }
     });
-    </script>
+    </script> -->
 
 
     <script src="../public/js/analise.js"></script>  
