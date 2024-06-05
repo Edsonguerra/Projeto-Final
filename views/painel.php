@@ -22,13 +22,6 @@
             </li>
 
             <li>
-                <a href="Formulario_de_consulta.php">
-                    <i class="fa-solid fa-align-left"></i>
-                    <span class="nav-item">Formulário</span>
-                </a>
-            </li>
-
-            <li>
                 <a href="">
                     <i class="fa-solid fa-handshake-angle"></i>
                     <span class="nav-item">Ajuda</span>
@@ -143,7 +136,7 @@
         <div class="contudo-abaixo">
     
         <h4 class="Hosp">Hospital dos Cajueiros</h4>
-        <img src="../public/assets/css/img/fundo1.jpg" width="100%" >
+        <img src="../public/assets/css/img/fundo2.jpg">
         <h5 class="Infor">Informações</h5>
         <a class="Sobre" href="views/Sobre.php">Sobre</a>
         <a class="Contacto" href="views/Contacto.php">Contacto</a>
@@ -153,33 +146,6 @@
 
     </div>
     </div>
-
-<!------------------------------------- Mensagem de bem-vindo  -------------------------------------------->
-                    
-    <!-- <div class="boas-vindas">
-        <i class="icone fa-solid fa-circle-check"></i>
-        <span class="sucesso"> <strong>Sucesso ao Entrar</strong> <br> </span>
-        <span class="texto-bem-vindo"> <br> Bem vindo/a</span> <span class="nome-usuario">!</span>
-   </div> 
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <script>
-        $(document).ready(function() {
-    
-        if (window.performance && window.performance.navigation.type === 1) {
-        $('.boas-vindas').hide();
-        } else {
-
-        $('.boas-vindas').fadeIn();
-        var interval = setInterval(function() {
-        $('.boas-vindas').fadeOut();
-        clearInterval(interval);
-        }, 2000); 
-    }
-    });
-    </script> -->
-
 
     <script src="../public/js/analise.js"></script>  
     <script src="../public/js/index.js"></script> 
