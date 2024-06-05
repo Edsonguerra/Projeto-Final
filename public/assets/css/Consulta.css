@@ -162,3 +162,9 @@ tr:hover th {
     position: relative;
     left: 45px;
 }
+
+.mensagem_sucesso{
+    position: relative;
+    top: 6px;
+    left: 45px;
+}

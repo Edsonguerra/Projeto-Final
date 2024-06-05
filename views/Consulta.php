@@ -1,8 +1,9 @@
 <?php 
 include('../modules/conexao.php');
 include('../modules/protect.php'); 
+?>
+<?php
 
-// Verifique se a sessão não está ativa e inicie-a
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
@@ -10,7 +11,20 @@ if (session_status() == PHP_SESSION_NONE) {
 $message = "";
 if (isset($_SESSION['message'])) {
     $message = $_SESSION['message'];
-    unset($_SESSION['message']); // Limpar a mensagem da sessão após exibição
+    unset($_SESSION['message']); 
+}
+
+
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+?>
+
+<?php 
+$mensagem2 = "";
+if (isset($_SESSION['mensagem2'])) {
+    $mensagem2 = $_SESSION['mensagem2'];
+    unset($_SESSION['mensagem2']);
 }
 ?>
 <!DOCTYPE html>
@@ -18,7 +32,7 @@ if (isset($_SESSION['message'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/assets/css/Consultar.css">
+    <link rel="stylesheet" href="../public/assets/css/Consulta.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&family=Glegoo:wght@400;700&family=M+PLUS+1+Code:wght@100..700&family=Quattrocento:wght@400;700&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -33,6 +47,10 @@ if (isset($_SESSION['message'])) {
         </a>
     </div>
 
+
+
+
+
     <?php if (!empty($message)): ?>
         <div class="mensagem">
             <span class="mensagem1"> <strong>Consulta marcada</strong> <br> </span>
@@ -43,11 +61,25 @@ if (isset($_SESSION['message'])) {
         </div>
     <?php endif; ?>
 
+    <?php if (!empty($mensagem2)): ?>
+        <div class="mensagem">
+            <span class="mensagem1"> <strong>Análise marcada</strong> <br> </span>
+            <label class="mensagem_sucesso" >com sucesso</label>
+            <div class="mensagem2">
+            <?php echo $message; ?>
+            </div>
+            <i class="icone fa-solid fa-circle-check"></i>
+        </div>
+    <?php endif; ?>
+
     <script>
     setTimeout(function(){
         document.querySelector('.mensagem').style.display = 'none';
-    }, 2000); // Tempo em milissegundos (2 segundos = 2000 milissegundos)
+    }, 2000); 
     </script>
+
+
+
 
     <div class="container">
         <table class="table-consulta">

@@ -408,7 +408,7 @@ h1 {
     width: 100%;
     border-radius: 8px;
     top: 565px;   
-    left: 620px;
+    left: 640px;
     z-index: 100;
 }
 
@@ -554,6 +554,7 @@ h1 {
     position: relative;
     top: 610px;
     left: -25px;
+    width: 100%;
 }
 
 
@@ -565,6 +566,7 @@ h1 {
     left: 350px;
     display: flex;
     color:#ffffff;
+
 }
 
 

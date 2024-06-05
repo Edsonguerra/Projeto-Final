@@ -65,6 +65,7 @@
             <h1 class="bem-vindo">Bem vindo!</h1>
             <h2 class="name">Marque agora mesmo <br> a tua Consulta ou Análise <br> de uma forma fácil e segura!</h2>
             <h3 class="Conteudo">A tua saúde é a nossa prioridade!</h3>
+        </div>       
         
 <!------------------------------------- Consultas -------------------------------------------->
 
@@ -73,7 +74,7 @@
             ?>
 
 
-            <form action="../modules/Formulário.php" method="POST">
+             <form action="../modules/Formulário_de_consulta.php" method="POST">
                 <div class="Selecionar">
                 <div class="selecionar-botao">
                     <span class="texto">Selecionar Consulta</span>
@@ -107,7 +108,7 @@
         ?>
 
 
-        <form action="processa_analise.php" method="POST">
+        <form action="../modules/Formulário_de_análise.php" method="POST">
             <div class="Selecionar2">
                 <div class="selecionar-botao2">
                     <span class="texto2">Selecionar Análise</span>
@@ -136,19 +137,17 @@
         <div class="contudo-abaixo">
     
         <h4 class="Hosp">Hospital dos Cajueiros</h4>
-        <img src="../public/assets/css/img/fundo2.jpg">
+        <img src="../public/assets/css/img/fundo2.jpg" width="103.3%">
         <h5 class="Infor">Informações</h5>
         <a class="Sobre" href="views/Sobre.php">Sobre</a>
         <a class="Contacto" href="views/Contacto.php">Contacto</a>
         <a class="Termos" href="views/Termos.php">Termos</a>
         <a class="Politica" href="views/Politica.php">Politica de privacidade</a>
     </div>
-
-    </div>
     </div>
 
-    <script src="../public/js/analise.js"></script>  
-    <script src="../public/js/index.js"></script> 
+    <script src="../public/js/Analise.js"></script>  
+    <script src="../public/js/Index.js"></script> 
 
 
 

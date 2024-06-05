@@ -46,7 +46,7 @@ if (isset($_POST['submit'])) {
                 <a href="../views/painel.php">
                     <button class="voltar">Voltar</button>
                 </a>
-                <form action="../modules/Formulário.php" method="POST">
+                <form action="../modules/Formulário_de_consulta.php" method="POST">
                     <h5 class="titulo">Formulário de Consulta</h5>
                     <div class="input-box">
                         <input type="text" name="nome_completo" id="nome_completo" class="input_nome" required placeholder="Digite o seu nome completo">
