@@ -100,8 +100,6 @@
         <a class="Politica" href="views/Politica.php">Politica de privacidade</a>
     </div>
 
-    <script src="public/js/disponivel.js"></script>  
-    <script src="public/js/disponivel2.js"></script> 
 
 </body>
 </html>
