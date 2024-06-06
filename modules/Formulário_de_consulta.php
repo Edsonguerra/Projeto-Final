@@ -1,10 +1,26 @@
 <?php
 include_once('conexao.php');
-?>
 
-<?php
- $_POST['id_da_consulta'];
- die(morri)
+// Verifica se a sessão já foi iniciada
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+// Verifica se o formulário foi enviado
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_POST['consulta'])) {
+        // Pega os IDs das consultas selecionadas
+        $id_da_consulta = $_POST['consulta'];
+
+        // Para debug, mostrar os IDs das consultas
+        var_dump($id_da_consulta); // ou use echo para mostrar de outra forma
+
+        // Interrompe o script após exibir os IDs
+        exit(); // ou die();
+    } else {
+        echo "Nenhuma consulta selecionada.";
+    }
+}
 ?>
 
 <?php
