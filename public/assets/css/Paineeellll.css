@@ -282,8 +282,8 @@ h1{
     max-width: 320px;
     width: 100%;
     border-radius: 8px;
-    top: 615px;   
-    left: 250px;
+    top: 530px;   
+    left: 450px;
     z-index: 100;
 }
 
@@ -429,7 +429,7 @@ h1{
 
 .contudo-abaixo{
     position: relative;
-    top: 610px;
+    top: 570px;
     left: -25px;
 }
 
