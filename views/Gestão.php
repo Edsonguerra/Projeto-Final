@@ -31,9 +31,8 @@
             </li>
 
             
-            <li class="divider"  data-text="criar">Consultas & análises</li>
+            <li class="divider"  data-text="criar">Consultas</li>
             <li><a href="Gerenciamento_de_consultas.php"><i class="fa-solid fa-notes-medical icon"></i>Gerenciamento de Consultas</a></li>
-            <li><a href="Gerenciamento_de_analises.php"><i class="fa-solid fa-notes-medical icon"></i>Gerenciamento de Análises</a></li>
 
 
             <li class="divider"  data-text="área administrativa">Área Administrativa</li>
