@@ -60,12 +60,14 @@
 
 
 
-    <div class="main-content">
+ 
+        <div class="main-content">
+            
         <div class="container">
-            <h1 class="bem-vindo">Bem vindo!</h1>
-            <h2 class="name">Marque agora mesmo <br> a tua Consulta ou Análise <br> de uma forma fácil e segura!</h2>
-            <h3 class="Conteudo">A tua saúde é a nossa prioridade!</h3>
-        </div>       
+            <h2>Marque <br> agora mesmo!</h2>
+            <h3>A tua consulta ou análise</h3>
+        </div> 
+  
         
 <!------------------------------------- Consultas -------------------------------------------->
 
