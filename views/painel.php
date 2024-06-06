@@ -57,36 +57,58 @@
             <h4>Bem vindo/a</h4>
         </div> 
 
-<!------------------------------------- Consultas -------------------------------------------->
-        <?php
-            $consulta = mysqli_query($mysqli, "SELECT * FROM consulta"); 
-        ?>
+ 
+    <!------------------------------------- Consultas -------------------------------------------->
+    <?php
+        $consulta = mysqli_query($mysqli, "SELECT * FROM consulta"); 
+    ?>
 
-        <form action="../modules/Formulário_de_consulta.php" method="POST">
-            <div class="Selecionar">
-                <div class="selecionar-botao">
-                    <span class="texto">Selecionar Consulta</span>
-                    <span class="down-arrow">
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </span> 
-                </div>
-                <?php if ($consulta->num_rows > 0): ?> 
-                    <ul class="lista-consulta">
-                    <?php while ($row = $consulta->fetch_assoc()) :?> 
-                        <li class="lista">
-                            <img class="img" width="35 " src="../public/assets/css/img/43493.png" alt="">
-                            <span class="checked"><i class="fa-solid fa-check check-icon"></i></span>
-                            <span class="primeiro-lista"><?php echo $row["nome"]?></span>
-                            <input type="checkbox" name="consulta[]" value="<?php echo $row['id_da_consulta']; ?>" class="consulta-checkbox">
-                        </li>
-                    <?php endwhile;?>      
-                    </ul>   
-                    <button class="button" type="submit">Marcar Consulta</button>
-                <?php else:?>
-                    <p>Consultas indisponíveis</p>     
-                <?php endif;?>     
-            </div>    
-        </form>
+    <form action="../modules/Formulário_de_consulta.php" method="POST" onsubmit="return validarFormulario()">
+        <div class="Selecionar">
+            <div class="selecionar-botao">
+                <span class="texto">Selecionar Consulta</span>
+                <span class="down-arrow">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </span> 
+            </div>
+            <?php if ($consulta->num_rows > 0): ?> 
+                <ul class="lista-consulta">
+                <?php while ($row = $consulta->fetch_assoc()) :?> 
+                    <li class="lista">
+                        <img class="img" width="35 " src="../public/assets/css/img/43493.png" alt="">
+                        <span class="checked"><i class="fa-solid fa-check check-icon"></i></span>
+                        <span class="primeiro-lista"><?php echo $row["nome"]?></span>
+                        <input type="checkbox" name="consulta[]" value="<?php echo $row['id_da_consulta']; ?>" class="consulta-checkbox">
+                    </li>
+                <?php endwhile;?>   
+                <button class="button" type="submit">Marcar Consulta</button>  
+                </ul>   
+            <?php else:?>
+                <p>Consultas indisponíveis</p>     
+            <?php endif;?>     
+        </div>    
+    </form>
+
+    <script>
+        function validarFormulario() {
+            var checkboxes = document.getElementsByName("consulta[]");
+            var peloMenosUmSelecionado = false;
+
+            for (var i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i].checked) {
+                    peloMenosUmSelecionado = true;
+                    break;
+                }
+            }
+
+            if (!peloMenosUmSelecionado) {
+                alert("Por favor, selecione pelo menos uma consulta.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
 
 <!------------------------------------- Conteúdo -------------------------------------------->
         <div class="contudo-abaixo">

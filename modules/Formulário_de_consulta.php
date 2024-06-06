@@ -9,31 +9,28 @@ if (session_status() === PHP_SESSION_NONE) {
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['consulta'])) {
-   
         $id_da_consulta = $_POST['consulta'];
-
-
         $nomes_consultas = [];
-
+        $consulta_options = ""; 
+        if (empty($id_da_consulta)) {
+  
+            $consulta_options .= "<option value='' selected disabled>Nenhuma consulta selecionada</option>";
+        } else {
+            foreach ($id_da_consulta as $id) {
+                $query = "SELECT nome FROM consulta WHERE id_da_consulta = '$id'";
+                $result = mysqli_query($mysqli, $query);
+                if ($result) {
+                    $row = mysqli_fetch_assoc($result);
+                    $nomes_consultas[] = $row['nome'];
  
-        foreach ($id_da_consulta as $id) {
-            $query = "SELECT nome FROM consulta WHERE id_da_consulta = '$id'";
-            $result = mysqli_query($mysqli, $query);
-
-            if ($result) {
-                $row = mysqli_fetch_assoc($result);
-                $nomes_consultas[] = $row['nome'];
-            } else {
-                echo "Erro ao buscar o nome da consulta $id: " . mysqli_error($mysqli) . "<br>";
+                    $consulta_options .= "<option value='$id' selected disabled>$row[nome]</option>";
+                } else {
+                    echo "Erro ao buscar o nome da consulta $id: " . mysqli_error($mysqli) . "<br>";
+                }
             }
         }
-
-
-    } 
-        
     }
-
-
+}
 
 
 if (isset($_POST['submit'])) {
@@ -66,25 +63,18 @@ if (isset($_POST['submit'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/assets/css/Formularios_de_consultass.css">
+    <link rel="stylesheet" href="../public/assets/css/Formularios_de_Consultass.css">
     <title>Document</title>
 </head>
 <body>
 
     <div class="consultas-container">
-        <div class="consultas-selecionadas">
-            <?php
-                if (!empty($nomes_consultas)) {
-                echo "<p class='consultas-titulo'>Consultas selecionadas:</p>";
-                foreach ($nomes_consultas as $nome) {
-                    echo "<p class='consulta-selecionada'>" . $nome . "</p>";
-                }
-                } else {
-                echo "<p class='sem-consulta'>Nenhuma consulta selecionada.</p>";
-                }
-            ?>
-        </div>
-    </div>    
+        <select name="id" class="input">
+            <?php echo $consulta_options; ?>
+        </select>
+        <label class="titulo_consulta">Consulta/as selecionada/as</label>
+    </div>
+
 
 
     <div class="Formulario">

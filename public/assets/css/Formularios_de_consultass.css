@@ -127,7 +127,7 @@ textarea.input{
 
 .btn_enviar{
     position: relative;
-    top: 40px;
+    top: 70px;
     left: 170px;
     background: #007585;
     outline: none;
@@ -178,7 +178,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .voltar{
     position: absolute;
-    top: 370px;
+    top: 400px;
     left: 745px;
     font-size: 16px;
     font-weight: 600;
@@ -201,7 +201,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .consultas-container{
     position: absolute;
-    top: 295px;
+    top: 330px;
     left: 733px;
     font-size: 15px;
     font-weight: 500;
@@ -213,9 +213,30 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     color: #003c44;
 }
 
-.consulta-selecionada{
+.titulo_consulta{
     position: relative;
-    top: 10px;
-    color: #fff;
-    background-color: #003c44;
+    left: -1px;
+    top: -30px;
 }
+
+.input{
+    position: absolute;
+    top: 1px;
+    width: 160%;
+    height: 200%; 
+    background: transparent;
+    border: 2px solid #007585;
+    border-radius: 20px;
+    outline: none;
+    overflow: none;
+    padding-left: 10px;
+    color: black;
+    font-size: 16px;    
+}
+
+.input option {
+    color: #fff; 
+    background-color: #005a66;
+}
+
+
