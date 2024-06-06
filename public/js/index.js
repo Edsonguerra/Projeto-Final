@@ -1,20 +1,25 @@
 const selectBtn = document.querySelector(".selecionar-botao"),
     items = document.querySelectorAll(".lista");
 
-
 selectBtn.addEventListener("click", () => {
     selectBtn.classList.toggle("open");
 });
 
 items.forEach(item => {
-  item.addEventListener("click", () => {
-    item.classList.toggle("checked");
+    item.addEventListener("click", () => {
+        item.classList.toggle("checked");
+        
+        const checkbox = item.querySelector(".consulta-checkbox");
+        checkbox.checked = !checkbox.checked;
 
-    let checked = document.querySelectorAll(".checked"),
-      btnText = document.querySelector(".texto");
+        let checkedItems = document.querySelectorAll(".lista input[type='checkbox']:checked"),
+            btnText = document.querySelector(".texto");
 
-      console.log(checked,texto)
-  });
-})
-
+        if (checkedItems.length > 0) {
+            console.log("Selecionado");
+        } else {
+            console.log("Não selecionado");
+        }
+    });
+});
 

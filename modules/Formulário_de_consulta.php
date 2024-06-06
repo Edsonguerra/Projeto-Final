@@ -1,6 +1,13 @@
 <?php
 include_once('conexao.php');
+?>
 
+<?php
+ $_POST['id_da_consulta'];
+ die(morri)
+?>
+
+<?php
 session_start();
 
 if (isset($_POST['submit'])) {
