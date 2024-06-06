@@ -1,30 +1,40 @@
 <?php
 include_once('conexao.php');
 
-// Verifica se a sessão já foi iniciada
+
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-// Verifica se o formulário foi enviado
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['consulta'])) {
-        // Pega os IDs das consultas selecionadas
+   
         $id_da_consulta = $_POST['consulta'];
 
-        // Para debug, mostrar os IDs das consultas
-        var_dump($id_da_consulta); // ou use echo para mostrar de outra forma
 
-        // Interrompe o script após exibir os IDs
-        exit(); // ou die();
-    } else {
-        echo "Nenhuma consulta selecionada.";
+        $nomes_consultas = [];
+
+ 
+        foreach ($id_da_consulta as $id) {
+            $query = "SELECT nome FROM consulta WHERE id_da_consulta = '$id'";
+            $result = mysqli_query($mysqli, $query);
+
+            if ($result) {
+                $row = mysqli_fetch_assoc($result);
+                $nomes_consultas[] = $row['nome'];
+            } else {
+                echo "Erro ao buscar o nome da consulta $id: " . mysqli_error($mysqli) . "<br>";
+            }
+        }
+
+
+    } 
+        
     }
-}
-?>
 
-<?php
-session_start();
+
+
 
 if (isset($_POST['submit'])) {
 
@@ -56,10 +66,27 @@ if (isset($_POST['submit'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/assets/css/Formularios_de_consultas.css">
+    <link rel="stylesheet" href="../public/assets/css/Formularios_de_consultass.css">
     <title>Document</title>
 </head>
 <body>
+
+    <div class="consultas-container">
+        <div class="consultas-selecionadas">
+            <?php
+                if (!empty($nomes_consultas)) {
+                echo "<p class='consultas-titulo'>Consultas selecionadas:</p>";
+                foreach ($nomes_consultas as $nome) {
+                    echo "<p class='consulta-selecionada'>" . $nome . "</p>";
+                }
+                } else {
+                echo "<p class='sem-consulta'>Nenhuma consulta selecionada.</p>";
+                }
+            ?>
+        </div>
+    </div>    
+
+
     <div class="Formulario">
         <div class="detalhes">
             <div class="img-formulario">
