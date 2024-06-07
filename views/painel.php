@@ -52,8 +52,8 @@
 <!------------------------------------- Textos da pagina   -------------------------------------------->
     <div class="main-content">
         <div class="container">
-            <h2>Marque <br> agora mesmo!</h2>
-            <h3>A tua consulta ou análise</h3>
+            <h2> Não perca <br> tempo!</h2>
+            <h3>Marque agora mesmo a tua consulta!</h3>
             <h4>Bem vindo/a</h4>
         </div> 
 
