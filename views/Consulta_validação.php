@@ -25,7 +25,7 @@
                 <tr class="elementos" >
                     <th class="nome" scope="Id"> Nome completo</th>         
                     <th class="sexo" scope="Id"> Sexo</th>
-                    <th class="medico" scope="Id"> Historico Medico</th>
+                    <th class="medico" scope="Id"> Consulta marcada</th>
                     <th class="data" scope="Id"> Data de nascimento</th>
                     <th class="operações" scope="Id"> Operações</th>
 
