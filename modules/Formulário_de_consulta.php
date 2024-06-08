@@ -1,7 +1,6 @@
 <?php
+static $idConsultas=[];
 include_once('conexao.php');
-
-
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
@@ -10,6 +9,7 @@ if (session_status() === PHP_SESSION_NONE) {
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['consulta'])) {
         $id_da_consulta = $_POST['consulta'];
+        $idConsultas = $_POST['consulta'];
         $nomes_consultas = [];
         $consulta_options = ""; 
         if (empty($id_da_consulta)) {
@@ -30,19 +30,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
         }
     }
-}
-
-
+    
 if (isset($_POST['submit'])) {
-
     $nome_completo = $_POST['nome_completo'];
     $sexo = $_POST['sexo'];
     $data_de_nascimento = $_POST['data_de_nascimento'];
+    $bilhete = $_POST['bilhete'];
 
     if (isset($_SESSION['id_user'])) {
         $id_user = $_SESSION['id_user'];
 
-        $result = mysqli_query($mysqli, "INSERT INTO paciente (nome_completo, sexo, data_de_nascimento, user_id_user) VALUES ('$nome_completo', '$sexo', '$data_de_nascimento', '$id_user')");
+        $result = mysqli_query($mysqli, "INSERT INTO paciente (nome_completo, sexo, data_de_nascimento, user_id_user, bilhete) VALUES ('$nome_completo', '$sexo', '$data_de_nascimento', '$id_user', '$bilhete')");
+        $queryBi = "SELECT id_paciente FROM paciente WHERE bilhete = '$bilhete'";
+        $resultPaciente = mysqli_query($mysqli, $queryBi);
+        $pacienteId=mysqli_fetch_assoc($resultPaciente)['id_paciente'];
+       echo print_r($idConsultas);
+    
+ die("aqui");
 
         if ($result) {
             $_SESSION['message'] = "com sucesso!";
@@ -52,9 +56,14 @@ if (isset($_POST['submit'])) {
     } else {
         $_SESSION['message'] = "Erro: usuário não está logado.";
     }
+    print_r($_POST);
+die("Mor...");
     header("Location: ../views/Consulta.php");
     exit();
 }
+}
+
+
 ?>
 
 <?php include('../modules/protect.php');?> 
@@ -92,6 +101,10 @@ if (isset($_POST['submit'])) {
                         <input type="text" name="nome_completo" id="nome_completo" class="input_nome" required placeholder="Digite o seu nome completo">
                         <label for="nome completo" class="nome_completo">Nome completo</label>
                     </div>
+                    <div class="input-box">
+                        <input type="text" name="bilhete" id="bilhete" class="input_nome" maxlength="14" required placeholder="Digite o seu numero do bilhete">
+                        <label for="bilhete" class="nome_completo">Bilhete</label>
+                    </div>
                     
                     <br>
                     <div class="Genero">
@@ -111,6 +124,7 @@ if (isset($_POST['submit'])) {
                         <input type="date" name="data_de_nascimento" id="data_nascimento" class="inputUser" required>
                     </div>
 
+                    
                     <input type="submit" name="submit" id="submit" class="btn_enviar" value="Envia"> 
                 </form>
             </div>
