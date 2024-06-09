@@ -72,7 +72,7 @@ die("Mor...");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/assets/css/Formularios_de_Consultass.css">
+    <link rel="stylesheet" href="../public/assets/css/Formularios_de_Consultasss.css">
     <title>Document</title>
 </head>
 <body>
@@ -102,8 +102,8 @@ die("Mor...");
                         <label for="nome completo" class="nome_completo">Nome completo</label>
                     </div>
                     <div class="input-box">
-                        <input type="text" name="bilhete" id="bilhete" class="input_nome" maxlength="14" required placeholder="Digite o seu numero do bilhete">
-                        <label for="bilhete" class="nome_completo">Bilhete</label>
+                        <input type="text" name="bilhete" id="bilhete" class="input-bilhete" maxlength="14" placeholder="Digite o seu numero do bilhete" required  >
+                        <label for="bilhete" class="bilhete">Bilhete</label>
                     </div>
                     
                     <br>
