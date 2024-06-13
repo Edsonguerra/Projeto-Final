@@ -96,7 +96,7 @@ if (isset($_GET['success'])) {
                 </div>
                 <div class="two-col">
                     <div class="two">
-                        <label><a href="#">Esqueceu a senha?</a></label>
+                        <label><a href="recupera_senha.php">Esqueceu a senha?</a></label>
                     </div>
                 </div>
             </form>
