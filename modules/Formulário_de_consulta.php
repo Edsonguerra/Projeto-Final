@@ -1,35 +1,14 @@
 <?php
-static $idConsultas=[];
+
 include_once('conexao.php');
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
+$consultas=explode(",",$_GET['consultasId']);
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (isset($_POST['consulta'])) {
-        $id_da_consulta = $_POST['consulta'];
-        $idConsultas = $_POST['consulta'];
-        $nomes_consultas = [];
-        $consulta_options = ""; 
-        if (empty($id_da_consulta)) {
-  
-            $consulta_options .= "<option value='' selected disabled>Nenhuma consulta selecionada</option>";
-        } else {
-            foreach ($id_da_consulta as $id) {
-                $query = "SELECT nome FROM consulta WHERE id_da_consulta = '$id'";
-                $result = mysqli_query($mysqli, $query);
-                if ($result) {
-                    $row = mysqli_fetch_assoc($result);
-                    $nomes_consultas[] = $row['nome'];
- 
-                    $consulta_options .= "<option value='$id' selected disabled>$row[nome]</option>";
-                } else {
-                    echo "Erro ao buscar o nome da consulta $id: " . mysqli_error($mysqli) . "<br>";
-                }
-            }
-        }
-    }
+// if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
     
 if (isset($_POST['submit'])) {
     $nome_completo = $_POST['nome_completo'];
@@ -44,10 +23,14 @@ if (isset($_POST['submit'])) {
         $queryBi = "SELECT id_paciente FROM paciente WHERE bilhete = '$bilhete'";
         $resultPaciente = mysqli_query($mysqli, $queryBi);
         $pacienteId=mysqli_fetch_assoc($resultPaciente)['id_paciente'];
-       echo print_r($idConsultas);
-    
- die("aqui");
+        $idPaciente=$pacienteId;
 
+        echo print_r($id_da_consulta);
+        for($i=0;$i<$consultas.length;$i++){
+echo $consultas[$i];
+        }
+        die("depois do ciclo");
+        
         if ($result) {
             $_SESSION['message'] = "com sucesso!";
         } else {
@@ -56,12 +39,12 @@ if (isset($_POST['submit'])) {
     } else {
         $_SESSION['message'] = "Erro: usuário não está logado.";
     }
-    print_r($_POST);
-die("Mor...");
+    
     header("Location: ../views/Consulta.php");
     exit();
 }
-}
+
+// }
 
 
 ?>
@@ -95,7 +78,7 @@ die("Mor...");
                 <a href="../views/painel.php">
                     <button class="voltar">Voltar</button>
                 </a>
-                <form action="../modules/Formulário_de_consulta.php" method="POST">
+                <form action="../modules/formController.php" method="POST">
                     <h5 class="titulo">Formulário de Consulta</h5>
                     <div class="input-box">
                         <input type="text" name="nome_completo" id="nome_completo" class="input_nome" required placeholder="Digite o seu nome completo">
