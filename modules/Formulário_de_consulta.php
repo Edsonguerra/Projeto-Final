@@ -9,7 +9,6 @@ $consultas=explode(",",$_GET['consultasId']);
 
 // if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    
 if (isset($_POST['submit'])) {
     $nome_completo = $_POST['nome_completo'];
     $sexo = $_POST['sexo'];
@@ -24,12 +23,9 @@ if (isset($_POST['submit'])) {
         $resultPaciente = mysqli_query($mysqli, $queryBi);
         $pacienteId=mysqli_fetch_assoc($resultPaciente)['id_paciente'];
         $idPaciente=$pacienteId;
-
-        echo print_r($id_da_consulta);
-        for($i=0;$i<$consultas.length;$i++){
-echo $consultas[$i];
-        }
-        die("depois do ciclo");
+        print_r($consultas);
+die("exit");
+        // echo print_r($id_da_consulta);
         
         if ($result) {
             $_SESSION['message'] = "com sucesso!";

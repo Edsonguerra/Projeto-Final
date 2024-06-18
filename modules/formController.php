@@ -1,13 +1,16 @@
 <?php
 
 include_once('conexao.php');
+echo print_r($_POST);
+die("___");
 
-    if (isset($_POST['consulta'])) {
-        $id_da_consulta = $_POST['consulta'];
-        $idConsultas = $_POST['consulta'];
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_POST['consulta[]'])) {
+        $id_da_consulta = $_POST['consulta[]'];
         $nomes_consultas = [];
         $consulta_options = ""; 
-        // echo print_r($id_da_consulta);
+
+
         if (empty($id_da_consulta)) {
   
             $consulta_options .= "<option value='' selected disabled>Nenhuma consulta selecionada</option>";
@@ -25,9 +28,11 @@ include_once('conexao.php');
                 }
             }
         }
+        $idCon=implode(",",$id_da_consulta);
+        header("Location: ../modules/Formulário_de_consulta.php?consultasId={$idCon}");
     }
-    $idCon=implode(",",$id_da_consulta);
-    header("Location: ../modules/Formulário_de_consulta.php?consultasId={$idCon}");
+}
+    
     ?>
 <!-- 
 if (isset($_POST['submit'])) {
