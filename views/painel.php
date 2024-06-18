@@ -88,7 +88,7 @@
             $consulta = mysqli_query($mysqli, "SELECT * FROM consulta"); 
         ?>
 
-        <form action="../modules/formController.php" method="POST" onsubmit="return validarFormulario()">
+        <form action="../modules/Formulário_de_consulta.php" method="POST" onsubmit="return validarFormulario()">
             <div class="Selecionar" id="selecionarConsulta">
                 <div class="selecionar-botao">
                     <span class="texto">Selecionar Consulta</span>

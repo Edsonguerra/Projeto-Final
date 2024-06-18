@@ -28,7 +28,7 @@ if (isset($_SESSION['message'])) {
 <body>
     <div class="top">
         <label class="titulo_gerenciamento">Consultar consultas</label>
-        <a href="Painel.php">
+        <a href="painel.php">
             <button class="btn-voltar">Voltar</button>
         </a>
     </div>
