@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="style.css">
 </head> -->
 
-<body class="panelContainer bg-image-1"> 
+<body class="panelContainer bg-image-1" id="body"> 
     <div class="overlay"></div>
     <div class="sidebar">
         <div class="top">
@@ -49,39 +49,18 @@
         </ul>
     </div>
 
-    <script>
-        let btn = document.querySelector('#btn');
-        let sidebar = document.querySelector('.sidebar');
-
-        btn.onclick = function () {
-            sidebar.classList.toggle('active');
-        };
-
-        const images = ['bg-image-1', 'bg-image-2']; 
-        let currentImageIndex = 0;
-
-        function changeBackgroundImage() {
-            const body = document.querySelector('body');
-            body.classList.remove(images[currentImageIndex]);
-            currentImageIndex = (currentImageIndex + 1) % images.length;
-            body.classList.add(images[currentImageIndex]);
-        }
-
-        setInterval(changeBackgroundImage, 5000); 
-    </script>
-
     <div class="main-content">
         <div class="container">
             <h2> Não perca <br> tempo!</h2>
             <h3>Marque agora mesmo a tua consulta!</h3>
             <h4>Bem vindo/a</h4>
-            <button id="marcaConsultaBtn" class="marcar">Marcar Consulta</button>
+            <a href="#selecionarConsulta" id="marcaConsultaBtn" class="marcar" style="padding:6px; text-decoration:none;">Marcar Consulta</a>
         </div> 
 
         <div class="cabeça">
             <label class="contacto">Contacto</label>
             <label class="ajuda">Ajuda</label>
-            <button id="marcaConsultaBtn" class="marca_consulta">Marcar Consulta</button>
+            <a href="#selecionarConsulta" id="marcaConsultaBtn" class="marca_consulta" style="padding:6px; text-decoration:none;">Marcar Consulta</a>
         </div>
 
         <?php
@@ -155,5 +134,30 @@ document.getElementById('selecionarConsulta').scrollIntoView({ behavior: 'smooth
     </div>
 
     <script src="../public/js/index.js"></script> 
+    <script>
+        let btn = document.querySelector('#btn');
+        let sidebar = document.querySelector('.sidebar');
+
+        btn.onclick = function () {
+            sidebar.classList.toggle('active');
+        };
+
+        // function changeBackgroundImage() {
+        //     const body = document.querySelector('#body');
+        //     if(body.classList.contains('bg-image-1')){
+        //         body.classList.remove('bg-image-1');
+        //         body.classList.add('bg-image-2');
+        //     }
+        //     if(body.classList.contains('bg-image-2')){
+        //         body.classList.remove('bg-image-2');
+        //         body.classList.add('bg-image-1');
+        //     }
+        // }
+
+        
+        // setTimeout(() => {
+        //     Interval
+        // }, timeout);(changeBackgroundImage,1000); 
+    </script>
 </body>
 </html>

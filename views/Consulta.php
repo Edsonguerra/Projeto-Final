@@ -11,8 +11,8 @@ if (isset($_SESSION['message'])) {
     $message = $_SESSION['message'];
     unset($_SESSION['message']);
 }
-
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,6 +31,14 @@ if (isset($_SESSION['message'])) {
         <a href="painel.php">
             <button class="btn-voltar">Voltar</button>
         </a>
+        <select name="area" id="selectArea" class="selectArea">
+    <?php $areas= mysqli_query($mysqli, "SELECT * FROM area"); ?>
+      <?php if($areas):?>
+        <?php while($area_data = mysqli_fetch_assoc($areas)):?>
+            <option name=<?=$area_data['nome']?> value=<?=$area_data['id']?>> <?=$area_data['nome']?> </option>
+            <?php endwhile; ?>            
+        <?php endif;?>
+        </select>
     </div>
 
     <?php if (!empty($message)): ?>
@@ -62,12 +70,14 @@ if (isset($_SESSION['message'])) {
             </thead>
             <tbody class="dados_da_consulta">
                 <?php
-          
+                $areas= mysqli_query($mysqli, "SELECT * FROM area");
+                $area_zero = mysqli_fetch_assoc($areas);
+                $area_zero_id=$area_zero['id'];
+        
                 $sqli = "SELECT p.nome_completo, p.sexo, c.nome AS consulta_nome, cp.data
                          FROM paciente p
                          JOIN consulta_paciente cp ON p.id_paciente = cp.paciente_id_paciente
-                         JOIN consulta c ON cp.consulta_id_da_consulta = c.id_da_consulta";
-
+                         JOIN consulta c ON cp.consulta_id_da_consulta = c.id_da_consulta WHERE c.area_id={$area_zero_id}";
                 $result = mysqli_query($mysqli, $sqli);
 
      
@@ -84,9 +94,34 @@ if (isset($_SESSION['message'])) {
           
                     echo "<tr><td colspan='4'>Erro na consulta SQL: " . mysqli_error($mysqli) . "</td></tr>";
                 }
+                
                 ?>
             </tbody>
         </table>
     </div>
+    <script>
+        const selectArea=document.querySelector("#selectArea");
+        selectArea.addEventListener("change",async (el)=>{
+            const idArea=el.target.value;
+            const response= await fetch(`http://localhost/Projeto-Final/modules/consultasMarcadas.php/?idArea=${idArea}`);
+            const data = await response.json();
+            const dados_da_consulta=document.querySelector(".dados_da_consulta");
+            dados_da_consulta.innerHTML='';
+            if(data.length===0){
+                dados_da_consulta.innerHTML=`<tr><td colspan='4'>Sem Consultas nesta Área</td></tr>`;             
+            }
+
+            data.forEach(element => {
+                dados_da_consulta.innerHTML+=`
+                <tr>
+                <td>${element.nome_completo}</td>
+                <td>${element.sexo}</td>
+                <td>${element.consulta_nome}</td>
+                <td>${element.data}</td>
+            </tr>
+                `    
+            });            
+        })
+    </script>
 </body>
 </html>
