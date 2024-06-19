@@ -87,7 +87,11 @@ if (isset($_SESSION['message'])) {
                         echo "<td>" . $user_data['nome_completo'] . "</td>";
                         echo "<td>" . $user_data['sexo'] . "</td>";
                         echo "<td>" . $user_data['consulta_nome'] . "</td>";
-                        echo "<td>" . $user_data['data'] . "</td>";
+                        if(is_null($user_data['data'])){
+                            echo "<td> Pendente </td>";
+                        }else{
+                            echo "<td>" . $user_data['data'] . "</td>";
+                        }
                         echo "</tr>";
                     }
                 } else {
@@ -117,7 +121,7 @@ if (isset($_SESSION['message'])) {
                 <td>${element.nome_completo}</td>
                 <td>${element.sexo}</td>
                 <td>${element.consulta_nome}</td>
-                <td>${element.data}</td>
+                <td>${element.data==null?'Pendente':element.data}</td>
             </tr>
                 `    
             });            
