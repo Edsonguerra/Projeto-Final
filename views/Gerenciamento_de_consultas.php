@@ -35,7 +35,7 @@
             <tbody class="dados_da_consulta" >
             <?php 
 
-            $sqli = "SELECT * FROM `consulta`"; 
+            $sqli = "SELECT * FROM `consulta` ORDER BY nome ASC"; 
 
             $result = mysqli_query($mysqli, $sqli);
             

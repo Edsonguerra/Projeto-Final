@@ -34,7 +34,7 @@
             <tbody class="dados_da_area" >
             <?php
 
-            $sqli = "SELECT * FROM `area`"; 
+            $sqli = "SELECT * FROM `area` ORDER BY id ASC"; 
 
             $result = mysqli_query($mysqli, $sqli);
 
