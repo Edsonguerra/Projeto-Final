@@ -21,12 +21,13 @@
                 <a href="#">
                     <i class="fa-solid fa-hospital-user icon"></i>Dados & Validações <i class="fa-solid fa-chevron-right icon-rigth"></i> 
                 </a>
+                <?php $areas= mysqli_query($mysqli, "SELECT * FROM area"); ?>
                     <ul class="side-dropdown">
-                        <li><a href="Consulta_validação.php">Cardiologista</a></li>
-                        <li><a href="Consulta_validação.php">Dentista</a></li>
-                        <li><a href="Consulta_validação.php">Fisioterapeuta</a></li>
-                        <li><a href="Consulta_validação.php">Nutricionista</a></li>
-                        <li><a href="Consulta_validação.php">Urologista</a></li>
+      <?php if($areas):?>
+        <?php while($area_data = mysqli_fetch_assoc($areas)):?>
+            <li><a href="Consulta_validação.php?areaId=<?=$area_data['id']?>"><?=$area_data['nome']?></a></li>
+            <?php endwhile; ?>            
+        <?php endif;?>
                     </ul>
             </li>
 

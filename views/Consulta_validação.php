@@ -1,5 +1,18 @@
 <?php include('../modules/conexao.php');?>
 <?php include('../modules/protect.php');?> 
+<?php 
+$areaId=$_GET['areaId'];
+$areas= mysqli_query($mysqli, "SELECT * FROM area WHERE id={$areaId}");
+$area_data = mysqli_fetch_assoc($areas);
+
+$sqli = "SELECT p.nome_completo, p.sexo, c.nome AS consulta_nome, p.data_de_nascimento
+         FROM paciente p
+         JOIN consulta_paciente cp ON p.id_paciente = cp.paciente_id_paciente
+         JOIN consulta c ON cp.consulta_id_da_consulta = c.id_da_consulta WHERE c.area_id={$areaId}";
+
+$result = mysqli_query($mysqli, $sqli);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,10 +25,11 @@
 </head>
 <body>
     <div class="top">
-        <label class="titulo_gerenciamento">Consultas/Análises e Validações</label>
+        <label class="titulo_gerenciamento">Consultas Marcadas de <?=$area_data['nome']?></label>
         <a href="Gestão.php">
             <button class="btn-voltar">Voltar</button>
         </a>
+        <label class="selectArea">Total <?=$result->num_rows?></label>
     </div>
 
     <div class="container">
@@ -25,19 +39,13 @@
                     <th class="nome" scope="Id"> Nome completo</th>
                     <th class="sexo" scope="Id"> Sexo</th>
                     <th class="medico" scope="Id"> Consulta marcada</th>
-                    <th class="data" scope="Id"> Data de nascimento</th>
+                    <th class="data" scope="Id"> Nascimento</th>
                     <th class="operações" scope="Id"> Operações</th>
                 </tr>
             </thead>
             <tbody class="dados_da_consulta">
-                <?php 
-                $sqli = "SELECT p.nome_completo, p.sexo, c.nome AS consulta_nome, p.data_de_nascimento
-                         FROM paciente p
-                         JOIN consulta_paciente cp ON p.id_paciente = cp.paciente_id_paciente
-                         JOIN consulta c ON cp.consulta_id_da_consulta = c.id_da_consulta";
-
-                $result = mysqli_query($mysqli, $sqli);
-
+                
+               <?php
                 if ($result) {
                     while ($row = mysqli_fetch_assoc($result)) {
                         $nome_completo = $row['nome_completo'];

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jun 19, 2024 at 01:06 PM
+-- Generation Time: Jun 19, 2024 at 02:00 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -110,7 +110,7 @@ CREATE TABLE `consulta` (
 INSERT INTO `consulta` (`id_da_consulta`, `nome`, `area_id`) VALUES
 (1, 'Peso', 1),
 (2, 'Ossos', 2),
-(3, 'Martelo', 2);
+(3, 'Coluna', 1);
 
 -- --------------------------------------------------------
 
