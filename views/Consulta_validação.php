@@ -5,7 +5,7 @@ $areaId=$_GET['areaId'];
 $areas= mysqli_query($mysqli, "SELECT * FROM area WHERE id={$areaId}");
 $area_data = mysqli_fetch_assoc($areas);
 
-$sqli = "SELECT p.nome_completo, p.sexo, c.nome AS consulta_nome, p.data_de_nascimento
+$sqli = "SELECT p.nome_completo, p.sexo, c.nome AS consulta_nome, p.data_de_nascimento,estado
          FROM paciente p
          JOIN consulta_paciente cp ON p.id_paciente = cp.paciente_id_paciente
          JOIN consulta c ON cp.consulta_id_da_consulta = c.id_da_consulta WHERE c.area_id={$areaId}";
@@ -38,8 +38,9 @@ $result = mysqli_query($mysqli, $sqli);
                 <tr class="elementos">
                     <th class="nome" scope="Id"> Nome completo</th>
                     <th class="sexo" scope="Id"> Sexo</th>
-                    <th class="medico" scope="Id"> Consulta marcada</th>
+                    <th class="medico" scope="Id"> C. marcada</th>
                     <th class="data" scope="Id"> Nascimento</th>
+                    <th class="data" scope="Id"> Estado</th>
                     <th class="operações" scope="Id"> Operações</th>
                 </tr>
             </thead>
@@ -52,12 +53,14 @@ $result = mysqli_query($mysqli, $sqli);
                         $sexo = $row['sexo'];
                         $consulta_marcada = $row['consulta_nome'];
                         $data_de_nascimento = $row['data_de_nascimento'];
+                        $estado = $row['estado'];
                         
                         echo '<tr>
                             <td class="nome_da_consulta">' . $nome_completo . '</td>
                             <td class="Sexo">' . $sexo . '</td>
                             <td class="medico">' . $consulta_marcada . '</td>
                             <td class="medico">' . $data_de_nascimento . '</td>
+                            <td class="medico">' . $estado . '</td>
                             <td>
                                 <a href="#">
                                     <button class="btn-validar">Validar</button>

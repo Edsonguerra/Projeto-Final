@@ -66,6 +66,7 @@ if (isset($_SESSION['message'])) {
                     <th class="sexo" scope="Id"> Sexo</th>
                     <th class="consulta" scope="Id"> Consulta marcada</th>
                     <th class="data" scope="Id"> Data</th>
+                    <th class="data" scope="Id"> Estado</th>
                 </tr>
             </thead>
             <tbody class="dados_da_consulta">
@@ -74,7 +75,7 @@ if (isset($_SESSION['message'])) {
                 $area_zero = mysqli_fetch_assoc($areas);
                 $area_zero_id=$area_zero['id'];
         
-                $sqli = "SELECT p.nome_completo, p.sexo, c.nome AS consulta_nome, cp.data
+                $sqli = "SELECT p.nome_completo, p.sexo, c.nome AS consulta_nome, cp.data, estado
                          FROM paciente p
                          JOIN consulta_paciente cp ON p.id_paciente = cp.paciente_id_paciente
                          JOIN consulta c ON cp.consulta_id_da_consulta = c.id_da_consulta WHERE c.area_id={$area_zero_id}";
@@ -92,6 +93,7 @@ if (isset($_SESSION['message'])) {
                         }else{
                             echo "<td>" . $user_data['data'] . "</td>";
                         }
+                        echo "<td>" . $user_data['estado'] . "</td>";
                         echo "</tr>";
                     }
                 } else {
@@ -122,6 +124,7 @@ if (isset($_SESSION['message'])) {
                 <td>${element.sexo}</td>
                 <td>${element.consulta_nome}</td>
                 <td>${element.data==null?'Pendente':element.data}</td>
+                <td>${element.estado}</td>
             </tr>
                 `    
             });            
