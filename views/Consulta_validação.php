@@ -25,7 +25,7 @@ $result = mysqli_query($mysqli, $sqli);
 </head>
 <body>
     <div class="top">
-        <label class="titulo_gerenciamento">Consultas Marcadas de <?=$area_data['nome']?></label>
+        <label class="titulo_gerenciamento">Consultas Marcadas área de <?=$area_data['nome']?></label>
         <a href="Gestão.php">
             <button class="btn-voltar">Voltar</button>
         </a>
