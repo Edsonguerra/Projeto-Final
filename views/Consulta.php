@@ -65,7 +65,7 @@ if (isset($_SESSION['message'])) {
                     <th class="nome" scope="Id"> Nome completo</th>
                     <th class="sexo" scope="Id"> Sexo</th>
                     <th class="consulta" scope="Id"> Consulta</th>
-                    <th class="data" scope="Id"> Data da Consulta</th>
+                    <th class="data" scope="Id"> Data e Hora</th>
                     <th class="data" scope="Id"> Estado</th>
                     <th class="data" scope="Id"> Posição</th>
                 </tr>
