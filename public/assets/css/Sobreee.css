@@ -1,10 +1,10 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: var(--font-family);
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
 
 
 .bg-image-1 {
@@ -35,7 +35,7 @@
 
 .cabeça {
     position: relative;
-    top: -89px;
+    top: -101px;
     left: -21px;
     width: 103%;
     height: 80px;
@@ -241,18 +241,27 @@
 
 .sobre-nos{
     position: relative;
-    top: 230px;
+    top: 210px;
     left: 60px;
-    font-size: 63px;
+    font-size: 72px;
     font-weight: 700;
+    color: #fff;
+}
+
+.curioso{
+    font-family: "Jura", sans-serif;
+    position: relative;
+    top: 240px;
+    left: -270px;
+    font-size: 17px;
     color: #fff;
 }
 
 
 .marcar{
     position: relative;
-    top: 270px;
-    left: -358px;
+    top: 280px;
+    left: -580px;
     background-color: transparent;
     width: 11%;
     height: 40px;
@@ -261,8 +270,6 @@
     transition: .5s;
     cursor: pointer;
 }
-
-
 
 .marcar:hover{
     background-color: #feffff;
@@ -278,81 +285,56 @@
     top: 336px;
     left: 61px;
     font-size: 20px;
-    color: rgb(0, 0, 0);    
+    color: rgb(0, 0, 0);
+    
 }
 
 main {
+
     position: relative;
-    top: 320px;
-    left: -6px;
+    top: 300px;
+    left: -2px;
     width: 90%;
     margin: 150px auto 50px auto;
     padding: 20px;
-    font-size: 16px;
+    font-size: 17px;
     background: #ffffff;
     border-radius: 10px;
-    color: #000000;
     box-shadow: 0 0 20px 10px rgba(0, 13, 17, 0.4);
-    z-index: 500;
 }
 
 h2{
- 
     font-size: 27px;
     font-weight: 600;
-    color: #000000;
 }
 
 h3{
- 
     font-size: 27px;
     font-weight: 600;
     color: #001a22;
 }
 
 
-
-
-
-.terms h2 {
-    color: var(--primary-color);
-    margin-bottom: 20px;
+section {
+    margin-bottom: 40px;
 }
 
-.terms h3 {
+section h2, section h3 {
     color: var(--primary-color);
-    margin-top: 20px;
     margin-bottom: 10px;
 }
 
-.terms p, .terms ul {
+section p {
     margin-bottom: 20px;
     text-align: justify;
-    font-size: 18px;
 }
-
-.terms ul {
-    list-style: disc inside;
-    padding-left: 20px;
-}
-
-.terms a {
-    color: var(--primary-color);
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.terms a:hover {
-    color: var(--secondary-color);
-}
-
 
 
 
 
 .contudo-abaixo{
     position: relative;
-    top: 320px;
+    top: 280px;
     left: -25px;
 }
 

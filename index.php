@@ -64,7 +64,7 @@
         <h5 class="Infor">Informações</h5>
         <a class="Sobre" href="views/Sobre.php">Sobre</a>
         <a class="Contacto" href="views/Contacto.php">Contacto</a>
-        <a class="Termos" href="views/Termos.php">Termos</a>
+        <a class="Termos" href="views/Termos.php">Termos de uso</a>
         <a class="Politica" href="views/Politica.php">Politica de privacidade</a>
     </div>
 

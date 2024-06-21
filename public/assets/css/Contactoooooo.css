@@ -35,7 +35,7 @@
 
 .cabeça {
     position: relative;
-    top: -89px;
+    top: -129px;
     left: -21px;
     width: 103%;
     height: 80px;
@@ -84,8 +84,6 @@
     text-decoration: none;
     font-family: "Glegoo", serif;
 }
-
-
 
 
 
@@ -212,6 +210,9 @@
 
 
 
+
+
+
 .main-content{
     position: absolute;
     min-height: 100vh;
@@ -251,8 +252,8 @@
 
 .marcar{
     position: relative;
-    top: 270px;
-    left: -358px;
+    top: 260px;
+    left: -160px;
     background-color: transparent;
     width: 11%;
     height: 40px;
@@ -270,25 +271,25 @@
 }
 
 
-
-.Conteudo{
-   
-    position: absolute;
-    display: flex;
-    top: 336px;
-    left: 61px;
-    font-size: 20px;
-    color: rgb(0, 0, 0);    
+.duvida{
+    font-family: "Jura", sans-serif;
+    position: relative;
+    top: 219px;
+    left: 67px;
+    font-size: 17px;
+    color: #fff;
 }
+
+
 
 main {
     position: relative;
-    top: 320px;
+    top: 268px;
     left: -6px;
     width: 90%;
     margin: 150px auto 50px auto;
     padding: 20px;
-    font-size: 16px;
+    font-size: 18px;
     background: #ffffff;
     border-radius: 10px;
     color: #000000;
@@ -296,57 +297,30 @@ main {
     z-index: 500;
 }
 
-h2{
- 
-    font-size: 27px;
-    font-weight: 600;
-    color: #000000;
+
+
+.contact-info, .contacto-form, .lembre-se{
+    margin-bottom: 40px;
 }
 
-h3{
- 
-    font-size: 27px;
-    font-weight: 600;
-    color: #001a22;
-}
-
-
-
-
-
-.terms h2 {
+.contacto-info h2, .contacto-info h3,
+.contacto-form h3, 
+.lembre-se h3{
     color: var(--primary-color);
-    margin-bottom: 20px;
-}
-
-.terms h3 {
-    color: var(--primary-color);
-    margin-top: 20px;
     margin-bottom: 10px;
 }
 
-.terms p, .terms ul {
+.contacto-info p, .contacto-form p,
+.lembre-se p, h3
+address {
     margin-bottom: 20px;
     text-align: justify;
-    font-size: 18px;
 }
 
-.terms ul {
-    list-style: disc inside;
-    padding-left: 20px;
+.lembre-se{
+    position: relative;
+    top: 15px;
 }
-
-.terms a {
-    color: var(--primary-color);
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.terms a:hover {
-    color: var(--secondary-color);
-}
-
-
 
 
 
