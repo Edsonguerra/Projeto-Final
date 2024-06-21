@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../public/assets/css/validações_finaiiiis.css">
-    <title>Document</title>
+    <title>Validações Finais</title>
 </head>
 <body>
 
     <div class="consultas-container">
         <select name="id" class="input" id="consultasSelecionadas">
-
         </select>
         <label class="titulo_consulta">Consulta/as selecionada/as</label>
     </div>
@@ -27,24 +26,24 @@
                 <form>
                     <h5 class="titulo">Validações Finais</h5>
                     <div class="input-box">
-                        <input type="text" name="nome_completo" id="nome_completo" class="input_nome">
+                        <input type="text" name="nome_completo" id="nome_completo" class="input_nome" value="<?= htmlspecialchars($_GET['nome_completo'] ?? '') ?>" readonly>
                         <label for="nome_completo" class="nome_completo">Nome completo do Paciente</label>
                     </div>
                     <div class="input-box">
-                        <input type="text" name="bilhete" id="bilhete" class="input-bilhete">
-                        <label for="bilhete" class="bilhete">Bilhete</label>
+                        <input type="text" name="data_de_nascimento" id="data_de_nascimento" class="input-bilhete" value="<?= htmlspecialchars($_GET['data_de_nascimento'] ?? '') ?>" readonly>
+                        <label for="data_de_nascimento" class="bilhete">Data de nascimento</label>
                     </div>
                     
                     <br>
                     <div class="Genero">
                         <br><br>
                     <p class="Sexo">Sexo:</p>
-                        <input type="radio" id="feminino" name="sexo" value="Feminino" required>
+                        <input type="radio" id="feminino" name="sexo" value="Feminino" <?= (isset($_GET['sexo']) && $_GET['sexo'] == 'Feminino') ? 'checked' : '' ?> required>
                         <label for="feminino">Feminino</label>
                     </div>
     
                     <div class="Genero">
-                        <input type="radio" id="Masculino" name="sexo" value="Masculino" required>
+                        <input type="radio" id="Masculino" name="sexo" value="Masculino" <?= (isset($_GET['sexo']) && $_GET['sexo'] == 'Masculino') ? 'checked' : '' ?> required>
                         <label for="Masculino">Masculino</label>
                     </div>
 
@@ -58,22 +57,22 @@
                         <label for="estado" class="estado">Estado da consulta</label>
                     </div>
                     <input type="hidden" name="consultasId" id="consultasId">            
-                    <input type="submit" name="submit" id="submit" class="btn_enviar" value="Envia">    
+                    <input type="submit" name="submit" id="submit" class="btn_enviar" value="Enviar">    
                 </form>
             </div>
         </div>
     </div>
 
     <script>
-        const consultasSelecionadas=document.querySelector("#consultasSelecionadas");
-        const consultas=JSON.parse(localStorage.getItem("consultasObjectos"));
-        const consultasID=[];
+        const consultasSelecionadas = document.querySelector("#consultasSelecionadas");
+        const consultas = JSON.parse(localStorage.getItem("consultasObjectos"));
+        const consultasID = [];
         for (const key in consultas) {
-            consultasSelecionadas.innerHTML+=`<option value=${consultas[key]} selected disabled>${key}</option>`;
-        consultasID.push(consultas[key]);
+            consultasSelecionadas.innerHTML += `<option value=${consultas[key]} selected disabled>${key}</option>`;
+            consultasID.push(consultas[key]);
         }
-        document.querySelector("#consultasId").value=consultasID;
-      localStorage.clear("consultasObjectos");
+        document.querySelector("#consultasId").value = consultasID;
+        localStorage.clear("consultasObjectos");
     </script>
 </body>
 </html>

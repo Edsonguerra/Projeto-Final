@@ -1,14 +1,16 @@
-<?php include('../modules/conexao.php');?>
-<?php include('../modules/protect.php');?> 
 <?php 
-$areaId=$_GET['areaId'];
-$areas= mysqli_query($mysqli, "SELECT * FROM area WHERE id={$areaId}");
+include('../modules/conexao.php');
+include('../modules/protect.php'); 
+
+$areaId = $_GET['areaId'];
+$areas = mysqli_query($mysqli, "SELECT * FROM area WHERE id={$areaId}");
 $area_data = mysqli_fetch_assoc($areas);
 
-$sqli = "SELECT p.nome_completo, p.sexo, c.nome AS consulta_nome, p.data_de_nascimento,estado
+$sqli = "SELECT p.nome_completo, p.sexo, c.nome AS consulta_nome, p.data_de_nascimento, estado, p.id_paciente
          FROM paciente p
          JOIN consulta_paciente cp ON p.id_paciente = cp.paciente_id_paciente
-         JOIN consulta c ON cp.consulta_id_da_consulta = c.id_da_consulta WHERE c.area_id={$areaId}";
+         JOIN consulta c ON cp.consulta_id_da_consulta = c.id_da_consulta 
+         WHERE c.area_id={$areaId}";
 
 $result = mysqli_query($mysqli, $sqli);
 ?>
@@ -56,13 +58,13 @@ $result = mysqli_query($mysqli, $sqli);
                         $estado = $row['estado'];
                         
                         echo '<tr>
-                            <td class="nome_da_consulta">' . $nome_completo . '</td>
-                            <td class="Sexo">' . $sexo . '</td>
-                            <td class="medico">' . $consulta_marcada . '</td>
-                            <td class="medico">' . $data_de_nascimento . '</td>
-                            <td class="medico">' . $estado . '</td>
+                            <td class="nome_da_consulta">' . htmlspecialchars($nome_completo) . '</td>
+                            <td class="Sexo">' . htmlspecialchars($sexo) . '</td>
+                            <td class="medico">' . htmlspecialchars($consulta_marcada) . '</td>
+                            <td class="medico">' . htmlspecialchars($data_de_nascimento) . '</td>
+                            <td class="medico">' . htmlspecialchars($estado) . '</td>
                             <td>
-                                <a href="#">
+                                <a href="../modules/Validações_finais.php?nome_completo=' . urlencode($nome_completo) . '&sexo=' . urlencode($sexo) . '&consulta_nome=' . urlencode($consulta_marcada) . '&data_de_nascimento=' . urlencode($data_de_nascimento) . '">
                                     <button class="btn-validar">Validar</button>
                                 </a>
                                 <a href="#">
