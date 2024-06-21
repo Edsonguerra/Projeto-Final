@@ -8,8 +8,8 @@ selectBtn.addEventListener("click", () => {
 items.forEach(item => {
     item.addEventListener("click", () => {
         item.classList.toggle("checked");
-
         const checkbox = item.querySelector(".consulta-checkbox");
+        console.log(checkbox);
         checkbox.checked = !checkbox.checked;
 
         if(localStorage.getItem("consultasObjectos")){
