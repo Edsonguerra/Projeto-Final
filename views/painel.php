@@ -126,10 +126,10 @@ document.getElementById('selecionarConsulta').scrollIntoView({ behavior: 'smooth
             <h4 class="Hosp">Hospital dos Cajueiros</h4>
             <img src="../public/assets/css/img/fundo2.jpg" width="103.3%">
             <h5 class="Infor">Informações</h5>
-            <a class="Sobre" href="views/Sobre.php">Sobre</a>
-            <a class="Contacto" href="views/Contacto.php">Contacto</a>
-            <a class="Termos" href="views/Termos.php">Termos</a>
-            <a class="Politica" href="views/Politica.php">Política de privacidade</a>
+            <a class="Sobre" href="Sobre.php">Sobre</a>
+            <a class="Contacto" href="Contacto.php">Contacto</a>
+            <a class="Termos" href="Termos de uso.php">Termos</a>
+            <a class="Politica" href="Politica.php">Política de privacidade</a>
         </div>
     </div>
 
