@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jun 19, 2024 at 02:00 PM
+-- Generation Time: Jun 21, 2024 at 06:44 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -89,7 +89,8 @@ CREATE TABLE `area` (
 INSERT INTO `area` (`id`, `nome`) VALUES
 (1, 'Pediatria'),
 (2, 'Ortopedia'),
-(3, 'Geral');
+(3, 'Geral'),
+(4, 'Imagem');
 
 -- --------------------------------------------------------
 
@@ -110,7 +111,11 @@ CREATE TABLE `consulta` (
 INSERT INTO `consulta` (`id_da_consulta`, `nome`, `area_id`) VALUES
 (1, 'Peso', 1),
 (2, 'Ossos', 2),
-(3, 'Coluna', 1);
+(3, 'Coluna', 1),
+(4, 'Medicina Geral', 3),
+(5, 'Ouvido', 1),
+(6, 'Paludismo', 3),
+(7, 'Raio-X', 4);
 
 -- --------------------------------------------------------
 
@@ -122,30 +127,28 @@ CREATE TABLE `consulta_paciente` (
   `id` int(11) NOT NULL,
   `consulta_id_da_consulta` int(11) NOT NULL,
   `paciente_id_paciente` int(11) NOT NULL,
-  `data` date DEFAULT NULL
+  `data` datetime DEFAULT NULL,
+  `estado` varchar(50) NOT NULL DEFAULT 'pendente',
+  `posicao` bigint(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `consulta_paciente`
 --
 
-INSERT INTO `consulta_paciente` (`id`, `consulta_id_da_consulta`, `paciente_id_paciente`, `data`) VALUES
-(5, 1, 18, NULL),
-(6, 2, 18, NULL),
-(7, 1, 19, NULL),
-(8, 2, 19, NULL),
-(9, 2, 20, NULL),
-(10, 1, 20, NULL),
-(11, 2, 21, NULL),
-(12, 1, 22, NULL),
-(13, 3, 23, NULL),
-(14, 1, 24, NULL),
-(15, 2, 24, NULL),
-(16, 3, 24, NULL),
-(17, 1, 25, NULL),
-(18, 3, 26, NULL),
-(19, 2, 27, NULL),
-(20, 3, 28, NULL);
+INSERT INTO `consulta_paciente` (`id`, `consulta_id_da_consulta`, `paciente_id_paciente`, `data`, `estado`, `posicao`) VALUES
+(27, 4, 44, '2024-06-20 09:25:00', 'pendente', 1),
+(28, 4, 45, NULL, 'pendente', 2),
+(35, 1, 65, NULL, 'pendente', 1),
+(36, 1, 66, NULL, 'pendente', 2),
+(37, 1, 67, NULL, 'pendente', 3),
+(38, 1, 68, NULL, 'pendente', 4),
+(39, 2, 69, NULL, 'pendente', 1),
+(40, 5, 69, NULL, 'pendente', 5),
+(41, 6, 70, NULL, 'pendente', 3),
+(42, 2, 71, NULL, 'pendente', 2),
+(43, 7, 72, NULL, 'pendente', 1),
+(44, 7, 73, '2024-06-20 18:43:14', 'pendente', 2);
 
 -- --------------------------------------------------------
 
@@ -203,7 +206,52 @@ INSERT INTO `paciente` (`id_paciente`, `nome_completo`, `sexo`, `data_de_nascime
 (25, 'Antonio', 'Masculino', '2024-12-12', NULL, 3, '035'),
 (26, 'Martelo', 'Masculino', '2024-12-12', NULL, 3, '005717487MO040'),
 (27, 'PHP', 'Masculino', '2024-06-18', NULL, 3, '005717487MO041'),
-(28, 'João Carlos', 'Masculino', '2020-12-12', NULL, 3, '005717487MO022');
+(28, 'João Carlos', 'Masculino', '2020-12-12', NULL, 3, '005717487MO022'),
+(29, 'Graciano Henrique', 'Masculino', '2000-12-12', NULL, 3, '005717487M'),
+(30, 'Edson Guerra', 'Masculino', '2020-12-12', NULL, 3, '005717487MO045'),
+(31, 'jygjhghg', 'Masculino', '2024-06-20', NULL, 3, '444455'),
+(32, 'João', 'Masculino', '2024-06-20', NULL, 3, '005717487MO020'),
+(33, 'Henrique', 'Masculino', '2000-12-12', NULL, 3, '005717487'),
+(34, 'Marcia Bernardo', 'Masculino', '2024-06-20', NULL, 3, '005717487MO010'),
+(35, 'Gra', 'Masculino', '2024-06-20', NULL, 3, '005717487MO045'),
+(36, 'Gra', 'Masculino', '2024-06-20', NULL, 3, '005717487MO045'),
+(37, 'Gra', 'Masculino', '2024-06-20', NULL, 3, '005717487MO045'),
+(38, 'Gra', 'Masculino', '2024-06-20', NULL, 3, '005717487MO045'),
+(39, 'Gra', 'Masculino', '2024-06-20', NULL, 3, '005717487MO045'),
+(40, 'Gra', 'Masculino', '2024-06-20', NULL, 3, '005717487MO045'),
+(41, 'Gra', 'Masculino', '2024-06-20', NULL, 3, '005717487MO045'),
+(42, 'Gra', 'Masculino', '2024-06-20', NULL, 3, '005717487MO045'),
+(43, 'Gra', 'Masculino', '2024-06-20', NULL, 3, '005717487MO045'),
+(44, 'Gra', 'Masculino', '2024-06-20', NULL, 3, '005717487MO045'),
+(45, 'Graciano Henrique', 'Masculino', '2024-06-20', NULL, 3, '005717487MO045'),
+(46, 'Gra', 'Masculino', '2020-12-12', NULL, 3, '005717487MO045'),
+(47, 'Graciano Henrique', 'Masculino', '2000-12-12', NULL, 3, '005717487MO045'),
+(48, 'Graciano Henrique', 'Masculino', '2024-06-20', NULL, 3, '005717487MO045'),
+(49, 'Graciano Henrique', 'Masculino', '2024-06-20', NULL, 3, '005717487MO045'),
+(50, 'Graciano Henrique', 'Masculino', '2024-06-20', NULL, 3, '005717487MO045'),
+(51, 'Graciano Henrique', 'Masculino', '2024-06-20', NULL, 3, '005717487MO045'),
+(52, 'Graciano Henrique', 'Masculino', '2024-06-20', NULL, 3, '005717487MO045'),
+(53, 'Graciano Henrique', 'Masculino', '2024-06-20', NULL, 3, '005717487MO045'),
+(54, 'Graciano Henrique', 'Masculino', '2024-06-20', NULL, 3, '005717487MO045'),
+(55, 'Graciano Henrique', 'Masculino', '2024-06-20', NULL, 3, '005717487MO045'),
+(56, 'Graciano Henrique', 'Masculino', '2024-06-20', NULL, 3, '005717487MO045'),
+(57, 'Graciano Henrique', 'Masculino', '2024-06-20', NULL, 3, '005717487MO045'),
+(58, 'Graciano Henrique', 'Masculino', '2024-06-20', NULL, 3, '005717487MO045'),
+(59, 'Graciano Henrique', 'Masculino', '2024-06-20', NULL, 3, '005717487MO045'),
+(60, 'Graciano Henrique', 'Masculino', '2024-06-20', NULL, 3, '005717487MO045'),
+(61, 'Graciano Henrique', 'Masculino', '2024-06-20', NULL, 3, '005717487MO045'),
+(62, 'Graciano Henrique', 'Masculino', '2024-06-20', NULL, 3, '005717487MO045'),
+(63, 'Graciano Henrique', 'Masculino', '2024-06-20', NULL, 3, '005717487MO045'),
+(64, 'Graciano Henrique', 'Masculino', '2024-06-20', NULL, 3, '005717487MO045'),
+(65, 'Graciano Henrique', 'Masculino', '2024-06-20', NULL, 3, '005717487MO045'),
+(66, 'Marcia', 'Feminino', '2024-12-12', NULL, 3, '005717487MO045'),
+(67, 'Hosana', 'Feminino', '2020-12-12', NULL, 3, '005717487MO045'),
+(68, 'Graciano Henrique', 'Masculino', '2020-12-12', NULL, 3, '005717487MO045'),
+(69, 'Graciano Henrique', 'Masculino', '2000-12-12', NULL, 3, '005717487MO045'),
+(70, 'Antonio', 'Masculino', '1997-12-12', NULL, 3, '005717487MO045'),
+(71, 'Graciano Henrique', 'Masculino', '2000-12-12', NULL, 3, '005717487MO045'),
+(72, 'Gra', 'Masculino', '2000-12-12', NULL, 3, '005717487MO045'),
+(73, 'Gracia', 'Feminino', '2000-12-12', NULL, 3, '005717487MO045');
 
 -- --------------------------------------------------------
 
@@ -226,7 +274,8 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id_user`, `nome`, `ultimo_nome`, `email`, `senha`, `administrador`) VALUES
 (1, 'gra', 'gra', 'gra@gmail.com', 'gra', 1),
-(3, 'Graciano', 'Gra', 'gracianomanuelhenrique@gmail.com', 'gra', 0);
+(3, 'Graciano', 'Gra', 'gracianomanuelhenrique@gmail.com', 'gra', 0),
+(4, 'Edson', 'Guerra', 'edsonguerra@gmail.com', '1234', 0);
 
 --
 -- Indexes for dumped tables
@@ -344,19 +393,19 @@ ALTER TABLE `analista`
 -- AUTO_INCREMENT for table `area`
 --
 ALTER TABLE `area`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `consulta`
 --
 ALTER TABLE `consulta`
-  MODIFY `id_da_consulta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_da_consulta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `consulta_paciente`
 --
 ALTER TABLE `consulta_paciente`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
 -- AUTO_INCREMENT for table `consulta_paciente_has_doctor`
@@ -374,13 +423,13 @@ ALTER TABLE `doctor`
 -- AUTO_INCREMENT for table `paciente`
 --
 ALTER TABLE `paciente`
-  MODIFY `id_paciente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id_paciente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables
@@ -417,13 +466,6 @@ ALTER TABLE `analista`
 --
 ALTER TABLE `consulta`
   ADD CONSTRAINT `fk_consulta_area1` FOREIGN KEY (`area_id`) REFERENCES `area` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
---
--- Constraints for table `consulta_paciente`
---
-ALTER TABLE `consulta_paciente`
-  ADD CONSTRAINT `fk_consulta_paciente_consulta1` FOREIGN KEY (`consulta_id_da_consulta`) REFERENCES `consulta` (`id_da_consulta`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_consulta_paciente_paciente1` FOREIGN KEY (`paciente_id_paciente`) REFERENCES `paciente` (`id_paciente`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Constraints for table `consulta_paciente_has_doctor`
