@@ -2,14 +2,13 @@
 include('../modules/conexao.php');
 include('../modules/protect.php'); 
 
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/assets/css/validações_finaiiiis.css">
+    <link rel="stylesheet" href="../public/assets/css/Validações_finais.css">
     <title>Validações Finais</title>
 </head>
 <body>
@@ -29,7 +28,7 @@ include('../modules/protect.php');
                 <a href="../views/Gestão.php">
                     <button class="voltar">Voltar</button>
                 </a>
-                <form>
+                <form action="../modules/Validações_finais.php" method="POST">
                     <h5 class="titulo">Validações Finais</h5>
                     <div class="input-box">
                         <input type="text" name="nome_completo" id="nome_completo" class="input_nome" value="<?= htmlspecialchars($_GET['nome_completo'] ?? '') ?>" readonly>
@@ -55,8 +54,9 @@ include('../modules/protect.php');
 
                     <div class="input-box">
                         <label class="data_nascimento" for="data_nascimento">Data e hora da consulta:</label> 
-                        <input type="date" name="data" id="date" class="inputUser" required>
+                        <input type="datetime-local" name="data" id="date" class="inputUser" required>
                     </div>
+
 
                     <div class="input-box">
                         <input type="text" name="estado" id="nestado" class="input_estado" placeholder="Digite o estado da consulta" required>
