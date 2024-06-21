@@ -1,3 +1,9 @@
+<?php 
+include('../modules/conexao.php');
+include('../modules/protect.php'); 
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +26,7 @@
                 <img src="../public/assets/css/img/imagem do formulario.jpg" alt="">
             </div>
             <div class="submite-formulario">
-                <a href="../views/painel.php">
+                <a href="../views/Gestão.php">
                     <button class="voltar">Voltar</button>
                 </a>
                 <form>
