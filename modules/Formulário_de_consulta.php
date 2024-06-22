@@ -56,7 +56,7 @@
                         <label class="data_nascimento" for="data_nascimento">Data de nascimento:</label> 
                         <input type="date" name="data_de_nascimento" id="data_nascimento" class="inputUser" required>
                     </div>
-                    <input type="hidden" name="consultasId" id="consultasId">            
+                    <input type="hidden" name="consultasId" id="consultasId">           
                     <input type="submit" name="submit" id="submit" class="btn_enviar" value="Envia"> 
                 </form>
             </div>

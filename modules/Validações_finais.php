@@ -7,6 +7,7 @@ $nome_completo = htmlspecialchars($_GET['nome_completo'] ?? '');
 $data_de_nascimento = htmlspecialchars($_GET['data_de_nascimento'] ?? '');
 $consulta_id = htmlspecialchars($_GET['consulta_id'] ?? '');
 $sexo = htmlspecialchars($_GET['sexo'] ?? '');
+$areaId=htmlspecialchars($_GET['area'] ?? '');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -62,11 +63,14 @@ $sexo = htmlspecialchars($_GET['sexo'] ?? '');
                     </div>
 
                     <div class="input-box">
-                        <select name="doctor" id="doctor" class="input_doctor" required>
+                        <?php $doctorsAreas= mysqli_query($mysqli, "SELECT * FROM doctor WHERE area_id=$areaId"); ?>
+                        <select name="doctorId" id="doctor" class="input_doctor" required>
+                            <?php if($doctorsAreas):?>
                             <option value="" disabled selected>Selecione o Doctor para a consulta</option>
-                            <option value="graciano">Dr. Graciano</option>
-                            <option value="edson">Dr. Edson</option>
-                            <option value="luciano">Dr. Luciano</option>
+                            <?php while($doctor=mysqli_fetch_assoc($doctorsAreas)):?>
+                            <option value=<?=$doctor['id_doctor'];?>><?=$doctor['nome'];?></option>
+                            <?php endwhile; ?>            
+                            <?php endif;?>
                         </select>
                         <label class="doctor">Doctor</label>
                     </div>

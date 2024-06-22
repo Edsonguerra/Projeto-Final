@@ -1,17 +1,6 @@
 <?php
 include_once('conexao.php');
 
-//  function testt(){
-    // $AAreas= mysqli_query($mysqli, "SELECT * FROM area");
-    // $resulta=mysqli_query($mysqli,"SELECT * FROM consulta");
-    // $areaId=mysqli_fetch_assoc($result)['area_id'];
-    //  echo print_r($AAreas);
-    // return $areaId;
-//  };
-//  testt();
-// die("ddd");
-
-
 if(session_status() === PHP_SESSION_NONE){ session_start();}
 if ($_POST['submit']){
     $nome_completo = $_POST['nome_completo'];
@@ -45,8 +34,6 @@ if ($_POST['submit']){
             $query = "INSERT INTO consulta_paciente (consulta_id_da_consulta,paciente_id_paciente,posicao) VALUES ('$consultasID[$i]','$pacienteId',1)";
             $resultConsultaPaciente = mysqli_query($mysqli, $query);
         }
-        // echo $lastPosition;
-        // die();
        
     }
     if ($result) {

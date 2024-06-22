@@ -9,9 +9,14 @@ if ($_POST['submit']){
     $consultaId=htmlspecialchars($_POST["consultaId"] ?? '');
     $estado=htmlspecialchars($_POST["estado"]?? '');
     $dataHora=htmlspecialchars($_POST["data"] ?? '');
-   
+    $doctorId=htmlspecialchars($_POST["doctorId"] ?? '');
+    
+
     $query="UPDATE `consulta_paciente` SET `estado` = '$estado', `data` = '$dataHora' WHERE `consulta_paciente`.`id` = $consultaId";
       $resultConsultaPaciente = mysqli_query($mysqli, $query);
+
+    $resultPacienteHasDoctor = mysqli_query($mysqli, "INSERT INTO consulta_paciente_has_doctor (consulta_paciente_id, doctor_id_doctor) VALUES ($consultaId, $doctorId)");
+  
           
      if ($resultConsultaPaciente ) {
            $_SESSION['message'] = "Atualizado com sucesso!";

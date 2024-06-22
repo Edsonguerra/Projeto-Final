@@ -1,16 +1,6 @@
 <?php include('../modules/protect.php');?> 
 <?php include('../modules/conexao.php');?>
 <?php include('../components/header.php');?>
-
-<!-- <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hospital Cajueiros</title>
-    <link rel="stylesheet" href="style.css">
-</head> -->
-
 <body class="panelContainer bg-image-1" id="body"> 
     <div class="overlay"></div>
     <div class="sidebar">
@@ -171,31 +161,15 @@ document.getElementById('selecionarConsulta').scrollIntoView({ behavior: 'smooth
             sidebar.classList.toggle('active');
         };
 
-        // function changeBackgroundImage() {
-        //     const body = document.querySelector('#body');
-        //     if(body.classList.contains('bg-image-1')){
-        //         body.classList.remove('bg-image-1');
-        //         body.classList.add('bg-image-2');
-        //     }
-        //     if(body.classList.contains('bg-image-2')){
-        //         body.classList.remove('bg-image-2');
-        //         body.classList.add('bg-image-1');
-        //     }
-        // }
-
-        
-        // setTimeout(() => {
-        //     Interval
-        // }, timeout);(changeBackgroundImage,1000);
-        
         hospitalArea.addEventListener("change",async (el)=>{
             if(localStorage.getItem("consultasObjectos")){
                 localStorage.clear("consultasObjectos");
             }
-            
+
             if(el.target.value!=="area"){
+                localStorage.setItem("areaId",el.target.value);
                 const result= await fetch(`http://localhost/Projeto-Final/modules/consultasApi.php/?idArea=${el.target.value}`);
-                const data = await result.json();
+                const data = await result.json();     
                 const dados_da_consulta=document.querySelector("#lista-consultas");
                 dados_da_consulta.innerHTML='';
 
@@ -210,6 +184,7 @@ document.getElementById('selecionarConsulta').scrollIntoView({ behavior: 'smooth
                 `});
                 dados_da_consulta.innerHTML+=`<button class="button" type="submit">Marcar Consulta</button>`;
             }else{
+                localStorage.clear("areaId");
                 const dados_da_consulta=document.querySelector("#lista-consultas");
                 dados_da_consulta.innerHTML=`
                    <li class="lista">
