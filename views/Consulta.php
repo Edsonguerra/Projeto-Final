@@ -79,7 +79,7 @@ if (isset($_SESSION['message'])) {
                 $sqli = "SELECT p.nome_completo, p.sexo, c.nome AS consulta_nome, cp.data, estado,posicao
                          FROM paciente p
                          JOIN consulta_paciente cp ON p.id_paciente = cp.paciente_id_paciente
-                         JOIN consulta c ON cp.consulta_id_da_consulta = c.id_da_consulta WHERE c.area_id={$area_zero_id}";
+                         JOIN consulta c ON cp.consulta_id_da_consulta = c.id_da_consulta WHERE c.area_id={$area_zero_id} ORDER BY posicao";
                 $result = mysqli_query($mysqli, $sqli);
 
      
