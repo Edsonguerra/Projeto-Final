@@ -270,7 +270,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     position: relative;
     left: 44px;
     top: -50px;
-    color: #007585;
+    color: #003c44;
 }
 
 .input{
