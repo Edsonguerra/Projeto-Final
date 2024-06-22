@@ -19,8 +19,9 @@ $sexo = htmlspecialchars($_GET['sexo'] ?? '');
 
     <div class="consultas-container">
         <select name="id" class="input" id="consultasSelecionadas">
+            <option value=<?=$consulta_nome ?>><?=$consulta_nome ?></option>
         </select>
-        <label class="titulo_consulta">Consulta selecionada: <?= $consulta_nome ?></label>
+        <label class="titulo_consulta">Consulta selecionada</label>
     </div>
 
     <div class="Formulario">
@@ -47,12 +48,12 @@ $sexo = htmlspecialchars($_GET['sexo'] ?? '');
                     <div class="Genero">
                         <br><br>
                         <p class="Sexo">Sexo:</p>
-                        <input type="radio" id="feminino" name="sexo" value="Feminino" <?= ($sexo == 'Feminino') ? 'checked' : '' ?> required>
+                        <input type="radio" id="feminino" name="sexo" value="Feminino" <?= ($sexo == 'Feminino') ? 'checked' : '' ?> required readonly>
                         <label for="feminino">Feminino</label>
                     </div>
     
                     <div class="Genero">
-                        <input type="radio" id="Masculino" name="sexo" value="Masculino" <?= ($sexo == 'Masculino') ? 'checked' : '' ?> required>
+                        <input type="radio" id="Masculino" name="sexo" value="Masculino" <?= ($sexo == 'Masculino') ? 'checked' : '' ?> required readonly>
                         <label for="Masculino">Masculino</label>
                     </div>
 
@@ -61,9 +62,13 @@ $sexo = htmlspecialchars($_GET['sexo'] ?? '');
                         <input type="datetime-local" name="data" id="date" class="inputUser" required>
                     </div>
 
-                    <div class="input-box">
-                        <input type="text" name="estado" id="nestado" class="input_estado" placeholder="Digite o estado da consulta" required>
+                    <div class="input-box" style="display:flex; flex-direction:column; margin-top:8px;">
                         <label for="estado" class="estado">Estado da consulta</label>
+                        <select name="estado" id="nestado" class="input_estado">
+                            <option value="pendente">Pendente</option>
+                            <option value="pendente">Marcada</option>
+                            <option value="pendente">Anulada</option>
+                        </select>
                     </div>
                     <input type="hidden" name="consultasId" id="consultasId">            
                     <input type="submit" name="submit" id="submit" class="btn_enviar" value="Enviar">    

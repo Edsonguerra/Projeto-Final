@@ -250,8 +250,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .consultas-container{
     position: absolute;
-    top: 256px;
-    left: 733px;
+    top: 275px;
+    left: 690px;
     font-size: 15px;
     font-weight: 500;
     z-index: 10000;
@@ -266,6 +266,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     position: relative;
     left: -1px;
     top: -30px;
+    color: #007585;
 }
 
 .input{

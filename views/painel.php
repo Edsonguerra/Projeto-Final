@@ -87,15 +87,11 @@
                         <i class="fa-solid fa-chevron-down"></i>
                     </span> 
                 </div>
-                <?php //if ($consulta->num_rows > 0): ?> 
                     <ul class="lista-consulta" id="lista-consultas">
                     <li class="lista">
                             <span class="primeiro-lista">Nenhuma Área selecionada</span>
                         </li>
-                    </ul>   
-                <?php //else:?>
-                    <!-- <p>Consultas indisponíveis</p>      -->
-                <?php //endif;?>     
+                    </ul>        
             </div>    
         </form>
         </div>
