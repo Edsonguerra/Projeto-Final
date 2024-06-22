@@ -13,7 +13,7 @@ $sexo = htmlspecialchars($_GET['sexo'] ?? '');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/assets/css/Validações_finaiiiiis.css">
+    <link rel="stylesheet" href="../public/assets/css/Validações_finaiiiiiis.css">
     <title>Validações Finais</title>
 </head>
 <body>
@@ -45,18 +45,7 @@ $sexo = htmlspecialchars($_GET['sexo'] ?? '');
                         <label for="data_de_nascimento" class="bilhete">Data de nascimento</label>
                     </div>
                     
-                    <br>
-                    <div class="Genero">
-                        <br><br>
-                        <p class="Sexo">Sexo:</p>
-                        <input type="radio" id="feminino" name="sexo" value="Feminino" <?= ($sexo == 'Feminino') ? 'checked' : '' ?> required readonly>
-                        <label for="feminino">Feminino</label>
-                    </div>
-    
-                    <div class="Genero">
-                        <input type="radio" id="Masculino" name="sexo" value="Masculino" <?= ($sexo == 'Masculino') ? 'checked' : '' ?> required readonly>
-                        <label for="Masculino">Masculino</label>
-                    </div>
+  
 
                     <div class="input-box">
                         <label class="data_nascimento" for="data_nascimento">Data e hora da consulta:</label> 
@@ -70,6 +59,16 @@ $sexo = htmlspecialchars($_GET['sexo'] ?? '');
                             <option value="Remarcada">Remarcar</option>
                         </select>
                         <label class="estado">Estado da consulta</label>
+                    </div>
+
+                    <div class="input-box">
+                        <select name="doctor" id="doctor" class="input_doctor" required>
+                            <option value="" disabled selected>Selecione o Doctor para a consulta</option>
+                            <option value="graciano">Dr. Graciano</option>
+                            <option value="edson">Dr. Edson</option>
+                            <option value="luciano">Dr. Luciano</option>
+                        </select>
+                        <label class="doctor">Doctor</label>
                     </div>
 
                     <input type="hidden" name="consultaId" value=<?=$consulta_id?> id="consultasId">
