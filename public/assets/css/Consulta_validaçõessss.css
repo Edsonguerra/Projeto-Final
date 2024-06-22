@@ -52,6 +52,7 @@ body{
     left: 210px;
     border: 2px solid  rgb(0, 143, 143);
     color: rgb(0, 129, 138);
+    background: #fff;
     font-size: 15px;
     font-weight: 600;
     height: 38px;
@@ -68,8 +69,24 @@ body{
     color: #fff;
 }
 
+.total2{
+    position: relative;
+    top: 20px;
+    left: 1010px;
+    width: 100px;
+    height: 40%;
+    border: solid  rgb(0, 129, 138) 2px;
+    border-radius: 2px;
+    background: rgb(255, 255, 255);
+    color:  rgb(0, 129, 138);;
+}
 
-
+.selectArea{
+    position: relative;
+    top: 7px;
+    left: 25px;
+    font-weight: 600;
+}
 
 .container{
     position: relative;
