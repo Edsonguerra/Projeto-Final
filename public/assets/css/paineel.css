@@ -357,9 +357,11 @@ h1{
 
 
 .Selecionar{
-    position: absolute;
-    max-width: 320px;
-    width: 100%;
+    position: relative;
+    top: 320px;
+    left: -10px;
+    max-width: 350px;
+    width: 150%;
     border-radius: 8px;
     /* top: 353px;   
     left: 450px; */
@@ -378,38 +380,34 @@ h1{
     box-shadow: 0 5px 10px rgb(126, 141, 141);
 }
 
-.areaContainer{
-    display: flex;
-    width: 320px;
-    height: 50px;
-    align-items: center;
-    /* justify-content: space-between; */
-    padding: 0 16px;
-    border-radius: 8px;
-    cursor: pointer;
-    background-color: #008791;
-    box-shadow: 0 5px 10px rgb(126, 141, 141);
-    z-index: 100;
-}
+
 
 .areaContainer select {
-    width:100%;
+    position: relative;
+    top: 320px;
+    left: -170px;
+    width:190%;
     border: transparent;
-    color:white;
+    color:rgb(255, 255, 255);
     font-size: 15px;
     font-weight: 600;
-    height: 38px;
+    height: 50px;
     /* width: 120px; */
-    border-radius: 3px;
+    border-radius: 5px;
+    border: solid #008791 2px;
     cursor: pointer;
     text-decoration: none;
     transform: .3s;
     padding-left:15px;
     background-color: #008791;
+    box-shadow: 0 5px 10px rgb(126, 141, 141);
 }
 
 .areaContainer select option{
     text-align: center;
+    background: #ffffff;
+    color: #001a22;
+    box-shadow: 0 5px 10px rgb(2, 8, 8);
 }
 
 
