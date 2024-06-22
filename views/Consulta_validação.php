@@ -6,7 +6,7 @@ $areaId = $_GET['areaId'];
 $areas = mysqli_query($mysqli, "SELECT * FROM area WHERE id={$areaId}");
 $area_data = mysqli_fetch_assoc($areas);
 
-$sqli = "SELECT p.nome_completo, p.sexo, c.nome AS consulta_nome, p.data_de_nascimento, estado, p.id_paciente,
+$sqli = "SELECT p.nome_completo, p.sexo, c.nome AS consulta_nome, p.data_de_nascimento, estado,data, p.id_paciente,
          cp.id AS consulta_id
          FROM paciente p
          JOIN consulta_paciente cp ON p.id_paciente = cp.paciente_id_paciente
@@ -39,16 +39,16 @@ $result = mysqli_query($mysqli, $sqli);
         <table class="table-consulta">
             <thead>
                 <tr class="elementos">
-                    <th class="nome" scope="Id"> Nome completo</th>
+                    <th class="nome" scope="Id"> Nome</th>
                     <th class="sexo" scope="Id"> Sexo</th>
                     <th class="medico" scope="Id"> C. marcada</th>
                     <th class="data" scope="Id"> Nascimento</th>
+                    <th class="data" scope="Id"> Data e Hora</th>
                     <th class="data" scope="Id"> Estado</th>
                     <th class="operações" scope="Id"> Operações</th>
                 </tr>
             </thead>
             <tbody class="dados_da_consulta">
-                
                <?php
                 if ($result) {
                     while ($row = mysqli_fetch_assoc($result)) {
@@ -58,12 +58,14 @@ $result = mysqli_query($mysqli, $sqli);
                         $data_de_nascimento = $row['data_de_nascimento'];
                         $estado = $row['estado'];
                         $consulta_id = $row['consulta_id'];
+                        $dataHora = $row['data']?? "Pendente";
                         
                         echo '<tr>
                             <td class="nome_da_consulta">' . htmlspecialchars($nome_completo) . '</td>
                             <td class="Sexo">' . htmlspecialchars($sexo) . '</td>
                             <td class="medico">' . htmlspecialchars($consulta_marcada) . '</td>
                             <td class="medico">' . htmlspecialchars($data_de_nascimento) . '</td>
+                            <td class="medico">' . htmlspecialchars($dataHora) . '</td>
                             <td class="medico">' . htmlspecialchars($estado) . '</td>
                             <td>
 
