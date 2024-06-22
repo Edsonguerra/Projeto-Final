@@ -66,8 +66,8 @@ $sexo = htmlspecialchars($_GET['sexo'] ?? '');
                     <div class="input-box">
                         <select name="estado" id="estado" class="input_estado" required>
                             <option value="" disabled selected>Selecione o estado da consulta</option>
-                            <option value="Marcada">Marcada</option>
-                            <option value="Remarcada">Remarcada</option>
+                            <option value="Marcada">Marcar</option>
+                            <option value="Remarcada">Remarcar</option>
                         </select>
                         <label class="estado">Estado da consulta</label>
                     </div>

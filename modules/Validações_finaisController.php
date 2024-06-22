@@ -2,10 +2,10 @@
 include_once('conexao.php');
 if(session_status() === PHP_SESSION_NONE){ session_start();}
 
-$area=htmlspecialchars($_POST["areaId"] ?? 1);
 $anularConsultaId=$_GET['consulta_id'];
 
 if ($_POST['submit']){
+    $area=htmlspecialchars($_POST["areaId"] ?? 1);
     $consultaId=htmlspecialchars($_POST["consultaId"] ?? '');
     $estado=htmlspecialchars($_POST["estado"]?? '');
     $dataHora=htmlspecialchars($_POST["data"] ?? '');
@@ -25,10 +25,9 @@ if ($_POST['submit']){
 if($anularConsultaId){
     
     $estadoA="Anulada"; 
+    $areaToReturn=$_GET['area'];
     $queryAnular="UPDATE `consulta_paciente` SET `estado` = '$estadoA', `data` = NULL WHERE `consulta_paciente`.`id` = $anularConsultaId";
-    // echo "chegueiii";
-    // die();
     $resultAnulacao = mysqli_query($mysqli, $queryAnular);
-         header("Location: ../views/Consulta_validação.php?areaId={$area}");
+         header("Location: ../views/Consulta_validação.php?areaId={$areaToReturn}");
 }
 ?>
