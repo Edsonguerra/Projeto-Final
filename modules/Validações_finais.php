@@ -12,7 +12,7 @@ $sexo = htmlspecialchars($_GET['sexo'] ?? '');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/assets/css/Validações_finais.css">
+    <link rel="stylesheet" href="../public/assets/css/Validações_finaiiiiis.css">
     <title>Validações Finais</title>
 </head>
 <body>
@@ -62,9 +62,15 @@ $sexo = htmlspecialchars($_GET['sexo'] ?? '');
                     </div>
 
                     <div class="input-box">
-                        <input type="text" name="estado" id="nestado" class="input_estado" placeholder="Digite o estado da consulta" required>
-                        <label for="estado" class="estado">Estado da consulta</label>
+                        <select name="estado" id="estado" class="input_estado" required>
+                            <option value="" disabled selected>Selecione o estado da consulta</option>
+                            <option value="marcada">Marcada</option>
+                            <option value="pendente">Pendente</option>
+                            <option value="anulada">Anulada</option>
+                        </select>
+                        <label class="estado">Estado da consulta</label>
                     </div>
+
                     <input type="hidden" name="consultasId" id="consultasId">            
                     <input type="submit" name="submit" id="submit" class="btn_enviar" value="Enviar">    
                 </form>
