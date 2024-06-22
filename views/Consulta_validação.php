@@ -6,7 +6,8 @@ $areaId = $_GET['areaId'];
 $areas = mysqli_query($mysqli, "SELECT * FROM area WHERE id={$areaId}");
 $area_data = mysqli_fetch_assoc($areas);
 
-$sqli = "SELECT p.nome_completo, p.sexo, c.nome AS consulta_nome, p.data_de_nascimento, estado, p.id_paciente
+$sqli = "SELECT p.nome_completo, p.sexo, c.nome AS consulta_nome, p.data_de_nascimento, estado, p.id_paciente,
+         cp.id AS consulta_id
          FROM paciente p
          JOIN consulta_paciente cp ON p.id_paciente = cp.paciente_id_paciente
          JOIN consulta c ON cp.consulta_id_da_consulta = c.id_da_consulta 
@@ -56,6 +57,7 @@ $result = mysqli_query($mysqli, $sqli);
                         $consulta_marcada = $row['consulta_nome'];
                         $data_de_nascimento = $row['data_de_nascimento'];
                         $estado = $row['estado'];
+                        $consulta_id = $row['consulta_id'];
                         
                         echo '<tr>
                             <td class="nome_da_consulta">' . htmlspecialchars($nome_completo) . '</td>
@@ -64,11 +66,12 @@ $result = mysqli_query($mysqli, $sqli);
                             <td class="medico">' . htmlspecialchars($data_de_nascimento) . '</td>
                             <td class="medico">' . htmlspecialchars($estado) . '</td>
                             <td>
-                                <a href="../modules/Validações_finais.php?nome_completo=' . urlencode($nome_completo) . '&sexo=' . urlencode($sexo) . '&consulta_nome=' . urlencode($consulta_marcada) . '&data_de_nascimento=' . urlencode($data_de_nascimento) . '">
+
+                                <a href="../modules/Validações_finais.php?consulta_id='.urlencode($consulta_id).'&nome_completo=' . urlencode($nome_completo) . '&sexo=' . urlencode($sexo) . '&consulta_nome=' . urlencode($consulta_marcada) . '&data_de_nascimento=' . urlencode($data_de_nascimento). '&area=' . urlencode($_GET['areaId']) . '">
                                     <button class="btn-validar">Validar</button>
                                 </a>
-                                <a href="#">
-                                    <button class="btn-cancelar">Cancelar</button>
+                                <a href="../modules/Validações_finaisController.php?consulta_id='.urlencode($consulta_id). '&area=' . urlencode($_GET['areaId']) . '">
+                                    <button class="btn-cancelar">Anular</button>
                                 </a>
                             </td>
                         </tr>';    

@@ -5,6 +5,7 @@ include('../modules/protect.php');
 $consulta_nome = htmlspecialchars($_GET['consulta_nome'] ?? '');
 $nome_completo = htmlspecialchars($_GET['nome_completo'] ?? '');
 $data_de_nascimento = htmlspecialchars($_GET['data_de_nascimento'] ?? '');
+$consulta_id = htmlspecialchars($_GET['consulta_id'] ?? '');
 $sexo = htmlspecialchars($_GET['sexo'] ?? '');
 ?>
 <!DOCTYPE html>
@@ -12,7 +13,7 @@ $sexo = htmlspecialchars($_GET['sexo'] ?? '');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/assets/css/Validações_finais.css">
+    <link rel="stylesheet" href="../public/assets/css/Validações_finaiiiiis.css">
     <title>Validações Finais</title>
 </head>
 <body>
@@ -33,7 +34,7 @@ $sexo = htmlspecialchars($_GET['sexo'] ?? '');
                 <a href="../views/Gestão.php">
                     <button class="voltar">Voltar</button>
                 </a>
-                <form action="../modules/Validações_finais.php" method="POST">
+                <form action="./Validações_finaisController.php" method="POST">
                     <h5 class="titulo">Validações Finais</h5>
                     <div class="input-box">
                         <input type="text" name="nome_completo" id="nome_completo" class="input_nome" value="<?= $nome_completo ?>" readonly>
@@ -62,22 +63,24 @@ $sexo = htmlspecialchars($_GET['sexo'] ?? '');
                         <input type="datetime-local" name="data" id="date" class="inputUser" required>
                     </div>
 
-                    <div class="input-box" style="display:flex; flex-direction:column; margin-top:8px;">
-                        <label for="estado" class="estado">Estado da consulta</label>
-                        <select name="estado" id="nestado" class="input_estado">
-                            <option value="pendente">Pendente</option>
-                            <option value="pendente">Marcada</option>
-                            <option value="pendente">Anulada</option>
+                    <div class="input-box">
+                        <select name="estado" id="estado" class="input_estado" required>
+                            <option value="" disabled selected>Selecione o estado da consulta</option>
+                            <option value="Marcada">Marcada</option>
+                            <option value="Remarcada">Remarcada</option>
                         </select>
+                        <label class="estado">Estado da consulta</label>
                     </div>
-                    <input type="hidden" name="consultasId" id="consultasId">            
+
+                    <input type="hidden" name="consultaId" value=<?=$consulta_id?> id="consultasId">
+                    <input type="hidden" name="areaId" value=<?=$_GET['area']?>>            
                     <input type="submit" name="submit" id="submit" class="btn_enviar" value="Enviar">    
                 </form>
             </div>
         </div>
     </div>
 
-    <script>
+    <!-- <script>
         const consultasSelecionadas = document.querySelector("#consultasSelecionadas");
         const consultas = JSON.parse(localStorage.getItem("consultasObjectos"));
         const consultasID = [];
@@ -87,6 +90,6 @@ $sexo = htmlspecialchars($_GET['sexo'] ?? '');
         }
         document.querySelector("#consultasId").value = consultasID;
         localStorage.clear("consultasObjectos");
-    </script>
+    </script> -->
 </body>
 </html>

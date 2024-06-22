@@ -132,9 +132,11 @@ form{
 .estado{
     position: absolute;
     top: -30px;
+    left: -1px;
     font-weight: 500;
     color:#003c44;
 }
+
 
 
 .input_estado{
@@ -142,7 +144,6 @@ form{
     top: -2px;
     width: 100%;
     height: 35px; 
-    background: transparent;
     border: 2px solid #007585;
     border-radius: 10px;
     outline: none;
@@ -152,6 +153,9 @@ form{
     font-size: 16px;   
     z-index: 100; 
 }
+
+
+
 textarea.input{
     resize: none;
     min-height: 150px;
