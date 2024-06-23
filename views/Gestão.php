@@ -17,8 +17,8 @@
         <li class="divider" data-text="doctores">Doctores</li>
         
         <li>
-            <a href="#">
-                <i class="fa-solid fa-hospital-user icon"></i>Atender Consultas</i> 
+            <a href="Atender_consultas.php">
+                <i class="fa-solid fa-hospital-user icon"></i>Atender Consultas</i><i class="fa-solid fa-chevron-right icon-rigth"></i> 
                 </a>
                 </li>
         <?php endif;?>

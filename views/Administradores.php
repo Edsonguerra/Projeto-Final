@@ -34,13 +34,13 @@
             <tbody class="dados_da_consulta" >
             <?php
 
-            $sqli = "SELECT * FROM `user` WHERE administrador IS TRUE";
+            $sqli = "SELECT * FROM `funcionario` WHERE administrador IS TRUE";
 
             $result = mysqli_query($mysqli, $sqli);
 
             if ($result) {
             while ($row = mysqli_fetch_assoc($result)) {
-            $admin_id = $row['id_user'];
+            $admin_id = $row['id_funcionario'];
             $nome = $row['nome'];
 
             echo '<tr>

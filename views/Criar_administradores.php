@@ -8,7 +8,7 @@ if (isset($_POST['submit'])) {
    $senha = $_POST['senha'];
    $administrador = $_POST['administrador'] = true;
 
-        $sql = "INSERT INTO `user` (nome, administrador, email, senha) VALUES ('$nome', '$administrador','$email','$senha')";
+        $sql = "INSERT INTO `funcionario` (nome, administrador, email, senha) VALUES ('$nome', '$administrador','$email','$senha')";
         $result = mysqli_query($mysqli, $sql);
 
         if ($result) {
