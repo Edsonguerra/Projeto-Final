@@ -27,7 +27,7 @@ if (isset($_SESSION['message'])) {
 </head>
 <body>
     <div class="top">
-        <label class="titulo_gerenciamento">Consultas Marcadas</span></label>
+        <label class="titulo_gerenciamento">Consultas Marcadas</label>
         <a href="painel.php">
             <button class="btn-voltar">Voltar</button>
         </a>
@@ -118,6 +118,7 @@ if (isset($_SESSION['message'])) {
             if(data.length===0){
                 dados_da_consulta.innerHTML=`<tr><td colspan='4'>Sem Consultas nesta Área</td></tr>`;             
             }
+            console.log(data);
 
             data.forEach(element => {
                 dados_da_consulta.innerHTML+=`

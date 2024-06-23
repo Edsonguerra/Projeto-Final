@@ -31,7 +31,6 @@ CREATE TABLE IF NOT EXISTS `site_de_marcacao_de_consulta`.`user` (
   `senha` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id_user`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 6
 DEFAULT CHARACTER SET = utf8;
 
 
@@ -43,34 +42,7 @@ CREATE TABLE IF NOT EXISTS `site_de_marcacao_de_consulta`.`area` (
   `nome` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 5
 DEFAULT CHARACTER SET = utf8;
-
-
--- -----------------------------------------------------
--- Table `site_de_marcacao_de_consulta`.`analista`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `site_de_marcacao_de_consulta`.`analista` (
-  `id_analista` INT(11) NOT NULL AUTO_INCREMENT,
-  `nome` VARCHAR(45) NOT NULL,
-  `area_id` INT(11) NOT NULL,
-  `user_id_user1` INT(11) NOT NULL,
-  PRIMARY KEY (`id_analista`),
-  INDEX `fk_table1_area1_idx` (`area_id` ASC),
-  INDEX `fk_analista_user1_idx` (`user_id_user1` ASC),
-  CONSTRAINT `fk_analista_user1`
-    FOREIGN KEY (`user_id_user1`)
-    REFERENCES `site_de_marcacao_de_consulta`.`user` (`id_user`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_table1_area1`
-    FOREIGN KEY (`area_id`)
-    REFERENCES `site_de_marcacao_de_consulta`.`area` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8;
-
 
 -- -----------------------------------------------------
 -- Table `site_de_marcacao_de_consulta`.`consulta`
@@ -87,7 +59,6 @@ CREATE TABLE IF NOT EXISTS `site_de_marcacao_de_consulta`.`consulta` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
-AUTO_INCREMENT = 8
 DEFAULT CHARACTER SET = utf8;
 
 
@@ -105,7 +76,6 @@ CREATE TABLE IF NOT EXISTS `site_de_marcacao_de_consulta`.`consulta_paciente` (
   INDEX `fk_consulta_paciente_consulta1_idx` (`consulta_id_da_consulta` ASC),
   INDEX `fk_consulta_paciente_paciente1_idx` (`paciente_id_paciente` ASC))
 ENGINE = InnoDB
-AUTO_INCREMENT = 51
 DEFAULT CHARACTER SET = utf8;
 
 
@@ -116,7 +86,7 @@ CREATE TABLE IF NOT EXISTS `site_de_marcacao_de_consulta`.`funcionario` (
   `id_funcionario` INT(11) NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(30) NOT NULL,
   `ultimo_nome` VARCHAR(30) NOT NULL,
-  `email` VARCHAR(30) NOT NULL,
+  `email` VARCHAR(60) NOT NULL,
   `senha` VARCHAR(30) NOT NULL,
   `administrador` INT(11) NOT NULL,
   PRIMARY KEY (`id_funcionario`))
@@ -131,11 +101,9 @@ CREATE TABLE IF NOT EXISTS `site_de_marcacao_de_consulta`.`doctor` (
   `id_doctor` INT(11) NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
   `area_id` INT(11) NOT NULL,
-  `user_id_user` INT(11) NOT NULL,
   `funcionario_id` INT(11) NOT NULL,
   PRIMARY KEY (`id_doctor`),
   INDEX `fk_doctor_area1_idx` (`area_id` ASC),
-  INDEX `fk_doctor_user1_idx` (`user_id_user` ASC),
   INDEX `fk_doctor_funcionario1_idx` (`funcionario_id` ASC),
   CONSTRAINT `fk_doctor_area1`
     FOREIGN KEY (`area_id`)
@@ -145,11 +113,6 @@ CREATE TABLE IF NOT EXISTS `site_de_marcacao_de_consulta`.`doctor` (
   CONSTRAINT `fk_doctor_funcionario1`
     FOREIGN KEY (`funcionario_id`)
     REFERENCES `site_de_marcacao_de_consulta`.`funcionario` (`id_funcionario`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_doctor_user1`
-    FOREIGN KEY (`user_id_user`)
-    REFERENCES `site_de_marcacao_de_consulta`.`user` (`id_user`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
@@ -199,7 +162,6 @@ CREATE TABLE IF NOT EXISTS `site_de_marcacao_de_consulta`.`paciente` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
-AUTO_INCREMENT = 79
 DEFAULT CHARACTER SET = utf8;
 
 
