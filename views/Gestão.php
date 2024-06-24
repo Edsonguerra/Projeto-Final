@@ -13,7 +13,7 @@
 
         <a href="#" class="brand" data-text="hospital"> <i class="fa-solid fa-hospital icon"></i> Hospital Cajueiros</a>
         <ul class="side-menu">
-        <?php if(true):?>
+        <?php if($_SESSION['doctor']):?>
         <li class="divider" data-text="doctores">Doctores</li>
         
         <li>
@@ -23,11 +23,8 @@
                 </li>
         <?php endif;?>
         
-        <?php if(true):?>
-
+        <?php if($_SESSION['funcionario']):?>
             <li class="divider" data-text="doctores">Secretário Clínico</li>
-
-
             <li>
                 <a href="#">
                     <i class="fa-solid fa-hospital-user icon"></i>Dados & Validações <i class="fa-solid fa-chevron-right icon-rigth"></i> 
@@ -40,9 +37,7 @@
             <?php endwhile; ?>            
         <?php endif;?>
                     </ul>
-            </li>
-
-            
+            </li>            
             <li class="divider"  data-text="criar">Consultas</li>
             <li><a href="Gerenciamento_de_consultas.php"><i class="fa-solid fa-notes-medical icon"></i>Gerenciamento de Consultas</a></li>
 

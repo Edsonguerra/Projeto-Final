@@ -111,6 +111,7 @@ if (isset($_SESSION['message'])) {
         const selectArea=document.querySelector("#selectArea");
         selectArea.addEventListener("change",async (el)=>{
             const idArea=el.target.value;
+            console.log(idArea);
             const response= await fetch(`http://localhost/Projeto-Final/modules/consultasMarcadas.php/?idArea=${idArea}`);
             const data = await response.json();
             const dados_da_consulta=document.querySelector(".dados_da_consulta");

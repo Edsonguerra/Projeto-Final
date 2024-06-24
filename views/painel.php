@@ -24,12 +24,14 @@
                     <span class="nav-item">Ajuda</span>
                 </a>
             </li>
+            <?php if($_SESSION['doctor'] || $_SESSION['funcionario']): ?>
             <li>
                 <a href="Gestão.php">
                     <i class="fa-solid fa-users"></i>
                     <span class="nav-item">Gestão</span>
                 </a>
-            </li> 
+            </li>
+            <?php endif;?> 
             <li>
                 <a href="logout.php" class="sair">
                     <i class="fa-solid fa-arrow-right-from-bracket"></i>
@@ -195,6 +197,5 @@ document.getElementById('selecionarConsulta').scrollIntoView({ behavior: 'smooth
         });
     </script>
     <script src="../public/js/index.js"></script> 
-
 </body>
 </html>
