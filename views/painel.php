@@ -59,33 +59,42 @@
             $consulta = mysqli_query($mysqli, "SELECT * FROM consulta"); 
         ?>
 <div style="margin-top:80px; display: flex; justify-content:center;gap:20px;">
-    <div class="areaContainer">
-    <select  name="hospitalArea" id="hospitalArea">
-        <option value="area">Selecionar Área</option>
-    <?php $areas= mysqli_query($mysqli, "SELECT * FROM area"); ?>
-      <?php if($areas):?>
-        <?php while($area_data = mysqli_fetch_assoc($areas)):?>
-            <option name=<?=$area_data['nome']?> value=<?=$area_data['id']?>> <?=$area_data['nome']?> </option>
-            <?php endwhile; ?>            
-        <?php endif;?>
-    </select>
+    <?php if(isset($_SESSION['doctor']) || (isset($_SESSION['funcionario']) && isset($_SESSION['administrador']))):?>
+        <div class="Selecionar">
+        <p >A marcação de Consulta esta Exclusiva Somente aos Pacientes.</p>
+        <br>
+        <p>Cadastra-te como paciente e marque a tua consulta</p>
     </div>
-
-<form action="../modules/Formulário_de_consulta.php" method="POST" onsubmit="return validarFormulario()">
-<div class="Selecionar" id="selecionarConsulta">
-                <div class="selecionar-botao">
-                    <span class="texto">Selecionar Consulta</span>
-                    <span class="down-arrow">
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </span> 
-                </div>
-                    <ul class="lista-consulta" id="lista-consultas">
-                    <li class="lista">
-                            <span class="primeiro-lista">Nenhuma Área selecionada</span>
-                        </li>
-                    </ul>        
-            </div>    
-        </form>
+    <?php else :?>
+    <div class="areaContainer">
+        <select  name="hospitalArea" id="hospitalArea">
+            <option value="area">Selecionar Área</option>
+        <?php $areas= mysqli_query($mysqli, "SELECT * FROM area"); ?>
+          <?php if($areas):?>
+            <?php while($area_data = mysqli_fetch_assoc($areas)):?>
+                <option name=<?=$area_data['nome']?> value=<?=$area_data['id']?>> <?=$area_data['nome']?> </option>
+                <?php endwhile; ?>            
+            <?php endif;?>
+        </select>
+        </div>
+    
+    <form action="../modules/Formulário_de_consulta.php" method="POST" onsubmit="return validarFormulario()">
+    <div class="Selecionar" id="selecionarConsulta">
+                    <div class="selecionar-botao">
+                        <span class="texto">Selecionar Consulta</span>
+                        <span class="down-arrow">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </span> 
+                    </div>
+                        <ul class="lista-consulta" id="lista-consultas">
+                        <li class="lista">
+                                <span class="primeiro-lista">Nenhuma Área selecionada</span>
+                            </li>
+                        </ul>        
+                </div>    
+            </form>
+            
+    <?php endif; ?>
         </div>
         <script>
             function validarFormulario(){

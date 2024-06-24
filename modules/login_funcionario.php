@@ -41,9 +41,10 @@ if (isset($_POST['email']) && isset($_POST['senha'])) {
       //Checking if the Funcionario s Doctor....
       $sql_funcionario_doctor = "SELECT * FROM doctor WHERE funcionario_id =$funcionarioId LIMIT 1";
       $sql_query_result = $mysqli->query($sql_funcionario_doctor) or die("Falha na execução do código SQL: " . $mysqli->error);
-
+      $doctorData=$sql_query_result->fetch_assoc();
       if($sql_query_result->num_rows===1){
         $_SESSION['doctor']=true;
+        $_SESSION['doctorAreaId']=$doctorData['area_id']; 
       }else{
         $_SESSION['funcionario']=true;
         $_SESSION['administrador']=$funcionario['administrador'];

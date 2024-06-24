@@ -111,7 +111,6 @@ if (isset($_SESSION['message'])) {
         const selectArea=document.querySelector("#selectArea");
         selectArea.addEventListener("change",async (el)=>{
             const idArea=el.target.value;
-            console.log(idArea);
             const response= await fetch(`http://localhost/Projeto-Final/modules/consultasMarcadas.php/?idArea=${idArea}`);
             const data = await response.json();
             const dados_da_consulta=document.querySelector(".dados_da_consulta");
@@ -119,7 +118,6 @@ if (isset($_SESSION['message'])) {
             if(data.length===0){
                 dados_da_consulta.innerHTML=`<tr><td colspan='4'>Sem Consultas nesta Área</td></tr>`;             
             }
-            console.log(data);
 
             data.forEach(element => {
                 dados_da_consulta.innerHTML+=`

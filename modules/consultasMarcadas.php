@@ -1,18 +1,8 @@
 <?php
-// include_once('conexao.php');
-$host="localhost";
-$user="root";
-$password="";
-$bancodedados ="site_de_marcacao_de_consulta";
-
-$mysqli = new mysqli($host, $user, $password, $bancodedados);
-if($mysqli->error) {
-    die("Falha ao conectar ao banco de dados: " . $mysql->error );
-}
+include_once('conexao.php');
 
 header('Content-Type:application/json');
-// $idArea=$_GET["idArea"];
-$idArea=1;
+$idArea=$_GET["idArea"];
 $data=[];
 $sqli = "SELECT p.nome_completo, p.sexo, c.nome AS consulta_nome,estado,posicao,
  cp.data FROM paciente p JOIN consulta_paciente cp ON p.id_paciente = cp.paciente_id_paciente
