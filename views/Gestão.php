@@ -23,7 +23,7 @@
                 </li>
         <?php endif;?>
         
-        <?php if($_SESSION['funcionario']):?>
+        <?php if($_SESSION['funcionario']&&$_SESSION['administrador']):?>
             <li class="divider" data-text="doctores">Secretário Clínico</li>
             <li>
                 <a href="#">

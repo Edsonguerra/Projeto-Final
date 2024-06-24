@@ -1,17 +1,18 @@
 <?php
 include('../modules/conexao.php'); 
-include('../modules/protect.php');?>
-<?php
+include('../modules/protect.php');
+
 if (isset($_POST['submit'])) {
    $nome = $_POST['nome'];
    $email = $_POST['email'];
    $senha = $_POST['senha'];
-   $administrador = $_POST['administrador'] = true;
+   $lastName=$_POST['lastName']?? '';
+//    $administrador = $_POST['administrador'] = true;
+   $administrador = 1;
 
-        $sql = "INSERT INTO `funcionario` (nome, administrador, email, senha) VALUES ('$nome', '$administrador','$email','$senha')";
-        $result = mysqli_query($mysqli, $sql);
-
-        if ($result) {
+        $sqlFuncionario = "INSERT INTO `funcionario` (`id_funcionario`, `nome`, `ultimo_nome`, `email`, `senha`, `administrador`) VALUES (NULL, '$nome', '$lastName', '$email', '$senha', '$administrador')";
+        $resultFuncionario = mysqli_query($mysqli, $sqlFuncionario);
+        if ($resultFuncionario) {
          echo "Dados inseridos com sucesso!";
         } else {
          echo "Erro ao inserir dados: " . mysqli_error($mysqli);
@@ -19,6 +20,7 @@ if (isset($_POST['submit'])) {
     header("Location: ../views/Administradores.php");  
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,13 +33,13 @@ if (isset($_POST['submit'])) {
     <div class="Formulario">
         <div class="detalhes">
             <div class="img-formulario">
-                <img src="../public/assets/css/img/imagem do formulario.jpg" alt="">
+                <img src="../public/assets/css/img/imagem do formulario.jpg" alt="Formulario Background">
             </div>
             <div class="submite-formulario">
                 <a href="Administradores.php">
                     <button class="voltar">Voltar</button>
                 </a>
-                <form method="POST">
+                <form method="POST" action="../views/Criar_administradores.php">
                     <h5 class="titulo">Criar Administrador</h5>
 
                     <div class="input-box">
@@ -51,7 +53,7 @@ if (isset($_POST['submit'])) {
                 </div>
 
                 <div class="input-box">
-                    <input type="text" name="senha" class="input_senha" required placeholder="Crie uma senha">
+                    <input type="password" name="senha" class="input_senha" required placeholder="Crie uma senha">
                     <label class="senha">Senha</label>
                 </div>
 

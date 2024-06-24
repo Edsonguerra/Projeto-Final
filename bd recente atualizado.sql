@@ -93,7 +93,12 @@ CREATE TABLE IF NOT EXISTS `site_de_marcacao_de_consulta`.`funcionario` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
+-- -----------------------------------------------------
+-- Table `site_de_marcacao_de_consulta`.`funcionario` Add ADMIN USER
+-- -----------------------------------------------------
 
+INSERT INTO `site_de_marcacao_de_consulta`.`funcionario` (`id_funcionario`, `nome`, `ultimo_nome`, `email`, `senha`, `administrador`) 
+VALUES (NULL, 'admin', 'admin', 'admin@admin.com', 'admin', '1');
 -- -----------------------------------------------------
 -- Table `site_de_marcacao_de_consulta`.`doctor`
 -- -----------------------------------------------------

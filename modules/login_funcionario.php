@@ -46,6 +46,7 @@ if (isset($_POST['email']) && isset($_POST['senha'])) {
         $_SESSION['doctor']=true;
       }else{
         $_SESSION['funcionario']=true;
+        $_SESSION['administrador']=$funcionario['administrador'];
       }
 
       // End Checking..........
