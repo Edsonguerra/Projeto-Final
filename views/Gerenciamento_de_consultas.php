@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/assets/css/Gerenciamento_consultas.css">
+    <link rel="stylesheet" href="../public/assets/css/Gerenciamento_consultaas.css">
      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&family=Glegoo:wght@400;700&family=M+PLUS+1+Code:wght@100..700&family=Quattrocento:wght@400;700&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
     <title>Document</title>
@@ -29,6 +29,7 @@
                     <th class="id" scope="Id"> Id</th>
                     <th class="nome" scope="Id"> Nome da consulta</th>         
                     <th class="operações" scope="Id"> Operações</th>
+
                 </tr>
             </thead>
             

@@ -23,9 +23,7 @@
             
             <?php if(isset($_SESSION['funcionario']) && $_SESSION['funcionario'] && isset($_SESSION['administrador']) && $_SESSION['administrador']): ?>
             <li class="divider" data-text="doctores">Secretário Clínico</li>
-            <a href="doctores.php">
-                    <i class="fa-solid fa-hospital-user icon"></i>Doctores</i> 
-            </a>
+            
             <li>
                 <a href="#">
                     <i class="fa-solid fa-hospital-user icon"></i>Dados & Validações<i class="fa-solid fa-chevron-right icon-rigth"></i> 
@@ -43,6 +41,9 @@
             <li class="divider" data-text="criar">Consultas</li>
             <li><a href="Gerenciamento_de_consultas.php"><i class="fa-solid fa-notes-medical icon"></i>Gerenciamento de Consultas</a></li>
             <li class="divider" data-text="área administrativa">Área Administrativa</li>
+            <li><a href="doctores.php">
+                    <i class="fa-solid fa-hospital-user icon"></i>Doctores</i> 
+            </a></li>
             <li><a href="Area.php"><i class="fa-solid fa-list-ol icon"></i>Área</a></li>
             <li><a href="Administradores.php"><i class="fa-solid fa-users icon"></i>Adminstradores</a></li>
             <?php endif; ?>

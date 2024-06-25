@@ -7,22 +7,11 @@ if (isset($_GET['updateid']) && is_numeric($_GET['updateid'])) {
 
   if (isset($_POST['submit'])) {
     $nome = mysqli_real_escape_string($mysqli, $_POST['nome']); 
-    $areaId=mysqli_real_escape_string($mysqli, $_POST["area_profissional"]);
-    $stmt = mysqli_prepare($mysqli, "UPDATE consulta SET nome = ?, area_id = ? WHERE id_da_consulta = ?");
+    $areaId=$_POST["area_profissional"];
+
+    $result = mysqli_query($mysqli, "UPDATE consulta SET nome = '$nome', area_id =$areaId  WHERE id_da_consulta = $id_da_consulta");
     
-    if (!$stmt) {
-        echo "Erro ao preparar a declaração: " . mysqli_error($mysqli);
-        exit;
-    }
-
-    mysqli_stmt_bind_param($stmt, "si", $nome,$areaId,$id_da_consulta);
-
-    if (mysqli_stmt_execute($stmt)) {
-      header("Location: Gerenciamento_de_consultas.php");
-      echo "Dados atualizados com sucesso!";
-
-    } 
-    mysqli_stmt_close($stmt);
+    header("Location: Gerenciamento_de_consultas.php");
   }
 } else {
 
@@ -61,11 +50,11 @@ if (isset($_GET['updateid']) && is_numeric($_GET['updateid'])) {
 
                     <div class="input-box">
                     <select  id="selectArea" name="area_profissional" class="input_area">
-    <?php $areas= mysqli_query($mysqli, "SELECT * FROM area"); ?>
-      <?php if($areas):?>
-        <?php while($area_data = mysqli_fetch_assoc($areas)):?>
-            <option name=<?=$area_data['nome']?> value=<?=$area_data['id']?>> <?=$area_data['nome']?> </option>
-            <?php endwhile; ?>            
+                <?php $areas= mysqli_query($mysqli, "SELECT * FROM area"); ?>
+                <?php if($areas):?>
+                <?php while($area_data = mysqli_fetch_assoc($areas)):?>
+                <option value=<?=$area_data['id']?>> <?=$area_data['nome']?> </option>
+                <?php endwhile; ?>            
         <?php endif;?>
         </select>
         <label for="selectArea" class="area_profissional">Área Profissional</label>

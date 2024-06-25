@@ -8,7 +8,7 @@ if (isset($_POST['submit'])) {
    $senha = $_POST['senha'];
    $lastName=$_POST['lastName']?? '';
 //    $administrador = $_POST['administrador'] = true;
-   $administrador = 1;
+   $administrador = $_POST ['nivel'];
 
         $sqlFuncionario = "INSERT INTO `funcionario` (`id_funcionario`, `nome`, `ultimo_nome`, `email`, `senha`, `administrador`) VALUES (NULL, '$nome', '$lastName', '$email', '$senha', '$administrador')";
         $resultFuncionario = mysqli_query($mysqli, $sqlFuncionario);
@@ -26,7 +26,7 @@ if (isset($_POST['submit'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/assets/css/Criar_administrador.css">
+    <link rel="stylesheet" href="../public/assets/css/Criar_administradorrr.css">
     <title>Document</title>
 </head>
 <body>
@@ -40,7 +40,7 @@ if (isset($_POST['submit'])) {
                     <button class="voltar">Voltar</button>
                 </a>
                 <form method="POST" action="../views/Criar_administradores.php">
-                    <h5 class="titulo">Criar Administrador</h5>
+                    <h5 class="titulo">Criar Funcionários</h5>
 
                     <div class="input-box">
                         <input type="text" name="nome" class="input_nome" required placeholder="Digite o nome do administrador">
@@ -56,6 +56,17 @@ if (isset($_POST['submit'])) {
                     <input type="password" name="senha" class="input_senha" required placeholder="Crie uma senha">
                     <label class="senha">Senha</label>
                 </div>
+
+                <div class="input-box">
+                    <select name="nivel" class="input_funcionario" required>
+                        <option value="" selected disabled >Selecione o nível</option>
+                        <option value="1">Administrador</option>
+                        <option value="0">Funcionario</option>
+                        <?php echo $funcionario_options; ?>
+                    </select>
+                        <label class="funcionario">Nível</label>
+                    </div>
+
 
                     <input type="submit" name="submit" id="submit" class="btn_enviar" value="Criar">
                 </form>

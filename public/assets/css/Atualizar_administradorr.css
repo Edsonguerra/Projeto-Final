@@ -77,6 +77,33 @@ form{
     position: relative;
 }
 
+
+.input_funcionario{
+    position: absolute;
+    top: 170px;
+    width: 100%;
+    height: 100%; 
+    background: transparent;
+    border: 2px solid #007585;
+    border-radius: 20px;
+    outline: none;
+    overflow: none;
+    padding-left: 10px;
+    color: black;
+    font-size: 16px;
+}
+
+
+.funcionario{
+    position: absolute;
+    top: 140px;
+    font-weight: 500;
+    color: #00406b;
+}
+
+
+
+
 .nome_da_consulta{
     position: absolute;
     top: 50px;
@@ -156,7 +183,7 @@ form{
 
 .btn_enviar{
     position: relative;
-    top: 155px;
+    top: 166px;
     left: 170px;
     background: #007585;
     outline: none;
@@ -175,7 +202,7 @@ form{
 
 .voltar{
     position: absolute;
-    top: 380px;
+    top: 450px;
     left: 745px;
     font-size: 16px;
     font-weight: 600;

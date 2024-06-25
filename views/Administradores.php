@@ -12,7 +12,7 @@
 <body>
 
     <div class="top" >
-        <label class="titulo_gerenciamento" >Administradores</label>
+        <label class="titulo_gerenciamento" >Funcionários do Sistema</label>
         <a href="Criar_administradores.php">
             <button class="btn-cria_consulta">Criar</button>
         </a>
@@ -26,7 +26,8 @@
             <thead>
                 <tr class="elementos" >
                     <th class="id" scope="Id"> Id</th>
-                    <th class="nome" scope="Id"> Nome do administrador</th>         
+                    <th class="nome" scope="Id"> Nome</th>
+                    <th class="nome" scope="Id"> Nivel</th>         
                     <th class="operações" scope="Id"> Operações</th>
                 </tr>
             </thead>
@@ -34,7 +35,7 @@
             <tbody class="dados_da_consulta" >
             <?php
 
-            $sqli = "SELECT * FROM `funcionario` WHERE administrador IS TRUE";
+            $sqli = "SELECT * FROM `funcionario`";
 
             $result = mysqli_query($mysqli, $sqli);
 
@@ -42,10 +43,18 @@
             while ($row = mysqli_fetch_assoc($result)) {
             $admin_id = $row['id_funcionario'];
             $nome = $row['nome'];
+            $nivel = $row['administrador'];
+            if($nivel==1){
+                $nivel= "Adminstrador";
+            } 
+                else {
+                    $nivel= "Funcionario";
+                }
 
             echo '<tr>
             <th class="id_consulta" scope="row">' . $admin_id . '</th>
             <th class="nome_da_consulta" scope="row">' . $nome . '</th>
+            <th class="nome_da_consulta" scope="row">' . $nivel . '</th>
             
             <td>
                 <a href="atualizar_admin.php?updateid='. $admin_id .'">

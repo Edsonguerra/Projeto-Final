@@ -3,20 +3,21 @@ include('../modules/conexao.php');
 include('../modules/protect.php');
 
 if (isset($_POST['submit'])) {
-    $nome = $_POST['nome'];
+
     $area_id = $_POST['id']; 
     $funcionario_id = $_POST['funcionario_id']; // Adiciona o campo para funcionario_id
-
     // Verifica se a área existe
     $sql_area = "SELECT id FROM area WHERE id = $area_id";
     $result_area = mysqli_query($mysqli, $sql_area);
 
     // Verifica se o funcionario_id existe
-    $sql_funcionario = "SELECT id_funcionario FROM funcionario WHERE id_funcionario = $funcionario_id";
+    $sql_funcionario = "SELECT nome,id_funcionario FROM funcionario WHERE id_funcionario = $funcionario_id";
     $result_funcionario = mysqli_query($mysqli, $sql_funcionario);
 
     if (mysqli_num_rows($result_area) > 0 && mysqli_num_rows($result_funcionario) > 0) {
         // Insere os dados na tabela doctor
+        $result=mysqli_fetch_assoc($result_funcionario);
+        $nome = $result['nome'];
         $sql = "INSERT INTO `doctor` (nome, area_id, funcionario_id) VALUES ('$nome', $area_id, $funcionario_id)";
         $result = mysqli_query($mysqli, $sql);
 
@@ -82,10 +83,10 @@ if ($result_funcionarios) {
                 <form method="POST">
                     <h5 class="titulo">Criar doctor</h5>
 
-                    <div class="input-box">
+                    <!-- <div class="input-box">
                         <input type="text" name="nome" class="input_nome" required placeholder="Digite o nome do doctor">
                         <label for="nome" class="nome_da_consulta">Nome do doctor</label>
-                    </div>
+                    </div> -->
 
                     <div class="input-box">
                         <select name="id" class="input_area" required>
@@ -96,7 +97,7 @@ if ($result_funcionarios) {
                     </div>
 
                     <div class="input-box">
-                        <select name="funcionario" class="input_funcionario" required>
+                        <select name="funcionario_id" class="input_funcionario" required>
                             <option value="">Selecione o Funcionário</option>
                             <?php echo $funcionario_options; ?>
                         </select>
