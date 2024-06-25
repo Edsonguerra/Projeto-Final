@@ -84,33 +84,17 @@ form{
     color: #00406b;
 }
 
-.input_nome{
-    position: absolute;
-    top: 82px;
-    width: 100%;
-    height: 100%; 
-    background: transparent;
-    border: 2px solid #007585;
-    border-radius: 20px;
-    outline: none;
-    overflow: none;
-    padding-left: 10px;
-    color: black;
-    font-size: 16px;
-}
-
-
 
 .area_profissional{
     position: absolute;
-    top: 80px;
+    top: 50px;
     font-weight: 500;
     color: #00406b;
 }
 
 .input_area{
     position: absolute;
-    top: 110px;
+    top: 85px;
     width: 100%;
     height: 100%; 
     background: transparent;
@@ -125,14 +109,14 @@ form{
 
 .funcionario{
     position: absolute;
-    top: 100px;
+    top: 80px;
     font-weight: 500;
     color: #00406b;
 }
 
 .input_funcionario{
     position: absolute;
-    top: 130px;
+    top: 114px;
     width: 100%;
     height: 100%; 
     background: transparent;
@@ -168,7 +152,7 @@ form{
 
 .voltar{
     position: absolute;
-    top: 355px;
+    top: 296px;
     left: 745px;
     font-size: 16px;
     font-weight: 600;
