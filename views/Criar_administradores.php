@@ -43,28 +43,28 @@ if (isset($_POST['submit'])) {
                     <h5 class="titulo">Criar Funcionários</h5>
 
                     <div class="input-box">
-                        <input type="text" name="nome" class="input_nome" required placeholder="Digite o nome do administrador">
-                        <label for="nome" class="nome_da_consulta">Nome do administrador</label>
+                        <input type="text" id="nome" name="nome" class="input_nome" required placeholder="Digite o nome do funcionário">
+                        <label for="nome" class="nome_da_consulta">Nome </label>
                     </div>
 
                 <div class="input-box">
-                    <input type="text" name="email" class="input_area" required placeholder="Digite o seu email">
-                    <label class="area_email">Email</label>
+                    <input type="text" id="email" name="email" class="input_area" required placeholder="Digite o seu email">
+                    <label for="email" class="area_email">Email</label>
                 </div>
 
                 <div class="input-box">
-                    <input type="password" name="senha" class="input_senha" required placeholder="Crie uma senha">
-                    <label class="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" class="input_senha" required placeholder="Crie uma senha">
+                    <label for="senha" class="senha">Senha</label>
                 </div>
 
                 <div class="input-box">
-                    <select name="nivel" class="input_funcionario" required>
+                    <select name="nivel" id="nivel" class="input_funcionario" required>
                         <option value="" selected disabled >Selecione o nível</option>
                         <option value="1">Administrador</option>
                         <option value="0">Funcionario</option>
                         <?php echo $funcionario_options; ?>
                     </select>
-                        <label class="funcionario">Nível</label>
+                        <label id="nivel" class="funcionario">Nível</label>
                     </div>
 
 

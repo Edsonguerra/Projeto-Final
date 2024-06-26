@@ -18,7 +18,7 @@
 
     <div class="top">
         <label class="titulo_gerenciamento">Doctores</label>
-        <a href="Criar_doctor.php">
+        <a href="criar_doctor.php">
             <button class="btn-cria_consulta">Criar Doctor</button>
         </a>
         <a href="Gestão.php">

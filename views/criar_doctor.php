@@ -24,7 +24,7 @@ if (isset($_POST['submit'])) {
         $result = mysqli_query($mysqli, $sql);
 
         if ($result) {
-            header("Location: Doctores.php");  
+            header("Location: doctores.php");  
             echo "Dados inseridos com sucesso!";
         } else {
             echo "Erro ao inserir dados: " . mysqli_error($mysqli);
@@ -80,7 +80,7 @@ if ($result_funcionarios) {
                 <img src="../public/assets/css/img/imagem do formulario.jpg" alt="">
             </div>
             <div class="submite-formulario">
-                <a href="Doctores.php">
+                <a href="doctores.php">
                     <button class="voltar">Voltar</button>
                 </a>
                 <form method="POST">
@@ -102,7 +102,7 @@ if ($result_funcionarios) {
                         <label class="funcionario">Funcionário</label>
                     </div>
 
-                    <input type="submit" name="submit" id="submit" class="btn_enviar" value="Criar Consulta">
+                    <input type="submit" name="submit" id="submit" class="btn_enviar" value="Cadastrar">
                 </form>
             </div>
         </div>

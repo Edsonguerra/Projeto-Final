@@ -2,18 +2,17 @@
 include('../modules/conexao.php');
 include('../modules/protect.php'); 
 
-// $areaId = $_GET['areaId'];
-// $areas = mysqli_query($mysqli, "SELECT * FROM area WHERE id={$areaId}");
-// $area_data = mysqli_fetch_assoc($areas);
+$areaId = $_SESSION['doctorAreaId'];
+$areas = mysqli_query($mysqli, "SELECT * FROM area WHERE id={$areaId}");
+$area_data = mysqli_fetch_assoc($areas);
 
-// $sqli = "SELECT p.nome_completo, p.sexo, c.nome AS consulta_nome, p.data_de_nascimento, estado,data, p.id_paciente,
-//          cp.id AS consulta_id
-//          FROM paciente p
-//          JOIN consulta_paciente cp ON p.id_paciente = cp.paciente_id_paciente
-//          JOIN consulta c ON cp.consulta_id_da_consulta = c.id_da_consulta 
-//          WHERE c.area_id={$areaId}";
-
-// $result = mysqli_query($mysqli, $sqli);  
+ $sqli = "SELECT p.nome_completo, p.sexo, c.nome AS consulta_nome, p.data_de_nascimento, estado,data, p.id_paciente,
+          cp.id AS consulta_id
+          FROM paciente p
+          JOIN consulta_paciente cp ON p.id_paciente = cp.paciente_id_paciente
+          JOIN consulta c ON cp.consulta_id_da_consulta = c.id_da_consulta 
+          WHERE c.area_id={$areaId}";
+ $result = mysqli_query($mysqli, $sqli);  
 ?> 
 
 <!DOCTYPE html>
@@ -52,35 +51,35 @@ include('../modules/protect.php');
             </thead>
             <tbody class="dados_da_consulta">
                <?php
-                // if ($result) {
-                //     while ($row = mysqli_fetch_assoc($result)) {
-                //         $nome_completo = $row['nome_completo'];
-                //         $sexo = $row['sexo'];
-                //         $consulta_marcada = $row['consulta_nome'];
-                //         $data_de_nascimento = $row['data_de_nascimento'];
-                //         $estado = $row['estado'];
-                //         $consulta_id = $row['consulta_id'];
-                //         $dataHora = $row['data']?? "Pendente";
+                 if ($result) {
+                     while ($row = mysqli_fetch_assoc($result)) {
+                         $nome_completo = $row['nome_completo'];
+                         $sexo = $row['sexo'];
+                         $consulta_marcada = $row['consulta_nome'];
+                         $data_de_nascimento = $row['data_de_nascimento'];
+                         $estado = $row['estado'];
+                         $consulta_id = $row['consulta_id'];
+                         $dataHora = $row['data']?? "Pendente";
                         
-                //         echo '<tr>
-                //             <td class="nome_da_consulta">' . htmlspecialchars($nome_completo) . '</td>
-                //             <td class="Sexo">' . htmlspecialchars($sexo) . '</td>
-                //             <td class="medico">' . htmlspecialchars($consulta_marcada) . '</td>
-                //             <td class="medico">' . htmlspecialchars($data_de_nascimento) . '</td>
-                //             <td class="medico">' . htmlspecialchars($dataHora) . '</td>
-                //             <td class="medico">' . htmlspecialchars($estado) . '</td>
-                //             <td>
+                         echo '<tr>
+                             <td class="nome_da_consulta">' . htmlspecialchars($nome_completo) . '</td>
+                             <td class="Sexo">' . htmlspecialchars($sexo) . '</td>
+                             <td class="medico">' . htmlspecialchars($consulta_marcada) . '</td>
+                             <td class="medico">' . htmlspecialchars($data_de_nascimento) . '</td>
+                             <td class="medico">' . htmlspecialchars($dataHora) . '</td>
+                             <td class="medico">' . htmlspecialchars($estado) . '</td>
+                             <td>
 
-                //                 <a href="../modules/Validações_finais.php?consulta_id='.urlencode($consulta_id).'&nome_completo=' . urlencode($nome_completo) . '&sexo=' . urlencode($sexo) . '&consulta_nome=' . urlencode($consulta_marcada) . '&data_de_nascimento=' . urlencode($data_de_nascimento). '&area=' . urlencode($_GET['areaId']) . '">
-                //                     <button class="btn-validar">Atendido</button>
-                //                 </a>
-                //                 <a href="../modules/Validações_finaisController.php?consulta_id='.urlencode($consulta_id). '&area=' . urlencode($_GET['areaId']) . '">
-                //                     <button class="btn-cancelar">Anulada</button>
-                //                 </a>
-                //             </td>
-                //         </tr>';    
-                //     }
-                // }
+                                 <a href="../modules/Validações_finaisController.php?consulta_id_atendida='.urlencode($consulta_id).'">
+                                     <button class="btn-validar">Atendida</button>
+                                 </a>
+                                 <a href="../modules/Validações_finaisController.php?consulta_id_ausente='.urlencode($consulta_id).'">
+                                     <button class="btn-cancelar">Ausente</button>
+                                 </a>
+                             </td>
+                         </tr>';    
+                     }
+                 }
                 ?>
             </tbody>
         </table>

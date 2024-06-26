@@ -45,7 +45,7 @@
                     <i class="fa-solid fa-hospital-user icon"></i>Doctores</i> 
             </a></li>
             <li><a href="Area.php"><i class="fa-solid fa-list-ol icon"></i>Área</a></li>
-            <li><a href="Administradores.php"><i class="fa-solid fa-users icon"></i>Adminstradores</a></li>
+            <li><a href="Administradores.php"><i class="fa-solid fa-users icon"></i>Funcionários</a></li>
             <?php endif; ?>
             <li class="divider" data-text="Voltar ou sair">Voltar ou sair</li>
             <li><a href="painel.php"><i class="fa-solid fa-arrow-left-long icon"></i>Voltar</a></li>

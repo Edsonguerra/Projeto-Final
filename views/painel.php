@@ -2,45 +2,7 @@
 <?php include('../modules/conexao.php');?>
 <?php include('../components/header.php');?>
 <body class="panelContainer bg-image-1" id="body"> 
-    <div class="overlay"></div>
-    <div class="sidebar">
-        <div class="top">
-            <div class="logo">
-                <i class="fa-solid fa-hospital"></i>
-                <span>Hospital Cajueiros</span>
-            </div>
-            <i class="fa-solid fa-bars" id="btn"></i>
-        </div>
-        <ul>
-            <li>
-                <a href="Consulta.php">
-                    <i class="fa-solid fa-clipboard-question"></i>
-                    <span class="nav-item">Consultar</span>
-                </a>
-            </li>
-            <li>
-                <a href="Ajuda.php">
-                    <i class="fa-solid fa-handshake-angle"></i>
-                    <span class="nav-item">Ajuda</span>
-                </a>
-            </li>
-            <?php if(isset($_SESSION['doctor']) || isset($_SESSION['funcionario'])): ?>
-            <li>
-                <a href="Gestão.php">
-                    <i class="fa-solid fa-users"></i>
-                    <span class="nav-item">Gestão</span>
-                </a>
-            </li>
-            <?php endif;?> 
-            <li>
-                <a href="logout.php" class="sair">
-                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                    <span class="nav-item">Sair</span>
-                </a>
-            </li>
-        </ul>
-    </div>
-
+<?php include('../components/sidebar.php');?>
     <div class="main-content">
         <div class="container">
             <h2> Não perca <br> tempo!</h2>
@@ -50,9 +12,13 @@
         </div> 
 
         <div class="cabeça">
-            <label class="contacto">Contacto</label>
-            <label class="ajuda">Ajuda</label>
+        <!-- <div class="itens" > -->
+                <a class="contacto" style="text-decoration:none;" href="Contacto.php">Contacto</a>
+                <a class="ajuda" style="text-decoration:none;" href="Ajuda.php">Ajuda</a>  
             <a href="#selecionarConsulta" id="marcaConsultaBtn" class="marca_consulta" style="padding:6px; text-decoration:none;">Marcar Consulta</a>
+            <!-- </div> -->
+            <!-- <label class="contacto">Contacto</label>
+            <label class="ajuda">Ajuda</label> -->
         </div>
 
         <?php
