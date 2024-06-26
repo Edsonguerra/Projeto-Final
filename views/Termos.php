@@ -32,7 +32,7 @@
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="Ajuda.php">
                     <i class="fa-solid fa-handshake-angle"></i>
                     <span class="nav-item">Ajuda</span>
                 </a>
