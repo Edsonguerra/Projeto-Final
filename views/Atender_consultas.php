@@ -59,25 +59,31 @@ $area_data = mysqli_fetch_assoc($areas);
                          $data_de_nascimento = $row['data_de_nascimento'];
                          $estado = $row['estado'];
                          $consulta_id = $row['consulta_id'];
-                         $dataHora = $row['data']?? "Pendente";
+                         $dataHora = strtotime($row['data'])?? "Pendente";
+                         $today=date('Y-m-d');
+                         if($dataHora!="Pendente"){
+                            $data=date('Y-m-d',$dataHora);
+                         }
                         
-                         echo '<tr>
-                             <td class="nome_da_consulta">' . htmlspecialchars($nome_completo) . '</td>
-                             <td class="Sexo">' . htmlspecialchars($sexo) . '</td>
-                             <td class="medico">' . htmlspecialchars($consulta_marcada) . '</td>
-                             <td class="medico">' . htmlspecialchars($data_de_nascimento) . '</td>
-                             <td class="medico">' . htmlspecialchars($dataHora) . '</td>
-                             <td class="medico">' . htmlspecialchars($estado) . '</td>
-                             <td>
+                         if($today==$data){
+                            echo '<tr>
+                            <td class="nome_da_consulta">' . htmlspecialchars($nome_completo) . '</td>
+                            <td class="Sexo">' . htmlspecialchars($sexo) . '</td>
+                            <td class="medico">' . htmlspecialchars($consulta_marcada) . '</td>
+                            <td class="medico">' . htmlspecialchars($data_de_nascimento) . '</td>
+                            <td class="medico">' . htmlspecialchars($dataHora) . '</td>
+                            <td class="medico">' . htmlspecialchars($estado) . '</td>
+                            <td>
 
-                                 <a href="../modules/Validações_finaisController.php?consulta_id_atendida='.urlencode($consulta_id).'">
-                                     <button class="btn-validar">Atendida</button>
-                                 </a>
-                                 <a href="../modules/Validações_finaisController.php?consulta_id_ausente='.urlencode($consulta_id).'">
-                                     <button class="btn-cancelar">Ausente</button>
-                                 </a>
-                             </td>
-                         </tr>';    
+                                <a href="../modules/Validações_finaisController.php?consulta_id_atendida='.urlencode($consulta_id).'">
+                                    <button class="btn-validar">Atendida</button>
+                                </a>
+                                <a href="../modules/Validações_finaisController.php?consulta_id_ausente='.urlencode($consulta_id).'">
+                                    <button class="btn-cancelar">Ausente</button>
+                                </a>
+                            </td>
+                        </tr>';  
+                         }
                      }
                  }
                 ?>
