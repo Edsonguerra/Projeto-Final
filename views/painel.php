@@ -26,10 +26,15 @@
         ?>
         <div style="margin-top:80px; display: flex; justify-content:center;gap:20px;">
             <?php if(isset($_SESSION['doctor']) || (isset($_SESSION['funcionario']) && isset($_SESSION['administrador']))):?>
-                <div class="Selecionar">
-                    <p>A marcação de Consulta está Exclusiva Somente aos Pacientes.</p>
+                <div class="Container-noti">
+                    <img class="img-alerta" src="../public/assets/css/img/alerta2.png" width="50%" > 
+                    <div class="img-text" >
+                    <label class="caro" ><strong>Caro Administrador/Funcionário</strong></label>
+                    <p class="exclusiva" >A marcação de Consulta está Exclusiva Somente aos Pacientes.</p>
                     <br>
-                    <p>Cadastra-te como paciente e marque a tua consulta</p>
+                    <p class="paciente" >Cadastra-te como paciente e marque a tua consulta.</p>
+                    <a href="logout.php"><button class="login-user" >Login como usuario</button></a>  
+                    </div>
                 </div>
             <?php else :?>
                 <div class="areaContainer">
