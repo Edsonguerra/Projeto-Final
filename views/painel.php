@@ -27,7 +27,7 @@
         <div style="margin-top:80px; display: flex; justify-content:center;gap:20px;">
             <?php if(isset($_SESSION['doctor']) || (isset($_SESSION['funcionario']) && isset($_SESSION['administrador']))):?>
                 <div class="Container-noti">
-                    <img class="img-alerta" src="../public/assets/css/img/alerta2.png" width="50%" > 
+                    <img class="img-alerta" src="../public/assets/css/img/alerta2.png" width="45%" > 
                     <div class="img-text" >
                     <label class="caro" ><strong>Caro Administrador/Funcionário</strong></label>
                     <p class="exclusiva" >A marcação de Consulta está Exclusiva Somente aos Pacientes.</p>

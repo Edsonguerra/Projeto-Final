@@ -105,11 +105,13 @@ h3{
 
 .Selecionar{
     position: relative;
-    max-width: 320px;
-    width: 100%;
+    top: 580px;
+    left: -10px;
+    max-width: 350px;
+    width: 150%;
     border-radius: 8px;
-    top: 615px;   
-    left: 320px;
+    /* top: 353px;   
+    left: 450px; */
     z-index: 100;
 }
 
@@ -124,6 +126,42 @@ h3{
     background-color: #008791;
     box-shadow: 0 5px 10px rgb(126, 141, 141);
 }
+
+
+
+.areaContainer select {
+    position: relative;
+    top: 580px;
+    left: -170px;
+    width:190%;
+    border: transparent;
+    color:rgb(255, 255, 255);
+    font-size: 15px;
+    font-weight: 600;
+    height: 50px;
+    /* width: 120px; */
+    border-radius: 5px;
+    border: solid #008791 2px;
+    cursor: pointer;
+    text-decoration: none;
+    transform: .3s;
+    padding-left:15px;
+    background-color: #008791;
+    box-shadow: 0 5px 10px rgb(126, 141, 141);
+}
+
+.areaContainer select option{
+    text-align: center;
+    background: #ffffff;
+    color: #001a22;
+    box-shadow: 0 5px 10px rgb(2, 8, 8);
+}
+
+
+/* .areaContainer select:hover{
+    background: rgb(0, 143, 143);
+    color: #fff;
+} */
 
 .selecionar-botao .texto{
     font-size: 17px;

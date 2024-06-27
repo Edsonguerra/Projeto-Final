@@ -23,38 +23,151 @@
 <!------------------------------------- Consultas -------------------------------------------->
 
 <?php
-                $consulta = mysqli_query($mysqli, "SELECT * FROM consulta"); 
-            ?>
-
-
-            <form action="views/login.php">
-                <div class="Selecionar">
-                <div class="selecionar-botao">
-                    <span class="texto">Consultas disponíveis</span>
-                    <span class="down-arrow">
-                    <i class="fa-solid fa-chevron-down"></i>
-                    </span> 
+            $consulta = mysqli_query($mysqli, "SELECT * FROM consulta"); 
+        ?>
+        <div style="margin-top:80px; display: flex; justify-content:center;gap:20px;">
+            <?php if(isset($_SESSION['doctor']) || (isset($_SESSION['funcionario']) && isset($_SESSION['administrador']))):?>   
+                <div class="Container-noti">
+                    <img class="img-alerta" src="../public/assets/css/img/alerta2.png" width="50%" > 
+                    <div class="img-text" >
+                    <label class="caro" ><strong>Caro Administrador/Funcionário</strong></label>
+                    <p class="exclusiva" >A marcação de Consulta está Exclusiva Somente aos Pacientes.</p>
+                    <br>
+                    <p class="paciente" >Cadastra-te como paciente e marque a tua consulta.</p>
+                    </div>
                 </div>
-                <ul class="lista-consulta">
-                    <?php if ($consulta->num_rows > 0): ?> 
-                    <?php while ($row = $consulta->fetch_assoc()) :?> 
-                <li class="lista">
-                    <img class="img" width="35 " src="public/assets/css/img/43493.png" alt="">
-                    <span class="primeiro-lista"><?php echo $row["nome"]?></span>
-                    <input type="checkbox" name="nome[]" value="Consulta_de_Dermatologia">
-                </li>
-                <?php endwhile;?>     
-                    <input class="button" type="submit" value="Cadastra-se agora mesmo!"> 
-                <?php else:?>
-                    <p>Consultas indisponiveis</p>     
-                <?php endif;?>     
-                </ul>   
-                </div>    
-            </form>
+                <div class="#">
+                </div>
+            <?php else :?>
+                <div class="areaContainer">
+                    <select name="hospitalArea" id="hospitalArea">
+                        <option value="area">Selecionar Área</option>
+                        <?php $areas = mysqli_query($mysqli, "SELECT * FROM area"); ?>
+                        <?php if($areas): ?>
+                            <?php while($area_data = mysqli_fetch_assoc($areas)): ?>
+                                <option name="<?= $area_data['nome'] ?>" value="<?= $area_data['id'] ?>"> <?= $area_data['nome'] ?> </option>
+                            <?php endwhile; ?>            
+                        <?php endif; ?>
+                    </select>
+                </div>
+    
+                <form action="../modules/Formulário_de_consulta.php" method="POST" onsubmit="return validarFormulario()">
+                    <div class="Selecionar" id="selecionarConsulta">
+                        <div class="selecionar-botao">
+                            <span class="texto">Selecionar Consulta</span>
+                            <span class="down-arrow">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span> 
+                        </div>
+                        <ul class="lista-consulta" id="lista-consultas">
+                            <li class="lista">
+                                <span class="primeiro-lista">Nenhuma Área selecionada</span>
+                            </li>
+                        </ul>        
+                    </div>    
+                </form>
+            <?php endif; ?>
+        </div>
+        <script>
+            function validarFormulario(){
+                if(document.querySelectorAll(".consulta-checkbox")){
+                    var checkboxes = document.querySelectorAll(".consulta-checkbox");
 
-            <?php
-        $analise = mysqli_query($mysqli, "SELECT * FROM analise"); 
-    ?>
+                    var peloMenosUmSelecionado = false;
+
+                    for (var i = 0; i < checkboxes.length; i++) {
+                        if (checkboxes[i].checked) {
+                            peloMenosUmSelecionado = true;
+                            break;
+                        }
+                    }
+
+                    if (!peloMenosUmSelecionado) {
+                        alert("Por favor, selecione pelo menos uma consulta.");
+                        return false;
+                    }
+
+                    return true;
+                }
+
+                document.getElementById('marcaConsultaBtn').addEventListener('click', function() {
+                    document.getElementById('selecionarConsulta').scrollIntoView({ behavior: 'smooth' });
+                });
+            }
+        </script>
+
+        <script>
+                let btn = document.querySelector('#btn');
+                let sidebar = document.querySelector('.sidebar');
+                let hospitalArea = document.querySelector("#hospitalArea");
+
+                function liFunction(element){
+                    element.classList.toggle("checked");
+                    const checkbox = element.querySelector(".consulta-checkbox");
+                    checkbox.checked = !checkbox.checked;
+
+                    if(localStorage.getItem("consultasObjectos")){
+                        const consultasObject = JSON.parse(localStorage.getItem("consultasObjectos"));
+                        if(consultasObject[checkbox.name]){
+                            delete consultasObject[checkbox.name];
+                        }else{
+                            consultasObject[checkbox.name] = checkbox.value;
+                        }
+                        localStorage.setItem("consultasObjectos", JSON.stringify(consultasObject));              
+                    }else{
+                        const obj = {};
+                        obj[checkbox.name] = checkbox.value;
+                        localStorage.setItem("consultasObjectos", JSON.stringify(obj));  
+                    }
+
+                    let checkedItems = document.querySelectorAll(".lista input[type='checkbox']:checked"),
+                        btnText = document.querySelector(".texto");
+                    if (checkedItems.length > 0) {
+                        console.log("Selecionado");
+                    } else {
+                        console.log("Não selecionado");
+                    } 
+                };
+
+                btn.onclick = function () {
+                    sidebar.classList.toggle('active');
+                };
+
+                hospitalArea.addEventListener("change", async (el) => {
+                    if(localStorage.getItem("consultasObjectos")){
+                        localStorage.clear("consultasObjectos");
+                    }
+
+                    if(el.target.value !== "area"){
+                        localStorage.setItem("areaId", el.target.value);
+                        const result = await fetch(`http://localhost/Projeto-Final/modules/consultasApi.php/?idArea=${el.target.value}`);
+                        const data = await result.json();     
+                        const dados_da_consulta = document.querySelector("#lista-consultas");
+                        dados_da_consulta.innerHTML = '';
+
+                        data.forEach(element => {
+                            dados_da_consulta.innerHTML += `
+                                <li class="lista" style="z-index:200;" onclick="liFunction(this)">
+                                    <img class="img" width="35" src="../public/assets/css/img/43493.png" alt="">
+                                    <span class="checked"><i class="fa-solid fa-check check-icon"></i></span>
+                                    <span class="primeiro-lista">${element.nome}</span>
+                                    <input type="checkbox" name=${element.nome} value=${element.id_da_consulta} class="consulta-checkbox">
+                                </li>
+                            `;
+                        });
+                        dados_da_consulta.innerHTML += `<a href="views/login.php" class="sair"> <button class="button" type="submit">Primeiro faça o login</button> </a>`;
+                    }else{
+                        localStorage.clear("areaId");
+                        const dados_da_consulta = document.querySelector("#lista-consultas");
+                        dados_da_consulta.innerHTML = `
+                            <li class="lista">
+                                <span class="primeiro-lista">Nenhuma Área selecionada</span>
+                            </li>
+                        `;
+                    }
+                });
+            </script>
+    <script src="public/js/index2.js"></script> 
 
 
 
