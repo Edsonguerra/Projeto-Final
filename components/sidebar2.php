@@ -15,9 +15,9 @@
                 </a>
             </li>
             <li>
-                <a href="painel.php">
+                <a href="views/Ajuda.php">
                     <i class="fa-solid fa-handshake-angle"></i>
-                    <span class="nav-item">Painel</span>
+                    <span class="nav-item">Ajuda</span>
                 </a>
             </li>
             <?php if(isset($_SESSION['doctor']) || isset($_SESSION['funcionario'])): ?>
@@ -28,11 +28,5 @@
                 </a>
             </li>
             <?php endif;?> 
-            <li>
-                <a href="views/logout.php" class="sair">
-                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                    <span class="nav-item">Sair</span>
-                </a>
-            </li>
         </ul>
     </div>

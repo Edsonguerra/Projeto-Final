@@ -100,7 +100,7 @@
             <h5 class="Infor">Informações</h5>
             <a class="Sobre" href="Sobre.php">Sobre</a>
             <a class="Contacto" href="Contacto.php">Contacto</a>
-            <a class="Termos" href="Termos de uso.php">Termos</a>
+            <a class="Termos" href="Termos.php">Termos</a>
             <a class="Politica" href="Politica.php">Política de privacidade</a>
         </div>
     </div>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../public/assets/css/paineellll.css"> 
-    <link rel="stylesheet" href="../public/assets/css/Login.css">
+    <link rel="stylesheet" href="../public/assets/css/Loginn.css">
    
    
        <!-- <link rel="stylesheet" href="../public/assets/css/Politica.css"> -->

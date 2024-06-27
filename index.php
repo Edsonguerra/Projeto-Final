@@ -4,14 +4,14 @@
 <?php include('components/sidebar2.php');?>
     <div class="main-content">
         <div class="container">
-            <h2> Bem vindo ao <br> site de marcações <br> de consultas!</h2>
+            <h2> Bem vindo/a ao <br> site de marcações <br> de consultas!</h2>
             <h3>Cadastra-se agora mesmo para marcares <br> a tua consulta.</h3>
-            <h4>Bem vindo/a</h4>
+            <h4>Hospital Cajueiros</h4>
             <a href="#selecionarConsulta" id="marcaConsultaBtn" class="marcar" style="padding:6px; text-decoration:none;">Ver consultas disponíveis</a>
         </div> 
 
         <script>
-        const images = ['bg-image-1', 'bg-image-2']; // Adicione mais classes conforme necessário
+        const images = ['bg-image-1', 'bg-image-2'];
         let currentImageIndex = 0;
 
         function changeBackgroundImage() {
@@ -87,10 +87,10 @@
             <h4 class="Hosp">Hospital dos Cajueiros</h4>
             <img src="public/assets/css/img/fundo2.jpg" width="103.3%">
             <h5 class="Infor">Informações</h5>
-            <a class="Sobre" href="Sobre.php">Sobre</a>
-            <a class="Contacto" href="Contacto.php">Contacto</a>
-            <a class="Termos" href="Termos de uso.php">Termos</a>
-            <a class="Politica" href="Politica.php">Política de privacidade</a>
+            <a class="Sobre" href="views/Sobre.php">Sobre</a>
+            <a class="Contacto" href="views/Contacto.php">Contacto</a>
+            <a class="Termos" href="views/Termos.php">Termos</a>
+            <a class="Politica" href="views/Politica.php">Política de privacidade</a>
         </div>
     </div>
     <script>
