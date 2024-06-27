@@ -29,7 +29,7 @@
             </li>
             <?php endif;?> 
             <li>
-                <a href="logout.php" class="sair">
+                <a href="views/logout.php" class="sair">
                     <i class="fa-solid fa-arrow-right-from-bracket"></i>
                     <span class="nav-item">Sair</span>
                 </a>
