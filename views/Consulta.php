@@ -1,6 +1,6 @@
 <?php
 include('../modules/conexao.php');
-include('../modules/protect.php');
+
 
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
