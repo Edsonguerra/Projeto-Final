@@ -67,34 +67,7 @@
                     </div>    
                 </form>
             <?php endif; ?>
-        </div>
-        <script>
-            function validarFormulario(){
-                if(document.querySelectorAll(".consulta-checkbox")){
-                    var checkboxes = document.querySelectorAll(".consulta-checkbox");
-
-                    var peloMenosUmSelecionado = false;
-
-                    for (var i = 0; i < checkboxes.length; i++) {
-                        if (checkboxes[i].checked) {
-                            peloMenosUmSelecionado = true;
-                            break;
-                        }
-                    }
-
-                    if (!peloMenosUmSelecionado) {
-                        alert("Por favor, selecione pelo menos uma consulta.");
-                        return false;
-                    }
-
-                    return true;
-                }
-
-                document.getElementById('marcaConsultaBtn').addEventListener('click', function() {
-                    document.getElementById('selecionarConsulta').scrollIntoView({ behavior: 'smooth' });
-                });
-            }
-        </script>
+        </div>  
 
         <script>
                 let btn = document.querySelector('#btn');
