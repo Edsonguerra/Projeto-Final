@@ -620,9 +620,9 @@ h1{
 
 
 .Container-noti{
-    position: absolute;
-    top: 870px;
-    left: 47%;
+    position: relative;
+    top: 514px;
+    left: 163px;
     width: 400px;
     background: #fff;
     border-radius: 7px;
@@ -632,6 +632,7 @@ h1{
     color: #333;
     border: solid #de3636;
     box-shadow: 0 15px 15px rgba(0, 8, 0, 0.8);
+    z-index: 100;
 }
 
 .img-alerta{
