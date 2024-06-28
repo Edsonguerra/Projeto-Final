@@ -2,7 +2,7 @@
 include('conexao.php');
 
 
-if (isset($_POST['email']) && isset ($_POST['senha'])) {
+if (isset($_POST['email']) && isset($_POST['senha'])) {
 
   if (empty($_POST['email']) || empty($_POST['senha'])) {
     header("Location: ../views/login.php?error=Preencha todos os campos.");
@@ -11,7 +11,7 @@ if (isset($_POST['email']) && isset ($_POST['senha'])) {
 
     if ($mysqli && $mysqli->connect_errno === 0) {
       $email = $mysqli->real_escape_string($_POST['email']);
-      $senha = md5($mysqli->real_escape_string($_POST['senha']) );
+      $senha = $mysqli->real_escape_string($_POST['senha']);
     } else {
       echo "Falha ao conectar ao MySQL";
       exit();
@@ -46,7 +46,6 @@ if (isset($_POST['email']) && isset ($_POST['senha'])) {
       $_SESSION['id_user'] = $usuarios['id_user'];
       $_SESSION['nome'] = $usuarios['nome'];
       $_SESSION['email'] = $usuarios['email'];
-      
 
 
       header("Location: ../views/login.php?success=");
