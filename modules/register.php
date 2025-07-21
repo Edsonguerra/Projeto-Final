@@ -4,9 +4,9 @@ include_once('conexao.php');
 $nome = $_POST['nome'];
 $ultimo_nome = $_POST['ultimo_nome'];
 $email = $_POST['email'];
-$senha = $_POST['senha'];
+$senha = md5($_POST['senha']);
 
-$result = mysqli_query($mysqli, "INSERT INTO user (nome,ultimo_nome,email,senha) VALUES ('$nome','$ultimo_nome','$email','$senha')");
+$result = mysqli_query($mysqli, "INSERT INTO user(nome,ultimo_nome,email,senha) VALUES ('$nome','$ultimo_nome','$email','$senha')");
 
 if ($result) {
 

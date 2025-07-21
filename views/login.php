@@ -56,11 +56,9 @@ if (isset($_GET['success'])) {
 <body>
     <div class="wrapper">  
         <nav class="nav">
-            <a href="../index.php">
                 <div class="nav-hospital">
-                    <p>Hospital dos Cajueiros</p>
+                <a class="hospital" href="../index.php">Hospital Cajueiros</a>
                 </div>
-            </a>
             <div class="nav-menu">
                 <ul>
                     <li><a href="../index.php" class="link">Pagina Inicial</a></li>
@@ -96,7 +94,7 @@ if (isset($_GET['success'])) {
                 </div>
                 <div class="two-col">
                     <div class="two">
-                        <label><a href="#">Esqueceu a senha?</a></label>
+                        <label><a href="login_funcionario.php">Login Funcionario</a></label>
                     </div>
                 </div>
             </form>

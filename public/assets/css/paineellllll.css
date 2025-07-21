@@ -1,0 +1,680 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+.bg-image-1 {
+    background-image: url('img/Pagina_principal2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-image-2{
+    background-image: url('img/Pagina_principal2.jpg'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.panelContainer {
+    background-repeat: no-repeat; 
+    background-size: 100%;
+    background-attachment: scroll;
+    transition: background-image 1s ease-in-out; 
+}
+
+.cabeça {
+    position: relative;
+    top: -203px;
+    left: -17px;
+    width: 110%;
+    height: 80px;
+    border: 1px solid #c0c0c0;
+    background-color: transparent; 
+    color: #c0c0c0;
+    font-family: "Jura", sans-serif;
+}
+
+
+.ajuda{
+    position: relative;
+    top: 23px;
+    left: 800px;
+    color: #fff;
+}
+
+.contacto{
+    position: relative;
+    top: 23px;
+    left: 750px;
+    color: #fff;
+}
+
+.marca_consulta{
+    position: relative;
+    top: 23px;
+    left: 850px;
+    width: 12%;
+    height: 30px;
+    color: #fff;
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.marca_consulta:hover{
+    background-color: #fff;
+    color: #002033;
+}
+
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 80px;
+    background-color: #001a22;
+    padding: 0.4rem 0.8rem;
+    transition: all 0.5s ease;
+    z-index: 100;
+}
+
+.sidebar.active ~ .main-content{
+    left: 250px;
+    width: calc(100% - 250px);
+}
+
+.sidebar.active{
+    width: 250px;
+}
+
+.sidebar #btn {
+    position: absolute;
+    color: #ffffff;
+    top: .4rem;
+    left: 50%;
+    font-size: 1.2rem;
+    line-height: 50px;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.sidebar.active #btn{
+    left: 90%;
+}
+
+.sidebar .top .logo{
+    color: #ffffff;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.sidebar.active .top .logo{
+    opacity: 1;
+}
+
+.top .logo i{
+    font-size: 2rem;
+    margin-right: 5px;
+}
+
+.sidebar ul li {
+    position: relative;
+    top: 20px;
+    list-style: none;
+    height: 50px;
+    margin: 0.8rem auto;
+    line-height: 55px;
+}
+
+.sidebar ul li a{
+    color: #feffff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 0.8rem;
+}
+
+.sidebar ul li a:hover {
+    background-color: #004156;
+    color: #ffffff;
+}
+
+.sidebar ul li a i{
+    min-width: 50px;
+    text-align: center;
+    height: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+}
+
+.sidebar .nav-item {
+    opacity: 0;
+}
+
+.sidebar.active .nav-item {
+    opacity: 1;
+}
+
+.sidebar ul li .tooltip{
+    position: absolute;
+    left: 125px;
+    top: 50%;
+    color: #002c3d;
+    transform: translate(-50%, -50%);
+    border-radius: .6rem;
+    padding: .4rem 1.2rem;
+    line-height: 1.8rem;
+    z-index: 20;
+    opacity: 0;
+}
+
+.sidebar ul li:hover .tooltip{
+    opacity: 1;
+}
+
+.sidebar.active ul li .tooltip{
+    display: none   ;
+}
+
+.sidebar ul li .sair{
+    position: relative;
+    bottom: -235px;
+}
+
+.main-content{
+    position: absolute;
+    min-height: 100vh;
+    top: 0;
+    left: 80px;
+    transition: all 0.5s ease;
+    width: calc(100% - 80px);
+    padding: 1rem;
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+.name{
+    position: absolute;
+    font-size: 40px;
+    display: flex;
+    top: 201px;
+    left: 60px;
+    color: #fff;
+}
+
+h2{
+    font-family: "Electrolize", sans-serif;
+    font-weight: 100;
+}
+
+h2{
+    position: relative;
+    top: 160px;
+    left: 60px;
+    font-size: 63px;
+    font-weight: 700;
+    color: #fff;
+}
+
+h3{
+    font-family: "Jura", sans-serif;
+    position: relative;
+    top: 170px;
+    left: 60px;
+    font-size: 17px;
+    color: #fff;
+}
+
+
+h4{
+    position: absolute;
+    top: 25px;
+    left: 75px;
+    font-size: 25px;
+    color: #fff;
+    font-weight: 400;
+}
+
+.marcar{
+    position: relative;
+    top: 190px;
+    left: 60px;
+    background-color: transparent;
+    width: 11%;
+    height: 40px;
+    border: 1px solid #fff;
+    color: #fff;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.marcar:hover{
+    background-color: #feffff;
+    color: #002033;
+}
+
+
+
+.Conteudo{
+   
+    position: absolute;
+    display: flex;
+    top: 336px;
+    left: 61px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    
+}
+
+h4{
+    font-family: "Jura", sans-serif;
+}
+
+
+
+
+
+
+
+.bem-vindo{
+    position: absolute;
+    left: 30px;
+    top: 14px;
+    color: #007585;
+    font-size: 22px;
+}
+
+h1{
+    position: relative;
+    font-family: "Jura", sans-serif;
+    left: 800px;
+    font-weight: 700;
+ 
+  }
+
+.boas-vindas{
+    position: fixed;
+    font-size: 19px;
+    margin-top: 10px;
+    top: 20px;
+    left: 1090px;
+    border: 2px solid  rgb(255, 255, 255);
+    color: #fff;
+    border-radius: 10px;
+    width: 280px;
+    height: 60px;
+    background-color: #15b300;
+
+}
+
+.texto-bem-vindo{
+    position: absolute;
+    left: 50px;
+    top: 7px;
+    font-size: 18px;
+}
+
+.nome-usuario{
+    position: absolute;
+    top: 7px;
+    left: 160px;
+    font-size: 18px;
+}
+
+.sucesso{
+    position: absolute;
+    top: 5px;
+    margin-left: 50px;
+}
+
+.icone {
+    position: absolute;
+    top: 8px;
+    left: 15px;
+}
+
+
+
+
+.Selecionar{
+    position: relative;
+    top: 320px;
+    left: -10px;
+    max-width: 350px;
+    width: 150%;
+    border-radius: 8px;
+    /* top: 353px;   
+    left: 450px; */
+    z-index: 100;
+}
+
+.selecionar-botao{
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #008791;
+    box-shadow: 0 5px 10px rgb(126, 141, 141);
+}
+
+
+
+.areaContainer select {
+    position: relative;
+    top: 320px;
+    left: -170px;
+    width:190%;
+    border: transparent;
+    color:rgb(255, 255, 255);
+    font-size: 15px;
+    font-weight: 600;
+    height: 50px;
+    /* width: 120px; */
+    border-radius: 5px;
+    border: solid #008791 2px;
+    cursor: pointer;
+    text-decoration: none;
+    transform: .3s;
+    padding-left:15px;
+    background-color: #008791;
+    box-shadow: 0 5px 10px rgb(126, 141, 141);
+}
+
+.areaContainer select option{
+    text-align: center;
+    background: #ffffff;
+    color: #001a22;
+    box-shadow: 0 5px 10px rgb(2, 8, 8);
+}
+
+
+/* .areaContainer select:hover{
+    background: rgb(0, 143, 143);
+    color: #fff;
+} */
+
+.selecionar-botao .texto{
+    font-size: 17px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.selecionar-botao .down-arrow{
+    display: flex;
+    height: 21px;
+    width: 21px;
+    border-radius: 50%;
+    color: #008791;
+    font-size: 14px;
+    background: #fff;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.selecionar-botao.open .down-arrow{
+    transform: rotate(-180deg);
+}
+
+.lista-consulta{
+    position: relative;
+    margin-top: 15px;
+    border-radius: 8px;
+    padding: 9px;
+    background-color: #ffffff;
+    box-shadow: 0 5px 10px rgb(27, 97, 97);
+    display: none;
+    
+
+}
+
+
+.selecionar-botao.open ~ .lista-consulta{
+    display: block;
+
+}
+
+
+.lista-consulta .lista{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    height: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 0 15px;
+    border-radius: 8px;
+}
+
+.lista-consulta .lista:hover{
+    background-color: #e7edfe;
+
+}
+
+.lista .primeiro-lista{
+    position: absolute;
+    font-size: 16px;
+    left: 52px;
+    font-weight: 400px;
+    color: #002033;
+}
+
+.lista .img{
+    position: absolute;
+    left: 10px;
+}
+
+.lista .checked{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 285px;
+    height: 16px;
+    width: 16px;
+    border-radius: 4px;
+    margin-right: 12px;
+    border: 1.5px solid #c0c0c0;
+    transition: all 0.3s ease-in-out;
+}
+
+.lista.checked .checked{
+    background-color: #008791;
+    border-color: #ffffff;
+} 
+
+.checked .check-icon{
+    color: #e7edfe;
+    font-size: 11px;
+    transform: scale(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.lista.checked .check-icon{
+    transform: scale(1);
+}
+
+
+.button{
+    
+    width: 100%;
+    margin-top: 0.1rem;
+    border: none;
+    background-color: #008791;
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: #00747c;
+}
+
+.button{
+    text-decoration: none;
+    font-size: 1.0rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+
+
+
+
+.contudo-abaixo{
+    position: relative;
+    top: 400px;
+    left: -25px;
+}
+
+
+.Hosp{
+    font-family: "Doppio One", sans-serif;
+    position: absolute;
+    font-size: 25px;
+    top: 80px;
+    left: 350px;
+    display: flex;
+    color:#ffffff;
+
+}
+
+
+.Infor{
+    font-family: "Quattrocento", serif;
+    position: absolute;
+    font-size: 20px;
+    left: 740px;
+    top: 45px;
+    color: #fff;
+}
+
+.Sobre{
+    font-family: "Glegoo", serif;
+    position: absolute;
+    font-size: 15px;
+    left: 740px;
+    top: 70px;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.Contacto{
+    font-family: "Glegoo", serif;
+    position: absolute;
+    font-size: 15px;
+    left: 740px;
+    top: 90px;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.Termos{
+    font-family: "Glegoo", serif;
+    position: absolute;
+    font-size: 15px;
+    left: 740px;
+    top: 110px;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+.Politica{
+    font-family: "Glegoo", serif;
+    position: absolute;
+    font-size: 15px;
+    left: 740px;
+    top: 130px;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+
+.Container-noti{
+    position: relative;
+    top: 514px;
+    left: 163px;
+    width: 400px;
+    background: #fff;
+    border-radius: 7px;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    padding: 0 30px 0px;
+    color: #333;
+    border: solid #de3636;
+    box-shadow: 0 15px 15px rgba(0, 8, 0, 0.8);
+    z-index: 100;
+}
+
+.img-alerta{
+    position: relative;
+    top: -86px;
+}
+
+.caro{
+    position: relative;
+    top: -80px;
+    font-size: 23px;
+}
+
+.exclusiva{
+    position: relative;
+    top: -60px;
+    font-weight: 500;
+}
+
+.paciente{
+    position: relative;
+    top: -65px;
+    font-weight: 500;
+}
+
+.login-user{
+    position: relative;
+    top: -37px;
+    height: 50px;
+    width: 100%;
+    border: solid red 2px;
+    border-radius: 3px;
+    font-size: 17px;
+    color: #de3636;
+    font-weight: 600;
+    background: transparent;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.login-user:hover{
+    background: #00747c;
+    color: #fff;
+    border: none;
+}

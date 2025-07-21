@@ -1,8 +1,6 @@
-<?php 
-include('../modules/conexao.php');
-include('../modules/protect.php'); 
-?>
 <?php
+include('../modules/conexao.php');
+
 
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
@@ -11,22 +9,10 @@ if (session_status() == PHP_SESSION_NONE) {
 $message = "";
 if (isset($_SESSION['message'])) {
     $message = $_SESSION['message'];
-    unset($_SESSION['message']); 
-}
-
-
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
+    unset($_SESSION['message']);
 }
 ?>
 
-<?php 
-$mensagem2 = "";
-if (isset($_SESSION['mensagem2'])) {
-    $mensagem2 = $_SESSION['mensagem2'];
-    unset($_SESSION['mensagem2']);
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,36 +27,30 @@ if (isset($_SESSION['mensagem2'])) {
 </head>
 <body>
     <div class="top">
-        <label class="titulo_gerenciamento">Consultar consultas/Ánalises</label>
-        <a href="Painel.php">
-        <button class="btn-voltar">Voltar</button>
+        <label class="titulo_gerenciamento">Consultas Marcadas</label>
+        <a href="painel.php">
+            <button class="btn-voltar">Voltar</button>
         </a>
+        <select name="area" id="selectArea" class="selectArea">
+    <?php $areas= mysqli_query($mysqli, "SELECT * FROM area"); ?>
+      <?php if($areas):?>
+        <?php while($area_data = mysqli_fetch_assoc($areas)):?>
+            <option name=<?=$area_data['nome']?> value=<?=$area_data['id']?>> <?=$area_data['nome']?> </option>
+            <?php endwhile; ?>            
+        <?php endif;?>
+        </select>
     </div>
-
-
-
-
 
     <?php if (!empty($message)): ?>
         <div class="mensagem">
-            <span class="mensagem1"> <strong>Consulta marcada</strong> <br> </span>
+            <span class="mensagem1"> <strong>Consultas Marcada</strong> <br> </span>
             <div class="mensagem2">
-            <?php echo $message; ?>
+                <?php echo $message; ?>
             </div>
             <i class="icone fa-solid fa-circle-check"></i>
         </div>
     <?php endif; ?>
 
-    <?php if (!empty($mensagem2)): ?>
-        <div class="mensagem">
-            <span class="mensagem1"> <strong>Análise marcada</strong> <br> </span>
-            <label class="mensagem_sucesso" >com sucesso</label>
-            <div class="mensagem2">
-            <?php echo $message; ?>
-            </div>
-            <i class="icone fa-solid fa-circle-check"></i>
-        </div>
-    <?php endif; ?>
 
     <script>
     setTimeout(function(){
@@ -78,35 +58,80 @@ if (isset($_SESSION['mensagem2'])) {
     }, 2000); 
     </script>
 
-
-
-
     <div class="container">
         <table class="table-consulta">
             <thead>
                 <tr class="elementos">
-                    <th class="nome" scope="Id"> Nome completo</th>         
+                    <th class="nome" scope="Id"> Nome completo</th>
                     <th class="sexo" scope="Id"> Sexo</th>
-                    <th class="consulta" scope="Id"> Consulta/Análise</th>
+                    <th class="consulta" scope="Id"> Consulta</th>
+                    <th class="data" scope="Id"> Data e Hora</th>
+                    <th class="data" scope="Id"> Estado</th>
+                    <th class="data" scope="Id"> Posição</th>
                 </tr>
             </thead>
             <tbody class="dados_da_consulta">
-                <?php 
-                $sqli = "SELECT * FROM `paciente`"; 
+                <?php
+                $areas= mysqli_query($mysqli, "SELECT * FROM area");
+                $area_zero = mysqli_fetch_assoc($areas);
+                $area_zero_id=$area_zero['id'];
+        
+                $sqli = "SELECT p.nome_completo, p.sexo, c.nome AS consulta_nome, cp.data, estado,posicao
+                         FROM paciente p
+                         JOIN consulta_paciente cp ON p.id_paciente = cp.paciente_id_paciente
+                         JOIN consulta c ON cp.consulta_id_da_consulta = c.id_da_consulta WHERE c.area_id={$area_zero_id} ORDER BY posicao";
                 $result = mysqli_query($mysqli, $sqli);
+
+     
                 if ($result) {
-                    while ($row = mysqli_fetch_assoc($result)) {
-                        $nome_completo = $row['nome_completo'];
-                        $sexo = $row['sexo'];
-                        echo '<tr>
-                        <th class="nome_da_consulta" scope="row">' . $nome_completo . '</th>
-                        <th class="Sexo" scope="row">' . $sexo . '</th>
-                        </tr>';    
+                    while ($user_data = mysqli_fetch_assoc($result)) {
+                        echo "<tr>";
+                        echo "<td>" . $user_data['nome_completo'] . "</td>";
+                        echo "<td>" . $user_data['sexo'] . "</td>";
+                        echo "<td>" . $user_data['consulta_nome'] . "</td>";
+                        if(is_null($user_data['data'])){
+                            echo "<td> Pendente </td>";
+                        }else{
+                            echo "<td>" . $user_data['data'] . "</td>";
+                        }
+                        echo "<td>" . $user_data['estado'] . "</td>";
+                        echo "<td>" . $user_data['posicao'] . "</td>";
+                        echo "</tr>";
                     }
+                } else {
+          
+                    echo "<tr><td colspan='4'>Erro na consulta SQL: " . mysqli_error($mysqli) . "</td></tr>";
                 }
+                
                 ?>
             </tbody>
         </table>
     </div>
+    <script>
+        const selectArea=document.querySelector("#selectArea");
+        selectArea.addEventListener("change",async (el)=>{
+            const idArea=el.target.value;
+            const response= await fetch(`http://localhost/Projeto-Final/modules/consultasMarcadas.php/?idArea=${idArea}`);
+            const data = await response.json();
+            const dados_da_consulta=document.querySelector(".dados_da_consulta");
+            dados_da_consulta.innerHTML='';
+            if(data.length===0){
+                dados_da_consulta.innerHTML=`<tr><td colspan='4'>Sem Consultas nesta Área</td></tr>`;             
+            }
+
+            data.forEach(element => {
+                dados_da_consulta.innerHTML+=`
+                <tr>
+                <td>${element.nome_completo}</td>
+                <td>${element.sexo}</td>
+                <td>${element.consulta_nome}</td>
+                <td>${element.data==null?'Pendente':element.data}</td>
+                <td>${element.estado}</td>
+                 <td>${element.posicao}</td>
+            </tr>
+                `    
+            });            
+        })
+    </script>
 </body>
 </html>
