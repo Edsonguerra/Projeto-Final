@@ -8,16 +8,24 @@ selectBtn.addEventListener("click", () => {
 
 items.forEach(item => {
     item.addEventListener("click", () => {
-        item.classList.toggle("checked");
+      const button=item.querySelector('.consultaInput');
 
-        let checked = document.querySelectorAll(".checked"),
-            btnText = document.querySelector(".texto");
-
-            if(checked && checked.length > 10){
-              console.log("Selecionado")
-            }else{
-              console.log("Não selecionado")
-            }
+      if(!button.checked){
+        item.classList.add("checked");
+        button.checked=true;
+        // let checked = document.querySelectorAll(".checked"),
+            // btnText = document.querySelector(".texto");
+            // if(checked && checked.length > 10){
+            //   console.log("Selecionado");
+            //   console.log(button);
+            // }else{
+            //   console.log("Não selecionado")
+            // }
+            console.log(button);  
+      }else{
+        button.checked=false;
+        item.classList.remove("checked");
+      }
     });
 })
 

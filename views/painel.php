@@ -74,7 +74,7 @@
             ?>
 
 
-             <form action="../modules/Formulário_de_consulta.php" method="POST">
+             <form action="../modules/Formulário_de_consulta.php" method="POST" id="consultasForm">
                 <div class="Selecionar">
                 <div class="selecionar-botao">
                     <span class="texto">Selecionar Consulta</span>
@@ -82,28 +82,26 @@
                     <i class="fa-solid fa-chevron-down"></i>
                     </span> 
                 </div>
+                <?php if ($consulta->num_rows > 0): ?> 
                 <ul class="lista-consulta">
-                    <?php if ($consulta->num_rows > 0): ?> 
                     <?php while ($row = $consulta->fetch_assoc()) :?> 
                 <li class="lista">
-                    <img class="img" width="35 " src="../public/assets/css/img/43493.png" alt="">
+                    <img class="img" width="35" src="../public/assets/css/img/43493.png" alt="">
                     <span class="checked"><i class="fa-solid fa-check check-icon"></i></span>
                     <span class="primeiro-lista"><?php echo $row["nome"]?></span>
-                    <input type="checkbox" name="nome[]" value="Consulta_de_Dermatologia">
+                    <input type="checkbox" class="consultaInput" name=<?="consulta-".$row["nome"]?> value=<?=$row["id_da_consulta"]?>>
                 </li>
                 <?php endwhile;?>     
-                    <input class="button" type="submit" value="Marcar Consulta"> 
-                <?php else:?>
-                    <p>Consultas indisponiveis</p>     
-                <?php endif;?>     
                 </ul>   
+                    <input class="button" type="submit" value="Marcar Consulta"> 
+                    <?php else:?>
+                        <input class="button" type="submit" value=<?="Consultas indisponiveis"?>>      
+                <?php endif;?>     
                 </div>    
             </form>
-
-
 <!------------------------------------- Análises -------------------------------------------->
 
-        <?php
+        <!-- <?php
             $analise = mysqli_query($mysqli, "SELECT * FROM analise"); 
         ?>
 
@@ -132,7 +130,7 @@
                 <?php endif;?>     
                 </ul>   
             </div>   
-        </form>
+        </form> -->
 
         <div class="contudo-abaixo">
     
@@ -147,11 +145,6 @@
     </div>
 
     <script src="../public/js/Analise.js"></script>  
-    <script src="../public/js/Index.js"></script> 
-
-
-
-  
-    
+    <script src="../public/js/Index.js"></script>     
 </body>
 </html>

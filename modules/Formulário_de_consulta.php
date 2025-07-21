@@ -25,9 +25,9 @@ if (isset($_POST['submit'])) {
     header("Location: ../views/Consulta.php");
     exit();
 }
-?>
 
-<?php include('../modules/protect.php');?> 
+
+<!-- <?php include('../modules/protect.php');?> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -77,4 +77,4 @@ if (isset($_POST['submit'])) {
         </div>
     </div>
 </body>
-</html>
+</html> -->

@@ -1,6 +1,5 @@
 <?php include('components/header.php');?>
 <?php include('modules/conexao.php');?>
-<?php $tiposdeconsultas = mysqli_query($mysqli, "SELECT * FROM tipos_de_consultas"); ?>
 <header>
         <h1 class="Hospital">Hospital dos cajueiros</h1>
    <nav class="icones">
@@ -17,10 +16,7 @@
     <div class="Conteudo">
         <h3>Cadastre-se agora mesmo e marque a tua consulta ou análise de uma forma <p></p> fácil e segura.</h3>
     </div>
-
-
-
-           
+       
 <!------------------------------------- Consultas -------------------------------------------->
 
 <?php
